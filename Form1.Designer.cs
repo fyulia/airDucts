@@ -37,9 +37,9 @@ namespace airDucts
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.cb1_Dlin = new System.Windows.Forms.ComboBox();
-			this.cb1_Vys = new System.Windows.Forms.ComboBox();
-			this.cb1_Shir = new System.Windows.Forms.ComboBox();
+			this.cb1_vys = new System.Windows.Forms.ComboBox();
+			this.cb1_shir = new System.Windows.Forms.ComboBox();
+			this.cb1_dlin = new System.Windows.Forms.ComboBox();
 			this.label13 = new System.Windows.Forms.Label();
 			this.label14 = new System.Windows.Forms.Label();
 			this.label15 = new System.Windows.Forms.Label();
@@ -208,9 +208,9 @@ namespace airDucts
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.cb1_Dlin);
-			this.groupBox1.Controls.Add(this.cb1_Vys);
-			this.groupBox1.Controls.Add(this.cb1_Shir);
+			this.groupBox1.Controls.Add(this.cb1_vys);
+			this.groupBox1.Controls.Add(this.cb1_shir);
+			this.groupBox1.Controls.Add(this.cb1_dlin);
 			this.groupBox1.Controls.Add(this.label13);
 			this.groupBox1.Controls.Add(this.label14);
 			this.groupBox1.Controls.Add(this.label15);
@@ -221,29 +221,31 @@ namespace airDucts
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Параметры";
 			// 
-			// cb1_Dlin
+			// cb1_vys
 			// 
-			this.cb1_Dlin.FormattingEnabled = true;
-			this.cb1_Dlin.Location = new System.Drawing.Point(264, 138);
-			this.cb1_Dlin.Name = "cb1_Dlin";
-			this.cb1_Dlin.Size = new System.Drawing.Size(159, 28);
-			this.cb1_Dlin.TabIndex = 16;
+			this.cb1_vys.FormattingEnabled = true;
+			this.cb1_vys.Location = new System.Drawing.Point(264, 138);
+			this.cb1_vys.Name = "cb1_vys";
+			this.cb1_vys.Size = new System.Drawing.Size(159, 28);
+			this.cb1_vys.TabIndex = 16;
 			// 
-			// cb1_Vys
+			// cb1_shir
 			// 
-			this.cb1_Vys.FormattingEnabled = true;
-			this.cb1_Vys.Location = new System.Drawing.Point(264, 96);
-			this.cb1_Vys.Name = "cb1_Vys";
-			this.cb1_Vys.Size = new System.Drawing.Size(159, 28);
-			this.cb1_Vys.TabIndex = 15;
+			this.cb1_shir.FormattingEnabled = true;
+			this.cb1_shir.Location = new System.Drawing.Point(264, 96);
+			this.cb1_shir.Name = "cb1_shir";
+			this.cb1_shir.Size = new System.Drawing.Size(159, 28);
+			this.cb1_shir.TabIndex = 15;
 			// 
-			// cb1_Shir
+			// cb1_dlin
 			// 
-			this.cb1_Shir.FormattingEnabled = true;
-			this.cb1_Shir.Location = new System.Drawing.Point(264, 54);
-			this.cb1_Shir.Name = "cb1_Shir";
-			this.cb1_Shir.Size = new System.Drawing.Size(159, 28);
-			this.cb1_Shir.TabIndex = 14;
+			this.cb1_dlin.FormattingEnabled = true;
+			this.cb1_dlin.Location = new System.Drawing.Point(264, 54);
+			this.cb1_dlin.Name = "cb1_dlin";
+			this.cb1_dlin.Size = new System.Drawing.Size(159, 28);
+			this.cb1_dlin.TabIndex = 14;
+			this.cb1_dlin.SelectedIndexChanged += new System.EventHandler(this.cb1_dlin_SelectedIndexChanged);
+			this.cb1_dlin.SelectedValueChanged += new System.EventHandler(this.cb1_dlin_SelectedValueChanged);
 			// 
 			// label13
 			// 
@@ -251,9 +253,9 @@ namespace airDucts
 			this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.label13.Location = new System.Drawing.Point(91, 139);
 			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(126, 24);
+			this.label13.Size = new System.Drawing.Size(136, 24);
 			this.label13.TabIndex = 13;
-			this.label13.Text = "Длина          L";
+			this.label13.Text = "Высота          L";
 			// 
 			// label14
 			// 
@@ -261,9 +263,9 @@ namespace airDucts
 			this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.label14.Location = new System.Drawing.Point(91, 97);
 			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(123, 24);
+			this.label14.Size = new System.Drawing.Size(125, 24);
 			this.label14.TabIndex = 12;
-			this.label14.Text = "Высота       B";
+			this.label14.Text = "Ширина       B";
 			// 
 			// label15
 			// 
@@ -271,9 +273,9 @@ namespace airDucts
 			this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.label15.Location = new System.Drawing.Point(91, 55);
 			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(126, 24);
+			this.label15.Size = new System.Drawing.Size(114, 24);
 			this.label15.TabIndex = 11;
-			this.label15.Text = "Ширина       A";
+			this.label15.Text = "Длина       A";
 			// 
 			// label1
 			// 
@@ -1048,9 +1050,9 @@ namespace airDucts
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button bt_PrymVoz;
-		private System.Windows.Forms.ComboBox cb1_Dlin;
-		private System.Windows.Forms.ComboBox cb1_Vys;
-		private System.Windows.Forms.ComboBox cb1_Shir;
+		private System.Windows.Forms.ComboBox cb1_vys;
+		private System.Windows.Forms.ComboBox cb1_shir;
+		private System.Windows.Forms.ComboBox cb1_dlin;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label15;

@@ -202,6 +202,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\возд пр вер1.png" />
+    <None Include="Resources\возд пр вер2.png" />
+    <None Include="Resources\заглушка пр1.png" />
+    <None Include="Resources\заглушка пр.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

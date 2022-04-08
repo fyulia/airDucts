@@ -20,28 +20,33 @@ namespace airDucts
 
 		private SqlConnection sqlConnection = null;
 		private SqlDataAdapter sqlDataAdapter = null;
+		private SqlDataAdapter sqlDataAdapter2 = null;
 		private DataSet dataSet = null;
+		private DataSet dataSet2 = null;
 
 		public Form1()
 		{
 			InitializeComponent();
-			
-			//dataTab();
+
+			dataTab();
 			textBox2.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, позволяющим соединить воздуховоды с разным размером прямоугольных сечений.";
 
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\универ\airDucts\airDucts\Database1.mdf; Integrated Security = True");
-			SqlDataAdapter da = new SqlDataAdapter("SELECT DISTINCT dlin FROM VozdPr ", sqlConnection);
+			//SqlConnection sqlConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\универ\airDucts\airDucts\Database1.mdf; Integrated Security = True");
+			//SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT DISTINCT dlin FROM VozdPr ", sqlConnection);
 			
-			DataSet dataSet = new DataSet();
-			da.Fill(dataSet, "VozdPr");
+			//DataSet dataSet = new DataSet();
+			//sqlDataAdapter.Fill(dataSet, "VozdPr");
 
-			cb1_dlin.Items.Clear();
+			//cb1_dlin.Items.Clear();
 			
-			for (int i = 0; i < dataSet.Tables["VozdPr"].Rows.Count; i++)
-			{
-					cb1_dlin.Items.Add(dataSet.Tables["VozdPr"].Rows[i][0].ToString());
-			}
-			
+			//for (int i = 0; i < dataSet.Tables["VozdPr"].Rows.Count; i++)
+			//{
+			//		cb1_dlin.Items.Add(dataSet.Tables["VozdPr"].Rows[i][1].ToString());
+			//}
+
+			//cb1_dlin.DataSource = dataSet;
+			//cb1_dlin.DisplayMember = "dlin";
+			//cb1_dlin.ValueMember = "id";
 		
 		
 		}
@@ -54,37 +59,37 @@ namespace airDucts
 		private void dataTab()
 		{
 			//прям возд
-			cb1_dlin.Items.Clear();
-			cb1_dlin.Items.Add("100");
-			cb1_dlin.Items.Add("150");
-			cb1_dlin.Items.Add("250");
-			cb1_dlin.Items.Add("400");
-			cb1_dlin.Items.Add("500");
-			cb1_dlin.Items.Add("600");
-			cb1_dlin.Items.Add("800");
-			cb1_dlin.Items.Add("1000");
-			cb1_dlin.Items.Add("1250");
-			cb1_dlin.Items.Add("1600");
+			cb51_dlin.Items.Clear();
+			cb51_dlin.Items.Add("100");
+			cb51_dlin.Items.Add("150");
+			cb51_dlin.Items.Add("250");
+			cb51_dlin.Items.Add("400");
+			cb51_dlin.Items.Add("500");
+			cb51_dlin.Items.Add("600");
+			cb51_dlin.Items.Add("800");
+			cb51_dlin.Items.Add("1000");
+			cb51_dlin.Items.Add("1250");
+			cb51_dlin.Items.Add("1600");
 
-			cb1_shir.Items.Clear();
-			cb1_shir.Items.Add("150");
-			cb1_shir.Items.Add("250");
-			cb1_shir.Items.Add("300");
-			cb1_shir.Items.Add("400");
-			cb1_shir.Items.Add("500");
-			cb1_shir.Items.Add("600");
-			cb1_shir.Items.Add("800");
-			cb1_shir.Items.Add("1000");
-			cb1_shir.Items.Add("1250");
-			cb1_shir.Items.Add("1600");
-			cb1_shir.Items.Add("2000");
+			cb51_shir.Items.Clear();
+			cb51_shir.Items.Add("150");
+			cb51_shir.Items.Add("250");
+			cb51_shir.Items.Add("300");
+			cb51_shir.Items.Add("400");
+			cb51_shir.Items.Add("500");
+			cb51_shir.Items.Add("600");
+			cb51_shir.Items.Add("800");
+			cb51_shir.Items.Add("1000");
+			cb51_shir.Items.Add("1250");
+			cb51_shir.Items.Add("1600");
+			cb51_shir.Items.Add("2000");
 
-			cb1_vys.Items.Clear();
-			cb1_vys.Items.Add("2500");
-			cb1_vys.Items.Add("3000");
-			cb1_vys.Items.Add("4000");
-			cb1_vys.Items.Add("5000");
-			cb1_vys.Items.Add("6000");
+			cb51_vys.Items.Clear();
+			cb51_vys.Items.Add("20");
+			cb51_vys.Items.Add("50");
+			cb51_vys.Items.Add("100");
+			
+			
 		}
 
 		
@@ -95,9 +100,9 @@ namespace airDucts
 		{
 
 			double shir_pr, vys_pr, dlin_pr;
-			shir_pr = Convert.ToDouble(cb1_dlin.Text);
-			vys_pr = Convert.ToDouble(cb1_shir.Text);
-			dlin_pr = Convert.ToDouble(cb1_vys.Text);
+			shir_pr = Convert.ToDouble(cb51_dlin.Text);
+			vys_pr = Convert.ToDouble(cb51_shir.Text);
+			dlin_pr = Convert.ToDouble(cb51_vys.Text);
 
 			shir_pr = shir_pr / 1000;
 			vys_pr = vys_pr / 1000;
@@ -111,7 +116,9 @@ namespace airDucts
 			Part = iSwApp.IActiveDoc2;
 
 			airDuct duct = new airDuct();
-			duct.createPrVozd(shir_pr,vys_pr,dlin_pr,Part);
+			duct.createPrVozd(shir_pr, vys_pr, dlin_pr, Part);
+
+
 			//setMaterial();
 
 
@@ -138,30 +145,56 @@ namespace airDucts
 
 		}
 
-		private void cb1_dlin_SelectedIndexChanged(object sender, EventArgs e)
+		//private void cb1_dlin_SelectedIndexChanged(object sender, EventArgs e)
+		//{
+		//	string str = cb1_dlin.SelectedItem.ToString();
+		//	SqlConnection sqlConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\универ\airDucts\airDucts\Database1.mdf; Integrated Security = True");
+		//	SqlCommand command = new SqlCommand("SELECT shir FROM VozdPr WHERE dlin = @str ", sqlConnection);
+
+		//	command.Parameters.AddWithValue("@str", str);
+		//	sqlDataAdapter2 = new SqlDataAdapter(command);
+
+		//	dataSet2 = new DataSet();
+		//	sqlDataAdapter2.Fill(dataSet2, "VozdPr");
+
+		//	cb1_shir.Items.Clear();
+
+		//	for (int i = 0; i < dataSet2.Tables["VozdPr"].Rows.Count; i++)
+		//	{
+
+		//		cb1_shir.Items.Add(dataSet2.Tables["VozdPr"].Rows[i][2].ToString());
+		//	}
+
+		//}
+
+		private void cb1_dlin_SelectedValueChanged(object sender, EventArgs e)
 		{
 			
 		}
 
-		private void cb1_dlin_SelectedValueChanged(object sender, EventArgs e)
+		private void bt_ZaglPr_Click(object sender, EventArgs e)
 		{
-			string str = cb1_dlin.SelectedItem.ToString();
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\универ\airDucts\airDucts\Database1.mdf; Integrated Security = True");
-			SqlCommand command = new SqlCommand("SELECT shir FROM VozdPr WHERE dlin = @str ", sqlConnection);
+			double shir_pr, vys_pr, dlin_pr;
+			dlin_pr = Convert.ToDouble(cb51_dlin.Text);
+			shir_pr = Convert.ToDouble(cb51_shir.Text);
+			vys_pr = Convert.ToDouble(cb51_vys.Text);
+			
 
-			command.Parameters.AddWithValue("@str", str);
-			sqlDataAdapter = new SqlDataAdapter(command);
+			shir_pr = shir_pr / 1000;
+			vys_pr = vys_pr / 1000;
+			dlin_pr = dlin_pr / 1000;
 
-			dataSet = new DataSet();
-			sqlDataAdapter.Fill(dataSet, "VozdPr");
 
-			cb1_shir.Items.Clear();
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
 
-			for (int i = 0; i < dataSet.Tables["VozdPr"].Rows.Count; i++)
-			{
+			//iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
 
-				cb1_shir.Items.Add(dataSet.Tables["VozdPr"].Rows[i][1].ToString());
-			}
+			Close();
+
+			Zaglushka zaglPr = new Zaglushka();
+			zaglPr.createZaglPr(dlin_pr, shir_pr, vys_pr, Part);
 		}
 	}
 }

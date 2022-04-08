@@ -63,6 +63,36 @@ namespace airDucts.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap возд_пр_вер1 {
+            get {
+                object obj = ResourceManager.GetObject("возд_пр_вер1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap возд_пр_вер2 {
+            get {
+                object obj = ResourceManager.GetObject("возд_пр_вер2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap заглушка_пр1 {
+            get {
+                object obj = ResourceManager.GetObject("заглушка_пр1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap переход1_вер2 {
             get {
                 object obj = ResourceManager.GetObject("переход1_вер2", resourceCulture);

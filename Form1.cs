@@ -99,14 +99,16 @@ namespace airDucts
 		private void bt_PrymVoz_Click(object sender, EventArgs e)
 		{
 
-			double shir_pr, vys_pr, dlin_pr;
-			shir_pr = Convert.ToDouble(cb51_dlin.Text);
-			vys_pr = Convert.ToDouble(cb51_shir.Text);
-			dlin_pr = Convert.ToDouble(cb51_vys.Text);
+			double shir_pr, vys_pr, dlin_pr, zazor_pr;
+			dlin_pr = Convert.ToDouble(cb51_dlin.Text);
+			shir_pr = Convert.ToDouble(cb51_shir.Text);
+			vys_pr = Convert.ToDouble(cb51_vys.Text);
+			zazor_pr = Convert.ToDouble(cb1_zazor);
 
 			shir_pr = shir_pr / 1000;
 			vys_pr = vys_pr / 1000;
 			dlin_pr = dlin_pr / 1000;
+			zazor_pr = zazor_pr / 1000;
 
 
 			iSwApp = new SldWorks();
@@ -114,9 +116,10 @@ namespace airDucts
 			
 			//iSwApp.NewPart();
 			Part = iSwApp.IActiveDoc2;
+			
 
 			airDuct duct = new airDuct();
-			duct.createPrVozd(shir_pr, vys_pr, dlin_pr, Part);
+			duct.createPrVozd(dlin_pr, shir_pr, vys_pr, zazor_pr, Part);
 
 
 			//setMaterial();
@@ -195,6 +198,90 @@ namespace airDucts
 
 			Zaglushka zaglPr = new Zaglushka();
 			zaglPr.createZaglPr(dlin_pr, shir_pr, vys_pr, Part);
+		}
+
+		private void bt_KrVozd_Click(object sender, EventArgs e)
+		{
+			double diam_kr, vys_kr, zazor_kr;
+			diam_kr = Convert.ToDouble(cb2_diam.Text);
+			vys_kr = Convert.ToDouble(cb2_vys.Text);
+			zazor_kr = Convert.ToDouble(cb2_zazor.Text);
+
+
+			diam_kr = diam_kr / 1000;
+			vys_kr = vys_kr / 1000;
+			zazor_kr = zazor_kr / 1000;
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			//iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
+
+			airDuct duct2 = new airDuct();
+			duct2.createKrVozd(diam_kr, vys_kr, zazor_kr, Part);
+		}
+
+		private void bt_PerehPrPr_Click(object sender, EventArgs e)
+		{
+			double dlin, dlin1, shir, shir1, vys, zazor;
+			dlin = Convert.ToDouble(cb31_dlin.Text);
+			dlin1 = Convert.ToDouble(cb31_dlin1.Text);
+			shir = Convert.ToDouble(cb31_shir.Text);
+			shir1 = Convert.ToDouble(cb31_shir1.Text);
+			vys = Convert.ToDouble(cb31_vys.Text);
+			zazor = Convert.ToDouble(cb31_zazor.Text);
+
+
+			dlin = dlin / 1000;
+			dlin1 = dlin1 / 1000;
+			shir = shir / 1000;
+			shir1 = shir1 / 1000;
+			vys = vys / 1000;
+			zazor = zazor / 1000;
+
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			//iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+
+			Close();
+
+			Perehod perehod1 = new Perehod();
+			perehod1.createPrPrPerehod(dlin, dlin1, shir, shir1, vys, zazor, Part);
+		}
+
+		private void bt_PerehPr_Click(object sender, EventArgs e)
+		{
+			double dlin, shir, diam, vys, zazor;
+			dlin = Convert.ToDouble(cb32_dlin.Text);
+			shir = Convert.ToDouble(cb32_shir.Text);
+			diam = Convert.ToDouble(cb32_diam.Text);
+			vys = Convert.ToDouble(cb32_vys.Text);
+			zazor = Convert.ToDouble(cb32_zazor.Text);
+
+
+			dlin = dlin / 1000;
+			shir = shir / 1000;
+			diam = diam / 1000;
+			vys = vys / 1000;
+			zazor = zazor / 1000;
+
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			//iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+
+			Close();
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
+
+			Perehod perehod2 = new Perehod();
+			perehod2.createPrPerehod(dlin, shir, diam, vys, zazor, Part);
 		}
 	}
 }

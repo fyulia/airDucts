@@ -32,14 +32,14 @@ namespace airDucts
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.button2 = new System.Windows.Forms.Button();
+			this.bt_Next1 = new System.Windows.Forms.Button();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.label13 = new System.Windows.Forms.Label();
 			this.label14 = new System.Windows.Forms.Label();
 			this.label15 = new System.Windows.Forms.Label();
 			this.label35 = new System.Windows.Forms.Label();
-			this.comboBox8 = new System.Windows.Forms.ComboBox();
+			this.cb1_zazor = new System.Windows.Forms.ComboBox();
 			this.cb1_vys = new System.Windows.Forms.ComboBox();
 			this.cb1_shir = new System.Windows.Forms.ComboBox();
 			this.cb1_dlin = new System.Windows.Forms.ComboBox();
@@ -55,13 +55,30 @@ namespace airDucts
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.label5 = new System.Windows.Forms.Label();
+			this.bt_Next2 = new System.Windows.Forms.Button();
+			this.bt_KrVozd = new System.Windows.Forms.Button();
+			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.label2 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label34 = new System.Windows.Forms.Label();
+			this.cb2_zazor = new System.Windows.Forms.ComboBox();
+			this.cb2_vys = new System.Windows.Forms.ComboBox();
+			this.cb2_diam = new System.Windows.Forms.ComboBox();
+			this.label40 = new System.Windows.Forms.Label();
+			this.label46 = new System.Windows.Forms.Label();
+			this.label56 = new System.Windows.Forms.Label();
+			this.label57 = new System.Windows.Forms.Label();
+			this.label58 = new System.Windows.Forms.Label();
+			this.label60 = new System.Windows.Forms.Label();
+			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.tabPage7 = new System.Windows.Forms.TabPage();
 			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.bt_Next31 = new System.Windows.Forms.Button();
+			this.bt_PerehPrPr = new System.Windows.Forms.Button();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.label33 = new System.Windows.Forms.Label();
 			this.label32 = new System.Windows.Forms.Label();
@@ -69,12 +86,12 @@ namespace airDucts
 			this.label30 = new System.Windows.Forms.Label();
 			this.label29 = new System.Windows.Forms.Label();
 			this.label28 = new System.Windows.Forms.Label();
-			this.comboBox6 = new System.Windows.Forms.ComboBox();
-			this.comboBox5 = new System.Windows.Forms.ComboBox();
-			this.comboBox4 = new System.Windows.Forms.ComboBox();
-			this.comboBox3 = new System.Windows.Forms.ComboBox();
-			this.comboBox2 = new System.Windows.Forms.ComboBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.cb31_zazor = new System.Windows.Forms.ComboBox();
+			this.cb31_shir1 = new System.Windows.Forms.ComboBox();
+			this.cb31_dlin1 = new System.Windows.Forms.ComboBox();
+			this.cb31_vys = new System.Windows.Forms.ComboBox();
+			this.cb31_shir = new System.Windows.Forms.ComboBox();
+			this.cb31_dlin = new System.Windows.Forms.ComboBox();
 			this.label27 = new System.Windows.Forms.Label();
 			this.label26 = new System.Windows.Forms.Label();
 			this.label25 = new System.Windows.Forms.Label();
@@ -90,9 +107,55 @@ namespace airDucts
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.tabPage10 = new System.Windows.Forms.TabPage();
-			this.label4 = new System.Windows.Forms.Label();
+			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.label61 = new System.Windows.Forms.Label();
+			this.label63 = new System.Windows.Forms.Label();
+			this.label64 = new System.Windows.Forms.Label();
+			this.label65 = new System.Windows.Forms.Label();
+			this.label66 = new System.Windows.Forms.Label();
+			this.cb32_zazor = new System.Windows.Forms.ComboBox();
+			this.cb32_diam = new System.Windows.Forms.ComboBox();
+			this.cb32_vys = new System.Windows.Forms.ComboBox();
+			this.cb32_shir = new System.Windows.Forms.ComboBox();
+			this.cb32_dlin = new System.Windows.Forms.ComboBox();
+			this.label67 = new System.Windows.Forms.Label();
+			this.label68 = new System.Windows.Forms.Label();
+			this.label70 = new System.Windows.Forms.Label();
+			this.label71 = new System.Windows.Forms.Label();
+			this.label72 = new System.Windows.Forms.Label();
+			this.label73 = new System.Windows.Forms.Label();
+			this.label74 = new System.Windows.Forms.Label();
+			this.label76 = new System.Windows.Forms.Label();
+			this.label77 = new System.Windows.Forms.Label();
+			this.label78 = new System.Windows.Forms.Label();
+			this.label55 = new System.Windows.Forms.Label();
+			this.bt_Next32 = new System.Windows.Forms.Button();
+			this.bt_PerehPr = new System.Windows.Forms.Button();
+			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.tabPage11 = new System.Windows.Forms.TabPage();
-			this.label5 = new System.Windows.Forms.Label();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.groupBox6 = new System.Windows.Forms.GroupBox();
+			this.label62 = new System.Windows.Forms.Label();
+			this.label69 = new System.Windows.Forms.Label();
+			this.label75 = new System.Windows.Forms.Label();
+			this.label80 = new System.Windows.Forms.Label();
+			this.comboBox12 = new System.Windows.Forms.ComboBox();
+			this.comboBox17 = new System.Windows.Forms.ComboBox();
+			this.comboBox18 = new System.Windows.Forms.ComboBox();
+			this.comboBox20 = new System.Windows.Forms.ComboBox();
+			this.label81 = new System.Windows.Forms.Label();
+			this.label82 = new System.Windows.Forms.Label();
+			this.label84 = new System.Windows.Forms.Label();
+			this.label85 = new System.Windows.Forms.Label();
+			this.label86 = new System.Windows.Forms.Label();
+			this.label87 = new System.Windows.Forms.Label();
+			this.label88 = new System.Windows.Forms.Label();
+			this.label90 = new System.Windows.Forms.Label();
+			this.label59 = new System.Windows.Forms.Label();
+			this.bt_Next33 = new System.Windows.Forms.Button();
+			this.bt_PerehKr = new System.Windows.Forms.Button();
+			this.pictureBox6 = new System.Windows.Forms.PictureBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.tabControl3 = new System.Windows.Forms.TabControl();
 			this.tabPage12 = new System.Windows.Forms.TabPage();
@@ -102,7 +165,7 @@ namespace airDucts
 			this.tabPage5 = new System.Windows.Forms.TabPage();
 			this.tabControl4 = new System.Windows.Forms.TabControl();
 			this.tabPage14 = new System.Windows.Forms.TabPage();
-			this.button4 = new System.Windows.Forms.Button();
+			this.bt_Next51 = new System.Windows.Forms.Button();
 			this.bt_ZaglPr = new System.Windows.Forms.Button();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -121,7 +184,20 @@ namespace airDucts
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.tabPage15 = new System.Windows.Forms.TabPage();
+			this.bt_Next52 = new System.Windows.Forms.Button();
+			this.bt_ZaglKr = new System.Windows.Forms.Button();
+			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.groupBox7 = new System.Windows.Forms.GroupBox();
+			this.label79 = new System.Windows.Forms.Label();
+			this.label89 = new System.Windows.Forms.Label();
+			this.comboBox19 = new System.Windows.Forms.ComboBox();
+			this.comboBox22 = new System.Windows.Forms.ComboBox();
+			this.label91 = new System.Windows.Forms.Label();
+			this.label93 = new System.Windows.Forms.Label();
+			this.label94 = new System.Windows.Forms.Label();
+			this.label96 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
+			this.pictureBox7 = new System.Windows.Forms.PictureBox();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
 			this.tabControl5 = new System.Windows.Forms.TabControl();
 			this.tabPage16 = new System.Windows.Forms.TabPage();
@@ -137,13 +213,19 @@ namespace airDucts
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.tabPage2.SuspendLayout();
+			this.groupBox4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
 			this.tabPage3.SuspendLayout();
 			this.tabControl2.SuspendLayout();
 			this.tabPage7.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.tabPage10.SuspendLayout();
+			this.groupBox5.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
 			this.tabPage11.SuspendLayout();
+			this.groupBox6.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
 			this.tabPage4.SuspendLayout();
 			this.tabControl3.SuspendLayout();
 			this.tabPage12.SuspendLayout();
@@ -154,6 +236,8 @@ namespace airDucts
 			this.groupBox3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			this.tabPage15.SuspendLayout();
+			this.groupBox7.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
 			this.tabPage6.SuspendLayout();
 			this.tabControl5.SuspendLayout();
 			this.tabPage16.SuspendLayout();
@@ -181,7 +265,7 @@ namespace airDucts
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.Controls.Add(this.button2);
+			this.tabPage1.Controls.Add(this.bt_Next1);
 			this.tabPage1.Controls.Add(this.textBox1);
 			this.tabPage1.Controls.Add(this.groupBox1);
 			this.tabPage1.Controls.Add(this.bt_PrymVoz);
@@ -195,17 +279,17 @@ namespace airDucts
 			this.tabPage1.Text = " Воздуховод прямоугольного сечения";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// bt_Next1
 			// 
-			this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button2.Location = new System.Drawing.Point(986, 516);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(135, 60);
-			this.button2.TabIndex = 11;
-			this.button2.Text = "Далее";
-			this.button2.UseVisualStyleBackColor = false;
+			this.bt_Next1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_Next1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_Next1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_Next1.Location = new System.Drawing.Point(986, 516);
+			this.bt_Next1.Name = "bt_Next1";
+			this.bt_Next1.Size = new System.Drawing.Size(135, 60);
+			this.bt_Next1.TabIndex = 11;
+			this.bt_Next1.Text = "Далее";
+			this.bt_Next1.UseVisualStyleBackColor = false;
 			// 
 			// textBox1
 			// 
@@ -226,7 +310,7 @@ namespace airDucts
 			this.groupBox1.Controls.Add(this.label14);
 			this.groupBox1.Controls.Add(this.label15);
 			this.groupBox1.Controls.Add(this.label35);
-			this.groupBox1.Controls.Add(this.comboBox8);
+			this.groupBox1.Controls.Add(this.cb1_zazor);
 			this.groupBox1.Controls.Add(this.cb1_vys);
 			this.groupBox1.Controls.Add(this.cb1_shir);
 			this.groupBox1.Controls.Add(this.cb1_dlin);
@@ -286,14 +370,14 @@ namespace airDucts
 			this.label35.TabIndex = 18;
 			this.label35.Text = "мм";
 			// 
-			// comboBox8
+			// cb1_zazor
 			// 
-			this.comboBox8.FormattingEnabled = true;
-			this.comboBox8.Location = new System.Drawing.Point(455, 92);
-			this.comboBox8.Name = "comboBox8";
-			this.comboBox8.Size = new System.Drawing.Size(84, 32);
-			this.comboBox8.TabIndex = 17;
-			this.comboBox8.Text = "1";
+			this.cb1_zazor.FormattingEnabled = true;
+			this.cb1_zazor.Location = new System.Drawing.Point(448, 92);
+			this.cb1_zazor.Name = "cb1_zazor";
+			this.cb1_zazor.Size = new System.Drawing.Size(91, 32);
+			this.cb1_zazor.TabIndex = 17;
+			this.cb1_zazor.Text = "1";
 			// 
 			// cb1_vys
 			// 
@@ -431,13 +515,18 @@ namespace airDucts
 			this.pictureBox1.Image = global::airDucts.Properties.Resources.возд_пр_вер1;
 			this.pictureBox1.Location = new System.Drawing.Point(8, 15);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(713, 568);
+			this.pictureBox1.Size = new System.Drawing.Size(670, 568);
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			// 
 			// tabPage2
 			// 
-			this.tabPage2.Controls.Add(this.label2);
+			this.tabPage2.Controls.Add(this.label5);
+			this.tabPage2.Controls.Add(this.bt_Next2);
+			this.tabPage2.Controls.Add(this.bt_KrVozd);
+			this.tabPage2.Controls.Add(this.textBox4);
+			this.tabPage2.Controls.Add(this.groupBox4);
+			this.tabPage2.Controls.Add(this.pictureBox4);
 			this.tabPage2.Location = new System.Drawing.Point(4, 34);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -446,14 +535,202 @@ namespace airDucts
 			this.tabPage2.Text = "Воздуховод круглого сечения";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label5.Location = new System.Drawing.Point(167, 22);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(287, 25);
+			this.label5.TabIndex = 14;
+			this.label5.Text = "Воздуховод круглого сечения";
+			// 
+			// bt_Next2
+			// 
+			this.bt_Next2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_Next2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_Next2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_Next2.Location = new System.Drawing.Point(979, 467);
+			this.bt_Next2.Name = "bt_Next2";
+			this.bt_Next2.Size = new System.Drawing.Size(135, 60);
+			this.bt_Next2.TabIndex = 13;
+			this.bt_Next2.Text = "Далее";
+			this.bt_Next2.UseVisualStyleBackColor = false;
+			// 
+			// bt_KrVozd
+			// 
+			this.bt_KrVozd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_KrVozd.FlatAppearance.BorderSize = 0;
+			this.bt_KrVozd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_KrVozd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_KrVozd.Location = new System.Drawing.Point(1140, 467);
+			this.bt_KrVozd.Name = "bt_KrVozd";
+			this.bt_KrVozd.Size = new System.Drawing.Size(135, 60);
+			this.bt_KrVozd.TabIndex = 12;
+			this.bt_KrVozd.Text = "Построить";
+			this.bt_KrVozd.UseVisualStyleBackColor = false;
+			this.bt_KrVozd.Click += new System.EventHandler(this.bt_KrVozd_Click);
+			// 
+			// textBox4
+			// 
+			this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBox4.Location = new System.Drawing.Point(685, 259);
+			this.textBox4.Multiline = true;
+			this.textBox4.Name = "textBox4";
+			this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.textBox4.Size = new System.Drawing.Size(587, 125);
+			this.textBox4.TabIndex = 11;
+			this.textBox4.Text = "Прямоугольный воздуховод является составной частью вентиляционной системы здания." +
+    "";
+			this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// groupBox4
+			// 
+			this.groupBox4.Controls.Add(this.label2);
+			this.groupBox4.Controls.Add(this.label4);
+			this.groupBox4.Controls.Add(this.label34);
+			this.groupBox4.Controls.Add(this.cb2_zazor);
+			this.groupBox4.Controls.Add(this.cb2_vys);
+			this.groupBox4.Controls.Add(this.cb2_diam);
+			this.groupBox4.Controls.Add(this.label40);
+			this.groupBox4.Controls.Add(this.label46);
+			this.groupBox4.Controls.Add(this.label56);
+			this.groupBox4.Controls.Add(this.label57);
+			this.groupBox4.Controls.Add(this.label58);
+			this.groupBox4.Controls.Add(this.label60);
+			this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.groupBox4.Location = new System.Drawing.Point(685, 53);
+			this.groupBox4.Name = "groupBox4";
+			this.groupBox4.Size = new System.Drawing.Size(587, 160);
+			this.groupBox4.TabIndex = 7;
+			this.groupBox4.TabStop = false;
+			this.groupBox4.Text = "Параметры";
+			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(451, 38);
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label2.Location = new System.Drawing.Point(545, 66);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(53, 20);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "label2";
+			this.label2.Size = new System.Drawing.Size(36, 24);
+			this.label2.TabIndex = 23;
+			this.label2.Text = "мм";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label4.Location = new System.Drawing.Point(252, 95);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(36, 24);
+			this.label4.TabIndex = 20;
+			this.label4.Text = "мм";
+			// 
+			// label34
+			// 
+			this.label34.AutoSize = true;
+			this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label34.Location = new System.Drawing.Point(252, 42);
+			this.label34.Name = "label34";
+			this.label34.Size = new System.Drawing.Size(36, 24);
+			this.label34.TabIndex = 18;
+			this.label34.Text = "мм";
+			// 
+			// cb2_zazor
+			// 
+			this.cb2_zazor.FormattingEnabled = true;
+			this.cb2_zazor.Location = new System.Drawing.Point(455, 63);
+			this.cb2_zazor.Name = "cb2_zazor";
+			this.cb2_zazor.Size = new System.Drawing.Size(84, 32);
+			this.cb2_zazor.TabIndex = 17;
+			this.cb2_zazor.Text = "1";
+			// 
+			// cb2_vys
+			// 
+			this.cb2_vys.FormattingEnabled = true;
+			this.cb2_vys.Location = new System.Drawing.Point(155, 92);
+			this.cb2_vys.Name = "cb2_vys";
+			this.cb2_vys.Size = new System.Drawing.Size(91, 32);
+			this.cb2_vys.TabIndex = 14;
+			this.cb2_vys.Text = "500";
+			// 
+			// cb2_diam
+			// 
+			this.cb2_diam.FormattingEnabled = true;
+			this.cb2_diam.Location = new System.Drawing.Point(155, 37);
+			this.cb2_diam.Name = "cb2_diam";
+			this.cb2_diam.Size = new System.Drawing.Size(91, 32);
+			this.cb2_diam.TabIndex = 12;
+			this.cb2_diam.Text = "350";
+			// 
+			// label40
+			// 
+			this.label40.AutoSize = true;
+			this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label40.Location = new System.Drawing.Point(407, 70);
+			this.label40.Name = "label40";
+			this.label40.Size = new System.Drawing.Size(20, 24);
+			this.label40.TabIndex = 11;
+			this.label40.Text = "c";
+			// 
+			// label46
+			// 
+			this.label46.AutoSize = true;
+			this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label46.Location = new System.Drawing.Point(107, 99);
+			this.label46.Name = "label46";
+			this.label46.Size = new System.Drawing.Size(24, 24);
+			this.label46.TabIndex = 10;
+			this.label46.Text = "H";
+			// 
+			// label56
+			// 
+			this.label56.AutoSize = true;
+			this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label56.Location = new System.Drawing.Point(107, 42);
+			this.label56.Name = "label56";
+			this.label56.Size = new System.Drawing.Size(23, 24);
+			this.label56.TabIndex = 6;
+			this.label56.Text = "D";
+			// 
+			// label57
+			// 
+			this.label57.AutoSize = true;
+			this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label57.Location = new System.Drawing.Point(318, 70);
+			this.label57.Name = "label57";
+			this.label57.Size = new System.Drawing.Size(65, 24);
+			this.label57.TabIndex = 5;
+			this.label57.Text = "Зазор";
+			// 
+			// label58
+			// 
+			this.label58.AutoSize = true;
+			this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label58.Location = new System.Drawing.Point(9, 99);
+			this.label58.Name = "label58";
+			this.label58.Size = new System.Drawing.Size(76, 24);
+			this.label58.TabIndex = 4;
+			this.label58.Text = "Высота";
+			// 
+			// label60
+			// 
+			this.label60.AutoSize = true;
+			this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label60.Location = new System.Drawing.Point(9, 42);
+			this.label60.Name = "label60";
+			this.label60.Size = new System.Drawing.Size(90, 24);
+			this.label60.TabIndex = 0;
+			this.label60.Text = "Диаметр";
+			// 
+			// pictureBox4
+			// 
+			this.pictureBox4.Image = global::airDucts.Properties.Resources.возд_кр_вер4;
+			this.pictureBox4.Location = new System.Drawing.Point(49, 53);
+			this.pictureBox4.Name = "pictureBox4";
+			this.pictureBox4.Size = new System.Drawing.Size(533, 530);
+			this.pictureBox4.TabIndex = 3;
+			this.pictureBox4.TabStop = false;
 			// 
 			// tabPage3
 			// 
@@ -480,8 +757,8 @@ namespace airDucts
 			// tabPage7
 			// 
 			this.tabPage7.Controls.Add(this.textBox2);
-			this.tabPage7.Controls.Add(this.button3);
-			this.tabPage7.Controls.Add(this.button1);
+			this.tabPage7.Controls.Add(this.bt_Next31);
+			this.tabPage7.Controls.Add(this.bt_PerehPrPr);
 			this.tabPage7.Controls.Add(this.groupBox2);
 			this.tabPage7.Controls.Add(this.pictureBox2);
 			this.tabPage7.Controls.Add(this.label3);
@@ -496,41 +773,42 @@ namespace airDucts
 			// textBox2
 			// 
 			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBox2.Location = new System.Drawing.Point(699, 287);
+			this.textBox2.Location = new System.Drawing.Point(684, 256);
 			this.textBox2.Multiline = true;
 			this.textBox2.Name = "textBox2";
 			this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.textBox2.Size = new System.Drawing.Size(572, 125);
+			this.textBox2.Size = new System.Drawing.Size(587, 125);
 			this.textBox2.TabIndex = 8;
 			this.textBox2.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
     "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
 			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
-			// button3
+			// bt_Next31
 			// 
-			this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button3.Location = new System.Drawing.Point(963, 461);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(135, 60);
-			this.button3.TabIndex = 7;
-			this.button3.Text = "Далее";
-			this.button3.UseVisualStyleBackColor = false;
+			this.bt_Next31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_Next31.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_Next31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_Next31.Location = new System.Drawing.Point(963, 461);
+			this.bt_Next31.Name = "bt_Next31";
+			this.bt_Next31.Size = new System.Drawing.Size(135, 60);
+			this.bt_Next31.TabIndex = 7;
+			this.bt_Next31.Text = "Далее";
+			this.bt_Next31.UseVisualStyleBackColor = false;
 			// 
-			// button1
+			// bt_PerehPrPr
 			// 
-			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.button1.Location = new System.Drawing.Point(1131, 461);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(135, 60);
-			this.button1.TabIndex = 6;
-			this.button1.Text = "Построить";
-			this.button1.UseVisualStyleBackColor = false;
+			this.bt_PerehPrPr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_PerehPrPr.FlatAppearance.BorderSize = 0;
+			this.bt_PerehPrPr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_PerehPrPr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_PerehPrPr.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.bt_PerehPrPr.Location = new System.Drawing.Point(1136, 461);
+			this.bt_PerehPrPr.Name = "bt_PerehPrPr";
+			this.bt_PerehPrPr.Size = new System.Drawing.Size(135, 60);
+			this.bt_PerehPrPr.TabIndex = 6;
+			this.bt_PerehPrPr.Text = "Построить";
+			this.bt_PerehPrPr.UseVisualStyleBackColor = false;
+			this.bt_PerehPrPr.Click += new System.EventHandler(this.bt_PerehPrPr_Click);
 			// 
 			// groupBox2
 			// 
@@ -540,12 +818,12 @@ namespace airDucts
 			this.groupBox2.Controls.Add(this.label30);
 			this.groupBox2.Controls.Add(this.label29);
 			this.groupBox2.Controls.Add(this.label28);
-			this.groupBox2.Controls.Add(this.comboBox6);
-			this.groupBox2.Controls.Add(this.comboBox5);
-			this.groupBox2.Controls.Add(this.comboBox4);
-			this.groupBox2.Controls.Add(this.comboBox3);
-			this.groupBox2.Controls.Add(this.comboBox2);
-			this.groupBox2.Controls.Add(this.comboBox1);
+			this.groupBox2.Controls.Add(this.cb31_zazor);
+			this.groupBox2.Controls.Add(this.cb31_shir1);
+			this.groupBox2.Controls.Add(this.cb31_dlin1);
+			this.groupBox2.Controls.Add(this.cb31_vys);
+			this.groupBox2.Controls.Add(this.cb31_shir);
+			this.groupBox2.Controls.Add(this.cb31_dlin);
 			this.groupBox2.Controls.Add(this.label27);
 			this.groupBox2.Controls.Add(this.label26);
 			this.groupBox2.Controls.Add(this.label25);
@@ -559,7 +837,7 @@ namespace airDucts
 			this.groupBox2.Controls.Add(this.label17);
 			this.groupBox2.Controls.Add(this.label16);
 			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.groupBox2.Location = new System.Drawing.Point(690, 51);
+			this.groupBox2.Location = new System.Drawing.Point(684, 36);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(587, 189);
 			this.groupBox2.TabIndex = 4;
@@ -626,59 +904,59 @@ namespace airDucts
 			this.label28.TabIndex = 18;
 			this.label28.Text = "мм";
 			// 
-			// comboBox6
+			// cb31_zazor
 			// 
-			this.comboBox6.FormattingEnabled = true;
-			this.comboBox6.Location = new System.Drawing.Point(455, 115);
-			this.comboBox6.Name = "comboBox6";
-			this.comboBox6.Size = new System.Drawing.Size(84, 32);
-			this.comboBox6.TabIndex = 17;
-			this.comboBox6.Text = "1";
+			this.cb31_zazor.FormattingEnabled = true;
+			this.cb31_zazor.Location = new System.Drawing.Point(455, 115);
+			this.cb31_zazor.Name = "cb31_zazor";
+			this.cb31_zazor.Size = new System.Drawing.Size(84, 32);
+			this.cb31_zazor.TabIndex = 17;
+			this.cb31_zazor.Text = "2";
 			// 
-			// comboBox5
+			// cb31_shir1
 			// 
-			this.comboBox5.FormattingEnabled = true;
-			this.comboBox5.Location = new System.Drawing.Point(455, 77);
-			this.comboBox5.Name = "comboBox5";
-			this.comboBox5.Size = new System.Drawing.Size(84, 32);
-			this.comboBox5.TabIndex = 16;
-			this.comboBox5.Text = "100";
+			this.cb31_shir1.FormattingEnabled = true;
+			this.cb31_shir1.Location = new System.Drawing.Point(455, 77);
+			this.cb31_shir1.Name = "cb31_shir1";
+			this.cb31_shir1.Size = new System.Drawing.Size(84, 32);
+			this.cb31_shir1.TabIndex = 16;
+			this.cb31_shir1.Text = "100";
 			// 
-			// comboBox4
+			// cb31_dlin1
 			// 
-			this.comboBox4.FormattingEnabled = true;
-			this.comboBox4.Location = new System.Drawing.Point(455, 37);
-			this.comboBox4.Name = "comboBox4";
-			this.comboBox4.Size = new System.Drawing.Size(84, 32);
-			this.comboBox4.TabIndex = 15;
-			this.comboBox4.Text = "150";
+			this.cb31_dlin1.FormattingEnabled = true;
+			this.cb31_dlin1.Location = new System.Drawing.Point(455, 37);
+			this.cb31_dlin1.Name = "cb31_dlin1";
+			this.cb31_dlin1.Size = new System.Drawing.Size(84, 32);
+			this.cb31_dlin1.TabIndex = 15;
+			this.cb31_dlin1.Text = "150";
 			// 
-			// comboBox3
+			// cb31_vys
 			// 
-			this.comboBox3.FormattingEnabled = true;
-			this.comboBox3.Location = new System.Drawing.Point(155, 115);
-			this.comboBox3.Name = "comboBox3";
-			this.comboBox3.Size = new System.Drawing.Size(91, 32);
-			this.comboBox3.TabIndex = 14;
-			this.comboBox3.Text = "500";
+			this.cb31_vys.FormattingEnabled = true;
+			this.cb31_vys.Location = new System.Drawing.Point(155, 115);
+			this.cb31_vys.Name = "cb31_vys";
+			this.cb31_vys.Size = new System.Drawing.Size(91, 32);
+			this.cb31_vys.TabIndex = 14;
+			this.cb31_vys.Text = "500";
 			// 
-			// comboBox2
+			// cb31_shir
 			// 
-			this.comboBox2.FormattingEnabled = true;
-			this.comboBox2.Location = new System.Drawing.Point(155, 77);
-			this.comboBox2.Name = "comboBox2";
-			this.comboBox2.Size = new System.Drawing.Size(91, 32);
-			this.comboBox2.TabIndex = 13;
-			this.comboBox2.Text = "250";
+			this.cb31_shir.FormattingEnabled = true;
+			this.cb31_shir.Location = new System.Drawing.Point(155, 77);
+			this.cb31_shir.Name = "cb31_shir";
+			this.cb31_shir.Size = new System.Drawing.Size(91, 32);
+			this.cb31_shir.TabIndex = 13;
+			this.cb31_shir.Text = "250";
 			// 
-			// comboBox1
+			// cb31_dlin
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(155, 37);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(91, 32);
-			this.comboBox1.TabIndex = 12;
-			this.comboBox1.Text = "350";
+			this.cb31_dlin.FormattingEnabled = true;
+			this.cb31_dlin.Location = new System.Drawing.Point(155, 37);
+			this.cb31_dlin.Name = "cb31_dlin";
+			this.cb31_dlin.Size = new System.Drawing.Size(91, 32);
+			this.cb31_dlin.TabIndex = 12;
+			this.cb31_dlin.Text = "350";
 			// 
 			// label27
 			// 
@@ -821,7 +1099,12 @@ namespace airDucts
 			// 
 			// tabPage10
 			// 
-			this.tabPage10.Controls.Add(this.label4);
+			this.tabPage10.Controls.Add(this.textBox5);
+			this.tabPage10.Controls.Add(this.groupBox5);
+			this.tabPage10.Controls.Add(this.label55);
+			this.tabPage10.Controls.Add(this.bt_Next32);
+			this.tabPage10.Controls.Add(this.bt_PerehPr);
+			this.tabPage10.Controls.Add(this.pictureBox5);
 			this.tabPage10.Location = new System.Drawing.Point(4, 29);
 			this.tabPage10.Name = "tabPage10";
 			this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
@@ -830,18 +1113,297 @@ namespace airDucts
 			this.tabPage10.Text = "Переход прямоугольного сечения";
 			this.tabPage10.UseVisualStyleBackColor = true;
 			// 
-			// label4
+			// textBox5
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(441, 39);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(53, 20);
-			this.label4.TabIndex = 2;
-			this.label4.Text = "label4";
+			this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBox5.Location = new System.Drawing.Point(703, 242);
+			this.textBox5.Multiline = true;
+			this.textBox5.Name = "textBox5";
+			this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.textBox5.Size = new System.Drawing.Size(587, 125);
+			this.textBox5.TabIndex = 18;
+			this.textBox5.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
+    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// groupBox5
+			// 
+			this.groupBox5.Controls.Add(this.label61);
+			this.groupBox5.Controls.Add(this.label63);
+			this.groupBox5.Controls.Add(this.label64);
+			this.groupBox5.Controls.Add(this.label65);
+			this.groupBox5.Controls.Add(this.label66);
+			this.groupBox5.Controls.Add(this.cb32_zazor);
+			this.groupBox5.Controls.Add(this.cb32_diam);
+			this.groupBox5.Controls.Add(this.cb32_vys);
+			this.groupBox5.Controls.Add(this.cb32_shir);
+			this.groupBox5.Controls.Add(this.cb32_dlin);
+			this.groupBox5.Controls.Add(this.label67);
+			this.groupBox5.Controls.Add(this.label68);
+			this.groupBox5.Controls.Add(this.label70);
+			this.groupBox5.Controls.Add(this.label71);
+			this.groupBox5.Controls.Add(this.label72);
+			this.groupBox5.Controls.Add(this.label73);
+			this.groupBox5.Controls.Add(this.label74);
+			this.groupBox5.Controls.Add(this.label76);
+			this.groupBox5.Controls.Add(this.label77);
+			this.groupBox5.Controls.Add(this.label78);
+			this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.groupBox5.Location = new System.Drawing.Point(703, 30);
+			this.groupBox5.Name = "groupBox5";
+			this.groupBox5.Size = new System.Drawing.Size(587, 189);
+			this.groupBox5.TabIndex = 17;
+			this.groupBox5.TabStop = false;
+			this.groupBox5.Text = "Параметры";
+			// 
+			// label61
+			// 
+			this.label61.AutoSize = true;
+			this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label61.Location = new System.Drawing.Point(545, 81);
+			this.label61.Name = "label61";
+			this.label61.Size = new System.Drawing.Size(36, 24);
+			this.label61.TabIndex = 23;
+			this.label61.Text = "мм";
+			// 
+			// label63
+			// 
+			this.label63.AutoSize = true;
+			this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label63.Location = new System.Drawing.Point(545, 42);
+			this.label63.Name = "label63";
+			this.label63.Size = new System.Drawing.Size(36, 24);
+			this.label63.TabIndex = 21;
+			this.label63.Text = "мм";
+			// 
+			// label64
+			// 
+			this.label64.AutoSize = true;
+			this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label64.Location = new System.Drawing.Point(252, 118);
+			this.label64.Name = "label64";
+			this.label64.Size = new System.Drawing.Size(36, 24);
+			this.label64.TabIndex = 20;
+			this.label64.Text = "мм";
+			// 
+			// label65
+			// 
+			this.label65.AutoSize = true;
+			this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label65.Location = new System.Drawing.Point(252, 81);
+			this.label65.Name = "label65";
+			this.label65.Size = new System.Drawing.Size(36, 24);
+			this.label65.TabIndex = 19;
+			this.label65.Text = "мм";
+			// 
+			// label66
+			// 
+			this.label66.AutoSize = true;
+			this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label66.Location = new System.Drawing.Point(252, 42);
+			this.label66.Name = "label66";
+			this.label66.Size = new System.Drawing.Size(36, 24);
+			this.label66.TabIndex = 18;
+			this.label66.Text = "мм";
+			// 
+			// cb32_zazor
+			// 
+			this.cb32_zazor.FormattingEnabled = true;
+			this.cb32_zazor.Location = new System.Drawing.Point(455, 78);
+			this.cb32_zazor.Name = "cb32_zazor";
+			this.cb32_zazor.Size = new System.Drawing.Size(84, 32);
+			this.cb32_zazor.TabIndex = 17;
+			this.cb32_zazor.Text = "1";
+			// 
+			// cb32_diam
+			// 
+			this.cb32_diam.FormattingEnabled = true;
+			this.cb32_diam.Location = new System.Drawing.Point(455, 37);
+			this.cb32_diam.Name = "cb32_diam";
+			this.cb32_diam.Size = new System.Drawing.Size(84, 32);
+			this.cb32_diam.TabIndex = 15;
+			this.cb32_diam.Text = "150";
+			// 
+			// cb32_vys
+			// 
+			this.cb32_vys.FormattingEnabled = true;
+			this.cb32_vys.Location = new System.Drawing.Point(155, 115);
+			this.cb32_vys.Name = "cb32_vys";
+			this.cb32_vys.Size = new System.Drawing.Size(91, 32);
+			this.cb32_vys.TabIndex = 14;
+			this.cb32_vys.Text = "500";
+			// 
+			// cb32_shir
+			// 
+			this.cb32_shir.FormattingEnabled = true;
+			this.cb32_shir.Location = new System.Drawing.Point(155, 77);
+			this.cb32_shir.Name = "cb32_shir";
+			this.cb32_shir.Size = new System.Drawing.Size(91, 32);
+			this.cb32_shir.TabIndex = 13;
+			this.cb32_shir.Text = "250";
+			// 
+			// cb32_dlin
+			// 
+			this.cb32_dlin.FormattingEnabled = true;
+			this.cb32_dlin.Location = new System.Drawing.Point(155, 37);
+			this.cb32_dlin.Name = "cb32_dlin";
+			this.cb32_dlin.Size = new System.Drawing.Size(91, 32);
+			this.cb32_dlin.TabIndex = 12;
+			this.cb32_dlin.Text = "350";
+			// 
+			// label67
+			// 
+			this.label67.AutoSize = true;
+			this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label67.Location = new System.Drawing.Point(407, 85);
+			this.label67.Name = "label67";
+			this.label67.Size = new System.Drawing.Size(20, 24);
+			this.label67.TabIndex = 11;
+			this.label67.Text = "c";
+			// 
+			// label68
+			// 
+			this.label68.AutoSize = true;
+			this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label68.Location = new System.Drawing.Point(107, 122);
+			this.label68.Name = "label68";
+			this.label68.Size = new System.Drawing.Size(24, 24);
+			this.label68.TabIndex = 10;
+			this.label68.Text = "H";
+			// 
+			// label70
+			// 
+			this.label70.AutoSize = true;
+			this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label70.Location = new System.Drawing.Point(107, 81);
+			this.label70.Name = "label70";
+			this.label70.Size = new System.Drawing.Size(22, 24);
+			this.label70.TabIndex = 8;
+			this.label70.Text = "B";
+			// 
+			// label71
+			// 
+			this.label71.AutoSize = true;
+			this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label71.Location = new System.Drawing.Point(403, 42);
+			this.label71.Name = "label71";
+			this.label71.Size = new System.Drawing.Size(23, 24);
+			this.label71.TabIndex = 7;
+			this.label71.Text = "D";
+			// 
+			// label72
+			// 
+			this.label72.AutoSize = true;
+			this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label72.Location = new System.Drawing.Point(107, 42);
+			this.label72.Name = "label72";
+			this.label72.Size = new System.Drawing.Size(23, 24);
+			this.label72.TabIndex = 6;
+			this.label72.Text = "A";
+			// 
+			// label73
+			// 
+			this.label73.AutoSize = true;
+			this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label73.Location = new System.Drawing.Point(307, 85);
+			this.label73.Name = "label73";
+			this.label73.Size = new System.Drawing.Size(65, 24);
+			this.label73.TabIndex = 5;
+			this.label73.Text = "Зазор";
+			// 
+			// label74
+			// 
+			this.label74.AutoSize = true;
+			this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label74.Location = new System.Drawing.Point(9, 122);
+			this.label74.Name = "label74";
+			this.label74.Size = new System.Drawing.Size(76, 24);
+			this.label74.TabIndex = 4;
+			this.label74.Text = "Высота";
+			// 
+			// label76
+			// 
+			this.label76.AutoSize = true;
+			this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label76.Location = new System.Drawing.Point(307, 42);
+			this.label76.Name = "label76";
+			this.label76.Size = new System.Drawing.Size(90, 24);
+			this.label76.TabIndex = 2;
+			this.label76.Text = "Диаметр";
+			// 
+			// label77
+			// 
+			this.label77.AutoSize = true;
+			this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label77.Location = new System.Drawing.Point(9, 81);
+			this.label77.Name = "label77";
+			this.label77.Size = new System.Drawing.Size(78, 24);
+			this.label77.TabIndex = 1;
+			this.label77.Text = "Ширина";
+			// 
+			// label78
+			// 
+			this.label78.AutoSize = true;
+			this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label78.Location = new System.Drawing.Point(9, 42);
+			this.label78.Name = "label78";
+			this.label78.Size = new System.Drawing.Size(66, 24);
+			this.label78.TabIndex = 0;
+			this.label78.Text = "Длина";
+			// 
+			// label55
+			// 
+			this.label55.AutoSize = true;
+			this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label55.Location = new System.Drawing.Point(196, 16);
+			this.label55.Name = "label55";
+			this.label55.Size = new System.Drawing.Size(330, 25);
+			this.label55.TabIndex = 16;
+			this.label55.Text = "Переход прямоугольного сечения";
+			// 
+			// bt_Next32
+			// 
+			this.bt_Next32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_Next32.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_Next32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_Next32.Location = new System.Drawing.Point(994, 467);
+			this.bt_Next32.Name = "bt_Next32";
+			this.bt_Next32.Size = new System.Drawing.Size(135, 60);
+			this.bt_Next32.TabIndex = 15;
+			this.bt_Next32.Text = "Далее";
+			this.bt_Next32.UseVisualStyleBackColor = false;
+			// 
+			// bt_PerehPr
+			// 
+			this.bt_PerehPr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_PerehPr.FlatAppearance.BorderSize = 0;
+			this.bt_PerehPr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_PerehPr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_PerehPr.Location = new System.Drawing.Point(1155, 467);
+			this.bt_PerehPr.Name = "bt_PerehPr";
+			this.bt_PerehPr.Size = new System.Drawing.Size(135, 60);
+			this.bt_PerehPr.TabIndex = 14;
+			this.bt_PerehPr.Text = "Построить";
+			this.bt_PerehPr.UseVisualStyleBackColor = false;
+			this.bt_PerehPr.Click += new System.EventHandler(this.bt_PerehPr_Click);
+			// 
+			// pictureBox5
+			// 
+			this.pictureBox5.Image = global::airDucts.Properties.Resources.переход2_вер2;
+			this.pictureBox5.Location = new System.Drawing.Point(24, 30);
+			this.pictureBox5.Name = "pictureBox5";
+			this.pictureBox5.Size = new System.Drawing.Size(673, 522);
+			this.pictureBox5.TabIndex = 0;
+			this.pictureBox5.TabStop = false;
 			// 
 			// tabPage11
 			// 
-			this.tabPage11.Controls.Add(this.label5);
+			this.tabPage11.Controls.Add(this.textBox6);
+			this.tabPage11.Controls.Add(this.groupBox6);
+			this.tabPage11.Controls.Add(this.label59);
+			this.tabPage11.Controls.Add(this.bt_Next33);
+			this.tabPage11.Controls.Add(this.bt_PerehKr);
+			this.tabPage11.Controls.Add(this.pictureBox6);
 			this.tabPage11.Location = new System.Drawing.Point(4, 29);
 			this.tabPage11.Name = "tabPage11";
 			this.tabPage11.Size = new System.Drawing.Size(1296, 558);
@@ -849,14 +1411,244 @@ namespace airDucts
 			this.tabPage11.Text = "Переход круглого сечения";
 			this.tabPage11.UseVisualStyleBackColor = true;
 			// 
-			// label5
+			// textBox6
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(466, 29);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(53, 20);
-			this.label5.TabIndex = 2;
-			this.label5.Text = "label5";
+			this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBox6.Location = new System.Drawing.Point(676, 231);
+			this.textBox6.Multiline = true;
+			this.textBox6.Name = "textBox6";
+			this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.textBox6.Size = new System.Drawing.Size(587, 125);
+			this.textBox6.TabIndex = 19;
+			this.textBox6.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
+    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// groupBox6
+			// 
+			this.groupBox6.Controls.Add(this.label62);
+			this.groupBox6.Controls.Add(this.label69);
+			this.groupBox6.Controls.Add(this.label75);
+			this.groupBox6.Controls.Add(this.label80);
+			this.groupBox6.Controls.Add(this.comboBox12);
+			this.groupBox6.Controls.Add(this.comboBox17);
+			this.groupBox6.Controls.Add(this.comboBox18);
+			this.groupBox6.Controls.Add(this.comboBox20);
+			this.groupBox6.Controls.Add(this.label81);
+			this.groupBox6.Controls.Add(this.label82);
+			this.groupBox6.Controls.Add(this.label84);
+			this.groupBox6.Controls.Add(this.label85);
+			this.groupBox6.Controls.Add(this.label86);
+			this.groupBox6.Controls.Add(this.label87);
+			this.groupBox6.Controls.Add(this.label88);
+			this.groupBox6.Controls.Add(this.label90);
+			this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.groupBox6.Location = new System.Drawing.Point(676, 24);
+			this.groupBox6.Name = "groupBox6";
+			this.groupBox6.Size = new System.Drawing.Size(587, 189);
+			this.groupBox6.TabIndex = 18;
+			this.groupBox6.TabStop = false;
+			this.groupBox6.Text = "Параметры";
+			// 
+			// label62
+			// 
+			this.label62.AutoSize = true;
+			this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label62.Location = new System.Drawing.Point(545, 106);
+			this.label62.Name = "label62";
+			this.label62.Size = new System.Drawing.Size(36, 24);
+			this.label62.TabIndex = 23;
+			this.label62.Text = "мм";
+			// 
+			// label69
+			// 
+			this.label69.AutoSize = true;
+			this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label69.Location = new System.Drawing.Point(545, 63);
+			this.label69.Name = "label69";
+			this.label69.Size = new System.Drawing.Size(36, 24);
+			this.label69.TabIndex = 21;
+			this.label69.Text = "мм";
+			// 
+			// label75
+			// 
+			this.label75.AutoSize = true;
+			this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label75.Location = new System.Drawing.Point(252, 106);
+			this.label75.Name = "label75";
+			this.label75.Size = new System.Drawing.Size(36, 24);
+			this.label75.TabIndex = 20;
+			this.label75.Text = "мм";
+			// 
+			// label80
+			// 
+			this.label80.AutoSize = true;
+			this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label80.Location = new System.Drawing.Point(252, 63);
+			this.label80.Name = "label80";
+			this.label80.Size = new System.Drawing.Size(36, 24);
+			this.label80.TabIndex = 18;
+			this.label80.Text = "мм";
+			// 
+			// comboBox12
+			// 
+			this.comboBox12.FormattingEnabled = true;
+			this.comboBox12.Location = new System.Drawing.Point(455, 103);
+			this.comboBox12.Name = "comboBox12";
+			this.comboBox12.Size = new System.Drawing.Size(84, 32);
+			this.comboBox12.TabIndex = 17;
+			this.comboBox12.Text = "1";
+			// 
+			// comboBox17
+			// 
+			this.comboBox17.FormattingEnabled = true;
+			this.comboBox17.Location = new System.Drawing.Point(455, 58);
+			this.comboBox17.Name = "comboBox17";
+			this.comboBox17.Size = new System.Drawing.Size(84, 32);
+			this.comboBox17.TabIndex = 15;
+			this.comboBox17.Text = "150";
+			// 
+			// comboBox18
+			// 
+			this.comboBox18.FormattingEnabled = true;
+			this.comboBox18.Location = new System.Drawing.Point(155, 103);
+			this.comboBox18.Name = "comboBox18";
+			this.comboBox18.Size = new System.Drawing.Size(91, 32);
+			this.comboBox18.TabIndex = 14;
+			this.comboBox18.Text = "500";
+			// 
+			// comboBox20
+			// 
+			this.comboBox20.FormattingEnabled = true;
+			this.comboBox20.Location = new System.Drawing.Point(155, 58);
+			this.comboBox20.Name = "comboBox20";
+			this.comboBox20.Size = new System.Drawing.Size(91, 32);
+			this.comboBox20.TabIndex = 12;
+			this.comboBox20.Text = "350";
+			// 
+			// label81
+			// 
+			this.label81.AutoSize = true;
+			this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label81.Location = new System.Drawing.Point(405, 106);
+			this.label81.Name = "label81";
+			this.label81.Size = new System.Drawing.Size(20, 24);
+			this.label81.TabIndex = 11;
+			this.label81.Text = "c";
+			// 
+			// label82
+			// 
+			this.label82.AutoSize = true;
+			this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label82.Location = new System.Drawing.Point(107, 110);
+			this.label82.Name = "label82";
+			this.label82.Size = new System.Drawing.Size(24, 24);
+			this.label82.TabIndex = 10;
+			this.label82.Text = "H";
+			// 
+			// label84
+			// 
+			this.label84.AutoSize = true;
+			this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label84.Location = new System.Drawing.Point(403, 63);
+			this.label84.Name = "label84";
+			this.label84.Size = new System.Drawing.Size(33, 24);
+			this.label84.TabIndex = 7;
+			this.label84.Text = "D2";
+			// 
+			// label85
+			// 
+			this.label85.AutoSize = true;
+			this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label85.Location = new System.Drawing.Point(107, 63);
+			this.label85.Name = "label85";
+			this.label85.Size = new System.Drawing.Size(33, 24);
+			this.label85.TabIndex = 6;
+			this.label85.Text = "D1";
+			// 
+			// label86
+			// 
+			this.label86.AutoSize = true;
+			this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label86.Location = new System.Drawing.Point(307, 110);
+			this.label86.Name = "label86";
+			this.label86.Size = new System.Drawing.Size(65, 24);
+			this.label86.TabIndex = 5;
+			this.label86.Text = "Зазор";
+			// 
+			// label87
+			// 
+			this.label87.AutoSize = true;
+			this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label87.Location = new System.Drawing.Point(9, 110);
+			this.label87.Name = "label87";
+			this.label87.Size = new System.Drawing.Size(76, 24);
+			this.label87.TabIndex = 4;
+			this.label87.Text = "Высота";
+			// 
+			// label88
+			// 
+			this.label88.AutoSize = true;
+			this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label88.Location = new System.Drawing.Point(307, 63);
+			this.label88.Name = "label88";
+			this.label88.Size = new System.Drawing.Size(90, 24);
+			this.label88.TabIndex = 2;
+			this.label88.Text = "Диаметр";
+			// 
+			// label90
+			// 
+			this.label90.AutoSize = true;
+			this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label90.Location = new System.Drawing.Point(9, 63);
+			this.label90.Name = "label90";
+			this.label90.Size = new System.Drawing.Size(90, 24);
+			this.label90.TabIndex = 0;
+			this.label90.Text = "Диаметр";
+			// 
+			// label59
+			// 
+			this.label59.AutoSize = true;
+			this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label59.Location = new System.Drawing.Point(211, 10);
+			this.label59.Name = "label59";
+			this.label59.Size = new System.Drawing.Size(258, 25);
+			this.label59.TabIndex = 16;
+			this.label59.Text = "Переход круглого сечения";
+			// 
+			// bt_Next33
+			// 
+			this.bt_Next33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_Next33.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_Next33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_Next33.Location = new System.Drawing.Point(967, 475);
+			this.bt_Next33.Name = "bt_Next33";
+			this.bt_Next33.Size = new System.Drawing.Size(135, 60);
+			this.bt_Next33.TabIndex = 15;
+			this.bt_Next33.Text = "Далее";
+			this.bt_Next33.UseVisualStyleBackColor = false;
+			// 
+			// bt_PerehKr
+			// 
+			this.bt_PerehKr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_PerehKr.FlatAppearance.BorderSize = 0;
+			this.bt_PerehKr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_PerehKr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_PerehKr.Location = new System.Drawing.Point(1128, 475);
+			this.bt_PerehKr.Name = "bt_PerehKr";
+			this.bt_PerehKr.Size = new System.Drawing.Size(135, 60);
+			this.bt_PerehKr.TabIndex = 14;
+			this.bt_PerehKr.Text = "Построить";
+			this.bt_PerehKr.UseVisualStyleBackColor = false;
+			// 
+			// pictureBox6
+			// 
+			this.pictureBox6.Image = global::airDucts.Properties.Resources.переход3;
+			this.pictureBox6.Location = new System.Drawing.Point(48, 24);
+			this.pictureBox6.Name = "pictureBox6";
+			this.pictureBox6.Size = new System.Drawing.Size(564, 520);
+			this.pictureBox6.TabIndex = 0;
+			this.pictureBox6.TabStop = false;
 			// 
 			// tabPage4
 			// 
@@ -942,7 +1734,7 @@ namespace airDucts
 			// 
 			// tabPage14
 			// 
-			this.tabPage14.Controls.Add(this.button4);
+			this.tabPage14.Controls.Add(this.bt_Next51);
 			this.tabPage14.Controls.Add(this.bt_ZaglPr);
 			this.tabPage14.Controls.Add(this.textBox3);
 			this.tabPage14.Controls.Add(this.groupBox3);
@@ -956,17 +1748,17 @@ namespace airDucts
 			this.tabPage14.Text = "Заглушка прямоугольного сечения";
 			this.tabPage14.UseVisualStyleBackColor = true;
 			// 
-			// button4
+			// bt_Next51
 			// 
-			this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button4.Location = new System.Drawing.Point(981, 458);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(135, 64);
-			this.button4.TabIndex = 11;
-			this.button4.Text = "Далее";
-			this.button4.UseVisualStyleBackColor = false;
+			this.bt_Next51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_Next51.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_Next51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_Next51.Location = new System.Drawing.Point(981, 458);
+			this.bt_Next51.Name = "bt_Next51";
+			this.bt_Next51.Size = new System.Drawing.Size(135, 60);
+			this.bt_Next51.TabIndex = 11;
+			this.bt_Next51.Text = "Далее";
+			this.bt_Next51.UseVisualStyleBackColor = false;
 			// 
 			// bt_ZaglPr
 			// 
@@ -977,7 +1769,7 @@ namespace airDucts
 			this.bt_ZaglPr.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.bt_ZaglPr.Location = new System.Drawing.Point(1149, 458);
 			this.bt_ZaglPr.Name = "bt_ZaglPr";
-			this.bt_ZaglPr.Size = new System.Drawing.Size(135, 64);
+			this.bt_ZaglPr.Size = new System.Drawing.Size(135, 60);
 			this.bt_ZaglPr.TabIndex = 10;
 			this.bt_ZaglPr.Text = "Построить";
 			this.bt_ZaglPr.UseVisualStyleBackColor = false;
@@ -1022,7 +1814,7 @@ namespace airDucts
 			// 
 			this.label37.AutoSize = true;
 			this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label37.Location = new System.Drawing.Point(537, 38);
+			this.label37.Location = new System.Drawing.Point(539, 66);
 			this.label37.Name = "label37";
 			this.label37.Size = new System.Drawing.Size(36, 24);
 			this.label37.TabIndex = 20;
@@ -1051,7 +1843,7 @@ namespace airDucts
 			// cb51_vys
 			// 
 			this.cb51_vys.FormattingEnabled = true;
-			this.cb51_vys.Location = new System.Drawing.Point(440, 35);
+			this.cb51_vys.Location = new System.Drawing.Point(442, 63);
 			this.cb51_vys.Name = "cb51_vys";
 			this.cb51_vys.Size = new System.Drawing.Size(91, 32);
 			this.cb51_vys.TabIndex = 14;
@@ -1079,7 +1871,7 @@ namespace airDucts
 			// 
 			this.label41.AutoSize = true;
 			this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label41.Location = new System.Drawing.Point(392, 42);
+			this.label41.Location = new System.Drawing.Point(394, 70);
 			this.label41.Name = "label41";
 			this.label41.Size = new System.Drawing.Size(24, 24);
 			this.label41.TabIndex = 10;
@@ -1109,7 +1901,7 @@ namespace airDucts
 			// 
 			this.label47.AutoSize = true;
 			this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label47.Location = new System.Drawing.Point(294, 42);
+			this.label47.Location = new System.Drawing.Point(296, 70);
 			this.label47.Name = "label47";
 			this.label47.Size = new System.Drawing.Size(76, 24);
 			this.label47.TabIndex = 4;
@@ -1156,7 +1948,12 @@ namespace airDucts
 			// 
 			// tabPage15
 			// 
+			this.tabPage15.Controls.Add(this.bt_Next52);
+			this.tabPage15.Controls.Add(this.bt_ZaglKr);
+			this.tabPage15.Controls.Add(this.textBox7);
+			this.tabPage15.Controls.Add(this.groupBox7);
 			this.tabPage15.Controls.Add(this.label9);
+			this.tabPage15.Controls.Add(this.pictureBox7);
 			this.tabPage15.Location = new System.Drawing.Point(4, 29);
 			this.tabPage15.Name = "tabPage15";
 			this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
@@ -1165,14 +1962,159 @@ namespace airDucts
 			this.tabPage15.Text = "Заглушка круглого сечения";
 			this.tabPage15.UseVisualStyleBackColor = true;
 			// 
+			// bt_Next52
+			// 
+			this.bt_Next52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_Next52.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_Next52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_Next52.Location = new System.Drawing.Point(971, 453);
+			this.bt_Next52.Name = "bt_Next52";
+			this.bt_Next52.Size = new System.Drawing.Size(135, 60);
+			this.bt_Next52.TabIndex = 15;
+			this.bt_Next52.Text = "Далее";
+			this.bt_Next52.UseVisualStyleBackColor = false;
+			// 
+			// bt_ZaglKr
+			// 
+			this.bt_ZaglKr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.bt_ZaglKr.FlatAppearance.BorderSize = 0;
+			this.bt_ZaglKr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.bt_ZaglKr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_ZaglKr.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.bt_ZaglKr.Location = new System.Drawing.Point(1139, 453);
+			this.bt_ZaglKr.Name = "bt_ZaglKr";
+			this.bt_ZaglKr.Size = new System.Drawing.Size(135, 60);
+			this.bt_ZaglKr.TabIndex = 14;
+			this.bt_ZaglKr.Text = "Построить";
+			this.bt_ZaglKr.UseVisualStyleBackColor = false;
+			// 
+			// textBox7
+			// 
+			this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBox7.Location = new System.Drawing.Point(693, 259);
+			this.textBox7.Multiline = true;
+			this.textBox7.Name = "textBox7";
+			this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.textBox7.Size = new System.Drawing.Size(581, 125);
+			this.textBox7.TabIndex = 13;
+			this.textBox7.Text = "Заглушка прямоугольного сечения является фасонным элементом, использующаяся для п" +
+    "ерекрытия торца воздуховода или фасонной детали стоящей в конце системы";
+			this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// groupBox7
+			// 
+			this.groupBox7.Controls.Add(this.label79);
+			this.groupBox7.Controls.Add(this.label89);
+			this.groupBox7.Controls.Add(this.comboBox19);
+			this.groupBox7.Controls.Add(this.comboBox22);
+			this.groupBox7.Controls.Add(this.label91);
+			this.groupBox7.Controls.Add(this.label93);
+			this.groupBox7.Controls.Add(this.label94);
+			this.groupBox7.Controls.Add(this.label96);
+			this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.groupBox7.Location = new System.Drawing.Point(693, 64);
+			this.groupBox7.Name = "groupBox7";
+			this.groupBox7.Size = new System.Drawing.Size(581, 189);
+			this.groupBox7.TabIndex = 12;
+			this.groupBox7.TabStop = false;
+			this.groupBox7.Text = "Параметры";
+			// 
+			// label79
+			// 
+			this.label79.AutoSize = true;
+			this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label79.Location = new System.Drawing.Point(271, 100);
+			this.label79.Name = "label79";
+			this.label79.Size = new System.Drawing.Size(36, 24);
+			this.label79.TabIndex = 20;
+			this.label79.Text = "мм";
+			// 
+			// label89
+			// 
+			this.label89.AutoSize = true;
+			this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label89.Location = new System.Drawing.Point(271, 51);
+			this.label89.Name = "label89";
+			this.label89.Size = new System.Drawing.Size(36, 24);
+			this.label89.TabIndex = 18;
+			this.label89.Text = "мм";
+			// 
+			// comboBox19
+			// 
+			this.comboBox19.FormattingEnabled = true;
+			this.comboBox19.Location = new System.Drawing.Point(174, 97);
+			this.comboBox19.Name = "comboBox19";
+			this.comboBox19.Size = new System.Drawing.Size(91, 32);
+			this.comboBox19.TabIndex = 14;
+			this.comboBox19.Text = "20";
+			// 
+			// comboBox22
+			// 
+			this.comboBox22.FormattingEnabled = true;
+			this.comboBox22.Location = new System.Drawing.Point(174, 46);
+			this.comboBox22.Name = "comboBox22";
+			this.comboBox22.Size = new System.Drawing.Size(91, 32);
+			this.comboBox22.TabIndex = 12;
+			this.comboBox22.Text = "100";
+			// 
+			// label91
+			// 
+			this.label91.AutoSize = true;
+			this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label91.Location = new System.Drawing.Point(126, 104);
+			this.label91.Name = "label91";
+			this.label91.Size = new System.Drawing.Size(24, 24);
+			this.label91.TabIndex = 10;
+			this.label91.Text = "H";
+			// 
+			// label93
+			// 
+			this.label93.AutoSize = true;
+			this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label93.Location = new System.Drawing.Point(126, 51);
+			this.label93.Name = "label93";
+			this.label93.Size = new System.Drawing.Size(23, 24);
+			this.label93.TabIndex = 6;
+			this.label93.Text = "D";
+			// 
+			// label94
+			// 
+			this.label94.AutoSize = true;
+			this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label94.Location = new System.Drawing.Point(28, 104);
+			this.label94.Name = "label94";
+			this.label94.Size = new System.Drawing.Size(76, 24);
+			this.label94.TabIndex = 4;
+			this.label94.Text = "Высота";
+			// 
+			// label96
+			// 
+			this.label96.AutoSize = true;
+			this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label96.Location = new System.Drawing.Point(28, 51);
+			this.label96.Name = "label96";
+			this.label96.Size = new System.Drawing.Size(90, 24);
+			this.label96.TabIndex = 0;
+			this.label96.Text = "Диаметр";
+			// 
 			// label9
 			// 
 			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(498, 25);
+			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label9.Location = new System.Drawing.Point(215, 27);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(53, 20);
-			this.label9.TabIndex = 2;
-			this.label9.Text = "label9";
+			this.label9.Size = new System.Drawing.Size(266, 25);
+			this.label9.TabIndex = 3;
+			this.label9.Text = "Заглушка круглого сечения";
+			// 
+			// pictureBox7
+			// 
+			this.pictureBox7.Image = global::airDucts.Properties.Resources.заглушка_кр;
+			this.pictureBox7.Location = new System.Drawing.Point(31, 64);
+			this.pictureBox7.Name = "pictureBox7";
+			this.pictureBox7.Size = new System.Drawing.Size(615, 464);
+			this.pictureBox7.TabIndex = 0;
+			this.pictureBox7.TabStop = false;
 			// 
 			// tabPage6
 			// 
@@ -1293,6 +2235,9 @@ namespace airDucts
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
+			this.groupBox4.ResumeLayout(false);
+			this.groupBox4.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
 			this.tabPage3.ResumeLayout(false);
 			this.tabControl2.ResumeLayout(false);
 			this.tabPage7.ResumeLayout(false);
@@ -1302,8 +2247,14 @@ namespace airDucts
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.tabPage10.ResumeLayout(false);
 			this.tabPage10.PerformLayout();
+			this.groupBox5.ResumeLayout(false);
+			this.groupBox5.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
 			this.tabPage11.ResumeLayout(false);
 			this.tabPage11.PerformLayout();
+			this.groupBox6.ResumeLayout(false);
+			this.groupBox6.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
 			this.tabPage4.ResumeLayout(false);
 			this.tabControl3.ResumeLayout(false);
 			this.tabPage12.ResumeLayout(false);
@@ -1319,6 +2270,9 @@ namespace airDucts
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			this.tabPage15.ResumeLayout(false);
 			this.tabPage15.PerformLayout();
+			this.groupBox7.ResumeLayout(false);
+			this.groupBox7.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
 			this.tabPage6.ResumeLayout(false);
 			this.tabControl5.ResumeLayout(false);
 			this.tabPage16.ResumeLayout(false);
@@ -1335,15 +2289,12 @@ namespace airDucts
 
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TabPage tabPage3;
 		private System.Windows.Forms.TabControl tabControl2;
 		private System.Windows.Forms.TabPage tabPage7;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TabPage tabPage10;
-		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TabPage tabPage11;
-		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TabPage tabPage4;
 		private System.Windows.Forms.TabControl tabControl3;
 		private System.Windows.Forms.TabPage tabPage12;
@@ -1362,7 +2313,6 @@ namespace airDucts
 		private System.Windows.Forms.TabPage tabPage19;
 		private System.Windows.Forms.TabPage tabPage8;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Label label12;
@@ -1380,14 +2330,14 @@ namespace airDucts
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.PictureBox pictureBox2;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.ComboBox comboBox6;
-		private System.Windows.Forms.ComboBox comboBox5;
-		private System.Windows.Forms.ComboBox comboBox4;
-		private System.Windows.Forms.ComboBox comboBox3;
-		private System.Windows.Forms.ComboBox comboBox2;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.Button bt_Next31;
+		private System.Windows.Forms.Button bt_PerehPrPr;
+		private System.Windows.Forms.ComboBox cb31_zazor;
+		private System.Windows.Forms.ComboBox cb31_shir1;
+		private System.Windows.Forms.ComboBox cb31_dlin1;
+		private System.Windows.Forms.ComboBox cb31_vys;
+		private System.Windows.Forms.ComboBox cb31_shir;
+		private System.Windows.Forms.ComboBox cb31_dlin;
 		private System.Windows.Forms.Label label33;
 		private System.Windows.Forms.Label label32;
 		private System.Windows.Forms.Label label31;
@@ -1396,7 +2346,7 @@ namespace airDucts
 		private System.Windows.Forms.Label label28;
 		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Button bt_Next51;
 		private System.Windows.Forms.Button bt_ZaglPr;
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.GroupBox groupBox3;
@@ -1413,14 +2363,14 @@ namespace airDucts
 		private System.Windows.Forms.Label label50;
 		private System.Windows.Forms.Label label51;
 		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button bt_Next1;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.Label label35;
-		private System.Windows.Forms.ComboBox comboBox8;
+		private System.Windows.Forms.ComboBox cb1_zazor;
 		private System.Windows.Forms.ComboBox cb1_vys;
 		private System.Windows.Forms.ComboBox cb1_shir;
 		private System.Windows.Forms.ComboBox cb1_dlin;
@@ -1435,5 +2385,85 @@ namespace airDucts
 		private System.Windows.Forms.Button bt_PrymVoz;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pictureBox4;
+		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.PictureBox pictureBox6;
+		private System.Windows.Forms.Button bt_Next2;
+		private System.Windows.Forms.Button bt_KrVozd;
+		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label34;
+		private System.Windows.Forms.ComboBox cb2_zazor;
+		private System.Windows.Forms.ComboBox cb2_vys;
+		private System.Windows.Forms.ComboBox cb2_diam;
+		private System.Windows.Forms.Label label40;
+		private System.Windows.Forms.Label label46;
+		private System.Windows.Forms.Label label56;
+		private System.Windows.Forms.Label label57;
+		private System.Windows.Forms.Label label58;
+		private System.Windows.Forms.Label label60;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label55;
+		private System.Windows.Forms.Button bt_Next32;
+		private System.Windows.Forms.Button bt_PerehPr;
+		private System.Windows.Forms.Label label59;
+		private System.Windows.Forms.Button bt_Next33;
+		private System.Windows.Forms.Button bt_PerehKr;
+		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.GroupBox groupBox5;
+		private System.Windows.Forms.Label label61;
+		private System.Windows.Forms.Label label63;
+		private System.Windows.Forms.Label label64;
+		private System.Windows.Forms.Label label65;
+		private System.Windows.Forms.Label label66;
+		private System.Windows.Forms.ComboBox cb32_zazor;
+		private System.Windows.Forms.ComboBox cb32_diam;
+		private System.Windows.Forms.ComboBox cb32_vys;
+		private System.Windows.Forms.ComboBox cb32_shir;
+		private System.Windows.Forms.ComboBox cb32_dlin;
+		private System.Windows.Forms.Label label67;
+		private System.Windows.Forms.Label label68;
+		private System.Windows.Forms.Label label70;
+		private System.Windows.Forms.Label label71;
+		private System.Windows.Forms.Label label72;
+		private System.Windows.Forms.Label label73;
+		private System.Windows.Forms.Label label74;
+		private System.Windows.Forms.Label label76;
+		private System.Windows.Forms.Label label77;
+		private System.Windows.Forms.Label label78;
+		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.GroupBox groupBox6;
+		private System.Windows.Forms.Label label62;
+		private System.Windows.Forms.Label label69;
+		private System.Windows.Forms.Label label75;
+		private System.Windows.Forms.Label label80;
+		private System.Windows.Forms.ComboBox comboBox12;
+		private System.Windows.Forms.ComboBox comboBox17;
+		private System.Windows.Forms.ComboBox comboBox18;
+		private System.Windows.Forms.ComboBox comboBox20;
+		private System.Windows.Forms.Label label81;
+		private System.Windows.Forms.Label label82;
+		private System.Windows.Forms.Label label84;
+		private System.Windows.Forms.Label label85;
+		private System.Windows.Forms.Label label86;
+		private System.Windows.Forms.Label label87;
+		private System.Windows.Forms.Label label88;
+		private System.Windows.Forms.Label label90;
+		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.Button bt_Next52;
+		private System.Windows.Forms.Button bt_ZaglKr;
+		private System.Windows.Forms.TextBox textBox7;
+		private System.Windows.Forms.GroupBox groupBox7;
+		private System.Windows.Forms.Label label79;
+		private System.Windows.Forms.Label label89;
+		private System.Windows.Forms.ComboBox comboBox19;
+		private System.Windows.Forms.ComboBox comboBox22;
+		private System.Windows.Forms.Label label91;
+		private System.Windows.Forms.Label label93;
+		private System.Windows.Forms.Label label94;
+		private System.Windows.Forms.Label label96;
+		private System.Windows.Forms.Label label9;
 	}
 }

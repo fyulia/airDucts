@@ -202,6 +202,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\заглушка кр.png" />
+    <None Include="Resources\переход3.png" />
+    <None Include="Resources\переход2 вер2.png" />
+    <None Include="Resources\возд кр вер4.png" />
     <None Include="Resources\возд пр вер1.png" />
     <None Include="Resources\возд пр вер2.png" />
     <None Include="Resources\заглушка пр1.png" />

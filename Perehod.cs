@@ -219,6 +219,7 @@ namespace airDucts
 			Part.ClearSelection2(true);
 
 			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
+
 			Part.BlankRefGeom();
 		}
 	}

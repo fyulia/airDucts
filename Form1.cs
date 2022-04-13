@@ -283,5 +283,33 @@ namespace airDucts
 			Perehod perehod2 = new Perehod();
 			perehod2.createPrPerehod(dlin, shir, diam, vys, zazor, Part);
 		}
+
+		private void bt_PerehKr_Click(object sender, EventArgs e)
+		{
+			double diam1, diam2, vys, zazor;
+			diam1 = Convert.ToDouble(cb33_diam1.Text);
+			diam2 = Convert.ToDouble(cb33_diam2.Text);
+			vys = Convert.ToDouble(cb33_vys.Text);
+			zazor = Convert.ToDouble(cb33_zazor.Text);
+
+
+			diam1 = diam1 / 1000;
+			diam2 = diam2 / 1000;
+			vys = vys / 1000;
+			zazor = zazor / 1000;
+
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			//iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+
+			Close();
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
+
+			Perehod perehod3 = new Perehod();
+			perehod3.createKrPerehod(diam1, diam2, vys, zazor, Part);
+		}
 	}
 }

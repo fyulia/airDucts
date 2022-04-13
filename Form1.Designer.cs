@@ -140,10 +140,10 @@ namespace airDucts
 			this.label69 = new System.Windows.Forms.Label();
 			this.label75 = new System.Windows.Forms.Label();
 			this.label80 = new System.Windows.Forms.Label();
-			this.comboBox12 = new System.Windows.Forms.ComboBox();
-			this.comboBox17 = new System.Windows.Forms.ComboBox();
-			this.comboBox18 = new System.Windows.Forms.ComboBox();
-			this.comboBox20 = new System.Windows.Forms.ComboBox();
+			this.cb33_zazor = new System.Windows.Forms.ComboBox();
+			this.cb33_diam2 = new System.Windows.Forms.ComboBox();
+			this.cb33_vys = new System.Windows.Forms.ComboBox();
+			this.cb33_diam1 = new System.Windows.Forms.ComboBox();
 			this.label81 = new System.Windows.Forms.Label();
 			this.label82 = new System.Windows.Forms.Label();
 			this.label84 = new System.Windows.Forms.Label();
@@ -1430,10 +1430,10 @@ namespace airDucts
 			this.groupBox6.Controls.Add(this.label69);
 			this.groupBox6.Controls.Add(this.label75);
 			this.groupBox6.Controls.Add(this.label80);
-			this.groupBox6.Controls.Add(this.comboBox12);
-			this.groupBox6.Controls.Add(this.comboBox17);
-			this.groupBox6.Controls.Add(this.comboBox18);
-			this.groupBox6.Controls.Add(this.comboBox20);
+			this.groupBox6.Controls.Add(this.cb33_zazor);
+			this.groupBox6.Controls.Add(this.cb33_diam2);
+			this.groupBox6.Controls.Add(this.cb33_vys);
+			this.groupBox6.Controls.Add(this.cb33_diam1);
 			this.groupBox6.Controls.Add(this.label81);
 			this.groupBox6.Controls.Add(this.label82);
 			this.groupBox6.Controls.Add(this.label84);
@@ -1490,41 +1490,41 @@ namespace airDucts
 			this.label80.TabIndex = 18;
 			this.label80.Text = "мм";
 			// 
-			// comboBox12
+			// cb33_zazor
 			// 
-			this.comboBox12.FormattingEnabled = true;
-			this.comboBox12.Location = new System.Drawing.Point(455, 103);
-			this.comboBox12.Name = "comboBox12";
-			this.comboBox12.Size = new System.Drawing.Size(84, 32);
-			this.comboBox12.TabIndex = 17;
-			this.comboBox12.Text = "1";
+			this.cb33_zazor.FormattingEnabled = true;
+			this.cb33_zazor.Location = new System.Drawing.Point(455, 103);
+			this.cb33_zazor.Name = "cb33_zazor";
+			this.cb33_zazor.Size = new System.Drawing.Size(84, 32);
+			this.cb33_zazor.TabIndex = 17;
+			this.cb33_zazor.Text = "1";
 			// 
-			// comboBox17
+			// cb33_diam2
 			// 
-			this.comboBox17.FormattingEnabled = true;
-			this.comboBox17.Location = new System.Drawing.Point(455, 58);
-			this.comboBox17.Name = "comboBox17";
-			this.comboBox17.Size = new System.Drawing.Size(84, 32);
-			this.comboBox17.TabIndex = 15;
-			this.comboBox17.Text = "150";
+			this.cb33_diam2.FormattingEnabled = true;
+			this.cb33_diam2.Location = new System.Drawing.Point(455, 58);
+			this.cb33_diam2.Name = "cb33_diam2";
+			this.cb33_diam2.Size = new System.Drawing.Size(84, 32);
+			this.cb33_diam2.TabIndex = 15;
+			this.cb33_diam2.Text = "150";
 			// 
-			// comboBox18
+			// cb33_vys
 			// 
-			this.comboBox18.FormattingEnabled = true;
-			this.comboBox18.Location = new System.Drawing.Point(155, 103);
-			this.comboBox18.Name = "comboBox18";
-			this.comboBox18.Size = new System.Drawing.Size(91, 32);
-			this.comboBox18.TabIndex = 14;
-			this.comboBox18.Text = "500";
+			this.cb33_vys.FormattingEnabled = true;
+			this.cb33_vys.Location = new System.Drawing.Point(155, 103);
+			this.cb33_vys.Name = "cb33_vys";
+			this.cb33_vys.Size = new System.Drawing.Size(91, 32);
+			this.cb33_vys.TabIndex = 14;
+			this.cb33_vys.Text = "500";
 			// 
-			// comboBox20
+			// cb33_diam1
 			// 
-			this.comboBox20.FormattingEnabled = true;
-			this.comboBox20.Location = new System.Drawing.Point(155, 58);
-			this.comboBox20.Name = "comboBox20";
-			this.comboBox20.Size = new System.Drawing.Size(91, 32);
-			this.comboBox20.TabIndex = 12;
-			this.comboBox20.Text = "350";
+			this.cb33_diam1.FormattingEnabled = true;
+			this.cb33_diam1.Location = new System.Drawing.Point(155, 58);
+			this.cb33_diam1.Name = "cb33_diam1";
+			this.cb33_diam1.Size = new System.Drawing.Size(91, 32);
+			this.cb33_diam1.TabIndex = 12;
+			this.cb33_diam1.Text = "350";
 			// 
 			// label81
 			// 
@@ -1640,6 +1640,7 @@ namespace airDucts
 			this.bt_PerehKr.TabIndex = 14;
 			this.bt_PerehKr.Text = "Построить";
 			this.bt_PerehKr.UseVisualStyleBackColor = false;
+			this.bt_PerehKr.Click += new System.EventHandler(this.bt_PerehKr_Click);
 			// 
 			// pictureBox6
 			// 
@@ -2439,10 +2440,10 @@ namespace airDucts
 		private System.Windows.Forms.Label label69;
 		private System.Windows.Forms.Label label75;
 		private System.Windows.Forms.Label label80;
-		private System.Windows.Forms.ComboBox comboBox12;
-		private System.Windows.Forms.ComboBox comboBox17;
-		private System.Windows.Forms.ComboBox comboBox18;
-		private System.Windows.Forms.ComboBox comboBox20;
+		private System.Windows.Forms.ComboBox cb33_zazor;
+		private System.Windows.Forms.ComboBox cb33_diam2;
+		private System.Windows.Forms.ComboBox cb33_vys;
+		private System.Windows.Forms.ComboBox cb33_diam1;
 		private System.Windows.Forms.Label label81;
 		private System.Windows.Forms.Label label82;
 		private System.Windows.Forms.Label label84;

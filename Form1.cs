@@ -33,22 +33,22 @@ namespace airDucts
 
 			//SqlConnection sqlConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\универ\airDucts\airDucts\Database1.mdf; Integrated Security = True");
 			//SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT DISTINCT dlin FROM VozdPr ", sqlConnection);
-			
+
 			//DataSet dataSet = new DataSet();
 			//sqlDataAdapter.Fill(dataSet, "VozdPr");
 
 			//cb1_dlin.Items.Clear();
-			
+
 			//for (int i = 0; i < dataSet.Tables["VozdPr"].Rows.Count; i++)
 			//{
-			//		cb1_dlin.Items.Add(dataSet.Tables["VozdPr"].Rows[i][1].ToString());
+			//	cb1_dlin.Items.Add(dataSet.Tables["VozdPr"].Rows[i][1].ToString());
 			//}
 
 			//cb1_dlin.DataSource = dataSet;
 			//cb1_dlin.DisplayMember = "dlin";
 			//cb1_dlin.ValueMember = "id";
-		
-		
+
+
 		}
 		
 
@@ -310,6 +310,33 @@ namespace airDucts
 
 			Perehod perehod3 = new Perehod();
 			perehod3.createKrPerehod(diam1, diam2, vys, zazor, Part);
+		}
+
+		private void bt_OtvodKr_Click(object sender, EventArgs e)
+		{
+			double diam,  zazor;
+			diam = Convert.ToDouble(cb42_diam.Text);
+			zazor = Convert.ToDouble(cb42_zazor.Text);
+
+
+			diam = diam / 1000;
+			zazor = zazor / 1000;
+
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			//iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+
+			Close();
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
+
+			Otvod otvod1 = new Otvod();
+			otvod1.createKrOtvod(diam,zazor,Part);
+
+			Part.SaveAs3("D:\универ\диплом доки\интерфейс\Деталь1.SLDPRT", 0, 0);
+
 		}
 	}
 }

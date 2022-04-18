@@ -335,8 +335,36 @@ namespace airDucts
 			Otvod otvod1 = new Otvod();
 			otvod1.createKrOtvod(diam,zazor,Part);
 
-			Part.SaveAs3("D:\универ\диплом доки\интерфейс\Деталь1.SLDPRT", 0, 0);
+			//Part.SaveAs3("D:\универ\диплом доки\интерфейс\Деталь1.SLDPRT", 0, 0);
 
+		}
+
+		private void bt_OtvodPr_Click(object sender, EventArgs e)
+		{
+			double dlin,shir, dlinOtv, zazor;
+			dlin = Convert.ToDouble(cb41_dlin.Text);
+			shir = Convert.ToDouble(cb41_shir.Text);
+			dlinOtv = Convert.ToDouble(cb41_dlinOtvod.Text);
+			zazor = Convert.ToDouble(cb41_zazor.Text);
+
+
+			dlin = dlin / 1000;
+			shir = shir / 1000;
+			dlinOtv = dlinOtv / 1000;
+			zazor = zazor / 1000;
+
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+
+			Close();
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
+
+			Otvod otvod2 = new Otvod();
+			otvod2.createPrOtvod(dlin, shir, dlinOtv, zazor, Part);
 		}
 	}
 }

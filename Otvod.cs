@@ -273,45 +273,8 @@ namespace airDucts
 				(int)swLoftedBendFacetOptions_e.swBendsPerTransitionSegment, 0, 2, 0, 0);
 			Part.ClearSelection2(true);
 
-			//skSegment = Part.SketchManager.CreateCircle(diam * 2, 0, 0, diam, 0, 0);
-
-			//Part.ClearSelection2(true);
-			//skSegment = Part.SketchManager.CreateLine(diam * 2, 0, 0, diam, 0, 0);
-			//Part.SetPickMode();
-			//Part.ClearSelection2(true);
-
-			//boolstatus = Part.Extension.SelectByID2("Line1", "SKETCHSEGMENT", diam, 0, 0, false, 0, null, 0);
-			//Part.SketchManager.CreateConstructionGeometry();
-			//Part.ClearSelection2(true);
-
-			//boolstatus = Part.Extension.SelectByID2("Line1", "SKETCHSEGMENT", diam, 0, 0, false, 1, null, 0);
-			//boolstatus = Part.SketchManager.SketchOffset2(zazor / 2, true, true, 0, 0, true);
-			//Part.ClearSelection2(true);
-
-			//boolstatus = Part.Extension.SelectByID2("Line2", "SKETCHSEGMENT", diam, 0.001, 0, false, 0, null, 0);
-			//Part.SketchManager.CreateConstructionGeometry();
-			//Part.ClearSelection2(true);
-
-			//boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", diam, -0.001, 0, false, 0, null, 0);
-			//Part.SketchManager.CreateConstructionGeometry();
-			//Part.ClearSelection2(true);
-
-			//double x2 = diam * Math.Cos(a);
-			//double y2 = diam * Math.Sin(a);
-
-			//boolstatus = Part.Extension.SelectByID2("Arc1", "SKETCHSEGMENT", x2, y2, 0, false, 2, null, 0);
-			//boolstatus = Part.SketchManager.SketchTrim(4, 0, 0, 0);
-			//boolstatus = Part.Extension.SelectByID2("Arc1", "SKETCHSEGMENT", x2, y2, 0, false, 2, null, 0);
-			//boolstatus = Part.SketchManager.SketchTrim(4, 0, 0, 0);
-			//Part.SketchManager.InsertSketch(true);
-
-			//boolstatus = Part.Extension.SelectByID2("Эскиз3", "SKETCH", diam, zazor / 2, 0, false, 1, null, 0);
-			//boolstatus = Part.Extension.SelectByID2("Эскиз4", "SKETCH", diam, -zazor / 2, 0, true, 1, null, 0);
-			//Part.FeatureManager.InsertSheetMetalLoftedBend(0, zazor);
-			//Part.ClearSelection2(true);
-
-			//boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
-			//Part.BlankRefGeom();
+			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
+			Part.BlankRefGeom();
 
 		}
 	}

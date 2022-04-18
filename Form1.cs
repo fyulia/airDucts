@@ -31,19 +31,7 @@ namespace airDucts
 			dataTab();
 			textBox2.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, позволяющим соединить воздуховоды с разным размером прямоугольных сечений.";
 
-			//SqlConnection sqlConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\универ\airDucts\airDucts\Database1.mdf; Integrated Security = True");
-			//SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT DISTINCT dlin FROM VozdPr ", sqlConnection);
-
-			//DataSet dataSet = new DataSet();
-			//sqlDataAdapter.Fill(dataSet, "VozdPr");
-
-			//cb1_dlin.Items.Clear();
-
-			//for (int i = 0; i < dataSet.Tables["VozdPr"].Rows.Count; i++)
-			//{
-			//	cb1_dlin.Items.Add(dataSet.Tables["VozdPr"].Rows[i][1].ToString());
-			//}
-
+			
 			//cb1_dlin.DataSource = dataSet;
 			//cb1_dlin.DisplayMember = "dlin";
 			//cb1_dlin.ValueMember = "id";
@@ -148,27 +136,27 @@ namespace airDucts
 
 		}
 
-		//private void cb1_dlin_SelectedIndexChanged(object sender, EventArgs e)
-		//{
-		//	string str = cb1_dlin.SelectedItem.ToString();
-		//	SqlConnection sqlConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\универ\airDucts\airDucts\Database1.mdf; Integrated Security = True");
-		//	SqlCommand command = new SqlCommand("SELECT shir FROM VozdPr WHERE dlin = @str ", sqlConnection);
+		private void cb1_dlin_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			string str = cb1_dlin.SelectedItem.ToString();
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\универ\airDucts\airDucts\Database1.mdf; Integrated Security = True");
+			SqlCommand command = new SqlCommand("SELECT  shir FROM VozdPr WHERE dlin = @str ", sqlConnection);
 
-		//	command.Parameters.AddWithValue("@str", str);
-		//	sqlDataAdapter2 = new SqlDataAdapter(command);
+			command.Parameters.AddWithValue("@str", str);
+			sqlDataAdapter2 = new SqlDataAdapter(command);
 
-		//	dataSet2 = new DataSet();
-		//	sqlDataAdapter2.Fill(dataSet2, "VozdPr");
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "VozdPr");
 
-		//	cb1_shir.Items.Clear();
+			cb1_shir.Items.Clear();
 
-		//	for (int i = 0; i < dataSet2.Tables["VozdPr"].Rows.Count; i++)
-		//	{
+			for (int i = 0; i < dataSet2.Tables["VozdPr"].Rows.Count; i++)
+			{
 
-		//		cb1_shir.Items.Add(dataSet2.Tables["VozdPr"].Rows[i][2].ToString());
-		//	}
+				cb1_shir.Items.Add(dataSet2.Tables["VozdPr"].Rows[i]["shir"].ToString());
+			}
 
-		//}
+		}
 
 		private void cb1_dlin_SelectedValueChanged(object sender, EventArgs e)
 		{
@@ -365,6 +353,23 @@ namespace airDucts
 
 			Otvod otvod2 = new Otvod();
 			otvod2.createPrOtvod(dlin, shir, dlinOtv, zazor, Part);
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\универ\airDucts\airDucts\Database1.mdf; Integrated Security = True");
+			SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT DISTINCT dlin FROM VozdPr", sqlConnection);
+
+			DataSet dataSet = new DataSet();
+			sqlDataAdapter.Fill(dataSet, "VozdPr");
+
+			cb1_dlin.Items.Clear();
+
+			for (int i = 0; i < dataSet.Tables["VozdPr"].Rows.Count; i++)
+			{
+				cb1_dlin.Items.Add(dataSet.Tables["VozdPr"].Rows[i]["dlin"].ToString());
+			}
+
 		}
 	}
 }

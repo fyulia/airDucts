@@ -433,7 +433,6 @@ namespace airDucts
 			this.cb1_shir.Name = "cb1_shir";
 			this.cb1_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb1_shir.TabIndex = 13;
-			this.cb1_shir.Text = "250";
 			// 
 			// cb1_dlin
 			// 
@@ -442,7 +441,7 @@ namespace airDucts
 			this.cb1_dlin.Name = "cb1_dlin";
 			this.cb1_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb1_dlin.TabIndex = 12;
-			this.cb1_dlin.Text = "350";
+			this.cb1_dlin.SelectedIndexChanged += new System.EventHandler(this.cb1_dlin_SelectedIndexChanged);
 			// 
 			// label36
 			// 
@@ -2654,6 +2653,7 @@ namespace airDucts
 			this.MaximumSize = new System.Drawing.Size(1330, 676);
 			this.Name = "Form1";
 			this.Text = "Воздуховоды и фасонные элементы";
+			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage1.PerformLayout();

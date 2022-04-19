@@ -2711,7 +2711,7 @@ namespace airDucts
 			this.cb61_vys2.Name = "cb61_vys2";
 			this.cb61_vys2.Size = new System.Drawing.Size(84, 32);
 			this.cb61_vys2.TabIndex = 26;
-			this.cb61_vys2.Text = "500";
+			this.cb61_vys2.Text = "100";
 			// 
 			// label131
 			// 

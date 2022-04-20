@@ -407,5 +407,37 @@ namespace airDucts
 
 
 		}
+
+		private void bt_TroinicPrKr_Click(object sender, EventArgs e)
+		{
+			double dlin, shir, vys1, diam,  vys2, zazor;
+			dlin = Convert.ToDouble(cb62_dlin.Text);
+			shir = Convert.ToDouble(cb62_shir.Text);
+			vys1 = Convert.ToDouble(cb62_vys1.Text);
+			diam = Convert.ToDouble(cb62_diam.Text);
+			vys2 = Convert.ToDouble(cb62_vys2.Text);
+			zazor = Convert.ToDouble(cb62_zazor.Text);
+
+
+			dlin = dlin / 1000;
+			shir = shir / 1000;
+			diam = diam / 1000;
+			vys1 = vys1 / 1000;
+			vys2 = vys2 / 1000;
+			zazor = zazor / 1000;
+
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+
+			Close();
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
+
+			Troinik troinik = new Troinik();
+			troinik.createTroinikPrKr(dlin, shir, vys1, diam, vys2, zazor, Part);
+		}
 	}
 }

@@ -439,5 +439,35 @@ namespace airDucts
 			Troinik troinik = new Troinik();
 			troinik.createTroinikPrKr(dlin, shir, vys1, diam, vys2, zazor, Part);
 		}
+
+		private void bt_TroinicKr_Click(object sender, EventArgs e)
+		{
+			double diam1, diam2,vys1, vys2, zazor;
+			diam1 = Convert.ToDouble(cb63_diam1.Text);
+			vys1 = Convert.ToDouble(cb63_vys1.Text);
+			diam2 = Convert.ToDouble(cb63_diam2.Text);
+			vys2 = Convert.ToDouble(cb63_vys2.Text);
+			zazor = Convert.ToDouble(cb63_zazor.Text);
+
+
+			diam1 = diam1 / 1000;
+			diam2 = diam2 / 1000;
+			vys1 = vys1 / 1000;
+			vys2 = vys2 / 1000;
+			zazor = zazor / 1000;
+
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+
+			Close();
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
+
+			Troinik troinik = new Troinik();
+			troinik.createTroinikKr(diam1,  vys1, diam2, vys2, zazor, Part);
+		}
 	}
 }

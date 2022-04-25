@@ -88,10 +88,10 @@ namespace airDucts
 		{
 
 			double shir_pr, vys_pr, dlin_pr, zazor_pr;
-			dlin_pr = Convert.ToDouble(cb51_dlin.Text);
-			shir_pr = Convert.ToDouble(cb51_shir.Text);
-			vys_pr = Convert.ToDouble(cb51_vys.Text);
-			zazor_pr = Convert.ToDouble(cb1_zazor);
+			dlin_pr = Convert.ToDouble(cb1_dlin.Text);
+			shir_pr = Convert.ToDouble(cb1_shir.Text);
+			vys_pr = Convert.ToDouble(cb1_vys.Text);
+			zazor_pr = Convert.ToDouble(cb1_zazor.Text);
 
 			shir_pr = shir_pr / 1000;
 			vys_pr = vys_pr / 1000;
@@ -101,10 +101,10 @@ namespace airDucts
 
 			iSwApp = new SldWorks();
 			iSwApp.Visible = true;
-			
-			//iSwApp.NewPart();
+
+			iSwApp.NewPart();
 			Part = iSwApp.IActiveDoc2;
-			
+			Close();
 
 			airDuct duct = new airDuct();
 			duct.createPrVozd(dlin_pr, shir_pr, vys_pr, zazor_pr, Part);
@@ -179,7 +179,7 @@ namespace airDucts
 			iSwApp = new SldWorks();
 			iSwApp.Visible = true;
 
-			//iSwApp.NewPart();
+			iSwApp.NewPart();
 			Part = iSwApp.IActiveDoc2;
 
 			Close();
@@ -203,7 +203,7 @@ namespace airDucts
 			iSwApp = new SldWorks();
 			iSwApp.Visible = true;
 
-			//iSwApp.NewPart();
+			iSwApp.NewPart();
 			Part = iSwApp.IActiveDoc2;
 			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
 
@@ -233,7 +233,7 @@ namespace airDucts
 			iSwApp = new SldWorks();
 			iSwApp.Visible = true;
 
-			//iSwApp.NewPart();
+			iSwApp.NewPart();
 			Part = iSwApp.IActiveDoc2;
 
 			Close();
@@ -262,7 +262,7 @@ namespace airDucts
 			iSwApp = new SldWorks();
 			iSwApp.Visible = true;
 
-			//iSwApp.NewPart();
+			iSwApp.NewPart();
 			Part = iSwApp.IActiveDoc2;
 
 			Close();
@@ -290,7 +290,7 @@ namespace airDucts
 			iSwApp = new SldWorks();
 			iSwApp.Visible = true;
 
-			//iSwApp.NewPart();
+			iSwApp.NewPart();
 			Part = iSwApp.IActiveDoc2;
 
 			Close();
@@ -314,7 +314,7 @@ namespace airDucts
 			iSwApp = new SldWorks();
 			iSwApp.Visible = true;
 
-			//iSwApp.NewPart();
+			iSwApp.NewPart();
 			Part = iSwApp.IActiveDoc2;
 
 			Close();
@@ -468,6 +468,38 @@ namespace airDucts
 
 			Troinik troinik = new Troinik();
 			troinik.createTroinikKr(diam1,  vys1, diam2, vys2, zazor, Part);
+		}
+
+		private void bt_TroinicKrPr_Click(object sender, EventArgs e)
+		{
+			double dlin, shir, vys1, diam, vys2, zazor;
+			dlin = Convert.ToDouble(cb64_dlin.Text);
+			shir = Convert.ToDouble(cb64_shir.Text);
+			vys1 = Convert.ToDouble(cb64_vys1.Text);
+			diam = Convert.ToDouble(cb64_diam.Text);
+			vys2 = Convert.ToDouble(cb64_vys2.Text);
+			zazor = Convert.ToDouble(cb64_zazor.Text);
+
+
+			dlin = dlin / 1000;
+			shir = shir / 1000;
+			diam = diam / 1000;
+			vys1 = vys1 / 1000;
+			vys2 = vys2 / 1000;
+			zazor = zazor / 1000;
+
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+
+			Close();
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
+
+			Troinik troinik = new Troinik();
+			troinik.createTroinikKrPr(dlin, shir, vys1, diam, vys2, zazor, Part);
 		}
 	}
 }

@@ -33,5 +33,15 @@ namespace airDucts.Properties {
                 return ((string)(this["Database1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True")]
+        public string airDuctConnectionString {
+            get {
+                return ((string)(this["airDuctConnectionString"]));
+            }
+        }
     }
 }

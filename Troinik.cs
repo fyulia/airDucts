@@ -90,7 +90,7 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", dlin2 / 2, 0, 0, false, 0, null, 0);
 			Part.SelectMidpoint();
 			boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, true, 0, null, 0);
-		
+
 
 			Part.AddDimension2(-dlin2 * 2 / 3, 0, 0);
 			Part.ClearSelection2(true);
@@ -107,7 +107,7 @@ namespace airDucts
 			var myDimension4 = Part.Parameter("D2@Эскиз5");
 			myDimension4.SystemValue = shir2;
 			Part.ClearSelection2(true);
-			
+
 
 			boolstatus = Part.Extension.SelectByID2("Line4", "SKETCHSEGMENT", -vys1 / 2 + dlin2 / 2, -shir2 / 2, 0, false, 0, null, 0);
 			Part.AddDimension2(-dlin2 * 2, 0, 0);
@@ -116,7 +116,7 @@ namespace airDucts
 			var myDimension5 = Part.Parameter("D3@Эскиз5");
 			myDimension5.SystemValue = dlin2;
 			Part.ClearSelection2(true);
-			
+
 
 			boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", -vys1 / 2 + dlin2 / 2, 0, 0, true, 0, null, 0);
 			Part.SelectMidpoint();
@@ -139,7 +139,7 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByRay(dlin1 / 2, shir1 / 2 + zazor, vys1 / 2, -1, 0, 0, 9.74884895444939E-04, 1, false, 0, 0);
 			Part.SelectMidpoint();
 			boolstatus = Part.Extension.SelectByID2("Line2", "SKETCHSEGMENT", dlin1 / 2 + zazor, shir2 / 2, vys1 / 2, true, 0, null, 0);
-			
+
 			Part.AddDimension2(-dlin2 * 2, 0, 0);
 			Part.ClearSelection2(true);
 
@@ -156,18 +156,18 @@ namespace airDucts
 			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(zazor, true, 0.0007366, vys2, 0, false, 0, 0, 1, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
 
 
-			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
-			Part.SketchManager.InsertSketch(true);
-			vskLines = Part.SketchManager.CreateCenterRectangle(-vys1 / 2, 0, 0, -vys1 / 2 - dlin2 / 2, shir2 / 2, 0);
-			Part.SketchManager.InsertSketch(true);
-			Part.ClearSelection2(true);
+			//boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
+			//Part.SketchManager.InsertSketch(true);
+			//vskLines = Part.SketchManager.CreateCenterRectangle(-vys1 / 2, 0, 0, -vys1 / 2 - dlin2 / 2, shir2 / 2, 0);
+			//Part.SketchManager.InsertSketch(true);
+			//Part.ClearSelection2(true);
 
-			boolstatus = Part.Extension.SelectByID2("Эскиз8", "SKETCH", 0, 0, 0, false, 0, null, 0);
-			feat = Part.FeatureManager.FeatureCut4(true, false, false, 2, 0, 0.01, 0.01, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, false, true, true, true, true, false, 0, 0, false, false);
-			Part.SelectionManager.EnableContourSelection = false;
+			//boolstatus = Part.Extension.SelectByID2("Эскиз8", "SKETCH", 0, 0, 0, false, 0, null, 0);
+			//feat = Part.FeatureManager.FeatureCut4(true, false, false, 2, 0, 0.01, 0.01, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, false, true, true, true, true, false, 0, 0, false, false);
+			//Part.SelectionManager.EnableContourSelection = false;
 
-			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
-			Part.BlankRefGeom();
+			//boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
+			//Part.BlankRefGeom();
 
 
 

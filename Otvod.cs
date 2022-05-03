@@ -200,7 +200,7 @@ namespace airDucts
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r, dlin / 2, 0, r + shir, dlin / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r + shir, dlin / 2, 0, r + shir, -dlin / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r + shir, -dlin / 2, 0, r, -dlin / 2, 0);
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r, -dlin / 2, 0, r, -zazor * 2, 0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r, -dlin / 2, 0, r, -zazor * 5, 0);
 
 			Part.ClearSelection2(true);
 
@@ -217,7 +217,7 @@ namespace airDucts
 
 
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", r, 0, 0, false, 0, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", r, -zazor * 2, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", r, -zazor * 5, 0, true, 0, null, 0);
 
 			Part.AddDimension2(-dlin * 2 / 3, 0, 0);
 			Part.ClearSelection2(true);
@@ -233,7 +233,7 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.SketchManager.InsertSketch(true);
 
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r, zazor * 2, 0, r, dlin / 2, 0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r, zazor * 5, 0, r, dlin / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r, dlin / 2, 0, r + shir, dlin / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r + shir, dlin / 2, 0, r + shir, -dlin / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r + shir, -dlin / 2, 0, r, -dlin / 2, 0);
@@ -253,7 +253,7 @@ namespace airDucts
 			Part.ClearSelection2(true);
 
 
-			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", r, zazor * 2, 0, false, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", r, zazor * 5, 0, false, 0, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", r, 0, 0, true, 0, null, 0);
 
 			Part.AddDimension2(-dlin * 2 / 3, 0, 0);

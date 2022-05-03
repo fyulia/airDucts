@@ -23,13 +23,26 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, 0, 0, -dlin / 2, shir / 2, 0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, zazor * 5, 0, -dlin / 2, shir / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, shir / 2, 0, dlin / 2, shir / 2, 0.0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin / 2, shir / 2, 0.0, dlin / 2, -shir / 2, 0.0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin / 2, -shir / 2, 0.0, -dlin / 2, -shir / 2, 0.0);
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, -shir / 2, 0.0, -dlin / 2, -zazor, 0.0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, -shir / 2, 0.0, -dlin / 2, 0, 0.0);
 
 
+			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", -dlin / 2, 0, 0.0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, true, 0, null, 0);
+			Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
+			Part.ClearSelection2(true);
+
+			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin / 2, zazor * 5, 0, false, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", -dlin / 2, 0, 0, true, 0, null, 0);
+
+			Part.AddDimension2(-dlin * 2 / 3, 0, 2.5);
+			Part.ClearSelection2(true);
+
+			var myDimension1 = Part.Parameter("D1@Эскиз1");
+			myDimension1.SystemValue = zazor;
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
 
@@ -40,13 +53,20 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.SketchManager.InsertSketch(true);
 
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin1 / 2, 0, 0, -dlin1 / 2, shir1 / 2, 0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin1 / 2, zazor * 5, 0, -dlin1 / 2, shir1 / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin1 / 2, shir1 / 2, 0, dlin1 / 2, shir1 / 2, 0.0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin1 / 2, shir1 / 2, 0.0, dlin1 / 2, -shir1 / 2, 0.0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin1 / 2, -shir1 / 2, 0.0, -dlin1 / 2, -shir1 / 2, 0.0);
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin1 / 2, -shir1 / 2, 0.0, -dlin1 / 2, -zazor, 0.0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin1 / 2, -shir1 / 2, 0.0, -dlin1 / 2, 0, 0.0);
+			Part.ClearSelection2(true);
+			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin1 / 2, zazor * 5, vys, false, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point12", "SKETCHPOINT", -dlin1 / 2, 0, vys, true, 0, null, 0);
+
+			Part.AddDimension2(-dlin * 2 / 3, 0, 2.5);
 			Part.ClearSelection2(true);
 
+			var myDimension2 = Part.Parameter("D1@Эскиз2");
+			myDimension2.SystemValue = zazor;
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
 
@@ -65,30 +85,28 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, 0, 0, -dlin / 2, shir / 2, 0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, zazor * 5, 0, -dlin / 2, shir / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, shir / 2, 0, dlin / 2, shir / 2, 0.0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin / 2, shir / 2, 0.0, dlin / 2, -shir / 2, 0.0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin / 2, -shir / 2, 0.0, -dlin / 2, -shir / 2, 0.0);
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, -shir / 2, 0.0, -dlin / 2, -zazor*5, 0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, -shir / 2, 0.0, -dlin / 2, 0, 0.0);
 			Part.SetPickMode();
 			Part.ClearSelection2(true);
 			//Part.SketchManager.InsertSketch(true);
 
-			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin / 2, 0, 0, false, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", -dlin / 2, 0, 0.0, true, 0, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, true, 0, null, 0);
 			Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
 			Part.ClearSelection2(true);
 
-			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin / 2, 0, 0, false, 0, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", -dlin / 2, -zazor * 5, 0.0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin / 2, zazor * 5, 0, false, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", -dlin / 2, 0, 0, true, 0, null, 0);
 
-
-			Part.AddDimension2(-dlin * 2 / 3, 0, 0);
-			//Part.InsertGtol();
+			Part.AddDimension2(-dlin * 2 / 3, 0, 2.5);
 			Part.ClearSelection2(true);
 
-			var myDimension = Part.Parameter("D1@Эскиз1");
-			myDimension.SystemValue = zazor;
+			var myDimension1 = Part.Parameter("D1@Эскиз1");
+			myDimension1.SystemValue = zazor;
 
 
 
@@ -117,8 +135,8 @@ namespace airDucts
 			//Part.InsertGtol();
 			Part.ClearSelection2(true);
 
-			var myDimension1 = Part.Parameter("D1@Эскиз2");
-			myDimension1.SystemValue = diam / 2;
+			var myDimension3 = Part.Parameter("D1@Эскиз2");
+			myDimension3.SystemValue = diam / 2;
 
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -diam / 2, 0, 0, true, 0, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Point3", "SKETCHPOINT", 0, 0, 0, true, 0, null, 0);
@@ -138,20 +156,20 @@ namespace airDucts
 			Part.ClearSelection2(true);
 
 
-			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", -dlin / 2, -zazor, 0, false, 1, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", -diam / 2, 0, 0, true, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", -dlin / 2, 0, 0, false, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", -diam / 2, 0, vys, true, 1, null, 0);
 
-			feat = Part.FeatureManager.InsertSheetMetalLoftedBend(0, zazor);
+			//feat = Part.FeatureManager.InsertSheetMetalLoftedBend(0, zazor);
 
 
 			//feat = Part.FeatureManager.InsertSheetMetalLoftedBend2(0, zazor, false, 0.001, true, (int)swLoftedBendFacetOptions_e.swChordTolerance, 0.0005, 0, 0, 0);
 
-			Part.ClearSelection2(true);
+			//Part.ClearSelection2(true);
 
-			Part.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swDisplayAnnotations, true);
+			//Part.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swDisplayAnnotations, true);
 
-			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
-			Part.BlankRefGeom();
+			//boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
+			//Part.BlankRefGeom();
 		}
 
 		public void createKrPerehod(double diam1, double diam2,  double vys, double zazor, IModelDoc2 Part)

@@ -26,18 +26,15 @@ namespace airDucts
 		private DataSet dataSet2 = null;
 		private DataSet dataSet3 = null;
 
+		int longstatus;
+		bool boolstatus;
+		int lErrors;
+		int lWarnings;
 		public Form1()
 		{
 			InitializeComponent();
 
-			dataTab();
 			textBox2.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, позволяющим соединить воздуховоды с разным размером прямоугольных сечений.";
-
-			
-			//cb1_dlin.DataSource = dataSet;
-			//cb1_dlin.DisplayMember = "dlin";
-			//cb1_dlin.ValueMember = "id";
-
 
 		}
 		
@@ -46,46 +43,8 @@ namespace airDucts
 		ISldWorks iSwApp = null;
 		IModelDoc2 Part; //Предоставляет доступ к документам SOLIDWORKS: деталям, сборкам и чертежам.
 						 //ShellFeatureData swShell;
-		private void dataTab()
-		{
-			//прям возд
-			cb51_dlin.Items.Clear();
-			cb51_dlin.Items.Add("100");
-			cb51_dlin.Items.Add("150");
-			cb51_dlin.Items.Add("250");
-			cb51_dlin.Items.Add("400");
-			cb51_dlin.Items.Add("500");
-			cb51_dlin.Items.Add("600");
-			cb51_dlin.Items.Add("800");
-			cb51_dlin.Items.Add("1000");
-			cb51_dlin.Items.Add("1250");
-			cb51_dlin.Items.Add("1600");
 
-			cb51_shir.Items.Clear();
-			cb51_shir.Items.Add("150");
-			cb51_shir.Items.Add("250");
-			cb51_shir.Items.Add("300");
-			cb51_shir.Items.Add("400");
-			cb51_shir.Items.Add("500");
-			cb51_shir.Items.Add("600");
-			cb51_shir.Items.Add("800");
-			cb51_shir.Items.Add("1000");
-			cb51_shir.Items.Add("1250");
-			cb51_shir.Items.Add("1600");
-			cb51_shir.Items.Add("2000");
-
-			cb51_vys.Items.Clear();
-			cb51_vys.Items.Add("20");
-			cb51_vys.Items.Add("50");
-			cb51_vys.Items.Add("100");
-			
-			
-		}
-
-		
-
-
-
+	
 		private void bt_PrymVoz_Click(object sender, EventArgs e)
 		{
 
@@ -95,11 +54,17 @@ namespace airDucts
 			vys_pr = Convert.ToDouble(cb1_vys.Text);
 			zazor_pr = Convert.ToDouble(cb1_zazor.Text);
 
+			string name = $"Воздуховод прямоугольного сечения_{shir_pr}x{dlin_pr}.SLDRT";
+
 			shir_pr = shir_pr / 1000;
 			vys_pr = vys_pr / 1000;
 			dlin_pr = dlin_pr / 1000;
 			zazor_pr = zazor_pr / 1000;
+			
+			FolderBrowserDialog target = new FolderBrowserDialog();
+			target.ShowDialog();
 
+			string trg = target.SelectedPath;
 
 			iSwApp = new SldWorks();
 			iSwApp.Visible = true;
@@ -111,7 +76,19 @@ namespace airDucts
 			airDuct duct = new airDuct();
 			duct.createPrVozd(dlin_pr, shir_pr, vys_pr, zazor_pr, Part);
 
+			//longstatus = Part.SaveAs3(name, 0, 2);
 
+			//boolstatus = Part.Save3((int)swSaveAsOptions_e.swSaveAsOptions_Silent, ref lErrors, ref lWarnings); //сохранение изменений
+
+			Part.SaveAs3(trg + "\\" + name + ".sldprt", (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+			//longstatus = Part.SaveAs3(($"D:\\универ\\Диплом\\{name}.SLDRT"), 0, 0);
+
+
+			//Part = (ModelDoc2)swPart;
+			//swModelDocExt = (ModelDocExtension)Part.Extension;
+
+			//boolstatus = swModelDocExt.SaveAs("D:\\универ\\Диплом\\PerehodPr.SLDRT", 0, (int)swSaveAsOptions_e.swSaveAsOptions_Silent, null, ref errors, ref warnings);
+			//swPart = null;
 			//setMaterial();
 
 
@@ -423,16 +400,133 @@ namespace airDucts
 
 			}
 
-			SqlDataAdapter sqlDataAdapter6 = new SqlDataAdapter("SELECT DISTINCT  dlin1  FROM perehodPrPr", sqlConnection);
+			SqlDataAdapter sqlDataAdapter6 = new SqlDataAdapter("SELECT DISTINCT  dlin  FROM perehodPr", sqlConnection);
 
 			DataSet dataSet6 = new DataSet();
-			sqlDataAdapter5.Fill(dataSet5, "perehodPrPr");
+			sqlDataAdapter6.Fill(dataSet6, "perehodPr");
 
-			cb31_dlin.Items.Clear();
+			cb32_dlin.Items.Clear();
 
-			for (int i = 0; i < dataSet5.Tables["perehodPrPr"].Rows.Count; i++)
+			for (int i = 0; i < dataSet6.Tables["perehodPr"].Rows.Count; i++)
 			{
-				cb31_dlin.Items.Add(dataSet5.Tables["perehodPrPr"].Rows[i]["dlin1"].ToString());
+				cb32_dlin.Items.Add(dataSet6.Tables["perehodPr"].Rows[i]["dlin"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter7 = new SqlDataAdapter("SELECT DISTINCT  diam1  FROM perehodKr", sqlConnection);
+
+			DataSet dataSet7 = new DataSet();
+			sqlDataAdapter7.Fill(dataSet7, "perehodKr");
+
+			cb33_diam1.Items.Clear();
+
+			for (int i = 0; i < dataSet7.Tables["perehodKr"].Rows.Count; i++)
+			{
+				cb33_diam1.Items.Add(dataSet7.Tables["perehodKr"].Rows[i]["diam1"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter8 = new SqlDataAdapter("SELECT DISTINCT  dlin  FROM otvodPr", sqlConnection);
+
+			DataSet dataSet8 = new DataSet();
+			sqlDataAdapter8.Fill(dataSet8, "otvodPr");
+
+			cb41_dlin.Items.Clear();
+
+			for (int i = 0; i < dataSet8.Tables["otvodPr"].Rows.Count; i++)
+			{
+				cb41_dlin.Items.Add(dataSet8.Tables["otvodPr"].Rows[i]["dlin"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter9 = new SqlDataAdapter("SELECT diam  FROM otvodKr", sqlConnection);
+
+			DataSet dataSet9 = new DataSet();
+			sqlDataAdapter9.Fill(dataSet9, "otvodKr");
+
+			cb42_diam.Items.Clear();
+
+			for (int i = 0; i < dataSet9.Tables["otvodKr"].Rows.Count; i++)
+			{
+				cb42_diam.Items.Add(dataSet9.Tables["otvodKr"].Rows[i]["diam"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter10 = new SqlDataAdapter("SELECT DISTINCT dlin  FROM zaglPr", sqlConnection);
+
+			DataSet dataSet10 = new DataSet();
+			sqlDataAdapter10.Fill(dataSet10, "zaglPr");
+
+			cb51_dlin.Items.Clear();
+
+			for (int i = 0; i < dataSet10.Tables["zaglPr"].Rows.Count; i++)
+			{
+				cb51_dlin.Items.Add(dataSet10.Tables["zaglPr"].Rows[i]["dlin"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter11 = new SqlDataAdapter("SELECT  diam  FROM zaglKr", sqlConnection);
+
+			DataSet dataSet11 = new DataSet();
+			sqlDataAdapter11.Fill(dataSet11, "zaglKr");
+
+			cb52_diam.Items.Clear();
+
+			for (int i = 0; i < dataSet11.Tables["zaglKr"].Rows.Count; i++)
+			{
+				cb52_diam.Items.Add(dataSet11.Tables["zaglKr"].Rows[i]["diam"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter12 = new SqlDataAdapter("SELECT DISTINCT dlin1  FROM troinicPrPr", sqlConnection);
+
+			DataSet dataSet12 = new DataSet();
+			sqlDataAdapter12.Fill(dataSet12, "troinicPrPr");
+
+			cb61_dlin1.Items.Clear();
+
+			for (int i = 0; i < dataSet12.Tables["troinicPrPr"].Rows.Count; i++)
+			{
+				cb61_dlin1.Items.Add(dataSet12.Tables["troinicPrPr"].Rows[i]["dlin1"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter13 = new SqlDataAdapter("SELECT DISTINCT dlin  FROM troinicPrKr", sqlConnection);
+
+			DataSet dataSet13 = new DataSet();
+			sqlDataAdapter13.Fill(dataSet13, "troinicPrKr");
+
+			cb62_dlin.Items.Clear();
+
+			for (int i = 0; i < dataSet13.Tables["troinicPrKr"].Rows.Count; i++)
+			{
+				cb62_dlin.Items.Add(dataSet13.Tables["troinicPrKr"].Rows[i]["dlin"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter14 = new SqlDataAdapter("SELECT DISTINCT diam1  FROM troinicKrKr", sqlConnection);
+
+			DataSet dataSet14 = new DataSet();
+			sqlDataAdapter14.Fill(dataSet14, "troinicKrKr");
+
+			cb63_diam1.Items.Clear();
+
+			for (int i = 0; i < dataSet14.Tables["troinicKrKr"].Rows.Count; i++)
+			{
+				cb63_diam1.Items.Add(dataSet14.Tables["troinicKrKr"].Rows[i]["diam1"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter15 = new SqlDataAdapter("SELECT DISTINCT diam  FROM troinicKrPr", sqlConnection);
+
+			DataSet dataSet15 = new DataSet();
+			sqlDataAdapter15.Fill(dataSet15, "troinicKrPr");
+
+			cb64_diam.Items.Clear();
+
+			for (int i = 0; i < dataSet15.Tables["troinicKrPr"].Rows.Count; i++)
+			{
+				cb64_diam.Items.Add(dataSet15.Tables["troinicKrPr"].Rows[i]["diam"].ToString());
 
 			}
 		}
@@ -613,7 +707,7 @@ namespace airDucts
 		{
 			string str = cb31_dlin.SelectedItem.ToString();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
-			SqlCommand command = new SqlCommand("SELECT  shir1 FROM perehodPrPr WHERE dlin1 = @str ", sqlConnection);
+			SqlCommand command = new SqlCommand("SELECT DISTINCT shir1 FROM perehodPrPr WHERE dlin1 = @str ", sqlConnection);
 
 			command.Parameters.AddWithValue("@str", str);
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -692,6 +786,386 @@ namespace airDucts
 			{
 
 				cb31_zazor.Text = dataSet2.Tables["perehodPrPr"].Rows[i]["thick"].ToString();
+			}
+		}
+
+		private void cb32_dlin_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM perehodPr WHERE dlin = " + cb32_dlin.SelectedItem.ToString() + "  ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "perehodPr");
+
+			cb32_shir.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["perehodPr"].Rows.Count; i++)
+			{
+
+				cb32_shir.Items.Add(dataSet2.Tables["perehodPr"].Rows[i]["shir"].ToString());
+
+			}
+		}
+
+		private void cb32_shir_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT diam,thick FROM perehodPr WHERE dlin = " + cb32_dlin.SelectedItem.ToString() + " AND shir = " + cb32_shir.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "perehodPr");
+
+			cb32_diam.Items.Clear();
+			cb32_zazor.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["perehodPr"].Rows.Count; i++)
+			{
+
+				cb32_diam.Items.Add(dataSet2.Tables["perehodPr"].Rows[i]["diam"].ToString());
+				cb32_zazor.Text = (dataSet2.Tables["perehodPr"].Rows[i]["thick"].ToString());
+
+			}
+		}
+
+		private void cb32_diam_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT vys FROM perehodPr WHERE dlin = " + cb32_dlin.SelectedItem.ToString() + " AND shir = " + cb32_shir.SelectedItem.ToString() + " AND diam = " + cb32_diam.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "perehodPr");
+
+			cb32_vys.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["perehodPr"].Rows.Count; i++)
+			{
+				cb32_vys.Text = (dataSet2.Tables["perehodPr"].Rows[i]["vys"].ToString());
+			}
+		}
+
+		private void cb33_diam1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT diam2 FROM perehodKr WHERE diam1 = " + cb33_diam1.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "perehodKr");
+
+			cb33_diam2.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["perehodKr"].Rows.Count; i++)
+			{
+				cb33_diam2.Items.Add(dataSet2.Tables["perehodKr"].Rows[i]["diam2"].ToString());
+			}
+		}
+
+		private void cb33_diam2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT vys,thick FROM perehodKr WHERE diam1 = " + cb33_diam1.SelectedItem.ToString() + " AND diam2 = " + cb33_diam2.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "perehodKr");
+
+			cb33_vys.Clear();
+			cb33_zazor.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["perehodKr"].Rows.Count; i++)
+			{
+
+				cb33_vys.Text = (dataSet2.Tables["perehodKr"].Rows[i]["vys"].ToString());
+				cb33_zazor.Text = (dataSet2.Tables["perehodKr"].Rows[i]["thick"].ToString());
+
+			}
+		}
+
+		private void cb41_dlin_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM otvodPr WHERE dlin = " + cb41_dlin.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "otvodPr");
+
+			cb41_shir.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["otvodPr"].Rows.Count; i++)
+			{
+				cb41_shir.Items.Add(dataSet2.Tables["otvodPr"].Rows[i]["shir"].ToString());
+			}
+		}
+
+		private void cb41_shir_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT dlinOtv,thick FROM otvodPr WHERE dlin = " + cb41_dlin.SelectedItem.ToString() + " AND shir = " + cb41_shir.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "otvodPr");
+
+			cb41_dlinOtvod.Clear();
+			cb41_zazor.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["otvodPr"].Rows.Count; i++)
+			{
+
+				cb41_dlinOtvod.Text = (dataSet2.Tables["otvodPr"].Rows[i]["dlinOtv"].ToString());
+				cb41_zazor.Text = (dataSet2.Tables["otvodPr"].Rows[i]["thick"].ToString());
+
+			}
+		}
+
+		private void cb42_diam_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT thick FROM otvodKr WHERE diam = " + cb42_diam.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "otvodKr");
+
+			cb42_zazor.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["otvodKr"].Rows.Count; i++)
+			{
+				cb42_zazor.Text = (dataSet2.Tables["otvodKr"].Rows[i]["thick"].ToString());
+
+			}
+		}
+
+		private void cb51_dlin_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM zaglPr WHERE dlin = " + cb51_dlin.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "zaglPr");
+
+			cb51_shir.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["zaglPr"].Rows.Count; i++)
+			{
+				cb51_shir.Items.Add(dataSet2.Tables["zaglPr"].Rows[i]["shir"].ToString());
+			}
+		}
+
+		private void cb61_dlin1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT shir1 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicPrPr");
+
+			cb61_shir1.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicPrPr"].Rows.Count; i++)
+			{
+				cb61_shir1.Items.Add(dataSet2.Tables["troinicPrPr"].Rows[i]["shir1"].ToString());
+			}
+			cb61_dlin2.Text = cb61_dlin1.SelectedItem.ToString();
+
+		}
+
+		private void cb61_shir1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys1 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " AND shir1 = " + cb61_shir1.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicPrPr");
+
+			cb61_vys1.Clear();
+			cb61_zazor.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicPrPr"].Rows.Count; i++)
+			{
+				cb61_zazor.Text = (dataSet2.Tables["troinicPrPr"].Rows[i]["thick"].ToString());
+				cb61_vys1.Text = (dataSet2.Tables["troinicPrPr"].Rows[i]["vys1"].ToString());
+
+			}
+
+			cb61_shir2.Text = cb61_shir1.SelectedItem.ToString();
+		}
+
+		private void cb62_dlin_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM troinicPrKr WHERE dlin = " + cb62_dlin.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicPrKr");
+
+			cb62_shir.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicPrKr"].Rows.Count; i++)
+			{
+				cb62_shir.Items.Add(dataSet2.Tables["troinicPrKr"].Rows[i]["shir"].ToString());
+			}
+		}
+
+		private void cb62_shir_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT diam FROM troinicPrKr WHERE dlin = " + cb62_dlin.SelectedItem.ToString() + " AND shir = " + cb62_shir.SelectedItem.ToString() + "", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicPrKr");
+
+			cb62_diam.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicPrKr"].Rows.Count; i++)
+			{
+				cb62_diam.Items.Add(dataSet2.Tables["troinicPrKr"].Rows[i]["diam"].ToString());
+			}
+		}
+
+		private void cb62_diam_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys FROM troinicPrKr WHERE dlin = " + cb62_dlin.SelectedItem.ToString() + " AND shir = " + cb62_shir.SelectedItem.ToString() + " AND diam = " + cb62_diam.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicPrKr");
+
+			cb62_vys1.Clear();
+			cb62_zazor.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicPrKr"].Rows.Count; i++)
+			{
+				cb62_zazor.Text = (dataSet2.Tables["troinicPrKr"].Rows[i]["thick"].ToString());
+				cb62_vys1.Text = (dataSet2.Tables["troinicPrKr"].Rows[i]["vys"].ToString());
+
+			}
+
+		}
+
+		private void cb63_diam1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT diam2 FROM troinicKrKr WHERE diam1 = " + cb63_diam1.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicKrKr");
+
+			cb63_diam2.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicKrKr"].Rows.Count; i++)
+			{
+				cb63_diam2.Items.Add(dataSet2.Tables["troinicKrKr"].Rows[i]["diam2"].ToString());
+			}
+		}
+
+		private void cb63_diam2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys1 FROM troinicKrKr WHERE diam1 = " + cb63_diam1.SelectedItem.ToString() + " AND diam2 = " + cb63_diam2.SelectedItem.ToString() + "  ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicKrKr");
+
+			cb63_vys1.Clear();
+			cb63_zazor.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicKrKr"].Rows.Count; i++)
+			{
+				cb63_zazor.Text = (dataSet2.Tables["troinicKrKr"].Rows[i]["thick"].ToString());
+				cb63_vys1.Text = (dataSet2.Tables["troinicKrKr"].Rows[i]["vys1"].ToString());
+
+			}
+		}
+
+		private void cb64_diam_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			cb64_dlin.Enabled = true;
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin FROM troinicKrPr WHERE diam = " + cb64_diam.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicKrPr");
+
+			cb64_dlin.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicKrPr"].Rows.Count; i++)
+			{
+				cb64_dlin.Items.Add(dataSet2.Tables["troinicKrPr"].Rows[i]["dlin"].ToString());
+			}
+		}
+
+		private void cb64_dlin_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			cb64_shir.Enabled = true;
+
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM troinicKrPr WHERE diam = " + cb64_diam.SelectedItem.ToString() + " AND dlin = " + cb64_dlin.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicKrPr");
+
+			cb64_shir.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicKrPr"].Rows.Count; i++)
+			{
+				cb64_shir.Items.Add(dataSet2.Tables["troinicKrPr"].Rows[i]["shir"].ToString());
+			}
+		}
+
+		private void cb64_shir_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			cb64_vys1.Enabled = true;
+			cb64_zazor.Enabled = true;
+
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys FROM troinicKrPr WHERE diam = " + cb64_diam.SelectedItem.ToString() + " AND dlin = " + cb64_dlin.SelectedItem.ToString() + " AND shir = " + cb64_shir.SelectedItem.ToString() + "  ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicKrPr");
+
+			cb64_vys1.Clear();
+			cb64_zazor.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicKrPr"].Rows.Count; i++)
+			{
+				cb64_zazor.Text = (dataSet2.Tables["troinicKrPr"].Rows[i]["thick"].ToString());
+				cb64_vys1.Text = (dataSet2.Tables["troinicKrPr"].Rows[i]["vys"].ToString());
+
 			}
 		}
 	}

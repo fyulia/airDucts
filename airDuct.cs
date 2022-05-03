@@ -60,11 +60,6 @@ namespace airDucts
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin / 2, -shir / 2, 0.0, -dlin / 2,zazor, 0.0);
 			Part.ClearSelection2(true);
 
-			//boolstatus = Part.Extension.SelectByID2("Point12", "SKETCHPOINT", -dlin / 2, zazor , 0.0, true, 0, null, 0);
-			//boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, true, 0, null, 0);
-			//Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
-			//Part.ClearSelection2(true);
-
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin / 2, zazor *10, vys, false, 0, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Point12", "SKETCHPOINT", -dlin / 2, zazor, vys, true, 0, null, 0);
 

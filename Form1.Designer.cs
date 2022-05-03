@@ -80,6 +80,7 @@ namespace airDucts
 			this.bt_Next31 = new System.Windows.Forms.Button();
 			this.bt_PerehPrPr = new System.Windows.Forms.Button();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.cb31_zazor = new System.Windows.Forms.TextBox();
 			this.label33 = new System.Windows.Forms.Label();
 			this.label32 = new System.Windows.Forms.Label();
 			this.label31 = new System.Windows.Forms.Label();
@@ -108,13 +109,13 @@ namespace airDucts
 			this.tabPage10 = new System.Windows.Forms.TabPage();
 			this.textBox5 = new System.Windows.Forms.TextBox();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.cb32_zazor = new System.Windows.Forms.TextBox();
 			this.label61 = new System.Windows.Forms.Label();
 			this.label63 = new System.Windows.Forms.Label();
 			this.label64 = new System.Windows.Forms.Label();
 			this.label65 = new System.Windows.Forms.Label();
 			this.label66 = new System.Windows.Forms.Label();
 			this.cb32_diam = new System.Windows.Forms.ComboBox();
-			this.cb32_vys = new System.Windows.Forms.ComboBox();
 			this.cb32_shir = new System.Windows.Forms.ComboBox();
 			this.cb32_dlin = new System.Windows.Forms.ComboBox();
 			this.label67 = new System.Windows.Forms.Label();
@@ -138,9 +139,7 @@ namespace airDucts
 			this.label69 = new System.Windows.Forms.Label();
 			this.label75 = new System.Windows.Forms.Label();
 			this.label80 = new System.Windows.Forms.Label();
-			this.cb33_zazor = new System.Windows.Forms.ComboBox();
 			this.cb33_diam2 = new System.Windows.Forms.ComboBox();
-			this.cb33_vys = new System.Windows.Forms.ComboBox();
 			this.cb33_diam1 = new System.Windows.Forms.ComboBox();
 			this.label81 = new System.Windows.Forms.Label();
 			this.label82 = new System.Windows.Forms.Label();
@@ -165,8 +164,6 @@ namespace airDucts
 			this.label97 = new System.Windows.Forms.Label();
 			this.label98 = new System.Windows.Forms.Label();
 			this.label99 = new System.Windows.Forms.Label();
-			this.cb41_zazor = new System.Windows.Forms.ComboBox();
-			this.cb41_dlinOtvod = new System.Windows.Forms.ComboBox();
 			this.cb41_shir = new System.Windows.Forms.ComboBox();
 			this.cb41_dlin = new System.Windows.Forms.ComboBox();
 			this.label100 = new System.Windows.Forms.Label();
@@ -186,7 +183,6 @@ namespace airDucts
 			this.groupBox9 = new System.Windows.Forms.GroupBox();
 			this.label92 = new System.Windows.Forms.Label();
 			this.label104 = new System.Windows.Forms.Label();
-			this.cb42_zazor = new System.Windows.Forms.ComboBox();
 			this.cb42_diam = new System.Windows.Forms.ComboBox();
 			this.label108 = new System.Windows.Forms.Label();
 			this.label113 = new System.Windows.Forms.Label();
@@ -204,7 +200,6 @@ namespace airDucts
 			this.label37 = new System.Windows.Forms.Label();
 			this.label38 = new System.Windows.Forms.Label();
 			this.label39 = new System.Windows.Forms.Label();
-			this.cb51_vys = new System.Windows.Forms.ComboBox();
 			this.cb51_shir = new System.Windows.Forms.ComboBox();
 			this.cb51_dlin = new System.Windows.Forms.ComboBox();
 			this.label41 = new System.Windows.Forms.Label();
@@ -222,8 +217,7 @@ namespace airDucts
 			this.groupBox7 = new System.Windows.Forms.GroupBox();
 			this.label79 = new System.Windows.Forms.Label();
 			this.label89 = new System.Windows.Forms.Label();
-			this.comboBox19 = new System.Windows.Forms.ComboBox();
-			this.comboBox22 = new System.Windows.Forms.ComboBox();
+			this.cb52_diam = new System.Windows.Forms.ComboBox();
 			this.label91 = new System.Windows.Forms.Label();
 			this.label93 = new System.Windows.Forms.Label();
 			this.label94 = new System.Windows.Forms.Label();
@@ -238,7 +232,6 @@ namespace airDucts
 			this.bt_TroinicPr = new System.Windows.Forms.Button();
 			this.groupBox10 = new System.Windows.Forms.GroupBox();
 			this.label130 = new System.Windows.Forms.Label();
-			this.cb61_vys2 = new System.Windows.Forms.ComboBox();
 			this.label131 = new System.Windows.Forms.Label();
 			this.label132 = new System.Windows.Forms.Label();
 			this.label95 = new System.Windows.Forms.Label();
@@ -247,10 +240,6 @@ namespace airDucts
 			this.label112 = new System.Windows.Forms.Label();
 			this.label115 = new System.Windows.Forms.Label();
 			this.label116 = new System.Windows.Forms.Label();
-			this.cb61_zazor = new System.Windows.Forms.ComboBox();
-			this.cb61_shir2 = new System.Windows.Forms.ComboBox();
-			this.cb61_dlin2 = new System.Windows.Forms.ComboBox();
-			this.cb61_vys1 = new System.Windows.Forms.ComboBox();
 			this.cb61_shir1 = new System.Windows.Forms.ComboBox();
 			this.cb61_dlin1 = new System.Windows.Forms.ComboBox();
 			this.label118 = new System.Windows.Forms.Label();
@@ -277,15 +266,12 @@ namespace airDucts
 			this.label138 = new System.Windows.Forms.Label();
 			this.label144 = new System.Windows.Forms.Label();
 			this.label133 = new System.Windows.Forms.Label();
-			this.cb62_vys2 = new System.Windows.Forms.ComboBox();
 			this.label134 = new System.Windows.Forms.Label();
 			this.label135 = new System.Windows.Forms.Label();
 			this.label136 = new System.Windows.Forms.Label();
 			this.label139 = new System.Windows.Forms.Label();
 			this.label140 = new System.Windows.Forms.Label();
 			this.label141 = new System.Windows.Forms.Label();
-			this.cb62_zazor = new System.Windows.Forms.ComboBox();
-			this.cb62_vys1 = new System.Windows.Forms.ComboBox();
 			this.cb62_shir = new System.Windows.Forms.ComboBox();
 			this.cb62_dlin = new System.Windows.Forms.ComboBox();
 			this.label142 = new System.Windows.Forms.Label();
@@ -312,13 +298,10 @@ namespace airDucts
 			this.label172 = new System.Windows.Forms.Label();
 			this.label173 = new System.Windows.Forms.Label();
 			this.label174 = new System.Windows.Forms.Label();
-			this.cb63_vys2 = new System.Windows.Forms.ComboBox();
 			this.label175 = new System.Windows.Forms.Label();
 			this.label176 = new System.Windows.Forms.Label();
 			this.label177 = new System.Windows.Forms.Label();
 			this.label178 = new System.Windows.Forms.Label();
-			this.cb63_zazor = new System.Windows.Forms.ComboBox();
-			this.cb63_vys1 = new System.Windows.Forms.ComboBox();
 			this.label181 = new System.Windows.Forms.Label();
 			this.label182 = new System.Windows.Forms.Label();
 			this.label185 = new System.Windows.Forms.Label();
@@ -335,15 +318,12 @@ namespace airDucts
 			this.label151 = new System.Windows.Forms.Label();
 			this.label154 = new System.Windows.Forms.Label();
 			this.label155 = new System.Windows.Forms.Label();
-			this.cb64_vys1 = new System.Windows.Forms.ComboBox();
 			this.label156 = new System.Windows.Forms.Label();
 			this.label157 = new System.Windows.Forms.Label();
 			this.label158 = new System.Windows.Forms.Label();
 			this.label159 = new System.Windows.Forms.Label();
 			this.label160 = new System.Windows.Forms.Label();
 			this.label161 = new System.Windows.Forms.Label();
-			this.cb64_zazor = new System.Windows.Forms.ComboBox();
-			this.cb64_vys2 = new System.Windows.Forms.ComboBox();
 			this.cb64_shir = new System.Windows.Forms.ComboBox();
 			this.cb64_dlin = new System.Windows.Forms.ComboBox();
 			this.label162 = new System.Windows.Forms.Label();
@@ -358,8 +338,28 @@ namespace airDucts
 			this.pictureBox12 = new System.Windows.Forms.PictureBox();
 			this.tabPage8 = new System.Windows.Forms.TabPage();
 			this.label12 = new System.Windows.Forms.Label();
-			this.cb31_zazor = new System.Windows.Forms.TextBox();
-			this.cb32_zazor = new System.Windows.Forms.TextBox();
+			this.cb32_vys = new System.Windows.Forms.TextBox();
+			this.cb33_zazor = new System.Windows.Forms.TextBox();
+			this.cb33_vys = new System.Windows.Forms.TextBox();
+			this.cb41_dlinOtvod = new System.Windows.Forms.TextBox();
+			this.cb41_zazor = new System.Windows.Forms.TextBox();
+			this.cb42_zazor = new System.Windows.Forms.TextBox();
+			this.cb51_vys = new System.Windows.Forms.TextBox();
+			this.cb52_vys = new System.Windows.Forms.TextBox();
+			this.cb61_zazor = new System.Windows.Forms.TextBox();
+			this.cb61_vys1 = new System.Windows.Forms.TextBox();
+			this.cb61_dlin2 = new System.Windows.Forms.TextBox();
+			this.cb61_shir2 = new System.Windows.Forms.TextBox();
+			this.cb61_vys2 = new System.Windows.Forms.TextBox();
+			this.cb62_vys2 = new System.Windows.Forms.TextBox();
+			this.cb62_zazor = new System.Windows.Forms.TextBox();
+			this.cb62_vys1 = new System.Windows.Forms.TextBox();
+			this.cb63_zazor = new System.Windows.Forms.TextBox();
+			this.cb63_vys2 = new System.Windows.Forms.TextBox();
+			this.cb63_vys1 = new System.Windows.Forms.TextBox();
+			this.cb64_zazor = new System.Windows.Forms.TextBox();
+			this.cb64_vys2 = new System.Windows.Forms.TextBox();
+			this.cb64_vys1 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -1011,6 +1011,13 @@ namespace airDucts
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Параметры";
 			// 
+			// cb31_zazor
+			// 
+			this.cb31_zazor.Location = new System.Drawing.Point(455, 118);
+			this.cb31_zazor.Name = "cb31_zazor";
+			this.cb31_zazor.Size = new System.Drawing.Size(84, 29);
+			this.cb31_zazor.TabIndex = 24;
+			// 
 			// label33
 			// 
 			this.label33.AutoSize = true;
@@ -1290,6 +1297,7 @@ namespace airDucts
 			// 
 			// groupBox5
 			// 
+			this.groupBox5.Controls.Add(this.cb32_vys);
 			this.groupBox5.Controls.Add(this.cb32_zazor);
 			this.groupBox5.Controls.Add(this.label61);
 			this.groupBox5.Controls.Add(this.label63);
@@ -1297,7 +1305,6 @@ namespace airDucts
 			this.groupBox5.Controls.Add(this.label65);
 			this.groupBox5.Controls.Add(this.label66);
 			this.groupBox5.Controls.Add(this.cb32_diam);
-			this.groupBox5.Controls.Add(this.cb32_vys);
 			this.groupBox5.Controls.Add(this.cb32_shir);
 			this.groupBox5.Controls.Add(this.cb32_dlin);
 			this.groupBox5.Controls.Add(this.label67);
@@ -1317,6 +1324,13 @@ namespace airDucts
 			this.groupBox5.TabIndex = 17;
 			this.groupBox5.TabStop = false;
 			this.groupBox5.Text = "Параметры";
+			// 
+			// cb32_zazor
+			// 
+			this.cb32_zazor.Location = new System.Drawing.Point(455, 81);
+			this.cb32_zazor.Name = "cb32_zazor";
+			this.cb32_zazor.Size = new System.Drawing.Size(84, 29);
+			this.cb32_zazor.TabIndex = 24;
 			// 
 			// label61
 			// 
@@ -1375,16 +1389,8 @@ namespace airDucts
 			this.cb32_diam.Name = "cb32_diam";
 			this.cb32_diam.Size = new System.Drawing.Size(84, 32);
 			this.cb32_diam.TabIndex = 15;
-			this.cb32_diam.Text = "150";
-			// 
-			// cb32_vys
-			// 
-			this.cb32_vys.FormattingEnabled = true;
-			this.cb32_vys.Location = new System.Drawing.Point(155, 115);
-			this.cb32_vys.Name = "cb32_vys";
-			this.cb32_vys.Size = new System.Drawing.Size(91, 32);
-			this.cb32_vys.TabIndex = 14;
-			this.cb32_vys.Text = "500";
+			this.cb32_diam.Text = "100";
+			this.cb32_diam.SelectedIndexChanged += new System.EventHandler(this.cb32_diam_SelectedIndexChanged);
 			// 
 			// cb32_shir
 			// 
@@ -1393,7 +1399,8 @@ namespace airDucts
 			this.cb32_shir.Name = "cb32_shir";
 			this.cb32_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb32_shir.TabIndex = 13;
-			this.cb32_shir.Text = "250";
+			this.cb32_shir.Text = "100";
+			this.cb32_shir.SelectedIndexChanged += new System.EventHandler(this.cb32_shir_SelectedIndexChanged);
 			// 
 			// cb32_dlin
 			// 
@@ -1402,7 +1409,8 @@ namespace airDucts
 			this.cb32_dlin.Name = "cb32_dlin";
 			this.cb32_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb32_dlin.TabIndex = 12;
-			this.cb32_dlin.Text = "350";
+			this.cb32_dlin.Text = "150";
+			this.cb32_dlin.SelectedIndexChanged += new System.EventHandler(this.cb32_dlin_SelectedIndexChanged);
 			// 
 			// label67
 			// 
@@ -1579,13 +1587,13 @@ namespace airDucts
 			// 
 			// groupBox6
 			// 
+			this.groupBox6.Controls.Add(this.cb33_vys);
+			this.groupBox6.Controls.Add(this.cb33_zazor);
 			this.groupBox6.Controls.Add(this.label62);
 			this.groupBox6.Controls.Add(this.label69);
 			this.groupBox6.Controls.Add(this.label75);
 			this.groupBox6.Controls.Add(this.label80);
-			this.groupBox6.Controls.Add(this.cb33_zazor);
 			this.groupBox6.Controls.Add(this.cb33_diam2);
-			this.groupBox6.Controls.Add(this.cb33_vys);
 			this.groupBox6.Controls.Add(this.cb33_diam1);
 			this.groupBox6.Controls.Add(this.label81);
 			this.groupBox6.Controls.Add(this.label82);
@@ -1643,15 +1651,6 @@ namespace airDucts
 			this.label80.TabIndex = 18;
 			this.label80.Text = "мм";
 			// 
-			// cb33_zazor
-			// 
-			this.cb33_zazor.FormattingEnabled = true;
-			this.cb33_zazor.Location = new System.Drawing.Point(455, 103);
-			this.cb33_zazor.Name = "cb33_zazor";
-			this.cb33_zazor.Size = new System.Drawing.Size(84, 32);
-			this.cb33_zazor.TabIndex = 17;
-			this.cb33_zazor.Text = "1";
-			// 
 			// cb33_diam2
 			// 
 			this.cb33_diam2.FormattingEnabled = true;
@@ -1660,15 +1659,7 @@ namespace airDucts
 			this.cb33_diam2.Size = new System.Drawing.Size(84, 32);
 			this.cb33_diam2.TabIndex = 15;
 			this.cb33_diam2.Text = "150";
-			// 
-			// cb33_vys
-			// 
-			this.cb33_vys.FormattingEnabled = true;
-			this.cb33_vys.Location = new System.Drawing.Point(155, 103);
-			this.cb33_vys.Name = "cb33_vys";
-			this.cb33_vys.Size = new System.Drawing.Size(91, 32);
-			this.cb33_vys.TabIndex = 14;
-			this.cb33_vys.Text = "500";
+			this.cb33_diam2.SelectedIndexChanged += new System.EventHandler(this.cb33_diam2_SelectedIndexChanged);
 			// 
 			// cb33_diam1
 			// 
@@ -1678,6 +1669,7 @@ namespace airDucts
 			this.cb33_diam1.Size = new System.Drawing.Size(91, 32);
 			this.cb33_diam1.TabIndex = 12;
 			this.cb33_diam1.Text = "350";
+			this.cb33_diam1.SelectedIndexChanged += new System.EventHandler(this.cb33_diam1_SelectedIndexChanged);
 			// 
 			// label81
 			// 
@@ -1883,12 +1875,12 @@ namespace airDucts
 			// 
 			// groupBox8
 			// 
+			this.groupBox8.Controls.Add(this.cb41_zazor);
+			this.groupBox8.Controls.Add(this.cb41_dlinOtvod);
 			this.groupBox8.Controls.Add(this.label83);
 			this.groupBox8.Controls.Add(this.label97);
 			this.groupBox8.Controls.Add(this.label98);
 			this.groupBox8.Controls.Add(this.label99);
-			this.groupBox8.Controls.Add(this.cb41_zazor);
-			this.groupBox8.Controls.Add(this.cb41_dlinOtvod);
 			this.groupBox8.Controls.Add(this.cb41_shir);
 			this.groupBox8.Controls.Add(this.cb41_dlin);
 			this.groupBox8.Controls.Add(this.label100);
@@ -1947,24 +1939,6 @@ namespace airDucts
 			this.label99.TabIndex = 18;
 			this.label99.Text = "мм";
 			// 
-			// cb41_zazor
-			// 
-			this.cb41_zazor.FormattingEnabled = true;
-			this.cb41_zazor.Location = new System.Drawing.Point(155, 117);
-			this.cb41_zazor.Name = "cb41_zazor";
-			this.cb41_zazor.Size = new System.Drawing.Size(91, 32);
-			this.cb41_zazor.TabIndex = 17;
-			this.cb41_zazor.Text = "2";
-			// 
-			// cb41_dlinOtvod
-			// 
-			this.cb41_dlinOtvod.FormattingEnabled = true;
-			this.cb41_dlinOtvod.Location = new System.Drawing.Point(398, 73);
-			this.cb41_dlinOtvod.Name = "cb41_dlinOtvod";
-			this.cb41_dlinOtvod.Size = new System.Drawing.Size(91, 32);
-			this.cb41_dlinOtvod.TabIndex = 14;
-			this.cb41_dlinOtvod.Text = "225";
-			// 
 			// cb41_shir
 			// 
 			this.cb41_shir.FormattingEnabled = true;
@@ -1973,6 +1947,7 @@ namespace airDucts
 			this.cb41_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb41_shir.TabIndex = 13;
 			this.cb41_shir.Text = "150";
+			this.cb41_shir.SelectedIndexChanged += new System.EventHandler(this.cb41_shir_SelectedIndexChanged);
 			// 
 			// cb41_dlin
 			// 
@@ -1982,6 +1957,7 @@ namespace airDucts
 			this.cb41_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb41_dlin.TabIndex = 12;
 			this.cb41_dlin.Text = "300";
+			this.cb41_dlin.SelectedIndexChanged += new System.EventHandler(this.cb41_dlin_SelectedIndexChanged);
 			// 
 			// label100
 			// 
@@ -2140,9 +2116,9 @@ namespace airDucts
 			// 
 			// groupBox9
 			// 
+			this.groupBox9.Controls.Add(this.cb42_zazor);
 			this.groupBox9.Controls.Add(this.label92);
 			this.groupBox9.Controls.Add(this.label104);
-			this.groupBox9.Controls.Add(this.cb42_zazor);
 			this.groupBox9.Controls.Add(this.cb42_diam);
 			this.groupBox9.Controls.Add(this.label108);
 			this.groupBox9.Controls.Add(this.label113);
@@ -2176,15 +2152,6 @@ namespace airDucts
 			this.label104.TabIndex = 18;
 			this.label104.Text = "мм";
 			// 
-			// cb42_zazor
-			// 
-			this.cb42_zazor.FormattingEnabled = true;
-			this.cb42_zazor.Location = new System.Drawing.Point(277, 97);
-			this.cb42_zazor.Name = "cb42_zazor";
-			this.cb42_zazor.Size = new System.Drawing.Size(91, 32);
-			this.cb42_zazor.TabIndex = 17;
-			this.cb42_zazor.Text = "2";
-			// 
 			// cb42_diam
 			// 
 			this.cb42_diam.FormattingEnabled = true;
@@ -2193,6 +2160,7 @@ namespace airDucts
 			this.cb42_diam.Size = new System.Drawing.Size(91, 32);
 			this.cb42_diam.TabIndex = 12;
 			this.cb42_diam.Text = "350";
+			this.cb42_diam.SelectedIndexChanged += new System.EventHandler(this.cb42_diam_SelectedIndexChanged);
 			// 
 			// label108
 			// 
@@ -2332,10 +2300,10 @@ namespace airDucts
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.cb51_vys);
 			this.groupBox3.Controls.Add(this.label37);
 			this.groupBox3.Controls.Add(this.label38);
 			this.groupBox3.Controls.Add(this.label39);
-			this.groupBox3.Controls.Add(this.cb51_vys);
 			this.groupBox3.Controls.Add(this.cb51_shir);
 			this.groupBox3.Controls.Add(this.cb51_dlin);
 			this.groupBox3.Controls.Add(this.label41);
@@ -2382,15 +2350,6 @@ namespace airDucts
 			this.label39.TabIndex = 18;
 			this.label39.Text = "мм";
 			// 
-			// cb51_vys
-			// 
-			this.cb51_vys.FormattingEnabled = true;
-			this.cb51_vys.Location = new System.Drawing.Point(442, 63);
-			this.cb51_vys.Name = "cb51_vys";
-			this.cb51_vys.Size = new System.Drawing.Size(91, 32);
-			this.cb51_vys.TabIndex = 14;
-			this.cb51_vys.Text = "20";
-			// 
 			// cb51_shir
 			// 
 			this.cb51_shir.FormattingEnabled = true;
@@ -2408,6 +2367,7 @@ namespace airDucts
 			this.cb51_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb51_dlin.TabIndex = 12;
 			this.cb51_dlin.Text = "100";
+			this.cb51_dlin.SelectedIndexChanged += new System.EventHandler(this.cb51_dlin_SelectedIndexChanged);
 			// 
 			// label41
 			// 
@@ -2545,10 +2505,10 @@ namespace airDucts
 			// 
 			// groupBox7
 			// 
+			this.groupBox7.Controls.Add(this.cb52_vys);
 			this.groupBox7.Controls.Add(this.label79);
 			this.groupBox7.Controls.Add(this.label89);
-			this.groupBox7.Controls.Add(this.comboBox19);
-			this.groupBox7.Controls.Add(this.comboBox22);
+			this.groupBox7.Controls.Add(this.cb52_diam);
 			this.groupBox7.Controls.Add(this.label91);
 			this.groupBox7.Controls.Add(this.label93);
 			this.groupBox7.Controls.Add(this.label94);
@@ -2581,23 +2541,14 @@ namespace airDucts
 			this.label89.TabIndex = 18;
 			this.label89.Text = "мм";
 			// 
-			// comboBox19
+			// cb52_diam
 			// 
-			this.comboBox19.FormattingEnabled = true;
-			this.comboBox19.Location = new System.Drawing.Point(174, 97);
-			this.comboBox19.Name = "comboBox19";
-			this.comboBox19.Size = new System.Drawing.Size(91, 32);
-			this.comboBox19.TabIndex = 14;
-			this.comboBox19.Text = "20";
-			// 
-			// comboBox22
-			// 
-			this.comboBox22.FormattingEnabled = true;
-			this.comboBox22.Location = new System.Drawing.Point(174, 46);
-			this.comboBox22.Name = "comboBox22";
-			this.comboBox22.Size = new System.Drawing.Size(91, 32);
-			this.comboBox22.TabIndex = 12;
-			this.comboBox22.Text = "100";
+			this.cb52_diam.FormattingEnabled = true;
+			this.cb52_diam.Location = new System.Drawing.Point(174, 46);
+			this.cb52_diam.Name = "cb52_diam";
+			this.cb52_diam.Size = new System.Drawing.Size(91, 32);
+			this.cb52_diam.TabIndex = 12;
+			this.cb52_diam.Text = "100";
 			// 
 			// label91
 			// 
@@ -2739,8 +2690,12 @@ namespace airDucts
 			// 
 			// groupBox10
 			// 
-			this.groupBox10.Controls.Add(this.label130);
 			this.groupBox10.Controls.Add(this.cb61_vys2);
+			this.groupBox10.Controls.Add(this.cb61_shir2);
+			this.groupBox10.Controls.Add(this.cb61_dlin2);
+			this.groupBox10.Controls.Add(this.cb61_vys1);
+			this.groupBox10.Controls.Add(this.cb61_zazor);
+			this.groupBox10.Controls.Add(this.label130);
 			this.groupBox10.Controls.Add(this.label131);
 			this.groupBox10.Controls.Add(this.label132);
 			this.groupBox10.Controls.Add(this.label95);
@@ -2749,10 +2704,6 @@ namespace airDucts
 			this.groupBox10.Controls.Add(this.label112);
 			this.groupBox10.Controls.Add(this.label115);
 			this.groupBox10.Controls.Add(this.label116);
-			this.groupBox10.Controls.Add(this.cb61_zazor);
-			this.groupBox10.Controls.Add(this.cb61_shir2);
-			this.groupBox10.Controls.Add(this.cb61_dlin2);
-			this.groupBox10.Controls.Add(this.cb61_vys1);
 			this.groupBox10.Controls.Add(this.cb61_shir1);
 			this.groupBox10.Controls.Add(this.cb61_dlin1);
 			this.groupBox10.Controls.Add(this.label118);
@@ -2784,15 +2735,6 @@ namespace airDucts
 			this.label130.Size = new System.Drawing.Size(36, 24);
 			this.label130.TabIndex = 27;
 			this.label130.Text = "мм";
-			// 
-			// cb61_vys2
-			// 
-			this.cb61_vys2.FormattingEnabled = true;
-			this.cb61_vys2.Location = new System.Drawing.Point(455, 114);
-			this.cb61_vys2.Name = "cb61_vys2";
-			this.cb61_vys2.Size = new System.Drawing.Size(84, 32);
-			this.cb61_vys2.TabIndex = 26;
-			this.cb61_vys2.Text = "100";
 			// 
 			// label131
 			// 
@@ -2874,42 +2816,6 @@ namespace airDucts
 			this.label116.TabIndex = 18;
 			this.label116.Text = "мм";
 			// 
-			// cb61_zazor
-			// 
-			this.cb61_zazor.FormattingEnabled = true;
-			this.cb61_zazor.Location = new System.Drawing.Point(310, 163);
-			this.cb61_zazor.Name = "cb61_zazor";
-			this.cb61_zazor.Size = new System.Drawing.Size(84, 32);
-			this.cb61_zazor.TabIndex = 17;
-			this.cb61_zazor.Text = "2";
-			// 
-			// cb61_shir2
-			// 
-			this.cb61_shir2.FormattingEnabled = true;
-			this.cb61_shir2.Location = new System.Drawing.Point(455, 77);
-			this.cb61_shir2.Name = "cb61_shir2";
-			this.cb61_shir2.Size = new System.Drawing.Size(84, 32);
-			this.cb61_shir2.TabIndex = 16;
-			this.cb61_shir2.Text = "100";
-			// 
-			// cb61_dlin2
-			// 
-			this.cb61_dlin2.FormattingEnabled = true;
-			this.cb61_dlin2.Location = new System.Drawing.Point(455, 37);
-			this.cb61_dlin2.Name = "cb61_dlin2";
-			this.cb61_dlin2.Size = new System.Drawing.Size(84, 32);
-			this.cb61_dlin2.TabIndex = 15;
-			this.cb61_dlin2.Text = "150";
-			// 
-			// cb61_vys1
-			// 
-			this.cb61_vys1.FormattingEnabled = true;
-			this.cb61_vys1.Location = new System.Drawing.Point(155, 115);
-			this.cb61_vys1.Name = "cb61_vys1";
-			this.cb61_vys1.Size = new System.Drawing.Size(91, 32);
-			this.cb61_vys1.TabIndex = 14;
-			this.cb61_vys1.Text = "500";
-			// 
 			// cb61_shir1
 			// 
 			this.cb61_shir1.FormattingEnabled = true;
@@ -2918,6 +2824,7 @@ namespace airDucts
 			this.cb61_shir1.Size = new System.Drawing.Size(91, 32);
 			this.cb61_shir1.TabIndex = 13;
 			this.cb61_shir1.Text = "250";
+			this.cb61_shir1.SelectedIndexChanged += new System.EventHandler(this.cb61_shir1_SelectedIndexChanged);
 			// 
 			// cb61_dlin1
 			// 
@@ -2927,6 +2834,7 @@ namespace airDucts
 			this.cb61_dlin1.Size = new System.Drawing.Size(91, 32);
 			this.cb61_dlin1.TabIndex = 12;
 			this.cb61_dlin1.Text = "350";
+			this.cb61_dlin1.SelectedIndexChanged += new System.EventHandler(this.cb61_dlin1_SelectedIndexChanged);
 			// 
 			// label118
 			// 
@@ -3125,20 +3033,20 @@ namespace airDucts
 			// 
 			// groupBox11
 			// 
+			this.groupBox11.Controls.Add(this.cb62_vys1);
+			this.groupBox11.Controls.Add(this.cb62_zazor);
+			this.groupBox11.Controls.Add(this.cb62_vys2);
 			this.groupBox11.Controls.Add(this.label137);
 			this.groupBox11.Controls.Add(this.cb62_diam);
 			this.groupBox11.Controls.Add(this.label138);
 			this.groupBox11.Controls.Add(this.label144);
 			this.groupBox11.Controls.Add(this.label133);
-			this.groupBox11.Controls.Add(this.cb62_vys2);
 			this.groupBox11.Controls.Add(this.label134);
 			this.groupBox11.Controls.Add(this.label135);
 			this.groupBox11.Controls.Add(this.label136);
 			this.groupBox11.Controls.Add(this.label139);
 			this.groupBox11.Controls.Add(this.label140);
 			this.groupBox11.Controls.Add(this.label141);
-			this.groupBox11.Controls.Add(this.cb62_zazor);
-			this.groupBox11.Controls.Add(this.cb62_vys1);
 			this.groupBox11.Controls.Add(this.cb62_shir);
 			this.groupBox11.Controls.Add(this.cb62_dlin);
 			this.groupBox11.Controls.Add(this.label142);
@@ -3175,6 +3083,7 @@ namespace airDucts
 			this.cb62_diam.Size = new System.Drawing.Size(84, 32);
 			this.cb62_diam.TabIndex = 30;
 			this.cb62_diam.Text = "100";
+			this.cb62_diam.SelectedIndexChanged += new System.EventHandler(this.cb62_diam_SelectedIndexChanged);
 			// 
 			// label138
 			// 
@@ -3205,15 +3114,6 @@ namespace airDucts
 			this.label133.Size = new System.Drawing.Size(36, 24);
 			this.label133.TabIndex = 27;
 			this.label133.Text = "мм";
-			// 
-			// cb62_vys2
-			// 
-			this.cb62_vys2.FormattingEnabled = true;
-			this.cb62_vys2.Location = new System.Drawing.Point(452, 77);
-			this.cb62_vys2.Name = "cb62_vys2";
-			this.cb62_vys2.Size = new System.Drawing.Size(84, 32);
-			this.cb62_vys2.TabIndex = 26;
-			this.cb62_vys2.Text = "100";
 			// 
 			// label134
 			// 
@@ -3275,24 +3175,6 @@ namespace airDucts
 			this.label141.TabIndex = 18;
 			this.label141.Text = "мм";
 			// 
-			// cb62_zazor
-			// 
-			this.cb62_zazor.FormattingEnabled = true;
-			this.cb62_zazor.Location = new System.Drawing.Point(452, 114);
-			this.cb62_zazor.Name = "cb62_zazor";
-			this.cb62_zazor.Size = new System.Drawing.Size(84, 32);
-			this.cb62_zazor.TabIndex = 17;
-			this.cb62_zazor.Text = "2";
-			// 
-			// cb62_vys1
-			// 
-			this.cb62_vys1.FormattingEnabled = true;
-			this.cb62_vys1.Location = new System.Drawing.Point(155, 115);
-			this.cb62_vys1.Name = "cb62_vys1";
-			this.cb62_vys1.Size = new System.Drawing.Size(91, 32);
-			this.cb62_vys1.TabIndex = 14;
-			this.cb62_vys1.Text = "500";
-			// 
 			// cb62_shir
 			// 
 			this.cb62_shir.FormattingEnabled = true;
@@ -3301,6 +3183,7 @@ namespace airDucts
 			this.cb62_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb62_shir.TabIndex = 13;
 			this.cb62_shir.Text = "250";
+			this.cb62_shir.SelectedIndexChanged += new System.EventHandler(this.cb62_shir_SelectedIndexChanged);
 			// 
 			// cb62_dlin
 			// 
@@ -3310,6 +3193,7 @@ namespace airDucts
 			this.cb62_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb62_dlin.TabIndex = 12;
 			this.cb62_dlin.Text = "350";
+			this.cb62_dlin.SelectedIndexChanged += new System.EventHandler(this.cb62_dlin_SelectedIndexChanged);
 			// 
 			// label142
 			// 
@@ -3467,6 +3351,9 @@ namespace airDucts
 			// 
 			// groupBox13
 			// 
+			this.groupBox13.Controls.Add(this.cb63_vys1);
+			this.groupBox13.Controls.Add(this.cb63_vys2);
+			this.groupBox13.Controls.Add(this.cb63_zazor);
 			this.groupBox13.Controls.Add(this.label180);
 			this.groupBox13.Controls.Add(this.cb63_diam1);
 			this.groupBox13.Controls.Add(this.label184);
@@ -3476,13 +3363,10 @@ namespace airDucts
 			this.groupBox13.Controls.Add(this.label172);
 			this.groupBox13.Controls.Add(this.label173);
 			this.groupBox13.Controls.Add(this.label174);
-			this.groupBox13.Controls.Add(this.cb63_vys2);
 			this.groupBox13.Controls.Add(this.label175);
 			this.groupBox13.Controls.Add(this.label176);
 			this.groupBox13.Controls.Add(this.label177);
 			this.groupBox13.Controls.Add(this.label178);
-			this.groupBox13.Controls.Add(this.cb63_zazor);
-			this.groupBox13.Controls.Add(this.cb63_vys1);
 			this.groupBox13.Controls.Add(this.label181);
 			this.groupBox13.Controls.Add(this.label182);
 			this.groupBox13.Controls.Add(this.label185);
@@ -3513,6 +3397,7 @@ namespace airDucts
 			this.cb63_diam1.Size = new System.Drawing.Size(84, 32);
 			this.cb63_diam1.TabIndex = 34;
 			this.cb63_diam1.Text = "300";
+			this.cb63_diam1.SelectedIndexChanged += new System.EventHandler(this.cb63_diam1_SelectedIndexChanged);
 			// 
 			// label184
 			// 
@@ -3552,6 +3437,7 @@ namespace airDucts
 			this.cb63_diam2.Size = new System.Drawing.Size(84, 32);
 			this.cb63_diam2.TabIndex = 30;
 			this.cb63_diam2.Text = "100";
+			this.cb63_diam2.SelectedIndexChanged += new System.EventHandler(this.cb63_diam2_SelectedIndexChanged);
 			// 
 			// label172
 			// 
@@ -3582,15 +3468,6 @@ namespace airDucts
 			this.label174.Size = new System.Drawing.Size(36, 24);
 			this.label174.TabIndex = 27;
 			this.label174.Text = "мм";
-			// 
-			// cb63_vys2
-			// 
-			this.cb63_vys2.FormattingEnabled = true;
-			this.cb63_vys2.Location = new System.Drawing.Point(452, 77);
-			this.cb63_vys2.Name = "cb63_vys2";
-			this.cb63_vys2.Size = new System.Drawing.Size(84, 32);
-			this.cb63_vys2.TabIndex = 26;
-			this.cb63_vys2.Text = "100";
 			// 
 			// label175
 			// 
@@ -3631,24 +3508,6 @@ namespace airDucts
 			this.label178.Size = new System.Drawing.Size(36, 24);
 			this.label178.TabIndex = 20;
 			this.label178.Text = "мм";
-			// 
-			// cb63_zazor
-			// 
-			this.cb63_zazor.FormattingEnabled = true;
-			this.cb63_zazor.Location = new System.Drawing.Point(308, 123);
-			this.cb63_zazor.Name = "cb63_zazor";
-			this.cb63_zazor.Size = new System.Drawing.Size(84, 32);
-			this.cb63_zazor.TabIndex = 17;
-			this.cb63_zazor.Text = "2";
-			// 
-			// cb63_vys1
-			// 
-			this.cb63_vys1.FormattingEnabled = true;
-			this.cb63_vys1.Location = new System.Drawing.Point(155, 78);
-			this.cb63_vys1.Name = "cb63_vys1";
-			this.cb63_vys1.Size = new System.Drawing.Size(86, 32);
-			this.cb63_vys1.TabIndex = 14;
-			this.cb63_vys1.Text = "500";
 			// 
 			// label181
 			// 
@@ -3766,20 +3625,20 @@ namespace airDucts
 			// 
 			// groupBox12
 			// 
+			this.groupBox12.Controls.Add(this.cb64_vys1);
+			this.groupBox12.Controls.Add(this.cb64_vys2);
+			this.groupBox12.Controls.Add(this.cb64_zazor);
 			this.groupBox12.Controls.Add(this.label150);
 			this.groupBox12.Controls.Add(this.cb64_diam);
 			this.groupBox12.Controls.Add(this.label151);
 			this.groupBox12.Controls.Add(this.label154);
 			this.groupBox12.Controls.Add(this.label155);
-			this.groupBox12.Controls.Add(this.cb64_vys1);
 			this.groupBox12.Controls.Add(this.label156);
 			this.groupBox12.Controls.Add(this.label157);
 			this.groupBox12.Controls.Add(this.label158);
 			this.groupBox12.Controls.Add(this.label159);
 			this.groupBox12.Controls.Add(this.label160);
 			this.groupBox12.Controls.Add(this.label161);
-			this.groupBox12.Controls.Add(this.cb64_zazor);
-			this.groupBox12.Controls.Add(this.cb64_vys2);
 			this.groupBox12.Controls.Add(this.cb64_shir);
 			this.groupBox12.Controls.Add(this.cb64_dlin);
 			this.groupBox12.Controls.Add(this.label162);
@@ -3816,6 +3675,7 @@ namespace airDucts
 			this.cb64_diam.Size = new System.Drawing.Size(84, 32);
 			this.cb64_diam.TabIndex = 30;
 			this.cb64_diam.Text = "300";
+			this.cb64_diam.SelectedIndexChanged += new System.EventHandler(this.cb64_diam_SelectedIndexChanged);
 			// 
 			// label151
 			// 
@@ -3846,15 +3706,6 @@ namespace airDucts
 			this.label155.Size = new System.Drawing.Size(36, 24);
 			this.label155.TabIndex = 27;
 			this.label155.Text = "мм";
-			// 
-			// cb64_vys1
-			// 
-			this.cb64_vys1.FormattingEnabled = true;
-			this.cb64_vys1.Location = new System.Drawing.Point(452, 77);
-			this.cb64_vys1.Name = "cb64_vys1";
-			this.cb64_vys1.Size = new System.Drawing.Size(84, 32);
-			this.cb64_vys1.TabIndex = 26;
-			this.cb64_vys1.Text = "500";
 			// 
 			// label156
 			// 
@@ -3916,41 +3767,27 @@ namespace airDucts
 			this.label161.TabIndex = 18;
 			this.label161.Text = "мм";
 			// 
-			// cb64_zazor
-			// 
-			this.cb64_zazor.FormattingEnabled = true;
-			this.cb64_zazor.Location = new System.Drawing.Point(452, 114);
-			this.cb64_zazor.Name = "cb64_zazor";
-			this.cb64_zazor.Size = new System.Drawing.Size(84, 32);
-			this.cb64_zazor.TabIndex = 17;
-			this.cb64_zazor.Text = "2";
-			// 
-			// cb64_vys2
-			// 
-			this.cb64_vys2.FormattingEnabled = true;
-			this.cb64_vys2.Location = new System.Drawing.Point(155, 115);
-			this.cb64_vys2.Name = "cb64_vys2";
-			this.cb64_vys2.Size = new System.Drawing.Size(91, 32);
-			this.cb64_vys2.TabIndex = 14;
-			this.cb64_vys2.Text = "100";
-			// 
 			// cb64_shir
 			// 
+			this.cb64_shir.Enabled = false;
 			this.cb64_shir.FormattingEnabled = true;
 			this.cb64_shir.Location = new System.Drawing.Point(155, 77);
 			this.cb64_shir.Name = "cb64_shir";
 			this.cb64_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb64_shir.TabIndex = 13;
 			this.cb64_shir.Text = "50";
+			this.cb64_shir.SelectedIndexChanged += new System.EventHandler(this.cb64_shir_SelectedIndexChanged);
 			// 
 			// cb64_dlin
 			// 
+			this.cb64_dlin.Enabled = false;
 			this.cb64_dlin.FormattingEnabled = true;
 			this.cb64_dlin.Location = new System.Drawing.Point(155, 37);
 			this.cb64_dlin.Name = "cb64_dlin";
 			this.cb64_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb64_dlin.TabIndex = 12;
 			this.cb64_dlin.Text = "100";
+			this.cb64_dlin.SelectedIndexChanged += new System.EventHandler(this.cb64_dlin_SelectedIndexChanged);
 			// 
 			// label162
 			// 
@@ -4070,19 +3907,167 @@ namespace airDucts
 			this.label12.TabIndex = 2;
 			this.label12.Text = "label12";
 			// 
-			// cb31_zazor
+			// cb32_vys
 			// 
-			this.cb31_zazor.Location = new System.Drawing.Point(455, 118);
-			this.cb31_zazor.Name = "cb31_zazor";
-			this.cb31_zazor.Size = new System.Drawing.Size(84, 29);
-			this.cb31_zazor.TabIndex = 24;
+			this.cb32_vys.Location = new System.Drawing.Point(155, 117);
+			this.cb32_vys.Name = "cb32_vys";
+			this.cb32_vys.Size = new System.Drawing.Size(91, 29);
+			this.cb32_vys.TabIndex = 25;
 			// 
-			// cb32_zazor
+			// cb33_zazor
 			// 
-			this.cb32_zazor.Location = new System.Drawing.Point(455, 81);
-			this.cb32_zazor.Name = "cb32_zazor";
-			this.cb32_zazor.Size = new System.Drawing.Size(84, 29);
-			this.cb32_zazor.TabIndex = 24;
+			this.cb33_zazor.Location = new System.Drawing.Point(455, 106);
+			this.cb33_zazor.Name = "cb33_zazor";
+			this.cb33_zazor.Size = new System.Drawing.Size(84, 29);
+			this.cb33_zazor.TabIndex = 24;
+			// 
+			// cb33_vys
+			// 
+			this.cb33_vys.Location = new System.Drawing.Point(155, 110);
+			this.cb33_vys.Name = "cb33_vys";
+			this.cb33_vys.Size = new System.Drawing.Size(91, 29);
+			this.cb33_vys.TabIndex = 25;
+			// 
+			// cb41_dlinOtvod
+			// 
+			this.cb41_dlinOtvod.Location = new System.Drawing.Point(389, 73);
+			this.cb41_dlinOtvod.Name = "cb41_dlinOtvod";
+			this.cb41_dlinOtvod.Size = new System.Drawing.Size(100, 29);
+			this.cb41_dlinOtvod.TabIndex = 24;
+			// 
+			// cb41_zazor
+			// 
+			this.cb41_zazor.Location = new System.Drawing.Point(155, 122);
+			this.cb41_zazor.Name = "cb41_zazor";
+			this.cb41_zazor.Size = new System.Drawing.Size(91, 29);
+			this.cb41_zazor.TabIndex = 25;
+			// 
+			// cb42_zazor
+			// 
+			this.cb42_zazor.Location = new System.Drawing.Point(279, 98);
+			this.cb42_zazor.Name = "cb42_zazor";
+			this.cb42_zazor.Size = new System.Drawing.Size(91, 29);
+			this.cb42_zazor.TabIndex = 24;
+			// 
+			// cb51_vys
+			// 
+			this.cb51_vys.Location = new System.Drawing.Point(446, 63);
+			this.cb51_vys.Name = "cb51_vys";
+			this.cb51_vys.Size = new System.Drawing.Size(87, 29);
+			this.cb51_vys.TabIndex = 21;
+			this.cb51_vys.Text = "20";
+			// 
+			// cb52_vys
+			// 
+			this.cb52_vys.Location = new System.Drawing.Point(174, 95);
+			this.cb52_vys.Name = "cb52_vys";
+			this.cb52_vys.Size = new System.Drawing.Size(91, 29);
+			this.cb52_vys.TabIndex = 22;
+			this.cb52_vys.Text = "20";
+			// 
+			// cb61_zazor
+			// 
+			this.cb61_zazor.Location = new System.Drawing.Point(300, 166);
+			this.cb61_zazor.Name = "cb61_zazor";
+			this.cb61_zazor.Size = new System.Drawing.Size(83, 29);
+			this.cb61_zazor.TabIndex = 28;
+			// 
+			// cb61_vys1
+			// 
+			this.cb61_vys1.Location = new System.Drawing.Point(155, 120);
+			this.cb61_vys1.Name = "cb61_vys1";
+			this.cb61_vys1.Size = new System.Drawing.Size(91, 29);
+			this.cb61_vys1.TabIndex = 29;
+			// 
+			// cb61_dlin2
+			// 
+			this.cb61_dlin2.Location = new System.Drawing.Point(455, 40);
+			this.cb61_dlin2.Name = "cb61_dlin2";
+			this.cb61_dlin2.Size = new System.Drawing.Size(84, 29);
+			this.cb61_dlin2.TabIndex = 30;
+			// 
+			// cb61_shir2
+			// 
+			this.cb61_shir2.Location = new System.Drawing.Point(455, 77);
+			this.cb61_shir2.Name = "cb61_shir2";
+			this.cb61_shir2.Size = new System.Drawing.Size(84, 29);
+			this.cb61_shir2.TabIndex = 31;
+			// 
+			// cb61_vys2
+			// 
+			this.cb61_vys2.Location = new System.Drawing.Point(455, 118);
+			this.cb61_vys2.Name = "cb61_vys2";
+			this.cb61_vys2.Size = new System.Drawing.Size(84, 29);
+			this.cb61_vys2.TabIndex = 32;
+			this.cb61_vys2.Text = "100";
+			// 
+			// cb62_vys2
+			// 
+			this.cb62_vys2.Location = new System.Drawing.Point(452, 76);
+			this.cb62_vys2.Name = "cb62_vys2";
+			this.cb62_vys2.Size = new System.Drawing.Size(84, 29);
+			this.cb62_vys2.TabIndex = 32;
+			this.cb62_vys2.Text = "100";
+			// 
+			// cb62_zazor
+			// 
+			this.cb62_zazor.Location = new System.Drawing.Point(452, 118);
+			this.cb62_zazor.Name = "cb62_zazor";
+			this.cb62_zazor.Size = new System.Drawing.Size(84, 29);
+			this.cb62_zazor.TabIndex = 33;
+			// 
+			// cb62_vys1
+			// 
+			this.cb62_vys1.Location = new System.Drawing.Point(155, 120);
+			this.cb62_vys1.Name = "cb62_vys1";
+			this.cb62_vys1.Size = new System.Drawing.Size(91, 29);
+			this.cb62_vys1.TabIndex = 34;
+			// 
+			// cb63_zazor
+			// 
+			this.cb63_zazor.Location = new System.Drawing.Point(308, 124);
+			this.cb63_zazor.Name = "cb63_zazor";
+			this.cb63_zazor.Size = new System.Drawing.Size(83, 29);
+			this.cb63_zazor.TabIndex = 36;
+			// 
+			// cb63_vys2
+			// 
+			this.cb63_vys2.Location = new System.Drawing.Point(452, 80);
+			this.cb63_vys2.Name = "cb63_vys2";
+			this.cb63_vys2.Size = new System.Drawing.Size(84, 29);
+			this.cb63_vys2.TabIndex = 37;
+			this.cb63_vys2.Text = "100";
+			// 
+			// cb63_vys1
+			// 
+			this.cb63_vys1.Location = new System.Drawing.Point(157, 78);
+			this.cb63_vys1.Name = "cb63_vys1";
+			this.cb63_vys1.Size = new System.Drawing.Size(84, 29);
+			this.cb63_vys1.TabIndex = 38;
+			// 
+			// cb64_zazor
+			// 
+			this.cb64_zazor.Enabled = false;
+			this.cb64_zazor.Location = new System.Drawing.Point(452, 119);
+			this.cb64_zazor.Name = "cb64_zazor";
+			this.cb64_zazor.Size = new System.Drawing.Size(84, 29);
+			this.cb64_zazor.TabIndex = 32;
+			// 
+			// cb64_vys2
+			// 
+			this.cb64_vys2.Location = new System.Drawing.Point(155, 119);
+			this.cb64_vys2.Name = "cb64_vys2";
+			this.cb64_vys2.Size = new System.Drawing.Size(91, 29);
+			this.cb64_vys2.TabIndex = 33;
+			this.cb64_vys2.Text = "100";
+			// 
+			// cb64_vys1
+			// 
+			this.cb64_vys1.Enabled = false;
+			this.cb64_vys1.Location = new System.Drawing.Point(452, 78);
+			this.cb64_vys1.Name = "cb64_vys1";
+			this.cb64_vys1.Size = new System.Drawing.Size(84, 29);
+			this.cb64_vys1.TabIndex = 34;
 			// 
 			// Form1
 			// 
@@ -4239,7 +4224,6 @@ namespace airDucts
 		private System.Windows.Forms.Label label37;
 		private System.Windows.Forms.Label label38;
 		private System.Windows.Forms.Label label39;
-		private System.Windows.Forms.ComboBox cb51_vys;
 		private System.Windows.Forms.ComboBox cb51_shir;
 		private System.Windows.Forms.ComboBox cb51_dlin;
 		private System.Windows.Forms.Label label41;
@@ -4303,7 +4287,6 @@ namespace airDucts
 		private System.Windows.Forms.Label label65;
 		private System.Windows.Forms.Label label66;
 		private System.Windows.Forms.ComboBox cb32_diam;
-		private System.Windows.Forms.ComboBox cb32_vys;
 		private System.Windows.Forms.ComboBox cb32_shir;
 		private System.Windows.Forms.ComboBox cb32_dlin;
 		private System.Windows.Forms.Label label67;
@@ -4322,9 +4305,7 @@ namespace airDucts
 		private System.Windows.Forms.Label label69;
 		private System.Windows.Forms.Label label75;
 		private System.Windows.Forms.Label label80;
-		private System.Windows.Forms.ComboBox cb33_zazor;
 		private System.Windows.Forms.ComboBox cb33_diam2;
-		private System.Windows.Forms.ComboBox cb33_vys;
 		private System.Windows.Forms.ComboBox cb33_diam1;
 		private System.Windows.Forms.Label label81;
 		private System.Windows.Forms.Label label82;
@@ -4341,8 +4322,7 @@ namespace airDucts
 		private System.Windows.Forms.GroupBox groupBox7;
 		private System.Windows.Forms.Label label79;
 		private System.Windows.Forms.Label label89;
-		private System.Windows.Forms.ComboBox comboBox19;
-		private System.Windows.Forms.ComboBox comboBox22;
+		private System.Windows.Forms.ComboBox cb52_diam;
 		private System.Windows.Forms.Label label91;
 		private System.Windows.Forms.Label label93;
 		private System.Windows.Forms.Label label94;
@@ -4356,8 +4336,6 @@ namespace airDucts
 		private System.Windows.Forms.Label label97;
 		private System.Windows.Forms.Label label98;
 		private System.Windows.Forms.Label label99;
-		private System.Windows.Forms.ComboBox cb41_zazor;
-		private System.Windows.Forms.ComboBox cb41_dlinOtvod;
 		private System.Windows.Forms.ComboBox cb41_shir;
 		private System.Windows.Forms.ComboBox cb41_dlin;
 		private System.Windows.Forms.Label label100;
@@ -4376,7 +4354,6 @@ namespace airDucts
 		private System.Windows.Forms.GroupBox groupBox9;
 		private System.Windows.Forms.Label label92;
 		private System.Windows.Forms.Label label104;
-		private System.Windows.Forms.ComboBox cb42_zazor;
 		private System.Windows.Forms.ComboBox cb42_diam;
 		private System.Windows.Forms.Label label108;
 		private System.Windows.Forms.Label label113;
@@ -4389,7 +4366,6 @@ namespace airDucts
 		private System.Windows.Forms.Button bt_TroinicPr;
 		private System.Windows.Forms.GroupBox groupBox10;
 		private System.Windows.Forms.Label label130;
-		private System.Windows.Forms.ComboBox cb61_vys2;
 		private System.Windows.Forms.Label label131;
 		private System.Windows.Forms.Label label132;
 		private System.Windows.Forms.Label label95;
@@ -4398,10 +4374,6 @@ namespace airDucts
 		private System.Windows.Forms.Label label112;
 		private System.Windows.Forms.Label label115;
 		private System.Windows.Forms.Label label116;
-		private System.Windows.Forms.ComboBox cb61_zazor;
-		private System.Windows.Forms.ComboBox cb61_shir2;
-		private System.Windows.Forms.ComboBox cb61_dlin2;
-		private System.Windows.Forms.ComboBox cb61_vys1;
 		private System.Windows.Forms.ComboBox cb61_shir1;
 		private System.Windows.Forms.ComboBox cb61_dlin1;
 		private System.Windows.Forms.Label label118;
@@ -4427,15 +4399,12 @@ namespace airDucts
 		private System.Windows.Forms.Label label138;
 		private System.Windows.Forms.Label label144;
 		private System.Windows.Forms.Label label133;
-		private System.Windows.Forms.ComboBox cb62_vys2;
 		private System.Windows.Forms.Label label134;
 		private System.Windows.Forms.Label label135;
 		private System.Windows.Forms.Label label136;
 		private System.Windows.Forms.Label label139;
 		private System.Windows.Forms.Label label140;
 		private System.Windows.Forms.Label label141;
-		private System.Windows.Forms.ComboBox cb62_zazor;
-		private System.Windows.Forms.ComboBox cb62_vys1;
 		private System.Windows.Forms.ComboBox cb62_shir;
 		private System.Windows.Forms.ComboBox cb62_dlin;
 		private System.Windows.Forms.Label label142;
@@ -4457,15 +4426,12 @@ namespace airDucts
 		private System.Windows.Forms.Label label151;
 		private System.Windows.Forms.Label label154;
 		private System.Windows.Forms.Label label155;
-		private System.Windows.Forms.ComboBox cb64_vys1;
 		private System.Windows.Forms.Label label156;
 		private System.Windows.Forms.Label label157;
 		private System.Windows.Forms.Label label158;
 		private System.Windows.Forms.Label label159;
 		private System.Windows.Forms.Label label160;
 		private System.Windows.Forms.Label label161;
-		private System.Windows.Forms.ComboBox cb64_zazor;
-		private System.Windows.Forms.ComboBox cb64_vys2;
 		private System.Windows.Forms.ComboBox cb64_shir;
 		private System.Windows.Forms.ComboBox cb64_dlin;
 		private System.Windows.Forms.Label label162;
@@ -4491,13 +4457,10 @@ namespace airDucts
 		private System.Windows.Forms.Label label172;
 		private System.Windows.Forms.Label label173;
 		private System.Windows.Forms.Label label174;
-		private System.Windows.Forms.ComboBox cb63_vys2;
 		private System.Windows.Forms.Label label175;
 		private System.Windows.Forms.Label label176;
 		private System.Windows.Forms.Label label177;
 		private System.Windows.Forms.Label label178;
-		private System.Windows.Forms.ComboBox cb63_zazor;
-		private System.Windows.Forms.ComboBox cb63_vys1;
 		private System.Windows.Forms.Label label181;
 		private System.Windows.Forms.Label label182;
 		private System.Windows.Forms.Label label185;
@@ -4508,5 +4471,27 @@ namespace airDucts
 		private System.Windows.Forms.TextBox cb2_zazor;
 		private System.Windows.Forms.TextBox cb31_zazor;
 		private System.Windows.Forms.TextBox cb32_zazor;
+		private System.Windows.Forms.TextBox cb32_vys;
+		private System.Windows.Forms.TextBox cb33_vys;
+		private System.Windows.Forms.TextBox cb33_zazor;
+		private System.Windows.Forms.TextBox cb41_zazor;
+		private System.Windows.Forms.TextBox cb41_dlinOtvod;
+		private System.Windows.Forms.TextBox cb42_zazor;
+		private System.Windows.Forms.TextBox cb51_vys;
+		private System.Windows.Forms.TextBox cb52_vys;
+		private System.Windows.Forms.TextBox cb61_vys1;
+		private System.Windows.Forms.TextBox cb61_zazor;
+		private System.Windows.Forms.TextBox cb61_vys2;
+		private System.Windows.Forms.TextBox cb61_shir2;
+		private System.Windows.Forms.TextBox cb61_dlin2;
+		private System.Windows.Forms.TextBox cb62_vys1;
+		private System.Windows.Forms.TextBox cb62_zazor;
+		private System.Windows.Forms.TextBox cb62_vys2;
+		private System.Windows.Forms.TextBox cb63_vys1;
+		private System.Windows.Forms.TextBox cb63_vys2;
+		private System.Windows.Forms.TextBox cb63_zazor;
+		private System.Windows.Forms.TextBox cb64_vys1;
+		private System.Windows.Forms.TextBox cb64_vys2;
+		private System.Windows.Forms.TextBox cb64_zazor;
 	}
 }

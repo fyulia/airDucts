@@ -152,5 +152,26 @@ namespace airDucts
 
 
 		}
+
+		public void createZaglKrBottom(double diam,double vys,double thick,IModelDoc2 Part)
+		{
+			Part.SketchManager.InsertSketch(true);
+			boolstatus = Part.Extension.SelectByID2("Спереди", "PLANE", 0, 0, 0, false, 0, null, 0);
+			Part.ClearSelection2(true);
+
+			skSegment = Part.SketchManager.CreateCircle(0, 0, 0, diam / 2, 0, 0);
+			Part.ClearSelection2(true);
+			Part.SketchManager.InsertSketch(true);
+
+			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", 0, 0, 0, false, 0, null, 0);
+
+			CustomBendAllowance customBendAllowanceData1;
+			customBendAllowanceData1 = Part.FeatureManager.CreateCustomBendAllowance();
+			customBendAllowanceData1.KFactor = 0.5;
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, false, 0.001, 0.02, 0.01, true, 0, 0, 1, customBendAllowanceData1,
+				false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
+			Part.ClearSelection2(true);
+
+		}
 	}
 }

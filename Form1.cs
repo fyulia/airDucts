@@ -12,6 +12,7 @@ using SolidWorks.Interop.swconst;
 using SolidWorks.Interop.swpublished;
 using SolidWorksTools;
 using SolidWorksTools.File;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace airDucts
 {
@@ -60,9 +61,20 @@ namespace airDucts
 			vys_pr = vys_pr / 1000;
 			dlin_pr = dlin_pr / 1000;
 			zazor_pr = zazor_pr / 1000;
-			
+
 			FolderBrowserDialog target = new FolderBrowserDialog();
+			target.RootFolder = System.Environment.SpecialFolder.MyComputer;
+			target.SelectedPath = "C:\\Users\\Yulia\\Desktop\\Воздуховоды";
 			target.ShowDialog();
+
+			//CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+			//dialog.InitialDirectory = "D:\\универ\\Диплом";
+			//dialog.IsFolderPicker = true;
+			//dialog
+			//if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+			//{
+			//	MessageBox.Show("You selected: " + dialog.FileName);
+			//}
 
 			string trg = target.SelectedPath;
 
@@ -75,21 +87,12 @@ namespace airDucts
 
 			airDuct duct = new airDuct();
 			duct.createPrVozd(dlin_pr, shir_pr, vys_pr, zazor_pr, Part);
-
-			//longstatus = Part.SaveAs3(name, 0, 2);
+			setMaterial();
 
 			//boolstatus = Part.Save3((int)swSaveAsOptions_e.swSaveAsOptions_Silent, ref lErrors, ref lWarnings); //сохранение изменений
 
 			Part.SaveAs3(trg + "\\" + name + ".sldprt", (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 			//longstatus = Part.SaveAs3(($"D:\\универ\\Диплом\\{name}.SLDRT"), 0, 0);
-
-
-			//Part = (ModelDoc2)swPart;
-			//swModelDocExt = (ModelDocExtension)Part.Extension;
-
-			//boolstatus = swModelDocExt.SaveAs("D:\\универ\\Диплом\\PerehodPr.SLDRT", 0, (int)swSaveAsOptions_e.swSaveAsOptions_Silent, null, ref errors, ref warnings);
-			//swPart = null;
-			//setMaterial();
 
 
 		}
@@ -98,22 +101,15 @@ namespace airDucts
 		{
 
 			//задание материала
-			string swMateDB = "";
-			string tempMaterial = "";
-			// Получить существующие материалы
-			//tempMaterial = ((PartDoc)Part).GetMaterialPropertyName2("", out swMateDB);
-
-			//MessageBox.Show("Текущий материал деталей - {TempMaterial}" );
-
-			//string configName = null;
-			//string databaseName = null;
-			//string newPropName = null;
+			
 			string configName = "По умолчанию";
 			string databaseName = "D:/SolidWorks/SOLIDWORKS/lang/russian/sldmaterials/solidworks materials.sldmat";
 			string newPropName = "Оцинкованная сталь";
 			((PartDoc)Part).SetMaterialPropertyName2(configName, databaseName, newPropName);
 
 		}
+
+		
 
 		private void cb1_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -190,6 +186,7 @@ namespace airDucts
 
 			airDuct duct2 = new airDuct();
 			duct2.createKrVozd(diam_kr, vys_kr, zazor_kr, Part);
+			Close();
 		}
 
 		private void bt_PerehPrPr_Click(object sender, EventArgs e)
@@ -527,6 +524,32 @@ namespace airDucts
 			for (int i = 0; i < dataSet15.Tables["troinicKrPr"].Rows.Count; i++)
 			{
 				cb64_diam.Items.Add(dataSet15.Tables["troinicKrPr"].Rows[i]["diam"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter16 = new SqlDataAdapter("SELECT DISTINCT dlin1  FROM flanPr", sqlConnection);
+
+			DataSet dataSet16 = new DataSet();
+			sqlDataAdapter16.Fill(dataSet16, "flanPr");
+
+			cb71_dlin.Items.Clear();
+
+			for (int i = 0; i < dataSet16.Tables["flanPr"].Rows.Count; i++)
+			{
+				cb71_dlin.Items.Add(dataSet16.Tables["flanPr"].Rows[i]["dlin1"].ToString());
+
+			}
+
+			SqlDataAdapter sqlDataAdapter17 = new SqlDataAdapter("SELECT DISTINCT diam  FROM flanKr", sqlConnection);
+
+			DataSet dataSet17 = new DataSet();
+			sqlDataAdapter17.Fill(dataSet17, "flanKr");
+
+			cb72_diam.Items.Clear();
+
+			for (int i = 0; i < dataSet17.Tables["flanKr"].Rows.Count; i++)
+			{
+				cb72_diam.Items.Add(dataSet17.Tables["flanKr"].Rows[i]["diam"].ToString());
 
 			}
 		}
@@ -1166,6 +1189,222 @@ namespace airDucts
 				cb64_zazor.Text = (dataSet2.Tables["troinicKrPr"].Rows[i]["thick"].ToString());
 				cb64_vys1.Text = (dataSet2.Tables["troinicKrPr"].Rows[i]["vys"].ToString());
 
+			}
+		}
+
+		private void cb71_dlin_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			string str = cb71_dlin.SelectedItem.ToString();
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT  shir1 FROM flanPr WHERE dlin1 =" + cb71_dlin.SelectedItem.ToString() + "", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "flanPr");
+
+			cb71_shir.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["flanPr"].Rows.Count; i++)
+			{
+
+				cb71_shir.Items.Add(dataSet2.Tables["flanPr"].Rows[i]["shir1"].ToString());
+			}
+
+		}
+
+		private void cb71_shir_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT dOtv,thick FROM flanPr WHERE dlin1 = " + cb71_dlin.SelectedItem.ToString() + " AND shir1 = " + cb71_shir.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "flanPr");
+			cb71_dOtv.Clear();
+			cb71_thick.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["flanPr"].Rows.Count; i++)
+			{
+				cb71_dOtv.Text = (dataSet2.Tables["flanPr"].Rows[i]["dOtv"].ToString());
+				cb71_thick.Text = (dataSet2.Tables["flanPr"].Rows[i]["thick"].ToString());
+
+			}
+		}
+
+		private void cb72_diam_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT dOtv,thick FROM flanKr WHERE diam = " + cb72_diam.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "flanKr");
+			cb72_dOtv.Clear();
+			cb72_thick.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["flanKr"].Rows.Count; i++)
+			{
+				cb72_dOtv.Text = (dataSet2.Tables["flanKr"].Rows[i]["dOtv"].ToString());
+				cb72_thick.Text = (dataSet2.Tables["flanKr"].Rows[i]["thick"].ToString());
+
+			}
+		}
+
+		private void bt_FlanPr_Click(object sender, EventArgs e)
+		{
+			double dlin1, shir1, dlin2, shir2,sDlin,sShir,thick,dOtv;
+			int countDlin, countShir;
+			dlin1 = Convert.ToDouble(cb71_dlin.SelectedItem.ToString());
+			shir1 = Convert.ToDouble(cb71_shir.SelectedItem.ToString());
+			dOtv = Convert.ToDouble(cb71_dOtv.Text);
+			thick = Convert.ToDouble(cb71_thick.Text);
+
+			dlin1 = dlin1 / 1000;
+			shir1 = shir1 / 1000;
+			dOtv = dOtv / 1000;
+			thick = thick / 1000;
+			dlin2 = 0;
+			shir2 = 0;
+			sDlin = 0;
+			sShir = 0;
+			countDlin = 0;
+			countShir = 0;
+
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin2,shir2,sDlin,sShir,countDlin,countShir FROM flanPr WHERE dlin1 = " + cb71_dlin.SelectedItem.ToString() + " AND shir1 = " + cb71_shir.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "flanPr");
+
+			for (int i = 0; i < dataSet2.Tables["flanPr"].Rows.Count; i++)
+			{
+				dlin2 = Convert.ToDouble(dataSet2.Tables["flanPr"].Rows[i]["dlin2"].ToString());
+				shir2 = Convert.ToDouble(dataSet2.Tables["flanPr"].Rows[i]["shir2"].ToString());
+				sDlin = Convert.ToDouble(dataSet2.Tables["flanPr"].Rows[i]["sDlin"].ToString());
+				sShir = Convert.ToDouble(dataSet2.Tables["flanPr"].Rows[i]["sShir"].ToString());
+				countDlin = Convert.ToInt32(dataSet2.Tables["flanPr"].Rows[i]["countDlin"].ToString());
+				countShir = Convert.ToInt32(dataSet2.Tables["flanPr"].Rows[i]["countShir"].ToString());
+
+			}
+
+			dlin2 = dlin2 / 1000;
+			shir2 = shir2 / 1000;
+			sDlin = sDlin / 1000;
+			sShir = sShir / 1000;
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+			Close();
+
+			Flanc flancPr = new Flanc();
+			flancPr.createPrFlanc(dlin1, shir1, dlin2, shir2, sDlin, sShir, countDlin, countShir, thick, dOtv, Part);
+
+		}
+
+		private void bt_FlanKr_Click(object sender, EventArgs e)
+		{
+			double diam, dOs, thick, dOtv;
+			int count;
+			diam = Convert.ToDouble(cb72_diam.SelectedItem.ToString());
+			dOtv = Convert.ToDouble(cb72_dOtv.Text);
+			thick = Convert.ToDouble(cb72_thick.Text);
+
+			diam = diam / 1000;
+			dOtv = dOtv / 1000;
+			thick = thick / 1000;
+
+			dOs = 0;
+			count = 0;
+
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT dOs,count FROM flanKr WHERE diam = " + cb72_diam.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "flanKr");
+
+			for (int i = 0; i < dataSet2.Tables["flanKr"].Rows.Count; i++)
+			{
+				dOs = Convert.ToDouble(dataSet2.Tables["flanKr"].Rows[i]["dOs"].ToString());
+				count = Convert.ToInt32(dataSet2.Tables["flanKr"].Rows[i]["count"].ToString());
+
+			}
+
+			dOs = dOs / 1000;
+
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+			Close();
+
+			Flanc flancKr = new Flanc();
+			flancKr.createKrFlanc(diam, dOs, dOtv, count, thick, Part);
+		}
+
+		private void bt_ZaglKr_Click(object sender, EventArgs e)
+		{
+			double diam, vys, thick;
+			diam = Convert.ToDouble(cb52_diam.Text);
+			vys = Convert.ToDouble(cb52_vys.Text);
+			thick = Convert.ToDouble(cb52_thick.Text);
+
+
+			diam = diam / 1000;
+			vys = vys / 1000;
+			thick = thick / 1000;
+
+			string name = $"Заглушка круглого сечения_{diam}.SLDRT";
+
+			FolderBrowserDialog target = new FolderBrowserDialog();
+			target.RootFolder = System.Environment.SpecialFolder.MyComputer;
+			target.SelectedPath = "C:\\Users\\Yulia\\Desktop\\Воздуховоды";
+			target.ShowDialog();
+
+			string trg = target.SelectedPath;
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			
+			iSwApp.NewPart();
+			Part = iSwApp.IActiveDoc2;
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
+
+			Zaglushka zagl = new Zaglushka();
+			zagl.createZaglKrBottom(diam, vys, thick, Part);
+			setMaterial();
+			Part.SaveAs3(trg +  "\\"+ name + ".sldprt", (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+
+
+		}
+
+		private void cb52_diam_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT thick FROM zaglKr WHERE diam = " + cb52_diam.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "zaglKr");
+
+			cb52_thick.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["zaglKr"].Rows.Count; i++)
+			{
+				cb52_thick.Text = (dataSet2.Tables["zaglKr"].Rows[i]["thick"].ToString());
 			}
 		}
 	}

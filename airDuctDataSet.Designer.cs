@@ -1117,6 +1117,8 @@ namespace airDucts {
             
             private global::System.Data.DataColumn columnthick;
             
+            private global::System.Data.DataColumn columndOtv;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public flanPrDataTable() {
@@ -1232,6 +1234,14 @@ namespace airDucts {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn dOtvColumn {
+                get {
+                    return this.columndOtv;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1267,7 +1277,7 @@ namespace airDucts {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public flanPrRow AddflanPrRow(int dlin1, int shir1, int dlin2, int shir2, int sDlin, string sShir, string countDlin, string countShir, double thick) {
+            public flanPrRow AddflanPrRow(int dlin1, int shir1, int dlin2, int shir2, int sDlin, string sShir, string countDlin, string countShir, double thick, int dOtv) {
                 flanPrRow rowflanPrRow = ((flanPrRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1279,7 +1289,8 @@ namespace airDucts {
                         sShir,
                         countDlin,
                         countShir,
-                        thick};
+                        thick,
+                        dOtv};
                 rowflanPrRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowflanPrRow);
                 return rowflanPrRow;
@@ -1312,6 +1323,7 @@ namespace airDucts {
                 this.columncountDlin = base.Columns["countDlin"];
                 this.columncountShir = base.Columns["countShir"];
                 this.columnthick = base.Columns["thick"];
+                this.columndOtv = base.Columns["dOtv"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1337,6 +1349,8 @@ namespace airDucts {
                 base.Columns.Add(this.columncountShir);
                 this.columnthick = new global::System.Data.DataColumn("thick", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnthick);
+                this.columndOtv = new global::System.Data.DataColumn("dOtv", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndOtv);
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AutoIncrementStep = -1;
@@ -1354,6 +1368,7 @@ namespace airDucts {
                 this.columncountShir.AllowDBNull = false;
                 this.columncountShir.MaxLength = 50;
                 this.columnthick.AllowDBNull = false;
+                this.columndOtv.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5776,6 +5791,17 @@ namespace airDucts {
                     this[this.tableflanPr.thickColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int dOtv {
+                get {
+                    return ((int)(this[this.tableflanPr.dOtvColumn]));
+                }
+                set {
+                    this[this.tableflanPr.dOtvColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -7648,12 +7674,13 @@ namespace airDucts.airDuctDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("countDlin", "countDlin");
             tableMapping.ColumnMappings.Add("countShir", "countShir");
             tableMapping.ColumnMappings.Add("thick", "thick");
+            tableMapping.ColumnMappings.Add("dOtv", "dOtv");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[flanPr] ([dlin1], [shir1], [dlin2], [shir2], [sDlin], [sShir]," +
-                " [countDlin], [countShir], [thick]) VALUES (@dlin1, @shir1, @dlin2, @shir2, @sDl" +
-                "in, @sShir, @countDlin, @countShir, @thick)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [flanPr] ([dlin1], [shir1], [dlin2], [shir2], [sDlin], [sShir], [coun" +
+                "tDlin], [countShir], [thick], [dOtv]) VALUES (@dlin1, @shir1, @dlin2, @shir2, @s" +
+                "Dlin, @sShir, @countDlin, @countShir, @thick, @dOtv)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dlin1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dlin1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@shir1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shir1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7664,6 +7691,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@countDlin", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "countDlin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@countShir", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "countShir", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@thick", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "thick", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dOtv", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dOtv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7679,8 +7707,8 @@ namespace airDucts.airDuctDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, dlin1, shir1, dlin2, shir2, sDlin, sShir, countDlin, countShir, thick " +
-                "FROM dbo.flanPr";
+            this._commandCollection[0].CommandText = "SELECT id, dlin1, shir1, dlin2, shir2, sDlin, sShir, countDlin, countShir, thick," +
+                " dOtv FROM flanPr";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7741,7 +7769,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int dlin1, int shir1, int dlin2, int shir2, int sDlin, string sShir, string countDlin, string countShir, double thick) {
+        public virtual int Insert(int dlin1, int shir1, int dlin2, int shir2, int sDlin, string sShir, string countDlin, string countShir, double thick, int dOtv) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(dlin1));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(shir1));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(dlin2));
@@ -7766,6 +7794,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(countShir));
             }
             this.Adapter.InsertCommand.Parameters[8].Value = ((double)(thick));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(dOtv));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

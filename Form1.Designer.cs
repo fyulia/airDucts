@@ -243,8 +243,6 @@ namespace airDucts
 			this.bt_TroinicPr = new System.Windows.Forms.Button();
 			this.groupBox10 = new System.Windows.Forms.GroupBox();
 			this.cb61_vys2 = new System.Windows.Forms.TextBox();
-			this.cb61_shir2 = new System.Windows.Forms.TextBox();
-			this.cb61_dlin2 = new System.Windows.Forms.TextBox();
 			this.cb61_vys1 = new System.Windows.Forms.TextBox();
 			this.cb61_zazor = new System.Windows.Forms.TextBox();
 			this.label130 = new System.Windows.Forms.Label();
@@ -403,6 +401,8 @@ namespace airDucts
 			this.bt_FlanKr = new System.Windows.Forms.Button();
 			this.label179 = new System.Windows.Forms.Label();
 			this.pictureBox15 = new System.Windows.Forms.PictureBox();
+			this.cb61_dlin2 = new System.Windows.Forms.ComboBox();
+			this.cb61_shir2 = new System.Windows.Forms.ComboBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -2831,9 +2831,9 @@ namespace airDucts
 			// 
 			// groupBox10
 			// 
-			this.groupBox10.Controls.Add(this.cb61_vys2);
 			this.groupBox10.Controls.Add(this.cb61_shir2);
 			this.groupBox10.Controls.Add(this.cb61_dlin2);
+			this.groupBox10.Controls.Add(this.cb61_vys2);
 			this.groupBox10.Controls.Add(this.cb61_vys1);
 			this.groupBox10.Controls.Add(this.cb61_zazor);
 			this.groupBox10.Controls.Add(this.label130);
@@ -2869,25 +2869,11 @@ namespace airDucts
 			// 
 			// cb61_vys2
 			// 
-			this.cb61_vys2.Location = new System.Drawing.Point(455, 118);
+			this.cb61_vys2.Location = new System.Drawing.Point(443, 118);
 			this.cb61_vys2.Name = "cb61_vys2";
-			this.cb61_vys2.Size = new System.Drawing.Size(84, 29);
+			this.cb61_vys2.Size = new System.Drawing.Size(96, 29);
 			this.cb61_vys2.TabIndex = 32;
 			this.cb61_vys2.Text = "100";
-			// 
-			// cb61_shir2
-			// 
-			this.cb61_shir2.Location = new System.Drawing.Point(455, 77);
-			this.cb61_shir2.Name = "cb61_shir2";
-			this.cb61_shir2.Size = new System.Drawing.Size(84, 29);
-			this.cb61_shir2.TabIndex = 31;
-			// 
-			// cb61_dlin2
-			// 
-			this.cb61_dlin2.Location = new System.Drawing.Point(455, 40);
-			this.cb61_dlin2.Name = "cb61_dlin2";
-			this.cb61_dlin2.Size = new System.Drawing.Size(84, 29);
-			this.cb61_dlin2.TabIndex = 30;
 			// 
 			// cb61_vys1
 			// 
@@ -2907,7 +2893,7 @@ namespace airDucts
 			// 
 			this.label130.AutoSize = true;
 			this.label130.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label130.Location = new System.Drawing.Point(552, 117);
+			this.label130.Location = new System.Drawing.Point(545, 118);
 			this.label130.Name = "label130";
 			this.label130.Size = new System.Drawing.Size(36, 24);
 			this.label130.TabIndex = 27;
@@ -4598,6 +4584,24 @@ namespace airDucts
 			this.pictureBox15.TabIndex = 0;
 			this.pictureBox15.TabStop = false;
 			// 
+			// cb61_dlin2
+			// 
+			this.cb61_dlin2.FormattingEnabled = true;
+			this.cb61_dlin2.Location = new System.Drawing.Point(442, 36);
+			this.cb61_dlin2.Name = "cb61_dlin2";
+			this.cb61_dlin2.Size = new System.Drawing.Size(97, 32);
+			this.cb61_dlin2.TabIndex = 33;
+			this.cb61_dlin2.SelectedIndexChanged += new System.EventHandler(this.cb61_dlin2_SelectedIndexChanged);
+			// 
+			// cb61_shir2
+			// 
+			this.cb61_shir2.FormattingEnabled = true;
+			this.cb61_shir2.Location = new System.Drawing.Point(442, 79);
+			this.cb61_shir2.Name = "cb61_shir2";
+			this.cb61_shir2.Size = new System.Drawing.Size(97, 32);
+			this.cb61_shir2.TabIndex = 34;
+			this.cb61_shir2.SelectedIndexChanged += new System.EventHandler(this.cb61_shir2_SelectedIndexChanged);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -5020,8 +5024,6 @@ namespace airDucts
 		private System.Windows.Forms.TextBox cb61_vys1;
 		private System.Windows.Forms.TextBox cb61_zazor;
 		private System.Windows.Forms.TextBox cb61_vys2;
-		private System.Windows.Forms.TextBox cb61_shir2;
-		private System.Windows.Forms.TextBox cb61_dlin2;
 		private System.Windows.Forms.TextBox cb62_vys1;
 		private System.Windows.Forms.TextBox cb62_zazor;
 		private System.Windows.Forms.TextBox cb62_vys2;
@@ -5075,5 +5077,7 @@ namespace airDucts
 		private System.Windows.Forms.TextBox cb52_thick;
 		private System.Windows.Forms.Label label204;
 		private System.Windows.Forms.Label label205;
+		private System.Windows.Forms.ComboBox cb61_shir2;
+		private System.Windows.Forms.ComboBox cb61_dlin2;
 	}
 }

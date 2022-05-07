@@ -20,9 +20,9 @@ namespace airDucts {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("airDuctDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("airDuctDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class airDuctDataSet : global::System.Data.DataSet {
+    public partial class airDuctDataSet1 : global::System.Data.DataSet {
         
         private flanKrDataTable tableflanKr;
         
@@ -58,7 +58,7 @@ namespace airDucts {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public airDuctDataSet() {
+        public airDuctDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -69,7 +69,7 @@ namespace airDucts {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected airDuctDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected airDuctDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -337,7 +337,7 @@ namespace airDucts {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            airDuctDataSet cln = ((airDuctDataSet)(base.Clone()));
+            airDuctDataSet1 cln = ((airDuctDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -535,9 +535,9 @@ namespace airDucts {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "airDuctDataSet";
+            this.DataSetName = "airDuctDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/airDuctDataSet.xsd";
+            this.Namespace = "http://tempuri.org/airDuctDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableflanKr = new flanKrDataTable();
@@ -673,7 +673,7 @@ namespace airDucts {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            airDuctDataSet ds = new airDuctDataSet();
+            airDuctDataSet1 ds = new airDuctDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -1031,7 +1031,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1436,7 +1436,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1719,7 +1719,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2032,7 +2032,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2344,7 +2344,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2671,7 +2671,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3014,7 +3014,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3327,7 +3327,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3397,9 +3397,9 @@ namespace airDucts {
             
             private global::System.Data.DataColumn columndiam;
             
-            private global::System.Data.DataColumn columndlin;
-            
             private global::System.Data.DataColumn columnshir;
+            
+            private global::System.Data.DataColumn columndlin;
             
             private global::System.Data.DataColumn columnthick;
             
@@ -3456,17 +3456,17 @@ namespace airDucts {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn dlinColumn {
+            public global::System.Data.DataColumn shirColumn {
                 get {
-                    return this.columndlin;
+                    return this.columnshir;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn shirColumn {
+            public global::System.Data.DataColumn dlinColumn {
                 get {
-                    return this.columnshir;
+                    return this.columndlin;
                 }
             }
             
@@ -3523,13 +3523,13 @@ namespace airDucts {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public troinicKrPrRow AddtroinicKrPrRow(int diam, int dlin, int shir, double thick, int vys) {
+            public troinicKrPrRow AddtroinicKrPrRow(int diam, int shir, int dlin, double thick, int vys) {
                 troinicKrPrRow rowtroinicKrPrRow = ((troinicKrPrRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         diam,
-                        dlin,
                         shir,
+                        dlin,
                         thick,
                         vys};
                 rowtroinicKrPrRow.ItemArray = columnValuesArray;
@@ -3556,8 +3556,8 @@ namespace airDucts {
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
                 this.columndiam = base.Columns["diam"];
-                this.columndlin = base.Columns["dlin"];
                 this.columnshir = base.Columns["shir"];
+                this.columndlin = base.Columns["dlin"];
                 this.columnthick = base.Columns["thick"];
                 this.columnvys = base.Columns["vys"];
             }
@@ -3569,10 +3569,10 @@ namespace airDucts {
                 base.Columns.Add(this.columnid);
                 this.columndiam = new global::System.Data.DataColumn("diam", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndiam);
-                this.columndlin = new global::System.Data.DataColumn("dlin", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndlin);
                 this.columnshir = new global::System.Data.DataColumn("shir", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnshir);
+                this.columndlin = new global::System.Data.DataColumn("dlin", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndlin);
                 this.columnthick = new global::System.Data.DataColumn("thick", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnthick);
                 this.columnvys = new global::System.Data.DataColumn("vys", typeof(int), null, global::System.Data.MappingType.Element);
@@ -3583,8 +3583,8 @@ namespace airDucts {
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
                 this.columndiam.AllowDBNull = false;
-                this.columndlin.AllowDBNull = false;
                 this.columnshir.AllowDBNull = false;
+                this.columndlin.AllowDBNull = false;
                 this.columnthick.AllowDBNull = false;
                 this.columnvys.AllowDBNull = false;
             }
@@ -3654,7 +3654,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3981,7 +3981,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4060,8 +4060,6 @@ namespace airDucts {
             private global::System.Data.DataColumn columnthick;
             
             private global::System.Data.DataColumn columnvys1;
-            
-            private global::System.Data.DataColumn columnvys2;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -4154,14 +4152,6 @@ namespace airDucts {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn vys2Column {
-                get {
-                    return this.columnvys2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4197,7 +4187,7 @@ namespace airDucts {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public troinicPrPrRow AddtroinicPrPrRow(int dlin1, int shir1, int dlin2, int shir2, string thick, int vys1, string vys2) {
+            public troinicPrPrRow AddtroinicPrPrRow(int dlin1, int shir1, int dlin2, int shir2, string thick, int vys1) {
                 troinicPrPrRow rowtroinicPrPrRow = ((troinicPrPrRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4206,8 +4196,7 @@ namespace airDucts {
                         dlin2,
                         shir2,
                         thick,
-                        vys1,
-                        vys2};
+                        vys1};
                 rowtroinicPrPrRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtroinicPrPrRow);
                 return rowtroinicPrPrRow;
@@ -4237,7 +4226,6 @@ namespace airDucts {
                 this.columnshir2 = base.Columns["shir2"];
                 this.columnthick = base.Columns["thick"];
                 this.columnvys1 = base.Columns["vys1"];
-                this.columnvys2 = base.Columns["vys2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4257,8 +4245,6 @@ namespace airDucts {
                 base.Columns.Add(this.columnthick);
                 this.columnvys1 = new global::System.Data.DataColumn("vys1", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnvys1);
-                this.columnvys2 = new global::System.Data.DataColumn("vys2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvys2);
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AutoIncrementStep = -1;
@@ -4271,7 +4257,6 @@ namespace airDucts {
                 this.columnthick.AllowDBNull = false;
                 this.columnthick.MaxLength = 50;
                 this.columnvys1.AllowDBNull = false;
-                this.columnvys2.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4339,7 +4324,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4636,7 +4621,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4947,7 +4932,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5230,7 +5215,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5528,7 +5513,7 @@ namespace airDucts {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                airDuctDataSet ds = new airDuctDataSet();
+                airDuctDataSet1 ds = new airDuctDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6273,23 +6258,23 @@ namespace airDucts {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int dlin {
-                get {
-                    return ((int)(this[this.tabletroinicKrPr.dlinColumn]));
-                }
-                set {
-                    this[this.tabletroinicKrPr.dlinColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int shir {
                 get {
                     return ((int)(this[this.tabletroinicKrPr.shirColumn]));
                 }
                 set {
                     this[this.tabletroinicKrPr.shirColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int dlin {
+                get {
+                    return ((int)(this[this.tabletroinicKrPr.dlinColumn]));
+                }
+                set {
+                    this[this.tabletroinicKrPr.dlinColumn] = value;
                 }
             }
             
@@ -6486,34 +6471,6 @@ namespace airDucts {
                 set {
                     this[this.tabletroinicPrPr.vys1Column] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string vys2 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletroinicPrPr.vys2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'vys2\' в таблице \'troinicPrPr\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletroinicPrPr.vys2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isvys2Null() {
-                return this.IsNull(this.tabletroinicPrPr.vys2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setvys2Null() {
-                this[this.tabletroinicPrPr.vys2Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -7298,7 +7255,7 @@ namespace airDucts {
         }
     }
 }
-namespace airDucts.airDuctDataSetTableAdapters {
+namespace airDucts.airDuctDataSet1TableAdapters {
     
     
     /// <summary>
@@ -7445,7 +7402,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7462,7 +7419,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.flanKrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.flanKrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7475,9 +7432,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.flanKrDataTable GetData() {
+        public virtual airDuctDataSet1.flanKrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.flanKrDataTable dataTable = new airDuctDataSet.flanKrDataTable();
+            airDuctDataSet1.flanKrDataTable dataTable = new airDuctDataSet1.flanKrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7485,14 +7442,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.flanKrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.flanKrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "flanKr");
         }
         
@@ -7678,9 +7635,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [flanPr] ([dlin1], [shir1], [dlin2], [shir2], [sDlin], [sShir], [coun" +
-                "tDlin], [countShir], [thick], [dOtv]) VALUES (@dlin1, @shir1, @dlin2, @shir2, @s" +
-                "Dlin, @sShir, @countDlin, @countShir, @thick, @dOtv)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[flanPr] ([dlin1], [shir1], [dlin2], [shir2], [sDlin], [sShir]," +
+                " [countDlin], [countShir], [thick], [dOtv]) VALUES (@dlin1, @shir1, @dlin2, @shi" +
+                "r2, @sDlin, @sShir, @countDlin, @countShir, @thick, @dOtv)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dlin1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dlin1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@shir1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shir1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7698,7 +7655,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7708,7 +7665,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, dlin1, shir1, dlin2, shir2, sDlin, sShir, countDlin, countShir, thick," +
-                " dOtv FROM flanPr";
+                " dOtv FROM dbo.flanPr";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7716,7 +7673,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.flanPrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.flanPrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7729,9 +7686,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.flanPrDataTable GetData() {
+        public virtual airDuctDataSet1.flanPrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.flanPrDataTable dataTable = new airDuctDataSet.flanPrDataTable();
+            airDuctDataSet1.flanPrDataTable dataTable = new airDuctDataSet1.flanPrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7739,14 +7696,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.flanPrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.flanPrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "flanPr");
         }
         
@@ -7949,7 +7906,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7966,7 +7923,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.otvodKrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.otvodKrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7979,9 +7936,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.otvodKrDataTable GetData() {
+        public virtual airDuctDataSet1.otvodKrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.otvodKrDataTable dataTable = new airDuctDataSet.otvodKrDataTable();
+            airDuctDataSet1.otvodKrDataTable dataTable = new airDuctDataSet1.otvodKrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7989,14 +7946,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.otvodKrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.otvodKrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "otvodKr");
         }
         
@@ -8186,7 +8143,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8203,7 +8160,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.otvodPrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.otvodPrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8216,9 +8173,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.otvodPrDataTable GetData() {
+        public virtual airDuctDataSet1.otvodPrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.otvodPrDataTable dataTable = new airDuctDataSet.otvodPrDataTable();
+            airDuctDataSet1.otvodPrDataTable dataTable = new airDuctDataSet1.otvodPrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8226,14 +8183,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.otvodPrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.otvodPrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "otvodPr");
         }
         
@@ -8425,7 +8382,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8442,7 +8399,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.perehodKrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.perehodKrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8455,9 +8412,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.perehodKrDataTable GetData() {
+        public virtual airDuctDataSet1.perehodKrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.perehodKrDataTable dataTable = new airDuctDataSet.perehodKrDataTable();
+            airDuctDataSet1.perehodKrDataTable dataTable = new airDuctDataSet1.perehodKrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8465,14 +8422,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.perehodKrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.perehodKrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "perehodKr");
         }
         
@@ -8661,7 +8618,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8678,7 +8635,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.perehodPrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.perehodPrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8691,9 +8648,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.perehodPrDataTable GetData() {
+        public virtual airDuctDataSet1.perehodPrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.perehodPrDataTable dataTable = new airDuctDataSet.perehodPrDataTable();
+            airDuctDataSet1.perehodPrDataTable dataTable = new airDuctDataSet1.perehodPrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8701,14 +8658,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.perehodPrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.perehodPrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "perehodPr");
         }
         
@@ -8900,7 +8857,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8917,7 +8874,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.perehodPrPrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.perehodPrPrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8930,9 +8887,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.perehodPrPrDataTable GetData() {
+        public virtual airDuctDataSet1.perehodPrPrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.perehodPrPrDataTable dataTable = new airDuctDataSet.perehodPrPrDataTable();
+            airDuctDataSet1.perehodPrPrDataTable dataTable = new airDuctDataSet1.perehodPrPrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8940,14 +8897,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.perehodPrPrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.perehodPrPrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "perehodPrPr");
         }
         
@@ -9141,7 +9098,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9158,7 +9115,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.troinicKrKrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.troinicKrKrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9171,9 +9128,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.troinicKrKrDataTable GetData() {
+        public virtual airDuctDataSet1.troinicKrKrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.troinicKrKrDataTable dataTable = new airDuctDataSet.troinicKrKrDataTable();
+            airDuctDataSet1.troinicKrKrDataTable dataTable = new airDuctDataSet1.troinicKrKrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9181,14 +9138,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.troinicKrKrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.troinicKrKrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "troinicKrKr");
         }
         
@@ -9361,19 +9318,19 @@ namespace airDucts.airDuctDataSetTableAdapters {
             tableMapping.DataSetTable = "troinicKrPr";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("diam", "diam");
-            tableMapping.ColumnMappings.Add("dlin", "dlin");
             tableMapping.ColumnMappings.Add("shir", "shir");
+            tableMapping.ColumnMappings.Add("dlin", "dlin");
             tableMapping.ColumnMappings.Add("thick", "thick");
             tableMapping.ColumnMappings.Add("vys", "vys");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[troinicKrPr] ([diam], [dlin], [shir], [thick], [vys]) VALUES (" +
-                "@diam, @dlin, @shir, @thick, @vys)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[troinicKrPr] ([diam], [shir], [dlin], [thick], [vys]) VALUES (" +
+                "@diam, @shir, @dlin, @thick, @vys)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@diam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "diam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dlin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dlin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@shir", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shir", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dlin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dlin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@thick", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "thick", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@vys", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "vys", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -9382,7 +9339,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9391,7 +9348,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, diam, dlin, shir, thick, vys FROM dbo.troinicKrPr";
+            this._commandCollection[0].CommandText = "SELECT id, diam, shir, dlin, thick, vys FROM dbo.troinicKrPr";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9399,7 +9356,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.troinicKrPrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.troinicKrPrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9412,9 +9369,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.troinicKrPrDataTable GetData() {
+        public virtual airDuctDataSet1.troinicKrPrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.troinicKrPrDataTable dataTable = new airDuctDataSet.troinicKrPrDataTable();
+            airDuctDataSet1.troinicKrPrDataTable dataTable = new airDuctDataSet1.troinicKrPrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9422,14 +9379,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.troinicKrPrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.troinicKrPrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "troinicKrPr");
         }
         
@@ -9452,10 +9409,10 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int diam, int dlin, int shir, double thick, int vys) {
+        public virtual int Insert(int diam, int shir, int dlin, double thick, int vys) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(diam));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(dlin));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(shir));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(shir));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(dlin));
             this.Adapter.InsertCommand.Parameters[3].Value = ((double)(thick));
             this.Adapter.InsertCommand.Parameters[4].Value = ((int)(vys));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
@@ -9619,7 +9576,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9636,7 +9593,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.troinicPrKrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.troinicPrKrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9649,9 +9606,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.troinicPrKrDataTable GetData() {
+        public virtual airDuctDataSet1.troinicPrKrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.troinicPrKrDataTable dataTable = new airDuctDataSet.troinicPrKrDataTable();
+            airDuctDataSet1.troinicPrKrDataTable dataTable = new airDuctDataSet1.troinicPrKrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9659,14 +9616,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.troinicPrKrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.troinicPrKrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "troinicPrKr");
         }
         
@@ -9840,12 +9797,11 @@ namespace airDucts.airDuctDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("shir2", "shir2");
             tableMapping.ColumnMappings.Add("thick", "thick");
             tableMapping.ColumnMappings.Add("vys1", "vys1");
-            tableMapping.ColumnMappings.Add("vys2", "vys2");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[troinicPrPr] ([dlin1], [shir1], [dlin2], [shir2], [thick], [vy" +
-                "s1], [vys2]) VALUES (@dlin1, @shir1, @dlin2, @shir2, @thick, @vys1, @vys2)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [troinicPrPr] ([dlin1], [shir1], [dlin2], [shir2], [thick], [vys1]) V" +
+                "ALUES (@dlin1, @shir1, @dlin2, @shir2, @thick, @vys1)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dlin1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dlin1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@shir1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shir1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9853,14 +9809,13 @@ namespace airDucts.airDuctDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@shir2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shir2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@thick", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "thick", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@vys1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "vys1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@vys2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "vys2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9869,7 +9824,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, dlin1, shir1, dlin2, shir2, thick, vys1, vys2 FROM dbo.troinicPrPr";
+            this._commandCollection[0].CommandText = "SELECT id, dlin1, shir1, dlin2, shir2, thick, vys1 FROM troinicPrPr";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9877,7 +9832,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.troinicPrPrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.troinicPrPrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9890,9 +9845,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.troinicPrPrDataTable GetData() {
+        public virtual airDuctDataSet1.troinicPrPrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.troinicPrPrDataTable dataTable = new airDuctDataSet.troinicPrPrDataTable();
+            airDuctDataSet1.troinicPrPrDataTable dataTable = new airDuctDataSet1.troinicPrPrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9900,14 +9855,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.troinicPrPrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.troinicPrPrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "troinicPrPr");
         }
         
@@ -9930,7 +9885,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int dlin1, int shir1, int dlin2, int shir2, string thick, int vys1, string vys2) {
+        public virtual int Insert(int dlin1, int shir1, int dlin2, int shir2, string thick, int vys1) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(dlin1));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(shir1));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(dlin2));
@@ -9942,12 +9897,6 @@ namespace airDucts.airDuctDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(thick));
             }
             this.Adapter.InsertCommand.Parameters[5].Value = ((int)(vys1));
-            if ((vys2 == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(vys2));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10104,7 +10053,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10121,7 +10070,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.vozdKrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.vozdKrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10134,9 +10083,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.vozdKrDataTable GetData() {
+        public virtual airDuctDataSet1.vozdKrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.vozdKrDataTable dataTable = new airDuctDataSet.vozdKrDataTable();
+            airDuctDataSet1.vozdKrDataTable dataTable = new airDuctDataSet1.vozdKrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10144,14 +10093,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.vozdKrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.vozdKrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "vozdKr");
         }
         
@@ -10347,7 +10296,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10364,7 +10313,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.vozdPrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.vozdPrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10377,9 +10326,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.vozdPrDataTable GetData() {
+        public virtual airDuctDataSet1.vozdPrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.vozdPrDataTable dataTable = new airDuctDataSet.vozdPrDataTable();
+            airDuctDataSet1.vozdPrDataTable dataTable = new airDuctDataSet1.vozdPrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10387,14 +10336,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.vozdPrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.vozdPrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "vozdPr");
         }
         
@@ -10581,7 +10530,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10598,7 +10547,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.zaglKrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.zaglKrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10611,9 +10560,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.zaglKrDataTable GetData() {
+        public virtual airDuctDataSet1.zaglKrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.zaglKrDataTable dataTable = new airDuctDataSet.zaglKrDataTable();
+            airDuctDataSet1.zaglKrDataTable dataTable = new airDuctDataSet1.zaglKrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10621,14 +10570,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.zaglKrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.zaglKrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "zaglKr");
         }
         
@@ -10816,7 +10765,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString;
+            this._connection.ConnectionString = global::airDucts.Properties.Settings.Default.airDuctConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10833,7 +10782,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(airDuctDataSet.zaglPrDataTable dataTable) {
+        public virtual int Fill(airDuctDataSet1.zaglPrDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10846,9 +10795,9 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual airDuctDataSet.zaglPrDataTable GetData() {
+        public virtual airDuctDataSet1.zaglPrDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            airDuctDataSet.zaglPrDataTable dataTable = new airDuctDataSet.zaglPrDataTable();
+            airDuctDataSet1.zaglPrDataTable dataTable = new airDuctDataSet1.zaglPrDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10856,14 +10805,14 @@ namespace airDucts.airDuctDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet.zaglPrDataTable dataTable) {
+        public virtual int Update(airDuctDataSet1.zaglPrDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(airDuctDataSet dataSet) {
+        public virtual int Update(airDuctDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "zaglPr");
         }
         
@@ -11325,7 +11274,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(airDuctDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(airDuctDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._flanKrTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.flanKr.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -11470,7 +11419,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(airDuctDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(airDuctDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._flanKrTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.flanKr.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -11600,7 +11549,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(airDuctDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(airDuctDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._zaglPrTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.zaglPr.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -11754,7 +11703,7 @@ namespace airDucts.airDuctDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(airDuctDataSet dataSet) {
+        public virtual int UpdateAll(airDuctDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

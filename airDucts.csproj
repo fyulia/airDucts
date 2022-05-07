@@ -131,10 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="airDuct.cs" />
-    <Compile Include="airDuctDataSet.Designer.cs">
+    <Compile Include="airDuctDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>airDuctDataSet.xsd</DependentUpon>
+      <DependentUpon>airDuctDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -177,16 +177,16 @@
     <EmbeddedResource Include="MainIconSmall.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="airDuctDataSet.xsc">
-      <DependentUpon>airDuctDataSet.xsd</DependentUpon>
+    <None Include="airDuctDataSet1.xsc">
+      <DependentUpon>airDuctDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="airDuctDataSet.xsd">
+    <None Include="airDuctDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>airDuctDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>airDuctDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="airDuctDataSet.xss">
-      <DependentUpon>airDuctDataSet.xsd</DependentUpon>
+    <None Include="airDuctDataSet1.xss">
+      <DependentUpon>airDuctDataSet1.xsd</DependentUpon>
     </None>
     <None Include="app.config" />
     <None Include="packages.config" />

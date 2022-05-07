@@ -84,7 +84,7 @@ namespace airDucts
 			iSwApp.NewPart();
 			Part = iSwApp.IActiveDoc2;
 			Close();
-
+			iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
 			airDuct duct = new airDuct();
 			duct.createPrVozd(dlin_pr, shir_pr, vys_pr, zazor_pr, Part);
 			setMaterial();
@@ -114,7 +114,7 @@ namespace airDucts
 		private void cb1_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			string str = cb1_dlin.SelectedItem.ToString();
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT  shir FROM vozdPr WHERE dlin = @str ", sqlConnection);
 
 			command.Parameters.AddWithValue("@str", str);
@@ -335,7 +335,7 @@ namespace airDucts
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT DISTINCT dlin  FROM vozdPr", sqlConnection);
 
 			DataSet dataSet = new DataSet();
@@ -347,7 +347,7 @@ namespace airDucts
 			for (int i = 0; i < dataSet.Tables["vozdPr"].Rows.Count; i++)
 			{
 				cb1_dlin.Items.Add(dataSet.Tables["vozdPr"].Rows[i]["dlin"].ToString());
-				
+
 			}
 
 			SqlDataAdapter sqlDataAdapter2 = new SqlDataAdapter("SELECT vys  FROM vozdPr WHERE vys IS NOT NULL", sqlConnection);
@@ -688,7 +688,7 @@ namespace airDucts
 		{
 			string str1 = cb1_dlin.SelectedItem.ToString();
 			string str2 = cb1_shir.SelectedItem.ToString();
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT thickness FROM vozdPr WHERE shir = @str2 AND dlin = @str1 ", sqlConnection);
 
 			command.Parameters.AddWithValue("@str1", str1);
@@ -709,7 +709,7 @@ namespace airDucts
 		private void cb2_diam_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			string str1 = cb2_diam.SelectedItem.ToString();
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT thick FROM vozdKr WHERE diam = @str1  ", sqlConnection);
 
 			command.Parameters.AddWithValue("@str1", str1);
@@ -729,7 +729,7 @@ namespace airDucts
 		private void cb31_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			string str = cb31_dlin.SelectedItem.ToString();
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir1 FROM perehodPrPr WHERE dlin1 = @str ", sqlConnection);
 
 			command.Parameters.AddWithValue("@str", str);
@@ -750,7 +750,7 @@ namespace airDucts
 
 		private void cb31_shir_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin2 FROM perehodPrPr WHERE dlin1 = "+ cb31_dlin.SelectedItem.ToString() +" AND shir1 = " + cb31_shir.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -769,7 +769,7 @@ namespace airDucts
 
 		private void cb31_dlin1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir2,vys FROM perehodPrPr WHERE dlin1 = " + cb31_dlin.SelectedItem.ToString() + " AND shir1 = " + cb31_shir.SelectedItem.ToString() + " AND dlin2 = " + cb31_dlin1.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -792,8 +792,8 @@ namespace airDucts
 
 		private void cb31_shir1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
-			
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
+
 
 			SqlCommand command1 = new SqlCommand("SELECT DISTINCT thick FROM perehodPrPr WHERE shir1 = " + cb31_shir.SelectedItem.ToString() + " AND dlin2 = " + cb31_dlin1.SelectedItem.ToString() + " AND shir2 = " + cb31_shir1.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -814,7 +814,7 @@ namespace airDucts
 
 		private void cb32_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM perehodPr WHERE dlin = " + cb32_dlin.SelectedItem.ToString() + "  ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -834,7 +834,7 @@ namespace airDucts
 
 		private void cb32_shir_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT diam,thick FROM perehodPr WHERE dlin = " + cb32_dlin.SelectedItem.ToString() + " AND shir = " + cb32_shir.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -856,7 +856,7 @@ namespace airDucts
 
 		private void cb32_diam_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT vys FROM perehodPr WHERE dlin = " + cb32_dlin.SelectedItem.ToString() + " AND shir = " + cb32_shir.SelectedItem.ToString() + " AND diam = " + cb32_diam.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -874,7 +874,7 @@ namespace airDucts
 
 		private void cb33_diam1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT diam2 FROM perehodKr WHERE diam1 = " + cb33_diam1.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -892,7 +892,7 @@ namespace airDucts
 
 		private void cb33_diam2_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT vys,thick FROM perehodKr WHERE diam1 = " + cb33_diam1.SelectedItem.ToString() + " AND diam2 = " + cb33_diam2.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -914,7 +914,7 @@ namespace airDucts
 
 		private void cb41_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM otvodPr WHERE dlin = " + cb41_dlin.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -932,7 +932,7 @@ namespace airDucts
 
 		private void cb41_shir_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT dlinOtv,thick FROM otvodPr WHERE dlin = " + cb41_dlin.SelectedItem.ToString() + " AND shir = " + cb41_shir.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -954,7 +954,7 @@ namespace airDucts
 
 		private void cb42_diam_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT thick FROM otvodKr WHERE diam = " + cb42_diam.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -973,7 +973,7 @@ namespace airDucts
 
 		private void cb51_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM zaglPr WHERE dlin = " + cb51_dlin.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -991,7 +991,7 @@ namespace airDucts
 
 		private void cb61_dlin1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir1 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1005,36 +1005,33 @@ namespace airDucts
 			{
 				cb61_shir1.Items.Add(dataSet2.Tables["troinicPrPr"].Rows[i]["shir1"].ToString());
 			}
-			cb61_dlin2.Text = cb61_dlin1.SelectedItem.ToString();
+			//cb61_dlin2.Text = cb61_dlin1.SelectedItem.ToString();
 
 		}
 
 		private void cb61_shir1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
-			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys1 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " AND shir1 = " + cb61_shir1.SelectedItem.ToString() + " ", sqlConnection);
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin2 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " AND shir1 = " + cb61_shir1.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
 
 			dataSet2 = new DataSet();
 			sqlDataAdapter2.Fill(dataSet2, "troinicPrPr");
 
-			cb61_vys1.Clear();
-			cb61_zazor.Clear();
+			cb61_dlin2.Items.Clear();
 
 			for (int i = 0; i < dataSet2.Tables["troinicPrPr"].Rows.Count; i++)
 			{
-				cb61_zazor.Text = (dataSet2.Tables["troinicPrPr"].Rows[i]["thick"].ToString());
-				cb61_vys1.Text = (dataSet2.Tables["troinicPrPr"].Rows[i]["vys1"].ToString());
+				cb61_dlin2.Items.Add(dataSet2.Tables["troinicPrPr"].Rows[i]["dlin2"].ToString());
 
 			}
 
-			cb61_shir2.Text = cb61_shir1.SelectedItem.ToString();
 		}
 
 		private void cb62_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM troinicPrKr WHERE dlin = " + cb62_dlin.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1052,7 +1049,7 @@ namespace airDucts
 
 		private void cb62_shir_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT diam FROM troinicPrKr WHERE dlin = " + cb62_dlin.SelectedItem.ToString() + " AND shir = " + cb62_shir.SelectedItem.ToString() + "", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1070,7 +1067,7 @@ namespace airDucts
 
 		private void cb62_diam_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys FROM troinicPrKr WHERE dlin = " + cb62_dlin.SelectedItem.ToString() + " AND shir = " + cb62_shir.SelectedItem.ToString() + " AND diam = " + cb62_diam.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1092,7 +1089,7 @@ namespace airDucts
 
 		private void cb63_diam1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT diam2 FROM troinicKrKr WHERE diam1 = " + cb63_diam1.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1110,7 +1107,7 @@ namespace airDucts
 
 		private void cb63_diam2_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys1 FROM troinicKrKr WHERE diam1 = " + cb63_diam1.SelectedItem.ToString() + " AND diam2 = " + cb63_diam2.SelectedItem.ToString() + "  ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1132,7 +1129,7 @@ namespace airDucts
 		private void cb64_diam_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb64_dlin.Enabled = true;
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin FROM troinicKrPr WHERE diam = " + cb64_diam.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1152,7 +1149,7 @@ namespace airDucts
 		{
 			cb64_shir.Enabled = true;
 
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM troinicKrPr WHERE diam = " + cb64_diam.SelectedItem.ToString() + " AND dlin = " + cb64_dlin.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1173,7 +1170,7 @@ namespace airDucts
 			cb64_vys1.Enabled = true;
 			cb64_zazor.Enabled = true;
 
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys FROM troinicKrPr WHERE diam = " + cb64_diam.SelectedItem.ToString() + " AND dlin = " + cb64_dlin.SelectedItem.ToString() + " AND shir = " + cb64_shir.SelectedItem.ToString() + "  ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1195,7 +1192,7 @@ namespace airDucts
 		private void cb71_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			string str = cb71_dlin.SelectedItem.ToString();
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT  shir1 FROM flanPr WHERE dlin1 =" + cb71_dlin.SelectedItem.ToString() + "", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1215,7 +1212,7 @@ namespace airDucts
 
 		private void cb71_shir_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT dOtv,thick FROM flanPr WHERE dlin1 = " + cb71_dlin.SelectedItem.ToString() + " AND shir1 = " + cb71_shir.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1235,7 +1232,7 @@ namespace airDucts
 
 		private void cb72_diam_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT dOtv,thick FROM flanKr WHERE diam = " + cb72_diam.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1273,7 +1270,7 @@ namespace airDucts
 			countDlin = 0;
 			countShir = 0;
 
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin2,shir2,sDlin,sShir,countDlin,countShir FROM flanPr WHERE dlin1 = " + cb71_dlin.SelectedItem.ToString() + " AND shir1 = " + cb71_shir.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1324,7 +1321,7 @@ namespace airDucts
 			dOs = 0;
 			count = 0;
 
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT dOs,count FROM flanKr WHERE diam = " + cb72_diam.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1392,7 +1389,7 @@ namespace airDucts
 
 		private void cb52_diam_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT thick FROM zaglKr WHERE diam = " + cb52_diam.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
@@ -1405,6 +1402,46 @@ namespace airDucts
 			for (int i = 0; i < dataSet2.Tables["zaglKr"].Rows.Count; i++)
 			{
 				cb52_thick.Text = (dataSet2.Tables["zaglKr"].Rows[i]["thick"].ToString());
+			}
+		}
+
+		private void cb61_shir2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys1 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " AND shir1 = " + cb61_shir1.SelectedItem.ToString() + " AND dlin2 = " + cb61_dlin2.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicPrPr");
+
+			cb61_vys1.Clear();
+			cb61_zazor.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicPrPr"].Rows.Count; i++)
+			{
+				cb61_zazor.Text = (dataSet2.Tables["troinicPrPr"].Rows[i]["thick"].ToString());
+				cb61_vys1.Text = (dataSet2.Tables["troinicPrPr"].Rows[i]["vys1"].ToString());
+
+			}
+		}
+
+		private void cb61_dlin2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
+			SqlCommand command = new SqlCommand("SELECT DISTINCT shir2 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " AND shir1 = " + cb61_shir1.SelectedItem.ToString() + " AND dlin2 = " + cb61_dlin2.SelectedItem.ToString() + " ", sqlConnection);
+
+			sqlDataAdapter2 = new SqlDataAdapter(command);
+
+			dataSet2 = new DataSet();
+			sqlDataAdapter2.Fill(dataSet2, "troinicPrPr");
+
+			cb61_shir2.Items.Clear();
+
+			for (int i = 0; i < dataSet2.Tables["troinicPrPr"].Rows.Count; i++)
+			{
+				cb61_shir2.Items.Add(dataSet2.Tables["troinicPrPr"].Rows[i]["shir2"].ToString());
+
 			}
 		}
 	}

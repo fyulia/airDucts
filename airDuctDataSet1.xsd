@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="airDuctDataSet" targetNamespace="http://tempuri.org/airDuctDataSet.xsd" xmlns:mstns="http://tempuri.org/airDuctDataSet.xsd" xmlns="http://tempuri.org/airDuctDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="airDuctDataSet1" targetNamespace="http://tempuri.org/airDuctDataSet1.xsd" xmlns:mstns="http://tempuri.org/airDuctDataSet1.xsd" xmlns="http://tempuri.org/airDuctDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="airDuctConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="airDuctConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.airDucts.Properties.Settings.GlobalReference.Default.airDuctConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="airDuctConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="airDuctConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.airDucts.Properties.Settings.GlobalReference.Default.airDuctConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="flanKrTableAdapter" GeneratorDataComponentClassName="flanKrTableAdapter" Name="flanKr" UserDataComponentName="flanKrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.flanKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.flanKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[flanKr] ([diam], [dOs], [dOtv], [count], [thick]) VALUES (@diam, @dOs, @dOtv, @count, @thick)</CommandText>
@@ -42,10 +42,10 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="flanPrTableAdapter" GeneratorDataComponentClassName="flanPrTableAdapter" Name="flanPr" UserDataComponentName="flanPrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.flanPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.flanPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [flanPr] ([dlin1], [shir1], [dlin2], [shir2], [sDlin], [sShir], [countDlin], [countShir], [thick], [dOtv]) VALUES (@dlin1, @shir1, @dlin2, @shir2, @sDlin, @sShir, @countDlin, @countShir, @thick, @dOtv)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[flanPr] ([dlin1], [shir1], [dlin2], [shir2], [sDlin], [sShir], [countDlin], [countShir], [thick], [dOtv]) VALUES (@dlin1, @shir1, @dlin2, @shir2, @sDlin, @sShir, @countDlin, @countShir, @thick, @dOtv)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@dlin1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dlin1" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@shir1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shir1" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -62,7 +62,7 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, dlin1, shir1, dlin2, shir2, sDlin, sShir, countDlin, countShir, thick, dOtv FROM flanPr</CommandText>
+                    <CommandText>SELECT id, dlin1, shir1, dlin2, shir2, sDlin, sShir, countDlin, countShir, thick, dOtv FROM dbo.flanPr</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -85,7 +85,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="otvodKrTableAdapter" GeneratorDataComponentClassName="otvodKrTableAdapter" Name="otvodKr" UserDataComponentName="otvodKrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.otvodKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.otvodKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[otvodKr] ([diam], [thick]) VALUES (@diam, @thick)</CommandText>
@@ -112,7 +112,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="otvodPrTableAdapter" GeneratorDataComponentClassName="otvodPrTableAdapter" Name="otvodPr" UserDataComponentName="otvodPrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.otvodPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.otvodPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[otvodPr] ([dlin], [shir], [dlinOtv], [thick]) VALUES (@dlin, @shir, @dlinOtv, @thick)</CommandText>
@@ -143,7 +143,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="perehodKrTableAdapter" GeneratorDataComponentClassName="perehodKrTableAdapter" Name="perehodKr" UserDataComponentName="perehodKrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.perehodKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.perehodKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[perehodKr] ([diam1], [diam2], [thick], [vys]) VALUES (@diam1, @diam2, @thick, @vys)</CommandText>
@@ -174,7 +174,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="perehodPrTableAdapter" GeneratorDataComponentClassName="perehodPrTableAdapter" Name="perehodPr" UserDataComponentName="perehodPrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.perehodPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.perehodPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[perehodPr] ([diam], [dlin], [shir], [thick], [vys]) VALUES (@diam, @dlin, @shir, @thick, @vys)</CommandText>
@@ -207,7 +207,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="perehodPrPrTableAdapter" GeneratorDataComponentClassName="perehodPrPrTableAdapter" Name="perehodPrPr" UserDataComponentName="perehodPrPrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.perehodPrPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.perehodPrPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[perehodPrPr] ([dlin1], [shir1], [dlin2], [shir2], [thick], [vys]) VALUES (@dlin1, @shir1, @dlin2, @shir2, @thick, @vys)</CommandText>
@@ -242,7 +242,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="troinicKrKrTableAdapter" GeneratorDataComponentClassName="troinicKrKrTableAdapter" Name="troinicKrKr" UserDataComponentName="troinicKrKrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.troinicKrKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.troinicKrKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[troinicKrKr] ([diam1], [diam2], [thick], [vys1]) VALUES (@diam1, @diam2, @thick, @vys1)</CommandText>
@@ -273,14 +273,14 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="troinicKrPrTableAdapter" GeneratorDataComponentClassName="troinicKrPrTableAdapter" Name="troinicKrPr" UserDataComponentName="troinicKrPrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.troinicKrPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.troinicKrPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[troinicKrPr] ([diam], [dlin], [shir], [thick], [vys]) VALUES (@diam, @dlin, @shir, @thick, @vys)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[troinicKrPr] ([diam], [shir], [dlin], [thick], [vys]) VALUES (@diam, @shir, @dlin, @thick, @vys)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@diam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="diam" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@dlin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dlin" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@shir" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@dlin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dlin" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@thick" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="thick" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@vys" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vys" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
@@ -288,7 +288,7 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, diam, dlin, shir, thick, vys FROM dbo.troinicKrPr</CommandText>
+                    <CommandText>SELECT id, diam, shir, dlin, thick, vys FROM dbo.troinicKrPr</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -297,8 +297,8 @@
             <Mappings>
               <Mapping SourceColumn="id" DataSetColumn="id" />
               <Mapping SourceColumn="diam" DataSetColumn="diam" />
-              <Mapping SourceColumn="dlin" DataSetColumn="dlin" />
               <Mapping SourceColumn="shir" DataSetColumn="shir" />
+              <Mapping SourceColumn="dlin" DataSetColumn="dlin" />
               <Mapping SourceColumn="thick" DataSetColumn="thick" />
               <Mapping SourceColumn="vys" DataSetColumn="vys" />
             </Mappings>
@@ -306,7 +306,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="troinicPrKrTableAdapter" GeneratorDataComponentClassName="troinicPrKrTableAdapter" Name="troinicPrKr" UserDataComponentName="troinicPrKrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.troinicPrKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.troinicPrKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[troinicPrKr] ([diam], [dlin], [shir], [thick], [vys]) VALUES (@diam, @dlin, @shir, @thick, @vys)</CommandText>
@@ -339,10 +339,10 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="troinicPrPrTableAdapter" GeneratorDataComponentClassName="troinicPrPrTableAdapter" Name="troinicPrPr" UserDataComponentName="troinicPrPrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.troinicPrPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.troinicPrPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[troinicPrPr] ([dlin1], [shir1], [dlin2], [shir2], [thick], [vys1], [vys2]) VALUES (@dlin1, @shir1, @dlin2, @shir2, @thick, @vys1, @vys2)</CommandText>
+                    <CommandText>INSERT INTO [troinicPrPr] ([dlin1], [shir1], [dlin2], [shir2], [thick], [vys1]) VALUES (@dlin1, @shir1, @dlin2, @shir2, @thick, @vys1)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@dlin1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dlin1" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@shir1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shir1" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -350,13 +350,12 @@
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@shir2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shir2" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@thick" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="thick" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@vys1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vys1" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@vys2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vys2" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, dlin1, shir1, dlin2, shir2, thick, vys1, vys2 FROM dbo.troinicPrPr</CommandText>
+                    <CommandText>SELECT id, dlin1, shir1, dlin2, shir2, thick, vys1 FROM troinicPrPr</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -370,13 +369,12 @@
               <Mapping SourceColumn="shir2" DataSetColumn="shir2" />
               <Mapping SourceColumn="thick" DataSetColumn="thick" />
               <Mapping SourceColumn="vys1" DataSetColumn="vys1" />
-              <Mapping SourceColumn="vys2" DataSetColumn="vys2" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vozdKrTableAdapter" GeneratorDataComponentClassName="vozdKrTableAdapter" Name="vozdKr" UserDataComponentName="vozdKrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.vozdKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.vozdKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[vozdKr] ([diam], [thick], [vys]) VALUES (@diam, @thick, @vys)</CommandText>
@@ -405,7 +403,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vozdPrTableAdapter" GeneratorDataComponentClassName="vozdPrTableAdapter" Name="vozdPr" UserDataComponentName="vozdPrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.vozdPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.vozdPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[vozdPr] ([dlin], [shir], [thickness], [vys]) VALUES (@dlin, @shir, @thickness, @vys)</CommandText>
@@ -436,7 +434,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="zaglKrTableAdapter" GeneratorDataComponentClassName="zaglKrTableAdapter" Name="zaglKr" UserDataComponentName="zaglKrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.zaglKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.zaglKr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[zaglKr] ([diam], [thick]) VALUES (@diam, @thick)</CommandText>
@@ -463,7 +461,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="zaglPrTableAdapter" GeneratorDataComponentClassName="zaglPrTableAdapter" Name="zaglPr" UserDataComponentName="zaglPrTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="airDuctConnectionString (Settings)" DbObjectName="airDuct.dbo.zaglPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="airDuctConnectionString1 (Settings)" DbObjectName="airDuct.dbo.zaglPr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[zaglPr] ([dlin], [shir], [thick]) VALUES (@dlin, @shir, @thick)</CommandText>
@@ -495,7 +493,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="airDuctDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="airDuctDataSet" msprop:Generator_UserDSName="airDuctDataSet">
+  <xs:element name="airDuctDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="airDuctDataSet1" msprop:Generator_UserDSName="airDuctDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="flanKr" msprop:Generator_TableClassName="flanKrDataTable" msprop:Generator_TableVarName="tableflanKr" msprop:Generator_RowChangedName="flanKrRowChanged" msprop:Generator_TablePropName="flanKr" msprop:Generator_RowDeletingName="flanKrRowDeleting" msprop:Generator_RowChangingName="flanKrRowChanging" msprop:Generator_RowEvHandlerName="flanKrRowChangeEventHandler" msprop:Generator_RowDeletedName="flanKrRowDeleted" msprop:Generator_RowClassName="flanKrRow" msprop:Generator_UserTableName="flanKr" msprop:Generator_RowEvArgName="flanKrRowChangeEvent">
@@ -647,8 +645,8 @@
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
               <xs:element name="diam" msprop:Generator_ColumnVarNameInTable="columndiam" msprop:Generator_ColumnPropNameInRow="diam" msprop:Generator_ColumnPropNameInTable="diamColumn" msprop:Generator_UserColumnName="diam" type="xs:int" />
-              <xs:element name="dlin" msprop:Generator_ColumnVarNameInTable="columndlin" msprop:Generator_ColumnPropNameInRow="dlin" msprop:Generator_ColumnPropNameInTable="dlinColumn" msprop:Generator_UserColumnName="dlin" type="xs:int" />
               <xs:element name="shir" msprop:Generator_ColumnVarNameInTable="columnshir" msprop:Generator_ColumnPropNameInRow="shir" msprop:Generator_ColumnPropNameInTable="shirColumn" msprop:Generator_UserColumnName="shir" type="xs:int" />
+              <xs:element name="dlin" msprop:Generator_ColumnVarNameInTable="columndlin" msprop:Generator_ColumnPropNameInRow="dlin" msprop:Generator_ColumnPropNameInTable="dlinColumn" msprop:Generator_UserColumnName="dlin" type="xs:int" />
               <xs:element name="thick" msprop:Generator_ColumnVarNameInTable="columnthick" msprop:Generator_ColumnPropNameInRow="thick" msprop:Generator_ColumnPropNameInTable="thickColumn" msprop:Generator_UserColumnName="thick" type="xs:double" />
               <xs:element name="vys" msprop:Generator_ColumnVarNameInTable="columnvys" msprop:Generator_ColumnPropNameInRow="vys" msprop:Generator_ColumnPropNameInTable="vysColumn" msprop:Generator_UserColumnName="vys" type="xs:int" />
             </xs:sequence>
@@ -682,13 +680,6 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="vys1" msprop:Generator_ColumnVarNameInTable="columnvys1" msprop:Generator_ColumnPropNameInRow="vys1" msprop:Generator_ColumnPropNameInTable="vys1Column" msprop:Generator_UserColumnName="vys1" type="xs:int" />
-              <xs:element name="vys2" msprop:Generator_ColumnVarNameInTable="columnvys2" msprop:Generator_ColumnPropNameInRow="vys2" msprop:Generator_ColumnPropNameInTable="vys2Column" msprop:Generator_UserColumnName="vys2" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="1" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

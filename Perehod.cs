@@ -115,10 +115,10 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Point3", "SKETCHPOINT", dlin / 2, -shir / 2, 0, true, 0, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Point4", "SKETCHPOINT", -dlin / 2, -shir / 2, 0, true, 0, null, 0);
 
-			skSegment = (SketchSegment)Part.SketchManager.CreateFillet(zazor, 1);
-			skSegment = (SketchSegment)Part.SketchManager.CreateFillet(zazor, 1);
-			skSegment = (SketchSegment)Part.SketchManager.CreateFillet(zazor, 1);
-			skSegment = (SketchSegment)Part.SketchManager.CreateFillet(zazor, 1);
+			skSegment = (SketchSegment)Part.SketchManager.CreateFillet(zazor*5, 1);
+			skSegment = (SketchSegment)Part.SketchManager.CreateFillet(zazor*5, 1);
+			skSegment = (SketchSegment)Part.SketchManager.CreateFillet(zazor*5, 1);
+			skSegment = (SketchSegment)Part.SketchManager.CreateFillet(zazor*5, 1);
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
 
@@ -156,20 +156,17 @@ namespace airDucts
 			Part.ClearSelection2(true);
 
 
-			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", -dlin / 2, 0, 0, false, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", -dlin / 2, -zazor, 0, false, 1, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", -diam / 2, 0, vys, true, 1, null, 0);
 
 			//feat = Part.FeatureManager.InsertSheetMetalLoftedBend(0, zazor);
 
+			feat = Part.FeatureManager.InsertSheetMetalLoftedBend2(0, zazor, false, 0.001, true, (int)swLoftedBendFacetOptions_e.swChordTolerance, 0.0005, 0, 0, 0);
 
-			//feat = Part.FeatureManager.InsertSheetMetalLoftedBend2(0, zazor, false, 0.001, true, (int)swLoftedBendFacetOptions_e.swChordTolerance, 0.0005, 0, 0, 0);
+			Part.ClearSelection2(true);
 
-			//Part.ClearSelection2(true);
-
-			//Part.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swDisplayAnnotations, true);
-
-			//boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
-			//Part.BlankRefGeom();
+			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
+			Part.BlankRefGeom();
 		}
 
 		public void createKrPerehod(double diam1, double diam2,  double vys, double zazor, IModelDoc2 Part)

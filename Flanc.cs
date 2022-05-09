@@ -89,7 +89,7 @@ namespace airDucts
 			feat = Part.FeatureManager.FeatureCut4(true, false, false, 1, 0, 0.01, 0.01, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, true, true, true, true, true, false, 0, 0, false, true);
 
 
-
+			Part.ClearSelection2(true);
 
 
 
@@ -134,7 +134,7 @@ namespace airDucts
 				1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, true, true, true, true, true, false, 0, 0, false, true);
 			Part.SelectionManager.EnableContourSelection = false;
 
-
+			Part.ClearSelection2(true);
 
 
 

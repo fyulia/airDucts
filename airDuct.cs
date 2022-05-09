@@ -154,8 +154,8 @@ namespace airDucts
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
 
-			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", 0, 0, 0, false, 1, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", 0, 0, 0, true, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", -diam/2, 0, 0, false, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", -diam/2, 0, vys, true, 1, null, 0);
 
 			feat = Part.FeatureManager.InsertSheetMetalLoftedBend(0, zazor);
 			Part.ClearSelection2(true);

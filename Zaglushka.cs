@@ -173,5 +173,52 @@ namespace airDucts
 			Part.ClearSelection2(true);
 
 		}
+
+		public void createZaglKrTop(double diam, double vys, double thick, IModelDoc2 Part)
+		{
+			Part.SketchManager.InsertSketch(true);
+			boolstatus = Part.Extension.SelectByID2("Спереди", "PLANE", 0, 0, 0, false, 0, null, 0);
+			Part.ClearSelection2(true);
+			skSegment = (SketchSegment)Part.SketchManager.CreateArc(0, 0, 0, - diam / 2, 0, 0, 0, diam / 2, 0, 1);
+
+			Part.AddDimension2(-diam * 2 / 3, diam, 2.5);
+			//Part.InsertGtol();
+			Part.ClearSelection2(true);
+
+			var myDimension3 = Part.Parameter("D1@Эскиз1");
+			myDimension3.SystemValue = diam / 2;
+
+
+			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -diam / 2, 0, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point3", "SKETCHPOINT", 0, 0, 0, true, 0, null, 0);
+			Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
+			Part.ClearSelection2(true);
+
+			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -diam / 2, 0, 0, false, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point2", "SKETCHPOINT", 0, diam / 2, 0, true, 0, null, 0);
+
+			Part.AddDimension2(-diam * 2 / 3, 0, 2.5);
+			Part.ClearSelection2(true);
+
+			var myDimension4 = Part.Parameter("D2@Эскиз1");
+			myDimension4.SystemValue = thick;
+
+			Part.ClearSelection2(true);
+			Part.SketchManager.InsertSketch(true);
+
+			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", 0, 0, 0, false, 0, null, 0);
+			CustomBendAllowance customBendAllowanceData;
+			customBendAllowanceData = Part.FeatureManager.CreateCustomBendAllowance();
+			customBendAllowanceData.KFactor = 0.5;
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, true, 0.0007366, vys, 0.01, false, 0, 0, 1, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
+
+			Part.ClearSelection2(true);
+
+			boolstatus = Part.Extension.SelectByID2("Спереди", "PLANE", 0, 0, 0, true, 0, null, 0);
+			refPlane = (RefPlane)Part.FeatureManager.InsertRefPlane(8, vys, 0, 0, 0, 0);
+			Part.ClearSelection2(true);
+			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
+			Part.BlankRefGeom();
+		}
 	}
 }

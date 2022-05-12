@@ -24,12 +24,12 @@ namespace airDucts
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin1 / 2, -shir1 / 2, 0, -dlin1 / 2, shir1 / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin1 / 2, shir1 / 2, 0, dlin1 / 2, shir1 / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin1 / 2, shir1 / 2, 0, dlin1 / 2, -shir1 / 2, 0);
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin1 / 2, -shir1 / 2, 0, -dlin1 / 2 + zazor * 5, -shir1 / 2, 0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin1 / 2, -shir1 / 2, 0, -dlin1 / 2 + zazor * 10, -shir1 / 2, 0);
 
 			Part.ClearSelection2(true);
 
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin1 / 2, -shir1 / 2, 0, false, 0, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Point5", "SKETCHPOINT", -dlin1 / 2 + zazor * 5, -shir1 / 2, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point5", "SKETCHPOINT", -dlin1 / 2 + zazor * 10, -shir1 / 2, 0, true, 0, null, 0);
 
 			Part.AddDimension2(-dlin1 * 2 / 3, 0, 2.5);
 			Part.ClearSelection2(true);
@@ -47,11 +47,11 @@ namespace airDucts
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin1 / 2, -shir1 / 2, 0, -dlin1 / 2, shir1 / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin1 / 2, shir1 / 2, 0, dlin1 / 2, shir1 / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin1 / 2, shir1 / 2, 0, dlin1 / 2, -shir1 / 2, 0);
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin1 / 2, -shir1 / 2, 0, -dlin1 / 2 + zazor * 5, -shir1 / 2, 0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin1 / 2, -shir1 / 2, 0, -dlin1 / 2 + zazor * 10, -shir1 / 2, 0);
 			Part.ClearSelection2(true);
 
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin1 / 2, -shir1 / 2, 0, false, 0, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Point5", "SKETCHPOINT", -dlin1 / 2 + zazor * 5, -shir1 / 2, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point5", "SKETCHPOINT", -dlin1 / 2 + zazor * 10, -shir1 / 2, 0, true, 0, null, 0);
 
 			Part.AddDimension2(-dlin1 * 2 / 3, 0, 2.5);
 			Part.ClearSelection2(true);
@@ -61,11 +61,11 @@ namespace airDucts
 			Part.SketchManager.InsertSketch(true);
 
 			// Select the sketches for the lofted bend feature
-			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", 0, 0, 0, false, 1, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", 0, 0, 0, true, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", -dlin1/2, -shir1/2, 0, false, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", -dlin1 / 2, -shir1 / 2, vys1, true, 1, null, 0);
 
 			// Insert a lofted bend feature with two bends
-			feat = Part.FeatureManager.InsertSheetMetalLoftedBend2(0, zazor, false, 0.0007366, true,
+			feat = Part.FeatureManager.InsertSheetMetalLoftedBend2(0, zazor, false, zazor, true,
 				(int)swLoftedBendFacetOptions_e.swBendsPerTransitionSegment, 0, 2, 0, 0);
 
 			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
@@ -80,94 +80,152 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.SketchManager.InsertSketch(true);
 
+
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin2 / 2, 0, 0, -dlin2 / 2, shir2 / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin2 / 2, shir2 / 2, 0, dlin2 / 2, shir2 / 2, 0.0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin2 / 2, shir2 / 2, 0.0, dlin2 / 2, -shir2 / 2, 0.0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin2 / 2, -shir2 / 2, 0.0, -dlin2 / 2, -shir2 / 2, 0.0);
-			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin2 / 2, -shir2 / 2, 0.0, -dlin2 / 2, -zazor * 5, 0.0);
+			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin2 / 2, -shir2 / 2, 0.0, -dlin2 / 2, -zazor * 10, 0.0);
 			Part.ClearSelection2(true);
 
-			boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", dlin2 / 2, 0, 0, false, 0, null, 0);
-			Part.SelectMidpoint();
+			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin2 / 2, 0, 0, true, 0, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, true, 0, null, 0);
+			Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
+			Part.ClearSelection2(true);
 
+			boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", dlin2 / 2,0, 0, true, 0, null, 0);
+			Part.SelectMidpoint();
+			Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
+			Part.ClearSelection2(true);
 
+			boolstatus = Part.Extension.SelectByID2("Line2", "SKETCHSEGMENT", 0, shir2 / 2, 0, false, 0, null, 0);
 			Part.AddDimension2(-dlin2 * 2 / 3, 0, 0);
 			Part.ClearSelection2(true);
 
 			var myDimension3 = Part.Parameter("D1@Эскиз5");
-			myDimension3.SystemValue = -vys1 / 2 + dlin2 / 2;
+			myDimension3.SystemValue =  dlin2 ;
 			Part.ClearSelection2(true);
 			Part.SetPickMode();
 
-			boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", -vys1 / 2 + dlin2 / 2, 0, 0, false, 0, null, 0);
-			Part.AddDimension2(-dlin2 * 2, 0, 0);
+			boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", dlin2/2, 0, 0, false, 0, null, 0);
+			Part.AddDimension2(-dlin2 * 2 / 3, 0, 0);
 			Part.ClearSelection2(true);
 
 			var myDimension4 = Part.Parameter("D2@Эскиз5");
 			myDimension4.SystemValue = shir2;
 			Part.ClearSelection2(true);
+			Part.SetPickMode();
 
-
-			boolstatus = Part.Extension.SelectByID2("Line4", "SKETCHSEGMENT", -vys1 / 2 + dlin2 / 2, -shir2 / 2, 0, false, 0, null, 0);
+			
+			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -dlin2 / 2, 0, 0, false, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", -dlin2 / 2, -zazor * 10, 0, true, 0, null, 0);
+			
 			Part.AddDimension2(-dlin2 * 2, 0, 0);
 			Part.ClearSelection2(true);
 
 			var myDimension5 = Part.Parameter("D3@Эскиз5");
-			myDimension5.SystemValue = dlin2;
-			Part.ClearSelection2(true);
-
-
-			boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", -vys1 / 2 + dlin2 / 2, 0, 0, true, 0, null, 0);
-			Part.SelectMidpoint();
-			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -vys1 / 2 - dlin2 / 2, 0, 0, true, 0, null, 0);
-
-			Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
-			Part.ClearSelection2(true);
-
-			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -vys1 / 2 - dlin2 / 2, 0, 0, false, 0, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", -vys1 / 2 - dlin2 / 2, -zazor * 5, 0, true, 0, null, 0);
-
-			Part.AddDimension2(-dlin2 * 2, 0, 0);
-			Part.ClearSelection2(true);
-
-			var myDimension6 = Part.Parameter("D4@Эскиз5");
-			myDimension6.SystemValue = zazor;
+			myDimension5.SystemValue = zazor;
 			Part.ClearSelection2(true);
 			Part.SetPickMode();
 
-			boolstatus = Part.Extension.SelectByRay(dlin1 / 2, shir1 / 2 + zazor, vys1 / 2, -1, 0, 0, 9.74884895444939E-04, 1, false, 0, 0);
-			Part.SelectMidpoint();
-			boolstatus = Part.Extension.SelectByID2("Line2", "SKETCHSEGMENT", dlin1 / 2 + zazor, shir2 / 2, vys1 / 2, true, 0, null, 0);
-
-			Part.AddDimension2(-dlin2 * 2, 0, 0);
+			boolstatus = Part.Extension.SelectByID2("Line1", "SKETCHSEGMENT", -dlin2 / 2, 0, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Line2", "SKETCHSEGMENT", 0, shir2 / 2, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", dlin2 / 2, 0, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Line4", "SKETCHSEGMENT", 0, -shir2 / 2, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Line5", "SKETCHSEGMENT", -dlin2 / 2, -zazor * 5, 0, true, 0, null, 0);
+			Part.Extension.MoveOrCopy(false, 1, true, 0, 0, 0, -vys1 / 2, 0, 0);
 			Part.ClearSelection2(true);
+			Part.SketchManager.InsertSketch(true);
 
-			var myDimension7 = Part.Parameter("D5@Эскиз5");
-			myDimension7.SystemValue = shir1 / 2 + zazor - shir2 / 2;
-			Part.ClearSelection2(true);
-			Part.SetPickMode();
+
+			//skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin2 / 2, 0, 0, -dlin2 / 2, shir2 / 2, 0);
+			//skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin2 / 2, shir2 / 2, 0, dlin2 / 2, shir2 / 2, 0.0);
+			//skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin2 / 2, shir2 / 2, 0.0, dlin2 / 2, -shir2 / 2, 0.0);
+			//skSegment = (SketchSegment)Part.SketchManager.CreateLine(dlin2 / 2, -shir2 / 2, 0.0, -dlin2 / 2, -shir2 / 2, 0.0);
+			//skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin2 / 2, -shir2 / 2, 0.0, -dlin2 / 2, -zazor * 5, 0.0);
+			//Part.ClearSelection2(true);
+
+			//boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", dlin2 / 2, 0, 0, false, 0, null, 0);
+			//Part.SelectMidpoint();
+			//boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, true, 0, null, 0);
+
+
+			//Part.AddDimension2(-dlin2 * 2 / 3, 0, 0);
+			//Part.ClearSelection2(true);
+
+			//var myDimension3 = Part.Parameter("D1@Эскиз5");
+			//myDimension3.SystemValue = -vys1 / 2 + dlin2 / 2;
+			//Part.ClearSelection2(true);
+			//Part.SetPickMode();
+
+			//boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", -vys1 / 2 + dlin2 / 2, 0, 0, false, 0, null, 0);
+			//Part.AddDimension2(-dlin2 * 2, 0, 0);
+			//Part.ClearSelection2(true);
+
+			//var myDimension4 = Part.Parameter("D2@Эскиз5");
+			//myDimension4.SystemValue = shir2;
+			//Part.ClearSelection2(true);
+
+
+			//boolstatus = Part.Extension.SelectByID2("Line4", "SKETCHSEGMENT", -vys1 / 2 + dlin2 / 2, -shir2 / 2, 0, false, 0, null, 0);
+			//Part.AddDimension2(-dlin2 * 2, 0, 0);
+			//Part.ClearSelection2(true);
+
+			//var myDimension5 = Part.Parameter("D3@Эскиз5");
+			//myDimension5.SystemValue = dlin2;
+			//Part.ClearSelection2(true);
+
+
+			//boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", -vys1 / 2 + dlin2 / 2, 0, 0, true, 0, null, 0);
+			//Part.SelectMidpoint();
+			//boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -vys1 / 2 - dlin2 / 2, 0, 0, true, 0, null, 0);
+
+			//Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
+			//Part.ClearSelection2(true);
+
+			//boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -vys1 / 2 - dlin2 / 2, 0, 0, false, 0, null, 0);
+			//boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", -vys1 / 2 - dlin2 / 2, -zazor * 5, 0, true, 0, null, 0);
+
+			//Part.AddDimension2(-dlin2 * 2, 0, 0);
+			//Part.ClearSelection2(true);
+
+			//var myDimension6 = Part.Parameter("D4@Эскиз5");
+			//myDimension6.SystemValue = zazor;
+			//Part.ClearSelection2(true);
+			//Part.SetPickMode();
+
+			//boolstatus = Part.Extension.SelectByRay(dlin1 / 2, shir1 / 2 + zazor, vys1 / 2, -1, 0, 0, 9.74884895444939E-04, 1, false, 0, 0);
+			//Part.SelectMidpoint();
+			//boolstatus = Part.Extension.SelectByID2("Line2", "SKETCHSEGMENT", dlin1 / 2 + zazor, shir2 / 2, vys1 / 2, true, 0, null, 0);
+
+			//Part.AddDimension2(-dlin2 * 2, 0, 0);
+			//Part.ClearSelection2(true);
+
+			//var myDimension7 = Part.Parameter("D5@Эскиз5");
+			//myDimension7.SystemValue = shir1 / 2 + zazor - shir2 / 2;
+			//Part.ClearSelection2(true);
+			//Part.SetPickMode();
 
 
 			boolstatus = Part.Extension.SelectByID2("Эскиз5", "SKETCH", 0, 0, 0, false, 0, null, 0);
 			CustomBendAllowance customBendAllowanceData;
 			customBendAllowanceData = Part.FeatureManager.CreateCustomBendAllowance();
 			customBendAllowanceData.KFactor = 0.5;
-			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(zazor, true, 0.0007366, vys2, 0, false, 0, 0, 1, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(zazor, false, zazor, vys2, 0, false, 0, 0, 1, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
 
+			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
+			Part.SketchManager.InsertSketch(true);
+			vskLines = Part.SketchManager.CreateCenterRectangle(-vys1 / 2, 0, 0, -vys1 / 2 + dlin2 / 2+zazor, shir2 / 2-zazor, 0);
+			Part.SketchManager.InsertSketch(true);
+			Part.ClearSelection2(true);
 
-			//boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
-			//Part.SketchManager.InsertSketch(true);
-			//vskLines = Part.SketchManager.CreateCenterRectangle(-vys1 / 2, 0, 0, -vys1 / 2 - dlin2 / 2, shir2 / 2, 0);
-			//Part.SketchManager.InsertSketch(true);
-			//Part.ClearSelection2(true);
+			boolstatus = Part.Extension.SelectByID2("Эскиз8", "SKETCH", 0, 0, 0, false, 0, null, 0);
+			feat = Part.FeatureManager.FeatureCut4(true, false, false, 2, 0, 0.01, 0.01, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, false, true, true, true, true, false, 0, 0, false, false);
+			Part.SelectionManager.EnableContourSelection = false;
 
-			//boolstatus = Part.Extension.SelectByID2("Эскиз8", "SKETCH", 0, 0, 0, false, 0, null, 0);
-			//feat = Part.FeatureManager.FeatureCut4(true, false, false, 2, 0, 0.01, 0.01, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, false, true, true, true, true, false, 0, 0, false, false);
-			//Part.SelectionManager.EnableContourSelection = false;
-
-			//boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
-			//Part.BlankRefGeom();
+			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
+			Part.BlankRefGeom();
 
 
 
@@ -218,11 +276,11 @@ namespace airDucts
 			Part.SketchManager.InsertSketch(true);
 
 			// Select the sketches for the lofted bend feature
-			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", 0, 0, 0, false, 1, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", 0, 0, 0, true, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", -dlin / 2, -shir / 2, 0, false, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", -dlin / 2, -shir / 2, vys1, true, 1, null, 0);
 
 			// Insert a lofted bend feature with two bends
-			feat = Part.FeatureManager.InsertSheetMetalLoftedBend2(0, zazor, false, 0.0007366, true,
+			feat = Part.FeatureManager.InsertSheetMetalLoftedBend2(0, zazor, false, zazor, true,
 				(int)swLoftedBendFacetOptions_e.swBendsPerTransitionSegment, 0, 2, 0, 0);
 
 			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
@@ -248,12 +306,12 @@ namespace airDucts
 
 
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -vys1 / 2 - diam / 2, 0, 0, true, 0, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Point3", "SKETCHPOINT", -vys1/2, 0, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point3", "SKETCHPOINT", -vys1 / 2, 0, 0, true, 0, null, 0);
 			Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
 			Part.ClearSelection2(true);
 
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -vys1 / 2 - diam / 2, 0, 0, false, 0, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Point2", "SKETCHPOINT", -vys1/2, diam / 2, 0, true, 0, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Point2", "SKETCHPOINT", -vys1 / 2, diam / 2, 0, true, 0, null, 0);
 
 			Part.AddDimension2(-diam * 2 / 3, 0, 2.5);
 			Part.ClearSelection2(true);
@@ -272,7 +330,7 @@ namespace airDucts
 
 			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.SketchManager.InsertSketch(true);
-			skSegment = Part.SketchManager.CreateCircle(-vys1/2, 0, 0, -vys1/2 + diam/2, 0, 0);
+			skSegment = Part.SketchManager.CreateCircle(-vys1 / 2, 0, 0, -vys1 / 2 + diam / 2-zazor, 0, 0);
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
 
@@ -397,7 +455,7 @@ namespace airDucts
 			CustomBendAllowance customBendAllowanceData;
 			customBendAllowanceData = Part.FeatureManager.CreateCustomBendAllowance();
 			customBendAllowanceData.KFactor = 0.5;
-			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(zazor, false, 0.00015, vys2, vys2/2, false, 0, 0, 0, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(zazor, false, 0.00015, vys2, vys2, false, 0, 0, 0, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
 
 			Part.SketchManager.InsertSketch(true);
 			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
@@ -545,7 +603,7 @@ namespace airDucts
 			CustomBendAllowance customBendAllowanceData;
 			customBendAllowanceData = Part.FeatureManager.CreateCustomBendAllowance();
 			customBendAllowanceData.KFactor = 0.5;
-			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(zazor, true, 0.00015, vys2, vys2 / 2, false, 0, 0, 0, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(zazor, true, 0.00015, vys2, diam/2, false, 0, 0, 0, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
 
 			Part.SketchManager.InsertSketch(true);
 			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);

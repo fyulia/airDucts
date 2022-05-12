@@ -194,9 +194,9 @@ namespace airDucts
 			string Title = "Воздуховоды", ToolTip = "Воздуховоды и фасонные элементы";
 
 
-			int[] docTypes = new int[]{(int)swDocumentTypes_e.swDocASSEMBLY,
-									   (int)swDocumentTypes_e.swDocDRAWING,
-									   (int)swDocumentTypes_e.swDocPART};
+			int[] docTypes = new int[] { (int)swDocumentTypes_e.swDocASSEMBLY };
+									   //(int)swDocumentTypes_e.swDocDRAWING,
+									   //(int)swDocumentTypes_e.swDocPART};
 
 			thisAssembly = System.Reflection.Assembly.GetAssembly(this.GetType());
 
@@ -322,11 +322,11 @@ namespace airDucts
 
 		public void AirDucts()
 		{
-			string partTemplate = iSwApp.GetUserPreferenceStringValue((int)swUserPreferenceStringValue_e.swDefaultTemplatePart);
+			string partTemplate = iSwApp.GetUserPreferenceStringValue((int)swUserPreferenceStringValue_e.swDefaultTemplatePart); //мб здесь
 			if ((partTemplate != null) && (partTemplate != ""))
 			{
 				//IModelDoc2 modDoc = iSwApp.IActiveDoc2;
-
+				//startForm start = new startForm();
 				Form1 form = new Form1();
 				form.ShowDialog();
 				form.Dispose();

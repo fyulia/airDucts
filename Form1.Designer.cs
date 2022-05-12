@@ -31,6 +31,20 @@ namespace airDucts
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.tabPage21 = new System.Windows.Forms.TabPage();
+			this.button1 = new System.Windows.Forms.Button();
+			this.label206 = new System.Windows.Forms.Label();
+			this.txt_name = new System.Windows.Forms.TextBox();
+			this.label207 = new System.Windows.Forms.Label();
+			this.bt_target = new System.Windows.Forms.Button();
+			this.txt_target = new System.Windows.Forms.TextBox();
+			this.bt_7 = new System.Windows.Forms.Button();
+			this.bt_6 = new System.Windows.Forms.Button();
+			this.bt_5 = new System.Windows.Forms.Button();
+			this.bt_4 = new System.Windows.Forms.Button();
+			this.bt_3 = new System.Windows.Forms.Button();
+			this.bt_2 = new System.Windows.Forms.Button();
+			this.bt_1 = new System.Windows.Forms.Button();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.bt_Next1 = new System.Windows.Forms.Button();
 			this.textBox1 = new System.Windows.Forms.TextBox();
@@ -89,7 +103,6 @@ namespace airDucts
 			this.label28 = new System.Windows.Forms.Label();
 			this.cb31_shir1 = new System.Windows.Forms.ComboBox();
 			this.cb31_dlin1 = new System.Windows.Forms.ComboBox();
-			this.cb31_vys = new System.Windows.Forms.ComboBox();
 			this.cb31_shir = new System.Windows.Forms.ComboBox();
 			this.cb31_dlin = new System.Windows.Forms.ComboBox();
 			this.label27 = new System.Windows.Forms.Label();
@@ -242,6 +255,8 @@ namespace airDucts
 			this.bt_Next61 = new System.Windows.Forms.Button();
 			this.bt_TroinicPr = new System.Windows.Forms.Button();
 			this.groupBox10 = new System.Windows.Forms.GroupBox();
+			this.cb61_shir2 = new System.Windows.Forms.ComboBox();
+			this.cb61_dlin2 = new System.Windows.Forms.ComboBox();
 			this.cb61_vys2 = new System.Windows.Forms.TextBox();
 			this.cb61_vys1 = new System.Windows.Forms.TextBox();
 			this.cb61_zazor = new System.Windows.Forms.TextBox();
@@ -401,9 +416,11 @@ namespace airDucts
 			this.bt_FlanKr = new System.Windows.Forms.Button();
 			this.label179 = new System.Windows.Forms.Label();
 			this.pictureBox15 = new System.Windows.Forms.PictureBox();
-			this.cb61_dlin2 = new System.Windows.Forms.ComboBox();
-			this.cb61_shir2 = new System.Windows.Forms.ComboBox();
+			this.cb31_vys = new System.Windows.Forms.TextBox();
+			this.txt_hint1 = new System.Windows.Forms.TextBox();
+			this.txt_hint2 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
+			this.tabPage21.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -463,6 +480,7 @@ namespace airDucts
 			// 
 			// tabControl1
 			// 
+			this.tabControl1.Controls.Add(this.tabPage21);
 			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Controls.Add(this.tabPage2);
 			this.tabControl1.Controls.Add(this.tabPage3);
@@ -470,7 +488,7 @@ namespace airDucts
 			this.tabControl1.Controls.Add(this.tabPage5);
 			this.tabControl1.Controls.Add(this.tabPage6);
 			this.tabControl1.Controls.Add(this.tabPage8);
-			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.tabControl1.ItemSize = new System.Drawing.Size(210, 30);
 			this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -478,6 +496,151 @@ namespace airDucts
 			this.tabControl1.SelectedIndex = 0;
 			this.tabControl1.Size = new System.Drawing.Size(1312, 629);
 			this.tabControl1.TabIndex = 0;
+			// 
+			// tabPage21
+			// 
+			this.tabPage21.Controls.Add(this.button1);
+			this.tabPage21.Controls.Add(this.label206);
+			this.tabPage21.Controls.Add(this.txt_name);
+			this.tabPage21.Controls.Add(this.label207);
+			this.tabPage21.Controls.Add(this.bt_target);
+			this.tabPage21.Controls.Add(this.txt_target);
+			this.tabPage21.Controls.Add(this.bt_7);
+			this.tabPage21.Controls.Add(this.bt_6);
+			this.tabPage21.Controls.Add(this.bt_5);
+			this.tabPage21.Controls.Add(this.bt_4);
+			this.tabPage21.Controls.Add(this.bt_3);
+			this.tabPage21.Controls.Add(this.bt_2);
+			this.tabPage21.Controls.Add(this.bt_1);
+			this.tabPage21.Location = new System.Drawing.Point(4, 34);
+			this.tabPage21.Name = "tabPage21";
+			this.tabPage21.Size = new System.Drawing.Size(1304, 591);
+			this.tabPage21.TabIndex = 8;
+			this.tabPage21.Text = "Главная";
+			this.tabPage21.UseVisualStyleBackColor = true;
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(479, 460);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(162, 38);
+			this.button1.TabIndex = 24;
+			this.button1.Text = "Создать сборку";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// label206
+			// 
+			this.label206.AutoSize = true;
+			this.label206.Location = new System.Drawing.Point(105, 439);
+			this.label206.Name = "label206";
+			this.label206.Size = new System.Drawing.Size(230, 20);
+			this.label206.TabIndex = 23;
+			this.label206.Text = "Введите название сборки";
+			// 
+			// txt_name
+			// 
+			this.txt_name.Location = new System.Drawing.Point(105, 466);
+			this.txt_name.Name = "txt_name";
+			this.txt_name.Size = new System.Drawing.Size(368, 26);
+			this.txt_name.TabIndex = 22;
+			// 
+			// label207
+			// 
+			this.label207.AutoSize = true;
+			this.label207.Location = new System.Drawing.Point(105, 358);
+			this.label207.Name = "label207";
+			this.label207.Size = new System.Drawing.Size(347, 20);
+			this.label207.TabIndex = 21;
+			this.label207.Text = "Выберите папку для сохранения сборки";
+			// 
+			// bt_target
+			// 
+			this.bt_target.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bt_target.Location = new System.Drawing.Point(479, 393);
+			this.bt_target.Name = "bt_target";
+			this.bt_target.Size = new System.Drawing.Size(53, 26);
+			this.bt_target.TabIndex = 20;
+			this.bt_target.Text = "...";
+			this.bt_target.UseVisualStyleBackColor = true;
+			this.bt_target.Click += new System.EventHandler(this.bt_target_Click);
+			// 
+			// txt_target
+			// 
+			this.txt_target.Location = new System.Drawing.Point(105, 393);
+			this.txt_target.Name = "txt_target";
+			this.txt_target.Size = new System.Drawing.Size(368, 26);
+			this.txt_target.TabIndex = 19;
+			// 
+			// bt_7
+			// 
+			this.bt_7.Location = new System.Drawing.Point(303, 221);
+			this.bt_7.Name = "bt_7";
+			this.bt_7.Size = new System.Drawing.Size(98, 37);
+			this.bt_7.TabIndex = 18;
+			this.bt_7.Text = "вкладка7";
+			this.bt_7.UseVisualStyleBackColor = true;
+			this.bt_7.Click += new System.EventHandler(this.bt_7_Click);
+			// 
+			// bt_6
+			// 
+			this.bt_6.Location = new System.Drawing.Point(303, 158);
+			this.bt_6.Name = "bt_6";
+			this.bt_6.Size = new System.Drawing.Size(98, 37);
+			this.bt_6.TabIndex = 17;
+			this.bt_6.Text = "вкладка6";
+			this.bt_6.UseVisualStyleBackColor = true;
+			this.bt_6.Click += new System.EventHandler(this.bt_6_Click);
+			// 
+			// bt_5
+			// 
+			this.bt_5.Location = new System.Drawing.Point(303, 92);
+			this.bt_5.Name = "bt_5";
+			this.bt_5.Size = new System.Drawing.Size(98, 37);
+			this.bt_5.TabIndex = 16;
+			this.bt_5.Text = "вкладка5";
+			this.bt_5.UseVisualStyleBackColor = true;
+			this.bt_5.Click += new System.EventHandler(this.bt_5_Click);
+			// 
+			// bt_4
+			// 
+			this.bt_4.Location = new System.Drawing.Point(105, 284);
+			this.bt_4.Name = "bt_4";
+			this.bt_4.Size = new System.Drawing.Size(98, 37);
+			this.bt_4.TabIndex = 15;
+			this.bt_4.Text = "вкладка4";
+			this.bt_4.UseVisualStyleBackColor = true;
+			this.bt_4.Click += new System.EventHandler(this.bt_4_Click);
+			// 
+			// bt_3
+			// 
+			this.bt_3.Location = new System.Drawing.Point(105, 221);
+			this.bt_3.Name = "bt_3";
+			this.bt_3.Size = new System.Drawing.Size(98, 37);
+			this.bt_3.TabIndex = 14;
+			this.bt_3.Text = "вкладка3";
+			this.bt_3.UseVisualStyleBackColor = true;
+			this.bt_3.Click += new System.EventHandler(this.bt_3_Click);
+			// 
+			// bt_2
+			// 
+			this.bt_2.Location = new System.Drawing.Point(105, 158);
+			this.bt_2.Name = "bt_2";
+			this.bt_2.Size = new System.Drawing.Size(98, 37);
+			this.bt_2.TabIndex = 13;
+			this.bt_2.Text = "вкладка2";
+			this.bt_2.UseVisualStyleBackColor = true;
+			this.bt_2.Click += new System.EventHandler(this.bt_2_Click);
+			// 
+			// bt_1
+			// 
+			this.bt_1.Location = new System.Drawing.Point(105, 92);
+			this.bt_1.Name = "bt_1";
+			this.bt_1.Size = new System.Drawing.Size(98, 37);
+			this.bt_1.TabIndex = 12;
+			this.bt_1.Text = "вкладка1";
+			this.bt_1.UseVisualStyleBackColor = true;
+			this.bt_1.Click += new System.EventHandler(this.bt_1_Click);
 			// 
 			// tabPage1
 			// 
@@ -506,13 +669,16 @@ namespace airDucts
 			this.bt_Next1.TabIndex = 11;
 			this.bt_Next1.Text = "Далее";
 			this.bt_Next1.UseVisualStyleBackColor = false;
+			this.bt_Next1.Click += new System.EventHandler(this.bt_Next1_Click);
 			// 
 			// textBox1
 			// 
+			this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox1.Location = new System.Drawing.Point(699, 296);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
+			this.textBox1.ReadOnly = true;
 			this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox1.Size = new System.Drawing.Size(587, 125);
 			this.textBox1.TabIndex = 10;
@@ -548,11 +714,12 @@ namespace airDucts
 			// 
 			// cb1_zazor
 			// 
+			this.cb1_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb1_zazor.Location = new System.Drawing.Point(448, 92);
 			this.cb1_zazor.Name = "cb1_zazor";
+			this.cb1_zazor.ReadOnly = true;
 			this.cb1_zazor.Size = new System.Drawing.Size(91, 29);
 			this.cb1_zazor.TabIndex = 24;
-			this.cb1_zazor.Text = "0,5";
 			// 
 			// label13
 			// 
@@ -596,31 +763,31 @@ namespace airDucts
 			// 
 			// cb1_vys
 			// 
+			this.cb1_vys.Enabled = false;
 			this.cb1_vys.FormattingEnabled = true;
 			this.cb1_vys.Location = new System.Drawing.Point(155, 92);
 			this.cb1_vys.Name = "cb1_vys";
 			this.cb1_vys.Size = new System.Drawing.Size(91, 32);
 			this.cb1_vys.TabIndex = 14;
-			this.cb1_vys.Text = "2500";
 			// 
 			// cb1_shir
 			// 
+			this.cb1_shir.Enabled = false;
 			this.cb1_shir.FormattingEnabled = true;
 			this.cb1_shir.Location = new System.Drawing.Point(448, 38);
 			this.cb1_shir.Name = "cb1_shir";
 			this.cb1_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb1_shir.TabIndex = 13;
-			this.cb1_shir.Text = "100";
 			this.cb1_shir.SelectedIndexChanged += new System.EventHandler(this.cb1_shir_SelectedIndexChanged);
 			// 
 			// cb1_dlin
 			// 
+			this.cb1_dlin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb1_dlin.FormattingEnabled = true;
 			this.cb1_dlin.Location = new System.Drawing.Point(155, 37);
 			this.cb1_dlin.Name = "cb1_dlin";
 			this.cb1_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb1_dlin.TabIndex = 12;
-			this.cb1_dlin.Text = "150";
 			this.cb1_dlin.SelectedIndexChanged += new System.EventHandler(this.cb1_dlin_SelectedIndexChanged);
 			// 
 			// label36
@@ -773,6 +940,7 @@ namespace airDucts
 			this.bt_Next2.TabIndex = 13;
 			this.bt_Next2.Text = "Далее";
 			this.bt_Next2.UseVisualStyleBackColor = false;
+			this.bt_Next2.Click += new System.EventHandler(this.bt_Next2_Click);
 			// 
 			// bt_KrVozd
 			// 
@@ -790,10 +958,14 @@ namespace airDucts
 			// 
 			// textBox4
 			// 
+			this.textBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.textBox4.Cursor = System.Windows.Forms.Cursors.Default;
+			this.textBox4.Enabled = false;
 			this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox4.Location = new System.Drawing.Point(685, 259);
 			this.textBox4.Multiline = true;
 			this.textBox4.Name = "textBox4";
+			this.textBox4.ReadOnly = true;
 			this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox4.Size = new System.Drawing.Size(587, 125);
 			this.textBox4.TabIndex = 11;
@@ -825,11 +997,12 @@ namespace airDucts
 			// 
 			// cb2_zazor
 			// 
+			this.cb2_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb2_zazor.Location = new System.Drawing.Point(455, 66);
 			this.cb2_zazor.Name = "cb2_zazor";
+			this.cb2_zazor.ReadOnly = true;
 			this.cb2_zazor.Size = new System.Drawing.Size(84, 29);
 			this.cb2_zazor.TabIndex = 24;
-			this.cb2_zazor.Text = "0,5";
 			// 
 			// label2
 			// 
@@ -868,7 +1041,6 @@ namespace airDucts
 			this.cb2_vys.Name = "cb2_vys";
 			this.cb2_vys.Size = new System.Drawing.Size(91, 32);
 			this.cb2_vys.TabIndex = 14;
-			this.cb2_vys.Text = "2500";
 			// 
 			// cb2_diam
 			// 
@@ -877,7 +1049,6 @@ namespace airDucts
 			this.cb2_diam.Name = "cb2_diam";
 			this.cb2_diam.Size = new System.Drawing.Size(91, 32);
 			this.cb2_diam.TabIndex = 12;
-			this.cb2_diam.Text = "100";
 			this.cb2_diam.SelectedIndexChanged += new System.EventHandler(this.cb2_diam_SelectedIndexChanged);
 			// 
 			// label40
@@ -989,10 +1160,12 @@ namespace airDucts
 			// 
 			// textBox2
 			// 
+			this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox2.Location = new System.Drawing.Point(684, 256);
 			this.textBox2.Multiline = true;
 			this.textBox2.Name = "textBox2";
+			this.textBox2.ReadOnly = true;
 			this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox2.Size = new System.Drawing.Size(587, 125);
 			this.textBox2.TabIndex = 8;
@@ -1011,6 +1184,7 @@ namespace airDucts
 			this.bt_Next31.TabIndex = 7;
 			this.bt_Next31.Text = "Далее";
 			this.bt_Next31.UseVisualStyleBackColor = false;
+			this.bt_Next31.Click += new System.EventHandler(this.bt_Next31_Click);
 			// 
 			// bt_PerehPrPr
 			// 
@@ -1029,6 +1203,7 @@ namespace airDucts
 			// 
 			// groupBox2
 			// 
+			this.groupBox2.Controls.Add(this.cb31_vys);
 			this.groupBox2.Controls.Add(this.cb31_zazor);
 			this.groupBox2.Controls.Add(this.label33);
 			this.groupBox2.Controls.Add(this.label32);
@@ -1038,7 +1213,6 @@ namespace airDucts
 			this.groupBox2.Controls.Add(this.label28);
 			this.groupBox2.Controls.Add(this.cb31_shir1);
 			this.groupBox2.Controls.Add(this.cb31_dlin1);
-			this.groupBox2.Controls.Add(this.cb31_vys);
 			this.groupBox2.Controls.Add(this.cb31_shir);
 			this.groupBox2.Controls.Add(this.cb31_dlin);
 			this.groupBox2.Controls.Add(this.label27);
@@ -1063,8 +1237,10 @@ namespace airDucts
 			// 
 			// cb31_zazor
 			// 
+			this.cb31_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb31_zazor.Location = new System.Drawing.Point(455, 118);
 			this.cb31_zazor.Name = "cb31_zazor";
+			this.cb31_zazor.ReadOnly = true;
 			this.cb31_zazor.Size = new System.Drawing.Size(84, 29);
 			this.cb31_zazor.TabIndex = 24;
 			// 
@@ -1130,41 +1306,32 @@ namespace airDucts
 			// 
 			// cb31_shir1
 			// 
+			this.cb31_shir1.Enabled = false;
 			this.cb31_shir1.FormattingEnabled = true;
 			this.cb31_shir1.Location = new System.Drawing.Point(455, 77);
 			this.cb31_shir1.Name = "cb31_shir1";
 			this.cb31_shir1.Size = new System.Drawing.Size(84, 32);
 			this.cb31_shir1.TabIndex = 16;
-			this.cb31_shir1.Text = "100";
 			this.cb31_shir1.SelectedIndexChanged += new System.EventHandler(this.cb31_shir1_SelectedIndexChanged);
 			// 
 			// cb31_dlin1
 			// 
+			this.cb31_dlin1.Enabled = false;
 			this.cb31_dlin1.FormattingEnabled = true;
 			this.cb31_dlin1.Location = new System.Drawing.Point(455, 37);
 			this.cb31_dlin1.Name = "cb31_dlin1";
 			this.cb31_dlin1.Size = new System.Drawing.Size(84, 32);
 			this.cb31_dlin1.TabIndex = 15;
-			this.cb31_dlin1.Text = "100";
 			this.cb31_dlin1.SelectedIndexChanged += new System.EventHandler(this.cb31_dlin1_SelectedIndexChanged);
-			// 
-			// cb31_vys
-			// 
-			this.cb31_vys.FormattingEnabled = true;
-			this.cb31_vys.Location = new System.Drawing.Point(155, 115);
-			this.cb31_vys.Name = "cb31_vys";
-			this.cb31_vys.Size = new System.Drawing.Size(91, 32);
-			this.cb31_vys.TabIndex = 14;
-			this.cb31_vys.Text = "300";
 			// 
 			// cb31_shir
 			// 
+			this.cb31_shir.Enabled = false;
 			this.cb31_shir.FormattingEnabled = true;
 			this.cb31_shir.Location = new System.Drawing.Point(155, 77);
 			this.cb31_shir.Name = "cb31_shir";
 			this.cb31_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb31_shir.TabIndex = 13;
-			this.cb31_shir.Text = "100";
 			this.cb31_shir.SelectedIndexChanged += new System.EventHandler(this.cb31_shir_SelectedIndexChanged);
 			// 
 			// cb31_dlin
@@ -1174,7 +1341,6 @@ namespace airDucts
 			this.cb31_dlin.Name = "cb31_dlin";
 			this.cb31_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb31_dlin.TabIndex = 12;
-			this.cb31_dlin.Text = "150";
 			this.cb31_dlin.SelectedIndexChanged += new System.EventHandler(this.cb31_dlin_SelectedIndexChanged);
 			// 
 			// label27
@@ -1334,10 +1500,12 @@ namespace airDucts
 			// 
 			// textBox5
 			// 
+			this.textBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox5.Location = new System.Drawing.Point(703, 242);
 			this.textBox5.Multiline = true;
 			this.textBox5.Name = "textBox5";
+			this.textBox5.ReadOnly = true;
 			this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox5.Size = new System.Drawing.Size(587, 125);
 			this.textBox5.TabIndex = 18;
@@ -1377,15 +1545,19 @@ namespace airDucts
 			// 
 			// cb32_vys
 			// 
+			this.cb32_vys.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb32_vys.Location = new System.Drawing.Point(155, 117);
 			this.cb32_vys.Name = "cb32_vys";
+			this.cb32_vys.ReadOnly = true;
 			this.cb32_vys.Size = new System.Drawing.Size(91, 29);
 			this.cb32_vys.TabIndex = 25;
 			// 
 			// cb32_zazor
 			// 
+			this.cb32_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb32_zazor.Location = new System.Drawing.Point(455, 81);
 			this.cb32_zazor.Name = "cb32_zazor";
+			this.cb32_zazor.ReadOnly = true;
 			this.cb32_zazor.Size = new System.Drawing.Size(84, 29);
 			this.cb32_zazor.TabIndex = 24;
 			// 
@@ -1441,22 +1613,22 @@ namespace airDucts
 			// 
 			// cb32_diam
 			// 
+			this.cb32_diam.Enabled = false;
 			this.cb32_diam.FormattingEnabled = true;
 			this.cb32_diam.Location = new System.Drawing.Point(455, 37);
 			this.cb32_diam.Name = "cb32_diam";
 			this.cb32_diam.Size = new System.Drawing.Size(84, 32);
 			this.cb32_diam.TabIndex = 15;
-			this.cb32_diam.Text = "100";
 			this.cb32_diam.SelectedIndexChanged += new System.EventHandler(this.cb32_diam_SelectedIndexChanged);
 			// 
 			// cb32_shir
 			// 
+			this.cb32_shir.Enabled = false;
 			this.cb32_shir.FormattingEnabled = true;
 			this.cb32_shir.Location = new System.Drawing.Point(155, 77);
 			this.cb32_shir.Name = "cb32_shir";
 			this.cb32_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb32_shir.TabIndex = 13;
-			this.cb32_shir.Text = "100";
 			this.cb32_shir.SelectedIndexChanged += new System.EventHandler(this.cb32_shir_SelectedIndexChanged);
 			// 
 			// cb32_dlin
@@ -1466,7 +1638,6 @@ namespace airDucts
 			this.cb32_dlin.Name = "cb32_dlin";
 			this.cb32_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb32_dlin.TabIndex = 12;
-			this.cb32_dlin.Text = "150";
 			this.cb32_dlin.SelectedIndexChanged += new System.EventHandler(this.cb32_dlin_SelectedIndexChanged);
 			// 
 			// label67
@@ -1590,6 +1761,7 @@ namespace airDucts
 			this.bt_Next32.TabIndex = 15;
 			this.bt_Next32.Text = "Далее";
 			this.bt_Next32.UseVisualStyleBackColor = false;
+			this.bt_Next32.Click += new System.EventHandler(this.bt_Next32_Click);
 			// 
 			// bt_PerehPr
 			// 
@@ -1631,10 +1803,12 @@ namespace airDucts
 			// 
 			// textBox6
 			// 
+			this.textBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox6.Location = new System.Drawing.Point(676, 231);
 			this.textBox6.Multiline = true;
 			this.textBox6.Name = "textBox6";
+			this.textBox6.ReadOnly = true;
 			this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox6.Size = new System.Drawing.Size(587, 125);
 			this.textBox6.TabIndex = 19;
@@ -1670,15 +1844,19 @@ namespace airDucts
 			// 
 			// cb33_vys
 			// 
+			this.cb33_vys.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb33_vys.Location = new System.Drawing.Point(155, 110);
 			this.cb33_vys.Name = "cb33_vys";
+			this.cb33_vys.ReadOnly = true;
 			this.cb33_vys.Size = new System.Drawing.Size(91, 29);
 			this.cb33_vys.TabIndex = 25;
 			// 
 			// cb33_zazor
 			// 
+			this.cb33_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb33_zazor.Location = new System.Drawing.Point(455, 106);
 			this.cb33_zazor.Name = "cb33_zazor";
+			this.cb33_zazor.ReadOnly = true;
 			this.cb33_zazor.Size = new System.Drawing.Size(84, 29);
 			this.cb33_zazor.TabIndex = 24;
 			// 
@@ -1724,12 +1902,12 @@ namespace airDucts
 			// 
 			// cb33_diam2
 			// 
+			this.cb33_diam2.Enabled = false;
 			this.cb33_diam2.FormattingEnabled = true;
 			this.cb33_diam2.Location = new System.Drawing.Point(455, 58);
 			this.cb33_diam2.Name = "cb33_diam2";
 			this.cb33_diam2.Size = new System.Drawing.Size(84, 32);
 			this.cb33_diam2.TabIndex = 15;
-			this.cb33_diam2.Text = "150";
 			this.cb33_diam2.SelectedIndexChanged += new System.EventHandler(this.cb33_diam2_SelectedIndexChanged);
 			// 
 			// cb33_diam1
@@ -1739,7 +1917,6 @@ namespace airDucts
 			this.cb33_diam1.Name = "cb33_diam1";
 			this.cb33_diam1.Size = new System.Drawing.Size(91, 32);
 			this.cb33_diam1.TabIndex = 12;
-			this.cb33_diam1.Text = "350";
 			this.cb33_diam1.SelectedIndexChanged += new System.EventHandler(this.cb33_diam1_SelectedIndexChanged);
 			// 
 			// label81
@@ -1843,6 +2020,7 @@ namespace airDucts
 			this.bt_Next33.TabIndex = 15;
 			this.bt_Next33.Text = "Далее";
 			this.bt_Next33.UseVisualStyleBackColor = false;
+			this.bt_Next33.Click += new System.EventHandler(this.bt_Next33_Click);
 			// 
 			// bt_PerehKr
 			// 
@@ -1906,10 +2084,12 @@ namespace airDucts
 			// 
 			// textBox8
 			// 
+			this.textBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox8.Location = new System.Drawing.Point(688, 257);
 			this.textBox8.Multiline = true;
 			this.textBox8.Name = "textBox8";
+			this.textBox8.ReadOnly = true;
 			this.textBox8.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox8.Size = new System.Drawing.Size(587, 125);
 			this.textBox8.TabIndex = 12;
@@ -1928,6 +2108,7 @@ namespace airDucts
 			this.bt_Next41.TabIndex = 11;
 			this.bt_Next41.Text = "Далее";
 			this.bt_Next41.UseVisualStyleBackColor = false;
+			this.bt_Next41.Click += new System.EventHandler(this.bt_Next41_Click);
 			// 
 			// bt_OtvodPr
 			// 
@@ -1972,15 +2153,19 @@ namespace airDucts
 			// 
 			// cb41_zazor
 			// 
+			this.cb41_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb41_zazor.Location = new System.Drawing.Point(155, 122);
 			this.cb41_zazor.Name = "cb41_zazor";
+			this.cb41_zazor.ReadOnly = true;
 			this.cb41_zazor.Size = new System.Drawing.Size(91, 29);
 			this.cb41_zazor.TabIndex = 25;
 			// 
 			// cb41_dlinOtvod
 			// 
+			this.cb41_dlinOtvod.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb41_dlinOtvod.Location = new System.Drawing.Point(389, 73);
 			this.cb41_dlinOtvod.Name = "cb41_dlinOtvod";
+			this.cb41_dlinOtvod.ReadOnly = true;
 			this.cb41_dlinOtvod.Size = new System.Drawing.Size(100, 29);
 			this.cb41_dlinOtvod.TabIndex = 24;
 			// 
@@ -2026,12 +2211,12 @@ namespace airDucts
 			// 
 			// cb41_shir
 			// 
+			this.cb41_shir.Enabled = false;
 			this.cb41_shir.FormattingEnabled = true;
 			this.cb41_shir.Location = new System.Drawing.Point(155, 77);
 			this.cb41_shir.Name = "cb41_shir";
 			this.cb41_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb41_shir.TabIndex = 13;
-			this.cb41_shir.Text = "150";
 			this.cb41_shir.SelectedIndexChanged += new System.EventHandler(this.cb41_shir_SelectedIndexChanged);
 			// 
 			// cb41_dlin
@@ -2041,7 +2226,6 @@ namespace airDucts
 			this.cb41_dlin.Name = "cb41_dlin";
 			this.cb41_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb41_dlin.TabIndex = 12;
-			this.cb41_dlin.Text = "300";
 			this.cb41_dlin.SelectedIndexChanged += new System.EventHandler(this.cb41_dlin_SelectedIndexChanged);
 			// 
 			// label100
@@ -2161,10 +2345,12 @@ namespace airDucts
 			// 
 			// textBox9
 			// 
+			this.textBox9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox9.Location = new System.Drawing.Point(697, 243);
 			this.textBox9.Multiline = true;
 			this.textBox9.Name = "textBox9";
+			this.textBox9.ReadOnly = true;
 			this.textBox9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox9.Size = new System.Drawing.Size(587, 125);
 			this.textBox9.TabIndex = 16;
@@ -2183,6 +2369,7 @@ namespace airDucts
 			this.bt_Next42.TabIndex = 15;
 			this.bt_Next42.Text = "Далее";
 			this.bt_Next42.UseVisualStyleBackColor = false;
+			this.bt_Next42.Click += new System.EventHandler(this.bt_Next42_Click);
 			// 
 			// bt_OtvodKr
 			// 
@@ -2219,8 +2406,10 @@ namespace airDucts
 			// 
 			// cb42_zazor
 			// 
+			this.cb42_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb42_zazor.Location = new System.Drawing.Point(279, 98);
 			this.cb42_zazor.Name = "cb42_zazor";
+			this.cb42_zazor.ReadOnly = true;
 			this.cb42_zazor.Size = new System.Drawing.Size(91, 29);
 			this.cb42_zazor.TabIndex = 24;
 			// 
@@ -2251,7 +2440,6 @@ namespace airDucts
 			this.cb42_diam.Name = "cb42_diam";
 			this.cb42_diam.Size = new System.Drawing.Size(91, 32);
 			this.cb42_diam.TabIndex = 12;
-			this.cb42_diam.Text = "350";
 			this.cb42_diam.SelectedIndexChanged += new System.EventHandler(this.cb42_diam_SelectedIndexChanged);
 			// 
 			// label108
@@ -2361,6 +2549,7 @@ namespace airDucts
 			this.bt_Next51.TabIndex = 11;
 			this.bt_Next51.Text = "Далее";
 			this.bt_Next51.UseVisualStyleBackColor = false;
+			this.bt_Next51.Click += new System.EventHandler(this.bt_Next51_Click);
 			// 
 			// bt_ZaglPr
 			// 
@@ -2379,10 +2568,12 @@ namespace airDucts
 			// 
 			// textBox3
 			// 
+			this.textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox3.Location = new System.Drawing.Point(703, 264);
 			this.textBox3.Multiline = true;
 			this.textBox3.Name = "textBox3";
+			this.textBox3.ReadOnly = true;
 			this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox3.Size = new System.Drawing.Size(581, 125);
 			this.textBox3.TabIndex = 9;
@@ -2414,8 +2605,10 @@ namespace airDucts
 			// 
 			// cb51_vys
 			// 
+			this.cb51_vys.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb51_vys.Location = new System.Drawing.Point(446, 63);
 			this.cb51_vys.Name = "cb51_vys";
+			this.cb51_vys.ReadOnly = true;
 			this.cb51_vys.Size = new System.Drawing.Size(87, 29);
 			this.cb51_vys.TabIndex = 21;
 			this.cb51_vys.Text = "20";
@@ -2452,12 +2645,12 @@ namespace airDucts
 			// 
 			// cb51_shir
 			// 
+			this.cb51_shir.Enabled = false;
 			this.cb51_shir.FormattingEnabled = true;
 			this.cb51_shir.Location = new System.Drawing.Point(155, 88);
 			this.cb51_shir.Name = "cb51_shir";
 			this.cb51_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb51_shir.TabIndex = 13;
-			this.cb51_shir.Text = "250";
 			// 
 			// cb51_dlin
 			// 
@@ -2466,7 +2659,6 @@ namespace airDucts
 			this.cb51_dlin.Name = "cb51_dlin";
 			this.cb51_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb51_dlin.TabIndex = 12;
-			this.cb51_dlin.Text = "100";
 			this.cb51_dlin.SelectedIndexChanged += new System.EventHandler(this.cb51_dlin_SelectedIndexChanged);
 			// 
 			// label41
@@ -2575,6 +2767,7 @@ namespace airDucts
 			this.bt_Next52.TabIndex = 15;
 			this.bt_Next52.Text = "Далее";
 			this.bt_Next52.UseVisualStyleBackColor = false;
+			this.bt_Next52.Click += new System.EventHandler(this.bt_Next52_Click);
 			// 
 			// bt_ZaglKr
 			// 
@@ -2593,10 +2786,12 @@ namespace airDucts
 			// 
 			// textBox7
 			// 
+			this.textBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox7.Location = new System.Drawing.Point(693, 259);
 			this.textBox7.Multiline = true;
 			this.textBox7.Name = "textBox7";
+			this.textBox7.ReadOnly = true;
 			this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox7.Size = new System.Drawing.Size(581, 125);
 			this.textBox7.TabIndex = 13;
@@ -2627,11 +2822,12 @@ namespace airDucts
 			// 
 			// cb52_thick
 			// 
+			this.cb52_thick.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb52_thick.Location = new System.Drawing.Point(196, 139);
 			this.cb52_thick.Name = "cb52_thick";
+			this.cb52_thick.ReadOnly = true;
 			this.cb52_thick.Size = new System.Drawing.Size(91, 29);
 			this.cb52_thick.TabIndex = 31;
-			this.cb52_thick.Text = "0,5";
 			// 
 			// label204
 			// 
@@ -2655,8 +2851,10 @@ namespace airDucts
 			// 
 			// cb52_vys
 			// 
+			this.cb52_vys.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb52_vys.Location = new System.Drawing.Point(196, 97);
 			this.cb52_vys.Name = "cb52_vys";
+			this.cb52_vys.ReadOnly = true;
 			this.cb52_vys.Size = new System.Drawing.Size(91, 29);
 			this.cb52_vys.TabIndex = 22;
 			this.cb52_vys.Text = "20";
@@ -2688,7 +2886,6 @@ namespace airDucts
 			this.cb52_diam.Name = "cb52_diam";
 			this.cb52_diam.Size = new System.Drawing.Size(91, 32);
 			this.cb52_diam.TabIndex = 12;
-			this.cb52_diam.Text = "100";
 			this.cb52_diam.SelectedIndexChanged += new System.EventHandler(this.cb52_diam_SelectedIndexChanged);
 			// 
 			// label91
@@ -2791,10 +2988,12 @@ namespace airDucts
 			// 
 			// textBox10
 			// 
+			this.textBox10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox10.Location = new System.Drawing.Point(689, 281);
 			this.textBox10.Multiline = true;
 			this.textBox10.Name = "textBox10";
+			this.textBox10.ReadOnly = true;
 			this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox10.Size = new System.Drawing.Size(587, 125);
 			this.textBox10.TabIndex = 12;
@@ -2813,6 +3012,7 @@ namespace airDucts
 			this.bt_Next61.TabIndex = 11;
 			this.bt_Next61.Text = "Далее";
 			this.bt_Next61.UseVisualStyleBackColor = false;
+			this.bt_Next61.Click += new System.EventHandler(this.bt_Next61_Click);
 			// 
 			// bt_TroinicPr
 			// 
@@ -2867,25 +3067,51 @@ namespace airDucts
 			this.groupBox10.TabStop = false;
 			this.groupBox10.Text = "Параметры";
 			// 
+			// cb61_shir2
+			// 
+			this.cb61_shir2.Enabled = false;
+			this.cb61_shir2.FormattingEnabled = true;
+			this.cb61_shir2.Location = new System.Drawing.Point(442, 79);
+			this.cb61_shir2.Name = "cb61_shir2";
+			this.cb61_shir2.Size = new System.Drawing.Size(97, 32);
+			this.cb61_shir2.TabIndex = 34;
+			this.cb61_shir2.SelectedIndexChanged += new System.EventHandler(this.cb61_shir2_SelectedIndexChanged);
+			// 
+			// cb61_dlin2
+			// 
+			this.cb61_dlin2.Enabled = false;
+			this.cb61_dlin2.FormattingEnabled = true;
+			this.cb61_dlin2.Location = new System.Drawing.Point(442, 36);
+			this.cb61_dlin2.Name = "cb61_dlin2";
+			this.cb61_dlin2.Size = new System.Drawing.Size(97, 32);
+			this.cb61_dlin2.TabIndex = 33;
+			this.cb61_dlin2.SelectedIndexChanged += new System.EventHandler(this.cb61_dlin2_SelectedIndexChanged);
+			// 
 			// cb61_vys2
 			// 
+			this.cb61_vys2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb61_vys2.Location = new System.Drawing.Point(443, 118);
 			this.cb61_vys2.Name = "cb61_vys2";
+			this.cb61_vys2.ReadOnly = true;
 			this.cb61_vys2.Size = new System.Drawing.Size(96, 29);
 			this.cb61_vys2.TabIndex = 32;
 			this.cb61_vys2.Text = "100";
 			// 
 			// cb61_vys1
 			// 
+			this.cb61_vys1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb61_vys1.Location = new System.Drawing.Point(155, 120);
 			this.cb61_vys1.Name = "cb61_vys1";
+			this.cb61_vys1.ReadOnly = true;
 			this.cb61_vys1.Size = new System.Drawing.Size(91, 29);
 			this.cb61_vys1.TabIndex = 29;
 			// 
 			// cb61_zazor
 			// 
+			this.cb61_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb61_zazor.Location = new System.Drawing.Point(300, 166);
 			this.cb61_zazor.Name = "cb61_zazor";
+			this.cb61_zazor.ReadOnly = true;
 			this.cb61_zazor.Size = new System.Drawing.Size(83, 29);
 			this.cb61_zazor.TabIndex = 28;
 			// 
@@ -2981,12 +3207,12 @@ namespace airDucts
 			// 
 			// cb61_shir1
 			// 
+			this.cb61_shir1.Enabled = false;
 			this.cb61_shir1.FormattingEnabled = true;
 			this.cb61_shir1.Location = new System.Drawing.Point(155, 77);
 			this.cb61_shir1.Name = "cb61_shir1";
 			this.cb61_shir1.Size = new System.Drawing.Size(91, 32);
 			this.cb61_shir1.TabIndex = 13;
-			this.cb61_shir1.Text = "250";
 			this.cb61_shir1.SelectedIndexChanged += new System.EventHandler(this.cb61_shir1_SelectedIndexChanged);
 			// 
 			// cb61_dlin1
@@ -2996,7 +3222,6 @@ namespace airDucts
 			this.cb61_dlin1.Name = "cb61_dlin1";
 			this.cb61_dlin1.Size = new System.Drawing.Size(91, 32);
 			this.cb61_dlin1.TabIndex = 12;
-			this.cb61_dlin1.Text = "350";
 			this.cb61_dlin1.SelectedIndexChanged += new System.EventHandler(this.cb61_dlin1_SelectedIndexChanged);
 			// 
 			// label118
@@ -3156,10 +3381,12 @@ namespace airDucts
 			// 
 			// textBox11
 			// 
+			this.textBox11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox11.Location = new System.Drawing.Point(697, 277);
 			this.textBox11.Multiline = true;
 			this.textBox11.Name = "textBox11";
+			this.textBox11.ReadOnly = true;
 			this.textBox11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox11.Size = new System.Drawing.Size(587, 125);
 			this.textBox11.TabIndex = 16;
@@ -3178,6 +3405,7 @@ namespace airDucts
 			this.bt_Nezt62.TabIndex = 15;
 			this.bt_Nezt62.Text = "Далее";
 			this.bt_Nezt62.UseVisualStyleBackColor = false;
+			this.bt_Nezt62.Click += new System.EventHandler(this.bt_Nezt62_Click);
 			// 
 			// bt_TroinicPrKr
 			// 
@@ -3230,22 +3458,28 @@ namespace airDucts
 			// 
 			// cb62_vys1
 			// 
+			this.cb62_vys1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb62_vys1.Location = new System.Drawing.Point(155, 120);
 			this.cb62_vys1.Name = "cb62_vys1";
+			this.cb62_vys1.ReadOnly = true;
 			this.cb62_vys1.Size = new System.Drawing.Size(91, 29);
 			this.cb62_vys1.TabIndex = 34;
 			// 
 			// cb62_zazor
 			// 
+			this.cb62_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb62_zazor.Location = new System.Drawing.Point(452, 118);
 			this.cb62_zazor.Name = "cb62_zazor";
+			this.cb62_zazor.ReadOnly = true;
 			this.cb62_zazor.Size = new System.Drawing.Size(84, 29);
 			this.cb62_zazor.TabIndex = 33;
 			// 
 			// cb62_vys2
 			// 
+			this.cb62_vys2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb62_vys2.Location = new System.Drawing.Point(452, 76);
 			this.cb62_vys2.Name = "cb62_vys2";
+			this.cb62_vys2.ReadOnly = true;
 			this.cb62_vys2.Size = new System.Drawing.Size(84, 29);
 			this.cb62_vys2.TabIndex = 32;
 			this.cb62_vys2.Text = "100";
@@ -3262,12 +3496,12 @@ namespace airDucts
 			// 
 			// cb62_diam
 			// 
+			this.cb62_diam.Enabled = false;
 			this.cb62_diam.FormattingEnabled = true;
 			this.cb62_diam.Location = new System.Drawing.Point(452, 34);
 			this.cb62_diam.Name = "cb62_diam";
 			this.cb62_diam.Size = new System.Drawing.Size(84, 32);
 			this.cb62_diam.TabIndex = 30;
-			this.cb62_diam.Text = "100";
 			this.cb62_diam.SelectedIndexChanged += new System.EventHandler(this.cb62_diam_SelectedIndexChanged);
 			// 
 			// label138
@@ -3362,12 +3596,12 @@ namespace airDucts
 			// 
 			// cb62_shir
 			// 
+			this.cb62_shir.Enabled = false;
 			this.cb62_shir.FormattingEnabled = true;
 			this.cb62_shir.Location = new System.Drawing.Point(155, 77);
 			this.cb62_shir.Name = "cb62_shir";
 			this.cb62_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb62_shir.TabIndex = 13;
-			this.cb62_shir.Text = "250";
 			this.cb62_shir.SelectedIndexChanged += new System.EventHandler(this.cb62_shir_SelectedIndexChanged);
 			// 
 			// cb62_dlin
@@ -3377,7 +3611,6 @@ namespace airDucts
 			this.cb62_dlin.Name = "cb62_dlin";
 			this.cb62_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb62_dlin.TabIndex = 12;
-			this.cb62_dlin.Text = "350";
 			this.cb62_dlin.SelectedIndexChanged += new System.EventHandler(this.cb62_dlin_SelectedIndexChanged);
 			// 
 			// label142
@@ -3496,10 +3729,12 @@ namespace airDucts
 			// 
 			// textBox13
 			// 
+			this.textBox13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox13.Location = new System.Drawing.Point(696, 284);
 			this.textBox13.Multiline = true;
 			this.textBox13.Name = "textBox13";
+			this.textBox13.ReadOnly = true;
 			this.textBox13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox13.Size = new System.Drawing.Size(587, 125);
 			this.textBox13.TabIndex = 24;
@@ -3518,6 +3753,7 @@ namespace airDucts
 			this.bt_Next63.TabIndex = 23;
 			this.bt_Next63.Text = "Далее";
 			this.bt_Next63.UseVisualStyleBackColor = false;
+			this.bt_Next63.Click += new System.EventHandler(this.bt_Next63_Click);
 			// 
 			// bt_TroinicKr
 			// 
@@ -3566,23 +3802,29 @@ namespace airDucts
 			// 
 			// cb63_vys1
 			// 
+			this.cb63_vys1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb63_vys1.Location = new System.Drawing.Point(157, 78);
 			this.cb63_vys1.Name = "cb63_vys1";
+			this.cb63_vys1.ReadOnly = true;
 			this.cb63_vys1.Size = new System.Drawing.Size(84, 29);
 			this.cb63_vys1.TabIndex = 38;
 			// 
 			// cb63_vys2
 			// 
+			this.cb63_vys2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb63_vys2.Location = new System.Drawing.Point(452, 80);
 			this.cb63_vys2.Name = "cb63_vys2";
+			this.cb63_vys2.ReadOnly = true;
 			this.cb63_vys2.Size = new System.Drawing.Size(84, 29);
 			this.cb63_vys2.TabIndex = 37;
 			this.cb63_vys2.Text = "100";
 			// 
 			// cb63_zazor
 			// 
+			this.cb63_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb63_zazor.Location = new System.Drawing.Point(308, 124);
 			this.cb63_zazor.Name = "cb63_zazor";
+			this.cb63_zazor.ReadOnly = true;
 			this.cb63_zazor.Size = new System.Drawing.Size(83, 29);
 			this.cb63_zazor.TabIndex = 36;
 			// 
@@ -3603,7 +3845,6 @@ namespace airDucts
 			this.cb63_diam1.Name = "cb63_diam1";
 			this.cb63_diam1.Size = new System.Drawing.Size(84, 32);
 			this.cb63_diam1.TabIndex = 34;
-			this.cb63_diam1.Text = "300";
 			this.cb63_diam1.SelectedIndexChanged += new System.EventHandler(this.cb63_diam1_SelectedIndexChanged);
 			// 
 			// label184
@@ -3638,12 +3879,12 @@ namespace airDucts
 			// 
 			// cb63_diam2
 			// 
+			this.cb63_diam2.Enabled = false;
 			this.cb63_diam2.FormattingEnabled = true;
 			this.cb63_diam2.Location = new System.Drawing.Point(452, 34);
 			this.cb63_diam2.Name = "cb63_diam2";
 			this.cb63_diam2.Size = new System.Drawing.Size(84, 32);
 			this.cb63_diam2.TabIndex = 30;
-			this.cb63_diam2.Text = "100";
 			this.cb63_diam2.SelectedIndexChanged += new System.EventHandler(this.cb63_diam2_SelectedIndexChanged);
 			// 
 			// label172
@@ -3792,10 +4033,12 @@ namespace airDucts
 			// 
 			// textBox12
 			// 
+			this.textBox12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox12.Location = new System.Drawing.Point(690, 279);
 			this.textBox12.Multiline = true;
 			this.textBox12.Name = "textBox12";
+			this.textBox12.ReadOnly = true;
 			this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox12.Size = new System.Drawing.Size(587, 125);
 			this.textBox12.TabIndex = 20;
@@ -3814,6 +4057,7 @@ namespace airDucts
 			this.bt_Next64.TabIndex = 19;
 			this.bt_Next64.Text = "Далее";
 			this.bt_Next64.UseVisualStyleBackColor = false;
+			this.bt_Next64.Click += new System.EventHandler(this.bt_Next64_Click);
 			// 
 			// bt_TroinicKrPr
 			// 
@@ -3866,25 +4110,31 @@ namespace airDucts
 			// 
 			// cb64_vys1
 			// 
+			this.cb64_vys1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb64_vys1.Enabled = false;
 			this.cb64_vys1.Location = new System.Drawing.Point(452, 78);
 			this.cb64_vys1.Name = "cb64_vys1";
+			this.cb64_vys1.ReadOnly = true;
 			this.cb64_vys1.Size = new System.Drawing.Size(84, 29);
 			this.cb64_vys1.TabIndex = 34;
 			// 
 			// cb64_vys2
 			// 
+			this.cb64_vys2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb64_vys2.Location = new System.Drawing.Point(155, 119);
 			this.cb64_vys2.Name = "cb64_vys2";
+			this.cb64_vys2.ReadOnly = true;
 			this.cb64_vys2.Size = new System.Drawing.Size(91, 29);
 			this.cb64_vys2.TabIndex = 33;
 			this.cb64_vys2.Text = "100";
 			// 
 			// cb64_zazor
 			// 
+			this.cb64_zazor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb64_zazor.Enabled = false;
 			this.cb64_zazor.Location = new System.Drawing.Point(452, 119);
 			this.cb64_zazor.Name = "cb64_zazor";
+			this.cb64_zazor.ReadOnly = true;
 			this.cb64_zazor.Size = new System.Drawing.Size(84, 29);
 			this.cb64_zazor.TabIndex = 32;
 			// 
@@ -3905,7 +4155,6 @@ namespace airDucts
 			this.cb64_diam.Name = "cb64_diam";
 			this.cb64_diam.Size = new System.Drawing.Size(84, 32);
 			this.cb64_diam.TabIndex = 30;
-			this.cb64_diam.Text = "300";
 			this.cb64_diam.SelectedIndexChanged += new System.EventHandler(this.cb64_diam_SelectedIndexChanged);
 			// 
 			// label151
@@ -4006,7 +4255,6 @@ namespace airDucts
 			this.cb64_shir.Name = "cb64_shir";
 			this.cb64_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb64_shir.TabIndex = 13;
-			this.cb64_shir.Text = "50";
 			this.cb64_shir.SelectedIndexChanged += new System.EventHandler(this.cb64_shir_SelectedIndexChanged);
 			// 
 			// cb64_dlin
@@ -4017,7 +4265,6 @@ namespace airDucts
 			this.cb64_dlin.Name = "cb64_dlin";
 			this.cb64_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb64_dlin.TabIndex = 12;
-			this.cb64_dlin.Text = "100";
 			this.cb64_dlin.SelectedIndexChanged += new System.EventHandler(this.cb64_dlin_SelectedIndexChanged);
 			// 
 			// label162
@@ -4158,10 +4405,12 @@ namespace airDucts
 			// 
 			// textBox14
 			// 
+			this.textBox14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox14.Location = new System.Drawing.Point(688, 262);
 			this.textBox14.Multiline = true;
 			this.textBox14.Name = "textBox14";
+			this.textBox14.ReadOnly = true;
 			this.textBox14.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox14.Size = new System.Drawing.Size(587, 125);
 			this.textBox14.TabIndex = 22;
@@ -4196,11 +4445,12 @@ namespace airDucts
 			// 
 			// cb71_thick
 			// 
+			this.cb71_thick.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb71_thick.Location = new System.Drawing.Point(251, 130);
 			this.cb71_thick.Name = "cb71_thick";
+			this.cb71_thick.ReadOnly = true;
 			this.cb71_thick.Size = new System.Drawing.Size(91, 29);
 			this.cb71_thick.TabIndex = 28;
-			this.cb71_thick.Text = "0,5";
 			// 
 			// label193
 			// 
@@ -4224,8 +4474,10 @@ namespace airDucts
 			// 
 			// cb71_dOtv
 			// 
+			this.cb71_dOtv.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb71_dOtv.Location = new System.Drawing.Point(249, 81);
 			this.cb71_dOtv.Name = "cb71_dOtv";
+			this.cb71_dOtv.ReadOnly = true;
 			this.cb71_dOtv.Size = new System.Drawing.Size(93, 29);
 			this.cb71_dOtv.TabIndex = 22;
 			// 
@@ -4261,12 +4513,12 @@ namespace airDucts
 			// 
 			// cb71_shir
 			// 
+			this.cb71_shir.Enabled = false;
 			this.cb71_shir.FormattingEnabled = true;
 			this.cb71_shir.Location = new System.Drawing.Point(452, 39);
 			this.cb71_shir.Name = "cb71_shir";
 			this.cb71_shir.Size = new System.Drawing.Size(91, 32);
 			this.cb71_shir.TabIndex = 13;
-			this.cb71_shir.Text = "100";
 			this.cb71_shir.SelectedIndexChanged += new System.EventHandler(this.cb71_shir_SelectedIndexChanged);
 			// 
 			// cb71_dlin
@@ -4276,7 +4528,6 @@ namespace airDucts
 			this.cb71_dlin.Name = "cb71_dlin";
 			this.cb71_dlin.Size = new System.Drawing.Size(91, 32);
 			this.cb71_dlin.TabIndex = 12;
-			this.cb71_dlin.Text = "150";
 			this.cb71_dlin.SelectedIndexChanged += new System.EventHandler(this.cb71_dlin_SelectedIndexChanged);
 			// 
 			// label194
@@ -4350,6 +4601,7 @@ namespace airDucts
 			this.bt_Next71.TabIndex = 20;
 			this.bt_Next71.Text = "Далее";
 			this.bt_Next71.UseVisualStyleBackColor = false;
+			this.bt_Next71.Click += new System.EventHandler(this.bt_Next71_Click);
 			// 
 			// bt_FlanPr
 			// 
@@ -4402,10 +4654,12 @@ namespace airDucts
 			// 
 			// textBox17
 			// 
+			this.textBox17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.textBox17.Location = new System.Drawing.Point(683, 251);
 			this.textBox17.Multiline = true;
 			this.textBox17.Name = "textBox17";
+			this.textBox17.ReadOnly = true;
 			this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox17.Size = new System.Drawing.Size(587, 125);
 			this.textBox17.TabIndex = 22;
@@ -4436,11 +4690,12 @@ namespace airDucts
 			// 
 			// cb72_thick
 			// 
+			this.cb72_thick.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb72_thick.Location = new System.Drawing.Point(263, 127);
 			this.cb72_thick.Name = "cb72_thick";
+			this.cb72_thick.ReadOnly = true;
 			this.cb72_thick.Size = new System.Drawing.Size(93, 29);
 			this.cb72_thick.TabIndex = 31;
-			this.cb72_thick.Text = "0,5";
 			// 
 			// label197
 			// 
@@ -4464,8 +4719,10 @@ namespace airDucts
 			// 
 			// cb72_dOtv
 			// 
+			this.cb72_dOtv.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb72_dOtv.Location = new System.Drawing.Point(263, 88);
 			this.cb72_dOtv.Name = "cb72_dOtv";
+			this.cb72_dOtv.ReadOnly = true;
 			this.cb72_dOtv.Size = new System.Drawing.Size(93, 29);
 			this.cb72_dOtv.TabIndex = 26;
 			// 
@@ -4516,7 +4773,6 @@ namespace airDucts
 			this.cb72_diam.Name = "cb72_diam";
 			this.cb72_diam.Size = new System.Drawing.Size(84, 32);
 			this.cb72_diam.TabIndex = 15;
-			this.cb72_diam.Text = "100";
 			this.cb72_diam.SelectedIndexChanged += new System.EventHandler(this.cb72_diam_SelectedIndexChanged);
 			// 
 			// label210
@@ -4550,6 +4806,7 @@ namespace airDucts
 			this.bt_Next72.TabIndex = 20;
 			this.bt_Next72.Text = "Далее";
 			this.bt_Next72.UseVisualStyleBackColor = false;
+			this.bt_Next72.Click += new System.EventHandler(this.bt_Next72_Click);
 			// 
 			// bt_FlanKr
 			// 
@@ -4584,37 +4841,51 @@ namespace airDucts
 			this.pictureBox15.TabIndex = 0;
 			this.pictureBox15.TabStop = false;
 			// 
-			// cb61_dlin2
+			// cb31_vys
 			// 
-			this.cb61_dlin2.FormattingEnabled = true;
-			this.cb61_dlin2.Location = new System.Drawing.Point(442, 36);
-			this.cb61_dlin2.Name = "cb61_dlin2";
-			this.cb61_dlin2.Size = new System.Drawing.Size(97, 32);
-			this.cb61_dlin2.TabIndex = 33;
-			this.cb61_dlin2.SelectedIndexChanged += new System.EventHandler(this.cb61_dlin2_SelectedIndexChanged);
+			this.cb31_vys.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.cb31_vys.Location = new System.Drawing.Point(155, 119);
+			this.cb31_vys.Name = "cb31_vys";
+			this.cb31_vys.ReadOnly = true;
+			this.cb31_vys.Size = new System.Drawing.Size(91, 29);
+			this.cb31_vys.TabIndex = 25;
 			// 
-			// cb61_shir2
+			// txt_hint1
 			// 
-			this.cb61_shir2.FormattingEnabled = true;
-			this.cb61_shir2.Location = new System.Drawing.Point(442, 79);
-			this.cb61_shir2.Name = "cb61_shir2";
-			this.cb61_shir2.Size = new System.Drawing.Size(97, 32);
-			this.cb61_shir2.TabIndex = 34;
-			this.cb61_shir2.SelectedIndexChanged += new System.EventHandler(this.cb61_shir2_SelectedIndexChanged);
+			this.txt_hint1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.txt_hint1.Location = new System.Drawing.Point(299, 641);
+			this.txt_hint1.Multiline = true;
+			this.txt_hint1.Name = "txt_hint1";
+			this.txt_hint1.Size = new System.Drawing.Size(360, 90);
+			this.txt_hint1.TabIndex = 12;
+			// 
+			// txt_hint2
+			// 
+			this.txt_hint2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.txt_hint2.Location = new System.Drawing.Point(716, 641);
+			this.txt_hint2.Multiline = true;
+			this.txt_hint2.Name = "txt_hint2";
+			this.txt_hint2.Size = new System.Drawing.Size(360, 90);
+			this.txt_hint2.TabIndex = 13;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1312, 629);
+			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.ClientSize = new System.Drawing.Size(1312, 753);
+			this.Controls.Add(this.txt_hint2);
 			this.Controls.Add(this.tabControl1);
+			this.Controls.Add(this.txt_hint1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MaximumSize = new System.Drawing.Size(1330, 676);
+			this.MaximumSize = new System.Drawing.Size(1330, 800);
 			this.Name = "Form1";
 			this.Text = "Воздуховоды и фасонные элементы";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tabControl1.ResumeLayout(false);
+			this.tabPage21.ResumeLayout(false);
+			this.tabPage21.PerformLayout();
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage1.PerformLayout();
 			this.groupBox1.ResumeLayout(false);
@@ -4701,6 +4972,7 @@ namespace airDucts
 			this.groupBox15.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -4748,7 +5020,6 @@ namespace airDucts
 		private System.Windows.Forms.Button bt_PerehPrPr;
 		private System.Windows.Forms.ComboBox cb31_shir1;
 		private System.Windows.Forms.ComboBox cb31_dlin1;
-		private System.Windows.Forms.ComboBox cb31_vys;
 		private System.Windows.Forms.ComboBox cb31_shir;
 		private System.Windows.Forms.ComboBox cb31_dlin;
 		private System.Windows.Forms.Label label33;
@@ -5079,5 +5350,22 @@ namespace airDucts
 		private System.Windows.Forms.Label label205;
 		private System.Windows.Forms.ComboBox cb61_shir2;
 		private System.Windows.Forms.ComboBox cb61_dlin2;
+		private System.Windows.Forms.TabPage tabPage21;
+		private System.Windows.Forms.Label label206;
+		private System.Windows.Forms.TextBox txt_name;
+		private System.Windows.Forms.Label label207;
+		private System.Windows.Forms.Button bt_target;
+		private System.Windows.Forms.TextBox txt_target;
+		private System.Windows.Forms.Button bt_7;
+		private System.Windows.Forms.Button bt_6;
+		private System.Windows.Forms.Button bt_5;
+		private System.Windows.Forms.Button bt_4;
+		private System.Windows.Forms.Button bt_3;
+		private System.Windows.Forms.Button bt_2;
+		private System.Windows.Forms.Button bt_1;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.TextBox cb31_vys;
+		private System.Windows.Forms.TextBox txt_hint1;
+		private System.Windows.Forms.TextBox txt_hint2;
 	}
 }

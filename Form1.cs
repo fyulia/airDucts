@@ -15,7 +15,7 @@ using SolidWorksTools.File;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Runtime.InteropServices;
 using System.IO;
-using System.Windows;
+//using System.Windows;
 
 namespace airDucts
 {
@@ -41,6 +41,14 @@ namespace airDucts
 			textBox2.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, позволяющим соединить воздуховоды с разным размером прямоугольных сечений.";
 
 			svoistva();
+			
+			tabControl1.TabPages.Remove(tabPage1);
+			tabControl1.TabPages.Remove(tabPage2);
+			tabControl1.TabPages.Remove(tabPage3);
+			tabControl1.TabPages.Remove(tabPage4);
+			tabControl1.TabPages.Remove(tabPage5);
+			tabControl1.TabPages.Remove(tabPage6);
+			tabControl1.TabPages.Remove(tabPage8);
 		}
 
 		public void svoistva()
@@ -108,11 +116,12 @@ namespace airDucts
 
 		
 		int errors = 0;
-		int longwarnings = 0;
+		int warnings = 0;
 		ModelDocExtension swModelDocExt = default(ModelDocExtension);
 		Feature swFeature;
 		FeatureManager swFeatureManager = default(FeatureManager);
 		CircularPatternFeatureData swFeatData;
+		Configuration swConfig = default(Configuration);
 		//данные
 
 
@@ -980,10 +989,12 @@ namespace airDucts
 		{
 			if (string.IsNullOrEmpty(cb1_dlin.Text) || string.IsNullOrEmpty(cb1_shir.Text) || string.IsNullOrEmpty(cb1_vys.Text))
 			{
-				System.Windows.Forms.MessageBox.Show("Заполните параметры для построения детали!");
+				MessageBox.Show("Заполните параметры для построения детали!");
 			}
 			else
 			{
+
+				assembly = (AssemblyDoc)Part;
 				double shir_pr, vys_pr, dlin_pr, zazor_pr;
 				dlin_pr = Convert.ToDouble(cb1_dlin.Text);
 				shir_pr = Convert.ToDouble(cb1_shir.Text);
@@ -997,6 +1008,11 @@ namespace airDucts
 				dlin_pr = dlin_pr / 1000;
 				zazor_pr = zazor_pr / 1000;
 
+				
+
+				//string assName = swConfig.Name;
+				
+
 				iSwApp = new SldWorks();
 				iSwApp.Visible = true;
 
@@ -1008,6 +1024,8 @@ namespace airDucts
 				duct.createPrVozd(dlin_pr, shir_pr, vys_pr, zazor_pr, Part);
 				setMaterial();
 				savePart(name);
+				string assPath = Part.GetPathName();
+				MessageBox.Show(assPath);
 
 				if (txt_hint1.TextLength == 0 && txt_hint2.TextLength == 0)
 				{
@@ -1018,6 +1036,13 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Длина: {dlin_pr * 1000}  Ширина: {shir_pr * 1000}";
 				}
+				//Закрытие открытых файлов компонентов в среде SolidWorks
+				//iSwApp.CloseDoc(assPath);
+
+				string mainPath = txt_target + "\\" + txt_name + ".sldasm";
+
+				
+				addComponent2(assPath);
 			}
 		}
 
@@ -1063,6 +1088,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Длина: {dlin_pr * 1000}  Ширина: {shir_pr * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1096,7 +1124,7 @@ namespace airDucts
 				duct2.createKrVozd(diam_kr, vys_kr, zazor_kr, Part);
 				setMaterial();
 				savePart(name);
-
+				
 				if (txt_hint1.TextLength == 0 && txt_hint2.TextLength == 0)
 				{
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Диаметр: {diam_kr * 1000}";
@@ -1106,6 +1134,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Диаметр: {diam_kr * 1000}";
 				}
+				string assPath = Part.GetPathName();
+				
+				addComponent2(assPath);
 			}
 			//Close();
 		}
@@ -1159,6 +1190,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Длина 1: {dlin * 1000}  Ширина 1: {shir * 1000}" + '\r' + '\n' + $"Длина 2: {dlin1 * 1000}  Ширина 2: {shir1 * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1209,6 +1243,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Длина 1: {dlin * 1000}  Ширина 1: {shir * 1000}" + '\r' + '\n' + $"Диаметр : {diam * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1257,6 +1294,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Диаметр 1 : {diam1 * 1000}" + '\r' + '\n' + $"Диаметр 2 : {diam2 * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1321,6 +1361,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Диаметр : {diam * 1000}";
 				}
+				string assPath2 = Part.GetPathName();
+
+				addComponent2Assembly(assPath2);
 			}
 		}
 
@@ -1394,6 +1437,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Длина : {dlin * 1000} Ширина : {shir * 1000}";
 				}
+				string assPath2 = Part.GetPathName();
+
+				addComponent2Assembly(assPath2);
 			}
 		}
 		public void createCircPattern(string assemblyPath, string assemblyName, string partName)
@@ -1472,6 +1518,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Длина 1 : {dlin1 * 1000} Ширина 1 : {shir1 * 1000}" + '\r' + '\n' + $"Длина 2 : {dlin2 * 1000} Ширина 2 : {shir2 * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1524,6 +1573,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Длина : {dlin * 1000} Ширина : {shir * 1000}" + '\r' + '\n' + $"Диаметр : {diam * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1574,6 +1626,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Диаметр 1 : {diam1 * 1000}" + '\r' + '\n' + $"Диаметр 2 : {diam2 * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1627,6 +1682,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Диаметр : {diam * 1000}" + '\r' + '\n' + $"Длина : {dlin * 1000}  Ширина : {shir * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1705,6 +1763,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Длина : {dlin1 * 1000}  Ширина : {shir1 * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1771,6 +1832,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Диаметр : {diam * 1000}";
 				}
+				string assPath = Part.GetPathName();
+
+				addComponent2(assPath);
 			}
 		}
 
@@ -1810,18 +1874,18 @@ namespace airDucts
 				string assPath = Part.GetPathName();
 				tmpPath = Part.GetPathName();
 				tmpPath = tmpPath.Substring(0, tmpPath.Length - name2.Length - 8);
-				System.Windows.Forms.MessageBox.Show(tmpPath);
+				MessageBox.Show(tmpPath);
 
 				createAssembly(tmpPath, name);
 
 
 				string path = Part.GetPathName();
-				System.Windows.Forms.MessageBox.Show(path);
+				MessageBox.Show(path);
 
 				addComponent(Part, path, 0, 0, thick / 2);
 
 				string assemblyPath = tmpPath + "\\" + name + ".sldasm";
-				System.Windows.Forms.MessageBox.Show(assemblyPath);
+				MessageBox.Show(assemblyPath);
 
 				iSwApp.NewPart();
 				Part = iSwApp.IActiveDoc2;
@@ -1830,7 +1894,7 @@ namespace airDucts
 				setMaterial();
 				savePart(name3);
 				string path2 = Part.GetPathName();
-				System.Windows.Forms.MessageBox.Show(path2);
+				MessageBox.Show(path2);
 				Part = (ModelDoc2)iSwApp.ActivateDoc3(assemblyPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
 				addComponent(Part, path2, 0, 0, -vys);
 
@@ -1847,6 +1911,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Диаметр : {diam * 1000}";
 				}
+				string assPath2 = Part.GetPathName();
+
+				addComponent2Assembly(assPath2);
 			}
 		}
 
@@ -1892,7 +1959,7 @@ namespace airDucts
 			//string compName = Part.GetPathName();
 
 			//Добавление координатных систем компонентов в массив
-			string xcoorsysnames = "Coordinate System1";
+			//string xcoorsysnames = "Coordinate System1";
 
 			//Активация документа сборки
 			Part = (ModelDoc2)iSwApp.ActivateDoc3(assPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
@@ -1906,6 +1973,73 @@ namespace airDucts
 			Part.ViewZoomtofit2();
 		}
 
+		public void addComponent2(string assPath)
+		{
+			object component;
+			//ModelDoc2 Part;
+			ModelDoc2 tmpObj;
+			//Закрытие открытых файлов компонентов в среде SolidWorks
+			iSwApp.CloseDoc(assPath);
+
+			//Считывание открытого окна сборки
+			assembly = (AssemblyDoc)iSwApp.ActiveDoc;
+			//string compName = Part.GetPathName();
+
+			//Добавление координатных систем компонентов в массив
+			//string xcoorsysnames = "Coordinate System1";
+			string mainPath = txt_target + "\\" + txt_name + ".sldasm";
+
+			tmpObj = (ModelDoc2)iSwApp.OpenDoc6(assPath, (int)swDocumentTypes_e.swDocPART, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
+
+			//Активация документа сборки
+			Part = (ModelDoc2)iSwApp.ActivateDoc3(mainPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
+			
+			//Добавление компонентов в документ сборки
+			component = assembly.AddComponent5(assPath, 0, "", false, "", 0, 0, 0); //путь к детали или сборке 
+			//Закрытие открытых файлов компонентов в среде SolidWorks
+			iSwApp.CloseDoc(assPath);
+			//Перестроение документа
+			assembly.ForceRebuild();
+			//Фокус камеры на компоненты
+			//Part.ViewZoomtofit2();
+
+			
+		}
+
+		public void addComponent2Assembly(string assPath)
+		{
+			object component;
+			//ModelDoc2 Part;
+			ModelDoc2 tmpObj;
+			//Закрытие открытых файлов компонентов в среде SolidWorks
+			iSwApp.CloseDoc(assPath);
+
+			//Считывание открытого окна сборки
+			assembly = (AssemblyDoc)iSwApp.ActiveDoc;
+			//string compName = Part.GetPathName();
+
+			//Добавление координатных систем компонентов в массив
+			//string xcoorsysnames = "Coordinate System1";
+			string mainPath = txt_target + "\\" + txt_name + ".sldasm";
+
+			tmpObj = (ModelDoc2)iSwApp.OpenDoc6(assPath, (int)swDocumentTypes_e.swDocASSEMBLY, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
+
+			//Активация документа сборки
+			Part = (ModelDoc2)iSwApp.ActivateDoc3(mainPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
+
+			//Добавление компонентов в документ сборки
+			component = assembly.AddComponent5(assPath, 0, "", false, "", 0, 0, 0); //путь к детали или сборке 
+																					//Закрытие открытых файлов компонентов в среде SolidWorks
+			iSwApp.CloseDoc(assPath);
+			//Перестроение документа
+			assembly.ForceRebuild();
+			//Фокус камеры на компоненты
+			//Part.ViewZoomtofit2();
+			boolstatus = Part.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swDisplaySketches, false);
+
+
+
+		}
 		public void AddMates(string assemblyPath, string assemblyName, string topName, string bottomName, double vys)
 		{
 
@@ -2052,9 +2186,19 @@ namespace airDucts
 				string name = txt_name.Text;
 				
 				createAssembly(targ, name);
+				
+				tabControl1.TabPages.Insert(1,tabPage1);
+				tabControl1.TabPages.Insert(2,tabPage2);
+				tabControl1.TabPages.Insert(3,tabPage3);
+				tabControl1.TabPages.Insert(4,tabPage4);
+				tabControl1.TabPages.Insert(5,tabPage5);
+				tabControl1.TabPages.Insert(6,tabPage6);
+				tabControl1.TabPages.Insert(7,tabPage8);
+				
+
 			}
 
-				
+
 		}
 
 		private void bt_1_Click(object sender, EventArgs e)

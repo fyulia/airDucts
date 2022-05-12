@@ -94,6 +94,7 @@ namespace airDucts
 			this.bt_Next31 = new System.Windows.Forms.Button();
 			this.bt_PerehPrPr = new System.Windows.Forms.Button();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.cb31_vys = new System.Windows.Forms.TextBox();
 			this.cb31_zazor = new System.Windows.Forms.TextBox();
 			this.label33 = new System.Windows.Forms.Label();
 			this.label32 = new System.Windows.Forms.Label();
@@ -416,7 +417,6 @@ namespace airDucts
 			this.bt_FlanKr = new System.Windows.Forms.Button();
 			this.label179 = new System.Windows.Forms.Label();
 			this.pictureBox15 = new System.Windows.Forms.PictureBox();
-			this.cb31_vys = new System.Windows.Forms.TextBox();
 			this.txt_hint1 = new System.Windows.Forms.TextBox();
 			this.txt_hint2 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
@@ -1234,6 +1234,15 @@ namespace airDucts
 			this.groupBox2.TabIndex = 4;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Параметры";
+			// 
+			// cb31_vys
+			// 
+			this.cb31_vys.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.cb31_vys.Location = new System.Drawing.Point(155, 119);
+			this.cb31_vys.Name = "cb31_vys";
+			this.cb31_vys.ReadOnly = true;
+			this.cb31_vys.Size = new System.Drawing.Size(91, 29);
+			this.cb31_vys.TabIndex = 25;
 			// 
 			// cb31_zazor
 			// 
@@ -4840,15 +4849,6 @@ namespace airDucts
 			this.pictureBox15.Size = new System.Drawing.Size(674, 515);
 			this.pictureBox15.TabIndex = 0;
 			this.pictureBox15.TabStop = false;
-			// 
-			// cb31_vys
-			// 
-			this.cb31_vys.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.cb31_vys.Location = new System.Drawing.Point(155, 119);
-			this.cb31_vys.Name = "cb31_vys";
-			this.cb31_vys.ReadOnly = true;
-			this.cb31_vys.Size = new System.Drawing.Size(91, 29);
-			this.cb31_vys.TabIndex = 25;
 			// 
 			// txt_hint1
 			// 

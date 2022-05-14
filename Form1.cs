@@ -1041,7 +1041,7 @@ namespace airDucts
 
 				string mainPath = txt_target + "\\" + txt_name + ".sldasm";
 
-				
+
 				addComponent2(assPath);
 			}
 		}
@@ -2035,7 +2035,7 @@ namespace airDucts
 			assembly.ForceRebuild();
 			//Фокус камеры на компоненты
 			//Part.ViewZoomtofit2();
-			boolstatus = Part.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swDisplaySketches, false);
+			//boolstatus = Part.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swDisplaySketches, false);
 
 
 

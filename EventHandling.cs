@@ -332,6 +332,14 @@ namespace airDucts
 		//EventHandlers
 		public int OnDestroy(int destroyType)
 		{
+			switch (destroyType)
+			{
+				case (int)swDestroyNotifyType_e.swDestroyNotifyHidden:
+					return 0;
+
+				case (int)swDestroyNotifyType_e.swDestroyNotifyDestroy:
+					return 0;
+			}
 			return 0;
 		}
 

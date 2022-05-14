@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Linq;
 
 
 namespace airDucts
@@ -22,6 +23,7 @@ namespace airDucts
 		Title = "airDucts",
 		LoadAtStartup = true
 		)]
+	
 	public class SwAddin : ISwAddin
 	{
 		#region Local Variables
@@ -194,9 +196,9 @@ namespace airDucts
 			string Title = "Воздуховоды", ToolTip = "Воздуховоды и фасонные элементы";
 
 
-			int[] docTypes = new int[] { (int)swDocumentTypes_e.swDocASSEMBLY };
-									   //(int)swDocumentTypes_e.swDocDRAWING,
-									   //(int)swDocumentTypes_e.swDocPART};
+			int[] docTypes = new int[] {(int)swDocumentTypes_e.swDocASSEMBLY,
+									   (int)swDocumentTypes_e.swDocDRAWING,
+									   (int)swDocumentTypes_e.swDocPART};
 
 			thisAssembly = System.Reflection.Assembly.GetAssembly(this.GetType());
 
@@ -268,7 +270,9 @@ namespace airDucts
 					cmdIDs = new int[1];
 					TextType = new int[1];
 
-					
+
+					TextType[0] = (int)swCommandTabButtonTextDisplay_e.swCommandTabButton_TextBelow | (int)swCommandTabButtonFlyoutStyle_e.swCommandTabButton_ActionFlyout;// добавила
+
 					bResult = cmdBox1.AddCommands(cmdIDs, TextType);
 
 					cmdTab.AddSeparator(cmdBox1, cmdIDs[0]);

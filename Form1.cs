@@ -34,6 +34,8 @@ namespace airDucts
 		bool boolstatus;
 		int lErrors;
 		int lWarnings;
+
+		string assPut;
 		public Form1()
 		{
 			InitializeComponent();	
@@ -42,13 +44,12 @@ namespace airDucts
 
 			svoistva();
 			
-			tabControl1.TabPages.Remove(tabPage1);
-			tabControl1.TabPages.Remove(tabPage2);
-			tabControl1.TabPages.Remove(tabPage3);
-			tabControl1.TabPages.Remove(tabPage4);
-			tabControl1.TabPages.Remove(tabPage5);
-			tabControl1.TabPages.Remove(tabPage6);
-			tabControl1.TabPages.Remove(tabPage8);
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			IModelDoc2 Part = iSwApp.IActiveDoc2;
+			assPut = Part.GetPathName();
 		}
 
 		public void svoistva()
@@ -127,6 +128,8 @@ namespace airDucts
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
+
+			
 
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT DISTINCT dlin  FROM vozdPr", sqlConnection);
@@ -1039,7 +1042,7 @@ namespace airDucts
 				//Закрытие открытых файлов компонентов в среде SolidWorks
 				//iSwApp.CloseDoc(assPath);
 
-				string mainPath = txt_target + "\\" + txt_name + ".sldasm";
+				//string mainPath = txt_target + "\\" + txt_name + ".sldasm";
 
 
 				addComponent2(assPath);
@@ -1951,15 +1954,8 @@ namespace airDucts
 		public void addComponent(IModelDoc2 Part, string assPath,double x, double y, double z)
 		{
 			object component;
-			//ModelDoc2 Part;
-
 			//Считывание открытого окна сборки
 			assembly = (AssemblyDoc)iSwApp.ActiveDoc;
-
-			//string compName = Part.GetPathName();
-
-			//Добавление координатных систем компонентов в массив
-			//string xcoorsysnames = "Coordinate System1";
 
 			//Активация документа сборки
 			Part = (ModelDoc2)iSwApp.ActivateDoc3(assPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
@@ -1987,12 +1983,12 @@ namespace airDucts
 
 			//Добавление координатных систем компонентов в массив
 			//string xcoorsysnames = "Coordinate System1";
-			string mainPath = txt_target + "\\" + txt_name + ".sldasm";
+			//string mainPath = txt_target + "\\" + txt_name + ".sldasm";
 
 			tmpObj = (ModelDoc2)iSwApp.OpenDoc6(assPath, (int)swDocumentTypes_e.swDocPART, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
 
 			//Активация документа сборки
-			Part = (ModelDoc2)iSwApp.ActivateDoc3(mainPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
+			Part = (ModelDoc2)iSwApp.ActivateDoc3(assPut, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
 			
 			//Добавление компонентов в документ сборки
 			component = assembly.AddComponent5(assPath, 0, "", false, "", 0, 0, 0); //путь к детали или сборке 
@@ -2020,12 +2016,12 @@ namespace airDucts
 
 			//Добавление координатных систем компонентов в массив
 			//string xcoorsysnames = "Coordinate System1";
-			string mainPath = txt_target + "\\" + txt_name + ".sldasm";
+			//string mainPath = txt_target + "\\" + txt_name + ".sldasm";
 
 			tmpObj = (ModelDoc2)iSwApp.OpenDoc6(assPath, (int)swDocumentTypes_e.swDocASSEMBLY, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
 
 			//Активация документа сборки
-			Part = (ModelDoc2)iSwApp.ActivateDoc3(mainPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
+			Part = (ModelDoc2)iSwApp.ActivateDoc3(assPut, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
 
 			//Добавление компонентов в документ сборки
 			component = assembly.AddComponent5(assPath, 0, "", false, "", 0, 0, 0); //путь к детали или сборке 
@@ -2156,163 +2152,126 @@ namespace airDucts
 
 		
 		//главная
-		private void bt_target_Click(object sender, EventArgs e)
-		{
-			string trg = "C:\\Users\\YuliaS\\Desktop\\Воздуховоды";
-			FolderBrowserDialog target = new FolderBrowserDialog();
-			target.Description = "Выберите папку для сохранения сборки";
-			target.RootFolder = System.Environment.SpecialFolder.MyComputer;
-			target.SelectedPath = "C:\\Users\\YuliaS\\Desktop\\Воздуховоды";
-			if (target.ShowDialog() == DialogResult.OK)
-			{
-				trg = target.SelectedPath;
-				txt_target.Text = target.SelectedPath;
-			}
-		}
+		
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-			if (txt_target.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Выберите папку для сохранения сборки!");
-			}
-			else if (txt_name.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Введите название сборки!");
-			}
-			else
-			{
-				string targ = txt_target.Text;
-				string name = txt_name.Text;
-				
-				createAssembly(targ, name);
-				
-				tabControl1.TabPages.Insert(1,tabPage1);
-				tabControl1.TabPages.Insert(2,tabPage2);
-				tabControl1.TabPages.Insert(3,tabPage3);
-				tabControl1.TabPages.Insert(4,tabPage4);
-				tabControl1.TabPages.Insert(5,tabPage5);
-				tabControl1.TabPages.Insert(6,tabPage6);
-				tabControl1.TabPages.Insert(7,tabPage8);
-				
-
-			}
+		
 
 
-		}
+		
 
 		private void bt_1_Click(object sender, EventArgs e)
-		{
-			if (txt_target.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Выберите папку для сохранения сборки!");
-			}
-			else if (txt_name.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Введите название сборки!");
-			}
-			else
-			{
+		{	
 				tabControl1.SelectedTab = tabControl1.TabPages["TabPage1"];
-			}
 		}
 
 		private void bt_2_Click(object sender, EventArgs e)
 		{
-			if (txt_target.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Выберите папку для сохранения сборки!");
-			}
-			else if (txt_name.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Введите название сборки!");
-			}
-			else
-			{
+		
 				tabControl1.SelectedTab = tabControl1.TabPages["TabPage2"];
-			}
+			
 		}
 
 		private void bt_3_Click(object sender, EventArgs e)
 		{
-			if (txt_target.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Выберите папку для сохранения сборки!");
-			}
-			else if (txt_name.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Введите название сборки!");
-			}
-			else
-			{
+			
 				tabControl1.SelectedTab = tabControl1.TabPages["TabPage3"];
-			}
+			
 		}
 
-		private void bt_4_Click(object sender, EventArgs e)
+		private void bt_4_Click(object sender, EventArgs e) //переход пр 
 		{
-			if (txt_target.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Выберите папку для сохранения сборки!");
-			}
-			else if (txt_name.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Введите название сборки!");
-			}
-			else
-			{
+			
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage3"];
+				tabControl2.SelectedTab = tabControl2.TabPages["TabPage10"];
+			
+		}
+
+		private void bt_5_Click(object sender, EventArgs e) //переход кр
+		{
+			
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage3"];
+				tabControl2.SelectedTab = tabControl2.TabPages["TabPage11"];
+			
+		}
+
+		private void bt_6_Click(object sender, EventArgs e) //отвод пр
+		{
+			
 				tabControl1.SelectedTab = tabControl1.TabPages["TabPage4"];
-			}
+				tabControl3.SelectedTab = tabControl3.TabPages["TabPage12"];
+			
 		}
 
-		private void bt_5_Click(object sender, EventArgs e)
+		private void bt_7_Click(object sender, EventArgs e) //отвод кр
 		{
-			if (txt_target.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Выберите папку для сохранения сборки!");
-			}
-			else if (txt_name.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Введите название сборки!");
-			}
-			else
-			{
+			
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage4"];
+				tabControl3.SelectedTab = tabControl3.TabPages["TabPage13"];
+			
+		}
+
+		private void bt_8_Click(object sender, EventArgs e) //загл пр
+		{
+			
 				tabControl1.SelectedTab = tabControl1.TabPages["TabPage5"];
-			}
+				tabControl4.SelectedTab = tabControl4.TabPages["TabPage14"];
+			
 		}
 
-		private void bt_6_Click(object sender, EventArgs e)
+		private void bt_9_Click(object sender, EventArgs e) //загл кр
 		{
-			if (txt_target.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Выберите папку для сохранения сборки!");
-			}
-			else if (txt_name.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Введите название сборки!");
-			}
-			else
-			{
-				tabControl1.SelectedTab = tabControl1.TabPages["TabPage6"];
-			}
+			
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage5"];
+				tabControl4.SelectedTab = tabControl4.TabPages["TabPage15"];
+			
 		}
 
-		private void bt_7_Click(object sender, EventArgs e)
+		private void bt_10_Click(object sender, EventArgs e) //трой пр пр
 		{
-			if (txt_target.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Выберите папку для сохранения сборки!");
-			}
-			else if (txt_name.TextLength == 0)
-			{
-				System.Windows.Forms.MessageBox.Show("Введите название сборки!");
-			}
-			else
-			{
-				tabControl1.SelectedTab = tabControl1.TabPages["TabPage8"];
-			}
-		}
-
 		
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage6"];
+				tabControl5.SelectedTab = tabControl5.TabPages["TabPage16"];
+			
+		}
+
+		private void bt_11_Click(object sender, EventArgs e) //трой пр кр
+		{
+			
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage6"];
+				tabControl5.SelectedTab = tabControl5.TabPages["TabPage17"];
+			
+		}
+
+		private void bt_12_Click(object sender, EventArgs e) //трой кр кр
+		{
+			
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage6"];
+				tabControl5.SelectedTab = tabControl5.TabPages["TabPage18"];
+			
+		}
+
+		private void bt_13_Click(object sender, EventArgs e)// трой кр пр
+		{
+
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage6"];
+				tabControl5.SelectedTab = tabControl5.TabPages["TabPage19"];
+			
+		}
+
+		private void bt_14_Click(object sender, EventArgs e) //флан пр
+		{
+			
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage8"];
+				tabControl6.SelectedTab = tabControl6.TabPages["TabPage9"];
+			
+		}
+
+		private void bt_15_Click(object sender, EventArgs e)//флан кр
+		{
+			
+				tabControl1.SelectedTab = tabControl1.TabPages["TabPage8"];
+				tabControl6.SelectedTab = tabControl6.TabPages["TabPage20"];
+			
+		}
 	}
 }

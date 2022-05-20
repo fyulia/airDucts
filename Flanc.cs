@@ -12,7 +12,7 @@ namespace airDucts
 
 		bool boolstatus;
 		Feature feat;
-		RefPlane refPlane;
+		//RefPlane refPlane;
 		SketchSegment skSegment;
 		object vskLines;
 

@@ -10,7 +10,8 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Linq;
-
+using System.Windows;
+using System.Windows.Forms;
 
 namespace airDucts
 {
@@ -329,12 +330,42 @@ namespace airDucts
 			string partTemplate = iSwApp.GetUserPreferenceStringValue((int)swUserPreferenceStringValue_e.swDefaultTemplatePart); //мб здесь
 			if ((partTemplate != null) && (partTemplate != ""))
 			{
-				//IModelDoc2 modDoc = iSwApp.IActiveDoc2;
-				//startForm start = new startForm();
-				Form1 form = new Form1();
-				form.ShowDialog();
-				form.Dispose();
+				IModelDoc2 modDoc = iSwApp.IActiveDoc2;
+				if (modDoc.GetType() != 2 )
+				{
+					DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Программный модуль доступен только в сборке. Хотите создать сборку?", "Ошибка!", MessageBoxButtons.YesNo);
+					if (dialogResult == DialogResult.Yes)
+					{
+						
+						iSwApp = (SldWorks)Marshal.GetActiveObject("SldWorks.Application");
+						ModelDoc2 Part;
 
+						//Новое окно сборки
+						Part = (ModelDoc2)iSwApp.NewAssembly();
+
+						//Сохраняем сборку
+						//Part.SaveAs3(trg + "\\" + name + ".sldasm", (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+
+					}
+					else if (dialogResult == DialogResult.No)
+					{
+						//do something else
+					}
+				}
+				else
+				{
+					if (modDoc.GetPathName() == "")
+					{
+						//System.Windows.MessageBox.Show(modDoc.GetPathName());
+						System.Windows.MessageBox.Show("Сохраните сборку!");
+					}
+					else
+					{
+						Form1 form = new Form1();
+						form.ShowDialog();
+						form.Dispose();
+					}
+				}
 			}
 			else
 			{
@@ -405,7 +436,7 @@ namespace airDucts
 				{
 					AttachModelDocEventHandler(modDoc);
 				}
-				else if (openDocs.Contains(modDoc))
+				else if (openDocs.Contains(modDoc))  //мб не нужно
 				{
 					bool connected = false;
 					DocumentEventHandler docHandler = (DocumentEventHandler)openDocs[modDoc];

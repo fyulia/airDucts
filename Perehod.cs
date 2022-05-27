@@ -18,6 +18,7 @@ namespace airDucts
 		DisplayDimension DisplayDimension = default(DisplayDimension);
 		Dimension swDim = default(Dimension);
 
+
 		public void createPrPrPerehod(double dlin,double dlin1, double shir,double shir1, double vys, double zazor, IModelDoc2 Part)
 		{
 			boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, false, 0, null, 0);
@@ -159,9 +160,9 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Эскиз1", "SKETCH", -dlin / 2, -zazor, 0, false, 1, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Эскиз2", "SKETCH", -diam / 2, 0, vys, true, 1, null, 0);
 
-			//feat = Part.FeatureManager.InsertSheetMetalLoftedBend(0, zazor);
 
-			feat = Part.FeatureManager.InsertSheetMetalLoftedBend2(0, zazor, false, 0.001, true, (int)swLoftedBendFacetOptions_e.swChordTolerance, 0.0005, 0, 0, 0);
+			feat = Part.FeatureManager.InsertSheetMetalLoftedBend2(0, zazor, false, 0.001,
+				true, (int)swLoftedBendFacetOptions_e.swChordTolerance, 0.0005, 0, 0, 0);
 
 			Part.ClearSelection2(true);
 

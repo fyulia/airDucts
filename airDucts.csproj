@@ -190,6 +190,7 @@
       <DependentUpon>airDuctDataSet1.xsd</DependentUpon>
     </None>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="pic\возд пр4.png" />
   </ItemGroup>

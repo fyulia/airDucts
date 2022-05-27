@@ -168,7 +168,8 @@ namespace airDucts
 			CustomBendAllowance customBendAllowanceData1;
 			customBendAllowanceData1 = Part.FeatureManager.CreateCustomBendAllowance();
 			customBendAllowanceData1.KFactor = 0.5;
-			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, false, 0.001, 0.02, 0.01, true, 0, 0, 1, customBendAllowanceData1,
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, false, 0.001, 0.02, 0.01, 
+				true, 0, 0, 1, customBendAllowanceData1,
 				false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
 			Part.ClearSelection2(true);
 
@@ -184,10 +185,8 @@ namespace airDucts
 			Part.AddDimension2(-diam * 2 / 3, diam, 2.5);
 			//Part.InsertGtol();
 			Part.ClearSelection2(true);
-
 			var myDimension3 = Part.Parameter("D1@Эскиз1");
 			myDimension3.SystemValue = diam / 2;
-
 
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", -diam / 2, 0, 0, true, 0, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Point3", "SKETCHPOINT", 0, 0, 0, true, 0, null, 0);
@@ -210,7 +209,8 @@ namespace airDucts
 			CustomBendAllowance customBendAllowanceData;
 			customBendAllowanceData = Part.FeatureManager.CreateCustomBendAllowance();
 			customBendAllowanceData.KFactor = 0.5;
-			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, true, 0.0007366, vys, 0.01, false, 0, 0, 1, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, true, 0.0007366, vys, 0.01, 
+				false, 0, 0, 1, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
 
 			Part.ClearSelection2(true);
 

@@ -47,7 +47,8 @@ namespace airDucts
 			CustomBendAllowance customBendAllowanceData1;
 			customBendAllowanceData1 = Part.FeatureManager.CreateCustomBendAllowance();
 			customBendAllowanceData1.KFactor = 0.5;
-			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, false, 0.0007366, 0.02, 0.01, false, 0, 0, 1, customBendAllowanceData1, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, false, 0.0007366, 0.02, 0.01, 
+				false, 0, 0, 1, customBendAllowanceData1, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
 
 			boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.ClearSelection2(true);
@@ -119,19 +120,22 @@ namespace airDucts
 			CustomBendAllowance customBendAllowanceData1;
 			customBendAllowanceData1 = Part.FeatureManager.CreateCustomBendAllowance();
 			customBendAllowanceData1.KFactor = 0.5;
-			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, false, 0.0007366, thick, 0.01, false, 0, 0, 1, customBendAllowanceData1, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(thick, false, 0.0007366, thick, 
+				0.01, false, 0, 0, 1, customBendAllowanceData1, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
 
 			boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
 			skSegment = Part.SketchManager.CreateCircle(0, dOs/2, 0, dOtv / 2, dOs/2, 0);
-			boolstatus = Part.SketchManager.CreateCircularSketchStepAndRepeat(dOs/2, 4.71238898038473, count, 4.71238898038473 / 2 * 4/ count, true, "", false, false, true);
+			boolstatus = Part.SketchManager.CreateCircularSketchStepAndRepeat(dOs/2, 4.71238898038473, 
+				count, 4.71238898038473 / 2 * 4/ count, true, "", false, false, true);
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
 
 			boolstatus = Part.Extension.SelectByID2("Эскиз6", "SKETCH", 0, 0, 0, false, 0, null, 0);
 			feat = Part.FeatureManager.FeatureCut4(true, false, false, 1, 0, 0.01, 0.01, false, false, false, false,
-				1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, true, true, true, true, true, false, 0, 0, false, true);
+				1.74532925199433E-02, 1.74532925199433E-02, false, false, false, 
+				false, true, true, true, true, true, false, 0, 0, false, true);
 			Part.SelectionManager.EnableContourSelection = false;
 
 			Part.ClearSelection2(true);

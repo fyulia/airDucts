@@ -14,9 +14,10 @@ namespace airDucts
 	{
 		
 		bool boolstatus;
-		Feature feat;
+		Feature feat; 
 		RefPlane refPlane;
 		SketchSegment skSegment;
+
 		public void createPrVozd(double dlin, double shir, double vys,double zazor, IModelDoc2 Part)
 		{
 			//double zazor = 0.002;
@@ -89,8 +90,6 @@ namespace airDucts
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
 
-			//swApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
-
 			skSegment = (SketchSegment)Part.SketchManager.CreateArc(0, 0, 0, -diam / 2, 0, 0, 0, diam / 2, 0, 1);
 
 			Part.AddDimension2(-diam * 2 / 3, diam, 2.5);
@@ -124,7 +123,6 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Плоскость4", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.SketchManager.InsertSketch(true);
 
-			//swApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
 			skSegment = (SketchSegment)Part.SketchManager.CreateArc(0, 0, 0, -diam / 2, 0, 0, 0, diam / 2, 0, 1);
 
 			Part.AddDimension2(-diam * 2 / 3, diam, 2.5);

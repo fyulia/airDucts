@@ -77,9 +77,9 @@ namespace airDucts
 
 			refPlane = (RefPlane)Part.FeatureManager.InsertRefPlane(1, 0, 4, 0, 0, 0);
 			Part.ClearSelection2(true);
+
 			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.SketchManager.InsertSketch(true);
-
 
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin2 / 2, 0, 0, -dlin2 / 2, shir2 / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(-dlin2 / 2, shir2 / 2, 0, dlin2 / 2, shir2 / 2, 0.0);
@@ -212,7 +212,8 @@ namespace airDucts
 			CustomBendAllowance customBendAllowanceData;
 			customBendAllowanceData = Part.FeatureManager.CreateCustomBendAllowance();
 			customBendAllowanceData.KFactor = 0.5;
-			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(zazor, false, zazor, vys2, 0, false, 0, 0, 1, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
+			feat = Part.FeatureManager.InsertSheetMetalBaseFlange2(zazor, false, zazor, vys2, 0, 
+				false, 0, 0, 1, customBendAllowanceData, false, 0, 0.0001, 0.0001, 0.5, true, false, true, true);
 
 			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);
 			Part.SketchManager.InsertSketch(true);
@@ -221,7 +222,9 @@ namespace airDucts
 			Part.ClearSelection2(true);
 
 			boolstatus = Part.Extension.SelectByID2("Эскиз8", "SKETCH", 0, 0, 0, false, 0, null, 0);
-			feat = Part.FeatureManager.FeatureCut4(true, false, false, 2, 0, 0.01, 0.01, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, false, true, true, true, true, false, 0, 0, false, false);
+			feat = Part.FeatureManager.FeatureCut4(true, false, false, 2, 0, 0.01,
+				0.01, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02,
+				false, false, false, false, false, true, true, true, true, false, 0, 0, false, false);
 			Part.SelectionManager.EnableContourSelection = false;
 
 			boolstatus = Part.Extension.SelectByID2("Плоскость5", "PLANE", 0, 0, 0, false, 0, null, 0);

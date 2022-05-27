@@ -1,7 +1,7 @@
 ﻿
 namespace airDucts
 {
-	partial class Form1
+	partial class Interface
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,9 +29,29 @@ namespace airDucts
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interface));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage21 = new System.Windows.Forms.TabPage();
+			this.label236 = new System.Windows.Forms.Label();
+			this.label235 = new System.Windows.Forms.Label();
+			this.label234 = new System.Windows.Forms.Label();
+			this.label233 = new System.Windows.Forms.Label();
+			this.label232 = new System.Windows.Forms.Label();
+			this.label231 = new System.Windows.Forms.Label();
+			this.label230 = new System.Windows.Forms.Label();
+			this.label229 = new System.Windows.Forms.Label();
+			this.label228 = new System.Windows.Forms.Label();
+			this.label227 = new System.Windows.Forms.Label();
+			this.label226 = new System.Windows.Forms.Label();
+			this.label225 = new System.Windows.Forms.Label();
+			this.label224 = new System.Windows.Forms.Label();
+			this.label223 = new System.Windows.Forms.Label();
+			this.label222 = new System.Windows.Forms.Label();
+			this.label221 = new System.Windows.Forms.Label();
+			this.label220 = new System.Windows.Forms.Label();
+			this.label219 = new System.Windows.Forms.Label();
+			this.label218 = new System.Windows.Forms.Label();
+			this.label217 = new System.Windows.Forms.Label();
 			this.label216 = new System.Windows.Forms.Label();
 			this.label215 = new System.Windows.Forms.Label();
 			this.label213 = new System.Windows.Forms.Label();
@@ -428,26 +448,6 @@ namespace airDucts
 			this.pictureBox15 = new System.Windows.Forms.PictureBox();
 			this.txt_hint1 = new System.Windows.Forms.TextBox();
 			this.txt_hint2 = new System.Windows.Forms.TextBox();
-			this.label217 = new System.Windows.Forms.Label();
-			this.label218 = new System.Windows.Forms.Label();
-			this.label219 = new System.Windows.Forms.Label();
-			this.label220 = new System.Windows.Forms.Label();
-			this.label221 = new System.Windows.Forms.Label();
-			this.label222 = new System.Windows.Forms.Label();
-			this.label223 = new System.Windows.Forms.Label();
-			this.label224 = new System.Windows.Forms.Label();
-			this.label225 = new System.Windows.Forms.Label();
-			this.label226 = new System.Windows.Forms.Label();
-			this.label227 = new System.Windows.Forms.Label();
-			this.label228 = new System.Windows.Forms.Label();
-			this.label229 = new System.Windows.Forms.Label();
-			this.label230 = new System.Windows.Forms.Label();
-			this.label231 = new System.Windows.Forms.Label();
-			this.label232 = new System.Windows.Forms.Label();
-			this.label233 = new System.Windows.Forms.Label();
-			this.label234 = new System.Windows.Forms.Label();
-			this.label235 = new System.Windows.Forms.Label();
-			this.label236 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage21.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -576,6 +576,186 @@ namespace airDucts
 			this.tabPage21.TabIndex = 8;
 			this.tabPage21.Text = "Главная";
 			this.tabPage21.UseVisualStyleBackColor = true;
+			// 
+			// label236
+			// 
+			this.label236.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label236.Location = new System.Drawing.Point(560, 565);
+			this.label236.Name = "label236";
+			this.label236.Size = new System.Drawing.Size(75, 21);
+			this.label236.TabIndex = 59;
+			this.label236.Text = "сечения";
+			// 
+			// label235
+			// 
+			this.label235.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label235.Location = new System.Drawing.Point(516, 544);
+			this.label235.Name = "label235";
+			this.label235.Size = new System.Drawing.Size(182, 21);
+			this.label235.TabIndex = 58;
+			this.label235.Text = "Фланец прямоугольного";
+			// 
+			// label234
+			// 
+			this.label234.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label234.Location = new System.Drawing.Point(803, 560);
+			this.label234.Name = "label234";
+			this.label234.Size = new System.Drawing.Size(75, 21);
+			this.label234.TabIndex = 57;
+			this.label234.Text = "сечения";
+			// 
+			// label233
+			// 
+			this.label233.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label233.Location = new System.Drawing.Point(783, 539);
+			this.label233.Name = "label233";
+			this.label233.Size = new System.Drawing.Size(165, 21);
+			this.label233.TabIndex = 56;
+			this.label233.Text = "Фланец круглого";
+			// 
+			// label232
+			// 
+			this.label232.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label232.Location = new System.Drawing.Point(246, 527);
+			this.label232.Name = "label232";
+			this.label232.Size = new System.Drawing.Size(187, 43);
+			this.label232.TabIndex = 55;
+			this.label232.Text = "Тройник круглого сечения с прямоугольной врезкой";
+			// 
+			// label231
+			// 
+			this.label231.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label231.Location = new System.Drawing.Point(1040, 336);
+			this.label231.Name = "label231";
+			this.label231.Size = new System.Drawing.Size(187, 43);
+			this.label231.TabIndex = 54;
+			this.label231.Text = "Тройник круглого сечения с круглой врезкой";
+			// 
+			// label230
+			// 
+			this.label230.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label230.Location = new System.Drawing.Point(839, 346);
+			this.label230.Name = "label230";
+			this.label230.Size = new System.Drawing.Size(195, 43);
+			this.label230.TabIndex = 53;
+			this.label230.Text = "Тройник прямоугольного сечения с круглой врезкой";
+			// 
+			// label229
+			// 
+			this.label229.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label229.Location = new System.Drawing.Point(690, 381);
+			this.label229.Name = "label229";
+			this.label229.Size = new System.Drawing.Size(75, 21);
+			this.label229.TabIndex = 52;
+			this.label229.Text = "врезкой";
+			// 
+			// label228
+			// 
+			this.label228.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label228.Location = new System.Drawing.Point(640, 347);
+			this.label228.Name = "label228";
+			this.label228.Size = new System.Drawing.Size(195, 43);
+			this.label228.TabIndex = 51;
+			this.label228.Text = "Тройник прямоугольного сечения с прямоугольной";
+			// 
+			// label227
+			// 
+			this.label227.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label227.Location = new System.Drawing.Point(494, 368);
+			this.label227.Name = "label227";
+			this.label227.Size = new System.Drawing.Size(75, 21);
+			this.label227.TabIndex = 50;
+			this.label227.Text = "сечения";
+			// 
+			// label226
+			// 
+			this.label226.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label226.Location = new System.Drawing.Point(462, 347);
+			this.label226.Name = "label226";
+			this.label226.Size = new System.Drawing.Size(164, 21);
+			this.label226.TabIndex = 49;
+			this.label226.Text = "Заглушка круглого";
+			// 
+			// label225
+			// 
+			this.label225.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label225.Location = new System.Drawing.Point(306, 368);
+			this.label225.Name = "label225";
+			this.label225.Size = new System.Drawing.Size(75, 21);
+			this.label225.TabIndex = 48;
+			this.label225.Text = "сечения";
+			// 
+			// label224
+			// 
+			this.label224.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label224.Location = new System.Drawing.Point(251, 347);
+			this.label224.Name = "label224";
+			this.label224.Size = new System.Drawing.Size(195, 21);
+			this.label224.TabIndex = 47;
+			this.label224.Text = "Заглушка прямоугольного";
+			// 
+			// label223
+			// 
+			this.label223.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label223.Location = new System.Drawing.Point(114, 390);
+			this.label223.Name = "label223";
+			this.label223.Size = new System.Drawing.Size(75, 21);
+			this.label223.TabIndex = 46;
+			this.label223.Text = "сечения";
+			// 
+			// label222
+			// 
+			this.label222.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label222.Location = new System.Drawing.Point(94, 369);
+			this.label222.Name = "label222";
+			this.label222.Size = new System.Drawing.Size(134, 21);
+			this.label222.TabIndex = 45;
+			this.label222.Text = "Отвод круглого";
+			// 
+			// label221
+			// 
+			this.label221.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label221.Location = new System.Drawing.Point(1106, 171);
+			this.label221.Name = "label221";
+			this.label221.Size = new System.Drawing.Size(75, 21);
+			this.label221.TabIndex = 44;
+			this.label221.Text = "сечения";
+			// 
+			// label220
+			// 
+			this.label220.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label220.Location = new System.Drawing.Point(1059, 154);
+			this.label220.Name = "label220";
+			this.label220.Size = new System.Drawing.Size(193, 21);
+			this.label220.TabIndex = 43;
+			this.label220.Text = "Отвод прямоугольного";
+			// 
+			// label219
+			// 
+			this.label219.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label219.Location = new System.Drawing.Point(917, 187);
+			this.label219.Name = "label219";
+			this.label219.Size = new System.Drawing.Size(75, 21);
+			this.label219.TabIndex = 42;
+			this.label219.Text = "сечения";
+			// 
+			// label218
+			// 
+			this.label218.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label218.Location = new System.Drawing.Point(885, 171);
+			this.label218.Name = "label218";
+			this.label218.Size = new System.Drawing.Size(136, 21);
+			this.label218.TabIndex = 41;
+			this.label218.Text = "Переход круглого";
+			// 
+			// label217
+			// 
+			this.label217.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label217.Location = new System.Drawing.Point(722, 188);
+			this.label217.Name = "label217";
+			this.label217.Size = new System.Drawing.Size(75, 21);
+			this.label217.TabIndex = 40;
+			this.label217.Text = "сечения";
 			// 
 			// label216
 			// 
@@ -1132,8 +1312,7 @@ namespace airDucts
 			this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox4.Size = new System.Drawing.Size(587, 125);
 			this.textBox4.TabIndex = 11;
-			this.textBox4.Text = "Прямоугольный воздуховод является составной частью вентиляционной системы здания." +
-    "";
+			this.textBox4.Text = "Круглый воздуховод является составной частью вентиляционной системы здания.";
 			this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// groupBox4
@@ -1681,8 +1860,9 @@ namespace airDucts
 			this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox5.Size = new System.Drawing.Size(587, 125);
 			this.textBox5.TabIndex = 18;
-			this.textBox5.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox5.Text = "Переход прямоугольного сечения предназначен для перехода с прямоугольного на круг" +
+    "лое сечение.\r\nДанный вид перехода позволяет компоновать в системе разные сечения" +
+    ". ";
 			this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// groupBox5
@@ -1984,8 +2164,8 @@ namespace airDucts
 			this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox6.Size = new System.Drawing.Size(587, 125);
 			this.textBox6.TabIndex = 19;
-			this.textBox6.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox6.Text = "Переход с круглого сечения на круглое сечение для систем воздуховодов предназначе" +
+    "ны для плавного перехода системы с одного круглого сечения на другое сечение\r\n";
 			this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// groupBox6
@@ -2265,8 +2445,8 @@ namespace airDucts
 			this.textBox8.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox8.Size = new System.Drawing.Size(587, 125);
 			this.textBox8.TabIndex = 12;
-			this.textBox8.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox8.Text = "Отводы 90 градусов прямоугольного сечения предназначены для плавного направления " +
+    "системы воздуховодов под углом 90 градусов по горизонтали или вертикали";
 			this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// bt_Next41
@@ -2526,8 +2706,8 @@ namespace airDucts
 			this.textBox9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox9.Size = new System.Drawing.Size(587, 125);
 			this.textBox9.TabIndex = 16;
-			this.textBox9.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox9.Text = "Отводы 90 градусов круглого сечения предназначены для плавного направления систем" +
+    "ы воздуховодов под углом 90 градусов по горизонтали или вертикали.";
 			this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// bt_Next42
@@ -2780,7 +2960,6 @@ namespace airDucts
 			this.cb51_vys.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb51_vys.Location = new System.Drawing.Point(446, 63);
 			this.cb51_vys.Name = "cb51_vys";
-			this.cb51_vys.ReadOnly = true;
 			this.cb51_vys.Size = new System.Drawing.Size(87, 29);
 			this.cb51_vys.TabIndex = 21;
 			this.cb51_vys.Text = "20";
@@ -2967,8 +3146,8 @@ namespace airDucts
 			this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox7.Size = new System.Drawing.Size(581, 125);
 			this.textBox7.TabIndex = 13;
-			this.textBox7.Text = "Заглушка прямоугольного сечения является фасонным элементом, использующаяся для п" +
-    "ерекрытия торца воздуховода или фасонной детали стоящей в конце системы";
+			this.textBox7.Text = "Заглушка круглого сечения является фасонным элементом, использующаяся для перекры" +
+    "тия торца воздуховода или фасонной детали стоящей в конце системы";
 			this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// groupBox7
@@ -3026,7 +3205,6 @@ namespace airDucts
 			this.cb52_vys.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb52_vys.Location = new System.Drawing.Point(196, 97);
 			this.cb52_vys.Name = "cb52_vys";
-			this.cb52_vys.ReadOnly = true;
 			this.cb52_vys.Size = new System.Drawing.Size(91, 29);
 			this.cb52_vys.TabIndex = 22;
 			this.cb52_vys.Text = "20";
@@ -3155,7 +3333,7 @@ namespace airDucts
 			this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage16.Size = new System.Drawing.Size(1296, 558);
 			this.tabPage16.TabIndex = 0;
-			this.tabPage16.Text = "Тройник прямоугольного сечения";
+			this.tabPage16.Text = "Тройник прямоугольного сечения с прямоугольной врезкой";
 			this.tabPage16.UseVisualStyleBackColor = true;
 			// 
 			// textBox10
@@ -3169,8 +3347,8 @@ namespace airDucts
 			this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox10.Size = new System.Drawing.Size(587, 125);
 			this.textBox10.TabIndex = 12;
-			this.textBox10.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox10.Text = "Тройники прямоугольного сечения с прямоугольной врезкой систем воздуховодов предн" +
+    "азначены для разводки по горизонтали или вертикали сеть воздуховодов.";
 			this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// bt_Next61
@@ -3264,7 +3442,6 @@ namespace airDucts
 			this.cb61_vys2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb61_vys2.Location = new System.Drawing.Point(443, 118);
 			this.cb61_vys2.Name = "cb61_vys2";
-			this.cb61_vys2.ReadOnly = true;
 			this.cb61_vys2.Size = new System.Drawing.Size(96, 29);
 			this.cb61_vys2.TabIndex = 32;
 			this.cb61_vys2.Text = "100";
@@ -3548,7 +3725,7 @@ namespace airDucts
 			this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage17.Size = new System.Drawing.Size(1296, 558);
 			this.tabPage17.TabIndex = 1;
-			this.tabPage17.Text = "Тройник прямоугольного кр";
+			this.tabPage17.Text = "Тройник прямоугольного сечения с круглой врезкой";
 			this.tabPage17.UseVisualStyleBackColor = true;
 			// 
 			// textBox11
@@ -3562,8 +3739,9 @@ namespace airDucts
 			this.textBox11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox11.Size = new System.Drawing.Size(587, 125);
 			this.textBox11.TabIndex = 16;
-			this.textBox11.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox11.Text = "Тройник прямоугольного сечения с круглой врезкой используется для изменения сечен" +
+    "ия вентиляционного канала с прямоугольного на круглое, а также для изменения нап" +
+    "равления.";
 			this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// bt_Nezt62
@@ -3651,7 +3829,6 @@ namespace airDucts
 			this.cb62_vys2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb62_vys2.Location = new System.Drawing.Point(452, 76);
 			this.cb62_vys2.Name = "cb62_vys2";
-			this.cb62_vys2.ReadOnly = true;
 			this.cb62_vys2.Size = new System.Drawing.Size(84, 29);
 			this.cb62_vys2.TabIndex = 32;
 			this.cb62_vys2.Text = "100";
@@ -3896,7 +4073,7 @@ namespace airDucts
 			this.tabPage18.Name = "tabPage18";
 			this.tabPage18.Size = new System.Drawing.Size(1296, 558);
 			this.tabPage18.TabIndex = 2;
-			this.tabPage18.Text = "Тройник круглого сечения";
+			this.tabPage18.Text = "Тройник круглого сечения с круглой врезкой";
 			this.tabPage18.UseVisualStyleBackColor = true;
 			// 
 			// textBox13
@@ -3910,8 +4087,7 @@ namespace airDucts
 			this.textBox13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox13.Size = new System.Drawing.Size(587, 125);
 			this.textBox13.TabIndex = 24;
-			this.textBox13.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox13.Text = resources.GetString("textBox13.Text");
 			this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// bt_Next63
@@ -3986,7 +4162,6 @@ namespace airDucts
 			this.cb63_vys2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb63_vys2.Location = new System.Drawing.Point(452, 80);
 			this.cb63_vys2.Name = "cb63_vys2";
-			this.cb63_vys2.ReadOnly = true;
 			this.cb63_vys2.Size = new System.Drawing.Size(84, 29);
 			this.cb63_vys2.TabIndex = 37;
 			this.cb63_vys2.Text = "100";
@@ -4200,7 +4375,7 @@ namespace airDucts
 			this.tabPage19.Name = "tabPage19";
 			this.tabPage19.Size = new System.Drawing.Size(1296, 558);
 			this.tabPage19.TabIndex = 3;
-			this.tabPage19.Text = "Тройник круглого пр";
+			this.tabPage19.Text = "Тройник круглого сечения с прямоугольной врезкой";
 			this.tabPage19.UseVisualStyleBackColor = true;
 			// 
 			// textBox12
@@ -4214,8 +4389,8 @@ namespace airDucts
 			this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox12.Size = new System.Drawing.Size(587, 125);
 			this.textBox12.TabIndex = 20;
-			this.textBox12.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox12.Text = "Тройник круглого сечения с прямоугольной врезкой используется для разветвления ве" +
+    "нтиляционного канала и изменения сечения с круглого на прямоугольное.";
 			this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// bt_Next64
@@ -4295,7 +4470,6 @@ namespace airDucts
 			this.cb64_vys2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cb64_vys2.Location = new System.Drawing.Point(155, 119);
 			this.cb64_vys2.Name = "cb64_vys2";
-			this.cb64_vys2.ReadOnly = true;
 			this.cb64_vys2.Size = new System.Drawing.Size(91, 29);
 			this.cb64_vys2.TabIndex = 33;
 			this.cb64_vys2.Text = "100";
@@ -4586,8 +4760,8 @@ namespace airDucts
 			this.textBox14.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox14.Size = new System.Drawing.Size(587, 125);
 			this.textBox14.TabIndex = 22;
-			this.textBox14.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox14.Text = "Фланцы прямоугольного сечения применяются в качестве элемента соединения одного п" +
+    "рямоугольного изделия с другим одинаковых присоединительных размеров.";
 			this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// groupBox14
@@ -4835,8 +5009,8 @@ namespace airDucts
 			this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox17.Size = new System.Drawing.Size(587, 125);
 			this.textBox17.TabIndex = 22;
-			this.textBox17.Text = "Переход с прямоугольного на прямоугольное сечение является фасонным элементом, по" +
-    "зволяющим соединить воздуховоды с разным размером прямоугольных сечений.\r\n";
+			this.textBox17.Text = "Фланцы круглого сечения применяются в качестве элемента соединения одного круглог" +
+    "о изделия с другим одинаковых присоединительных размеров.";
 			this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// groupBox15
@@ -5031,187 +5205,7 @@ namespace airDucts
 			this.txt_hint2.Size = new System.Drawing.Size(360, 90);
 			this.txt_hint2.TabIndex = 13;
 			// 
-			// label217
-			// 
-			this.label217.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label217.Location = new System.Drawing.Point(722, 188);
-			this.label217.Name = "label217";
-			this.label217.Size = new System.Drawing.Size(75, 21);
-			this.label217.TabIndex = 40;
-			this.label217.Text = "сечения";
-			// 
-			// label218
-			// 
-			this.label218.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label218.Location = new System.Drawing.Point(885, 171);
-			this.label218.Name = "label218";
-			this.label218.Size = new System.Drawing.Size(136, 21);
-			this.label218.TabIndex = 41;
-			this.label218.Text = "Переход круглого";
-			// 
-			// label219
-			// 
-			this.label219.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label219.Location = new System.Drawing.Point(917, 187);
-			this.label219.Name = "label219";
-			this.label219.Size = new System.Drawing.Size(75, 21);
-			this.label219.TabIndex = 42;
-			this.label219.Text = "сечения";
-			// 
-			// label220
-			// 
-			this.label220.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label220.Location = new System.Drawing.Point(1059, 154);
-			this.label220.Name = "label220";
-			this.label220.Size = new System.Drawing.Size(193, 21);
-			this.label220.TabIndex = 43;
-			this.label220.Text = "Отвод прямоугольного";
-			// 
-			// label221
-			// 
-			this.label221.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label221.Location = new System.Drawing.Point(1106, 171);
-			this.label221.Name = "label221";
-			this.label221.Size = new System.Drawing.Size(75, 21);
-			this.label221.TabIndex = 44;
-			this.label221.Text = "сечения";
-			// 
-			// label222
-			// 
-			this.label222.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label222.Location = new System.Drawing.Point(94, 369);
-			this.label222.Name = "label222";
-			this.label222.Size = new System.Drawing.Size(134, 21);
-			this.label222.TabIndex = 45;
-			this.label222.Text = "Отвод круглого";
-			// 
-			// label223
-			// 
-			this.label223.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label223.Location = new System.Drawing.Point(114, 390);
-			this.label223.Name = "label223";
-			this.label223.Size = new System.Drawing.Size(75, 21);
-			this.label223.TabIndex = 46;
-			this.label223.Text = "сечения";
-			// 
-			// label224
-			// 
-			this.label224.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label224.Location = new System.Drawing.Point(251, 347);
-			this.label224.Name = "label224";
-			this.label224.Size = new System.Drawing.Size(195, 21);
-			this.label224.TabIndex = 47;
-			this.label224.Text = "Заглушка прямоугольного";
-			// 
-			// label225
-			// 
-			this.label225.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label225.Location = new System.Drawing.Point(306, 368);
-			this.label225.Name = "label225";
-			this.label225.Size = new System.Drawing.Size(75, 21);
-			this.label225.TabIndex = 48;
-			this.label225.Text = "сечения";
-			// 
-			// label226
-			// 
-			this.label226.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label226.Location = new System.Drawing.Point(462, 347);
-			this.label226.Name = "label226";
-			this.label226.Size = new System.Drawing.Size(164, 21);
-			this.label226.TabIndex = 49;
-			this.label226.Text = "Заглушка круглого";
-			// 
-			// label227
-			// 
-			this.label227.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label227.Location = new System.Drawing.Point(494, 368);
-			this.label227.Name = "label227";
-			this.label227.Size = new System.Drawing.Size(75, 21);
-			this.label227.TabIndex = 50;
-			this.label227.Text = "сечения";
-			// 
-			// label228
-			// 
-			this.label228.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label228.Location = new System.Drawing.Point(640, 347);
-			this.label228.Name = "label228";
-			this.label228.Size = new System.Drawing.Size(195, 43);
-			this.label228.TabIndex = 51;
-			this.label228.Text = "Тройник прямоугольного сечения с прямоугольной";
-			// 
-			// label229
-			// 
-			this.label229.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label229.Location = new System.Drawing.Point(690, 381);
-			this.label229.Name = "label229";
-			this.label229.Size = new System.Drawing.Size(75, 21);
-			this.label229.TabIndex = 52;
-			this.label229.Text = "врезкой";
-			// 
-			// label230
-			// 
-			this.label230.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label230.Location = new System.Drawing.Point(839, 346);
-			this.label230.Name = "label230";
-			this.label230.Size = new System.Drawing.Size(195, 43);
-			this.label230.TabIndex = 53;
-			this.label230.Text = "Тройник прямоугольного сечения с круглой врезкой";
-			// 
-			// label231
-			// 
-			this.label231.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label231.Location = new System.Drawing.Point(1040, 336);
-			this.label231.Name = "label231";
-			this.label231.Size = new System.Drawing.Size(187, 43);
-			this.label231.TabIndex = 54;
-			this.label231.Text = "Тройник круглого сечения с круглой врезкой";
-			// 
-			// label232
-			// 
-			this.label232.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label232.Location = new System.Drawing.Point(246, 527);
-			this.label232.Name = "label232";
-			this.label232.Size = new System.Drawing.Size(187, 43);
-			this.label232.TabIndex = 55;
-			this.label232.Text = "Тройник круглого сечения с прямоугольной врезкой";
-			// 
-			// label233
-			// 
-			this.label233.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label233.Location = new System.Drawing.Point(783, 539);
-			this.label233.Name = "label233";
-			this.label233.Size = new System.Drawing.Size(165, 21);
-			this.label233.TabIndex = 56;
-			this.label233.Text = "Фланец круглого";
-			// 
-			// label234
-			// 
-			this.label234.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label234.Location = new System.Drawing.Point(803, 560);
-			this.label234.Name = "label234";
-			this.label234.Size = new System.Drawing.Size(75, 21);
-			this.label234.TabIndex = 57;
-			this.label234.Text = "сечения";
-			// 
-			// label235
-			// 
-			this.label235.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label235.Location = new System.Drawing.Point(516, 544);
-			this.label235.Name = "label235";
-			this.label235.Size = new System.Drawing.Size(182, 21);
-			this.label235.TabIndex = 58;
-			this.label235.Text = "Фланец прямоугольного";
-			// 
-			// label236
-			// 
-			this.label236.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label236.Location = new System.Drawing.Point(560, 565);
-			this.label236.Name = "label236";
-			this.label236.Size = new System.Drawing.Size(75, 21);
-			this.label236.TabIndex = 59;
-			this.label236.Text = "сечения";
-			// 
-			// Form1
+			// Interface
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -5223,7 +5217,7 @@ namespace airDucts
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximumSize = new System.Drawing.Size(1330, 800);
-			this.Name = "Form1";
+			this.Name = "Interface";
 			this.Text = "Воздуховоды и фасонные элементы";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tabControl1.ResumeLayout(false);

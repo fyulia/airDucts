@@ -19,7 +19,7 @@ using System.IO;
 
 namespace airDucts
 {
-	public partial class Form1 : Form
+	public partial class Interface : Form
 	{
 
 		private SqlConnection sqlConnection = null;
@@ -36,7 +36,7 @@ namespace airDucts
 		int lWarnings;
 
 		string assPut;
-		public Form1()
+		public Interface()
 		{
 			InitializeComponent();	
 
@@ -127,10 +127,7 @@ namespace airDucts
 
 
 		private void Form1_Load(object sender, EventArgs e)
-		{
-
-			
-
+		{			
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT DISTINCT dlin  FROM vozdPr", sqlConnection);
 
@@ -344,6 +341,9 @@ namespace airDucts
 		{
 			
 			cb1_shir.Enabled = true;
+			cb1_shir.Text = "";
+
+
 			string str = cb1_dlin.SelectedItem.ToString();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT  shir FROM vozdPr WHERE dlin = @str ", sqlConnection);
@@ -365,6 +365,9 @@ namespace airDucts
 		private void cb1_shir_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb1_vys.Enabled = true;
+
+			
+
 			string str1 = cb1_dlin.SelectedItem.ToString();
 			string str2 = cb1_shir.SelectedItem.ToString();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
@@ -387,6 +390,7 @@ namespace airDucts
 
 		private void cb2_diam_SelectedIndexChanged(object sender, EventArgs e)
 		{
+			cb2_vys.Text = "";
 			string str1 = cb2_diam.SelectedItem.ToString();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT thick FROM vozdKr WHERE diam = @str1  ", sqlConnection);
@@ -408,6 +412,11 @@ namespace airDucts
 		private void cb31_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb31_shir.Enabled = true;
+			cb31_shir.Text = "";
+			cb31_dlin1.Text = "";
+			cb31_shir1.Text = "";
+			cb31_vys.Clear();
+			cb31_zazor.Clear();
 			string str = cb31_dlin.SelectedItem.ToString();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir1 FROM perehodPrPr WHERE dlin1 = @str ", sqlConnection);
@@ -429,8 +438,14 @@ namespace airDucts
 		private void cb31_shir_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb31_dlin1.Enabled = true;
+			
+			cb31_dlin1.Text = "";
+			cb31_shir1.Text = "";
+			cb31_vys.Clear();
+			cb31_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
-			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin2 FROM perehodPrPr WHERE dlin1 = " + cb31_dlin.SelectedItem.ToString() + " AND shir1 = " + cb31_shir.SelectedItem.ToString() + " ", sqlConnection);
+			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin2 FROM perehodPrPr WHERE dlin1 = " + cb31_dlin.SelectedItem.ToString() + " " +
+				"AND shir1 = " + cb31_shir.SelectedItem.ToString() + " ", sqlConnection);
 
 			sqlDataAdapter2 = new SqlDataAdapter(command);
 
@@ -448,6 +463,10 @@ namespace airDucts
 		private void cb31_dlin1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb31_shir1.Enabled = true;
+			
+			cb31_shir1.Text = "";
+			cb31_vys.Clear();
+			cb31_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir2,vys FROM perehodPrPr WHERE dlin1 = " + cb31_dlin.SelectedItem.ToString() + " AND shir1 = " + cb31_shir.SelectedItem.ToString() + " AND dlin2 = " + cb31_dlin1.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -468,6 +487,9 @@ namespace airDucts
 
 		private void cb31_shir1_SelectedIndexChanged(object sender, EventArgs e)
 		{
+			
+			
+			cb31_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command1 = new SqlCommand("SELECT DISTINCT thick FROM perehodPrPr WHERE shir1 = " + cb31_shir.SelectedItem.ToString() + " AND dlin2 = " + cb31_dlin1.SelectedItem.ToString() + " AND shir2 = " + cb31_shir1.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -487,6 +509,10 @@ namespace airDucts
 		private void cb32_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb32_shir.Enabled = true;
+			cb32_shir.Text = "";
+			cb32_diam.Text = "";
+			cb32_vys.Clear();
+			cb32_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM perehodPr WHERE dlin = " + cb32_dlin.SelectedItem.ToString() + "  ", sqlConnection);
 
@@ -506,6 +532,10 @@ namespace airDucts
 		private void cb32_shir_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb32_diam.Enabled = true;
+		
+			cb32_diam.Text = "";
+			cb32_vys.Clear();
+			cb32_zazor.Clear(); 
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT diam,thick FROM perehodPr WHERE dlin = " + cb32_dlin.SelectedItem.ToString() + " AND shir = " + cb32_shir.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -545,6 +575,9 @@ namespace airDucts
 		private void cb33_diam1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb33_diam2.Enabled = true;
+			cb33_diam2.Text = "";
+			cb33_vys.Clear();
+			cb33_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT diam2 FROM perehodKr WHERE diam1 = " + cb33_diam1.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -584,6 +617,9 @@ namespace airDucts
 		private void cb41_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb41_shir.Enabled = true;
+			cb41_shir.Text = "";
+			cb41_dlinOtvod.Clear();
+			cb41_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM otvodPr WHERE dlin = " + cb41_dlin.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -642,6 +678,7 @@ namespace airDucts
 		private void cb51_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb51_shir.Enabled = true;
+			cb51_shir.Text = "";
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM zaglPr WHERE dlin = " + cb51_dlin.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -661,6 +698,11 @@ namespace airDucts
 		private void cb61_dlin1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb61_shir1.Enabled = true;
+			cb61_shir1.Text = "";
+			cb61_dlin2.Text = "";
+			cb61_shir2.Text = "";
+			cb61_vys1.Clear();
+			cb61_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir1 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -680,6 +722,11 @@ namespace airDucts
 		private void cb61_shir1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb61_dlin2.Enabled = true;
+			
+			cb61_dlin2.Text = "";
+			cb61_shir2.Text = "";
+			cb61_vys1.Clear();
+			cb61_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin2 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " AND shir1 = " + cb61_shir1.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -699,6 +746,10 @@ namespace airDucts
 		private void cb62_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb62_shir.Enabled = true;
+			cb62_shir.Text = "";
+			cb62_diam.Text = "";
+			cb62_vys1.Clear();
+			cb62_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM troinicPrKr WHERE dlin = " + cb62_dlin.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -718,6 +769,10 @@ namespace airDucts
 		private void cb62_shir_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb62_diam.Enabled = true;
+		
+			cb62_diam.Text = "";
+			cb62_vys1.Clear();
+			cb62_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT diam FROM troinicPrKr WHERE dlin = " + cb62_dlin.SelectedItem.ToString() + " AND shir = " + cb62_shir.SelectedItem.ToString() + "", sqlConnection);
 
@@ -759,6 +814,9 @@ namespace airDucts
 		private void cb63_diam1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb63_diam2.Enabled = true;
+			cb63_diam2.Text = "";
+			cb63_vys1.Clear();
+			cb63_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT diam2 FROM troinicKrKr WHERE diam1 = " + cb63_diam1.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -798,6 +856,10 @@ namespace airDucts
 		private void cb64_diam_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb64_dlin.Enabled = true;
+			cb64_dlin.Text = "";
+			cb64_shir.Text = "";
+			cb64_vys1.Clear();
+			cb64_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT dlin FROM troinicKrPr WHERE diam = " + cb64_diam.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -817,7 +879,9 @@ namespace airDucts
 		private void cb64_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb64_shir.Enabled = true;
-
+			cb64_shir.Text = "";
+			cb64_vys1.Clear();
+			cb64_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir FROM troinicKrPr WHERE diam = " + cb64_diam.SelectedItem.ToString() + " AND dlin = " + cb64_dlin.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -860,6 +924,9 @@ namespace airDucts
 		private void cb71_dlin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb71_shir.Enabled = true;
+			cb71_shir.Text = "";
+			cb71_dOtv.Clear();
+			cb71_thick.Clear();
 			string str = cb71_dlin.SelectedItem.ToString();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT  shir1 FROM flanPr WHERE dlin1 =" + cb71_dlin.SelectedItem.ToString() + "", sqlConnection);
@@ -917,7 +984,8 @@ namespace airDucts
 
 
 		private void cb52_diam_SelectedIndexChanged(object sender, EventArgs e)
-		{
+		{ 
+			
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT thick FROM zaglKr WHERE diam = " + cb52_diam.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -936,6 +1004,7 @@ namespace airDucts
 
 		private void cb61_shir2_SelectedIndexChanged(object sender, EventArgs e)
 		{
+
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT thick,vys1 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " AND shir1 = " + cb61_shir1.SelectedItem.ToString() + " AND dlin2 = " + cb61_dlin2.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -957,6 +1026,10 @@ namespace airDucts
 		private void cb61_dlin2_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			cb61_shir2.Enabled = true;
+			
+			cb61_shir2.Text = "";
+			cb61_vys1.Clear();
+			cb61_zazor.Clear();
 			SqlConnection sqlConnection = new SqlConnection(@"Data Source=YULIAS\SQLEXPRESS;Initial Catalog=airDuct;Integrated Security=True");
 			SqlCommand command = new SqlCommand("SELECT DISTINCT shir2 FROM troinicPrPr WHERE dlin1 = " + cb61_dlin1.SelectedItem.ToString() + " AND shir1 = " + cb61_shir1.SelectedItem.ToString() + " AND dlin2 = " + cb61_dlin2.SelectedItem.ToString() + " ", sqlConnection);
 
@@ -1011,10 +1084,6 @@ namespace airDucts
 				dlin_pr = dlin_pr / 1000;
 				zazor_pr = zazor_pr / 1000;
 
-				
-
-				//string assName = swConfig.Name;
-				
 
 				iSwApp = new SldWorks();
 				iSwApp.Visible = true;
@@ -1028,7 +1097,7 @@ namespace airDucts
 				setMaterial();
 				savePart(name);
 				string assPath = Part.GetPathName();
-				MessageBox.Show(assPath);
+				//MessageBox.Show(assPath);
 
 				if (txt_hint1.TextLength == 0 && txt_hint2.TextLength == 0)
 				{
@@ -1039,10 +1108,6 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Длина: {dlin_pr * 1000}  Ширина: {shir_pr * 1000}";
 				}
-				//Закрытие открытых файлов компонентов в среде SolidWorks
-				//iSwApp.CloseDoc(assPath);
-
-				//string mainPath = txt_target + "\\" + txt_name + ".sldasm";
 
 
 				addComponent2(assPath);
@@ -1054,6 +1119,9 @@ namespace airDucts
 			if (string.IsNullOrEmpty(cb51_dlin.Text) || string.IsNullOrEmpty(cb51_shir.Text) )
 			{
 				System.Windows.Forms.MessageBox.Show("Заполните параметры для построения детали!");
+			}else if (Convert.ToInt32(cb51_vys.Text) < 20 || Convert.ToInt32(cb51_vys.Text) > 100)
+			{
+				MessageBox.Show("Высота заглушки должна быть в диапазоне от 20 до 100 мм");
 			}
 			else
 			{
@@ -1125,6 +1193,7 @@ namespace airDucts
 
 				airDuct duct2 = new airDuct();
 				duct2.createKrVozd(diam_kr, vys_kr, zazor_kr, Part);
+
 				setMaterial();
 				savePart(name);
 				
@@ -1398,11 +1467,9 @@ namespace airDucts
 
 				iSwApp = new SldWorks();
 				iSwApp.Visible = true;
-
 				iSwApp.NewPart();
 				Part = iSwApp.IActiveDoc2;
 
-				//Close();
 				iSwApp.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swInputDimValOnCreate, false);
 
 				Otvod otvod2 = new Otvod();
@@ -1413,17 +1480,11 @@ namespace airDucts
 				string assPath = Part.GetPathName();
 				tmpPath = Part.GetPathName();
 				tmpPath = tmpPath.Substring(0, tmpPath.Length - name.Length - 8);
-				//MessageBox.Show(tmpPath);
 
 				createAssembly(tmpPath, name2);
-
 				string path = Part.GetPathName();
-				//MessageBox.Show(path);
-
 				addComponent(Part, path, xAss, yAss, 0);
-
 				string assemblyPath = tmpPath + "\\" + name + ".sldasm";
-				//MessageBox.Show(assemblyPath);
 
 				createCircPattern(assemblyPath, name, name2);
 
@@ -1450,9 +1511,9 @@ namespace airDucts
 			int mateSelMark;
 			int errorCode1 = 0;
 			int mateError;
-
 			//Активация документа со сборкой
-			assembly = (AssemblyDoc)iSwApp.ActivateDoc3(assemblyPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errorCode1);
+			assembly = (AssemblyDoc)iSwApp.ActivateDoc3(assemblyPath, true, 
+				(int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errorCode1);
 			Part = (ModelDoc2)assembly;
 			//Иницииализация объекта для выбора элементов компонентов 
 			swModelDocExt = Part.Extension;
@@ -1466,7 +1527,8 @@ namespace airDucts
 			swModelDocExt.SelectByID2("Line1@Эскиз2@" + partName + "-1@" + assemblyName, "EXTSKETCHSEGMENT", 0, 0, 0,
 				true, 2, null, 0);
 
-			swFeature = (Feature)swFeatureManager.FeatureCircularPattern5(6, 0.26179938779915,true, "NULL",false,false,false,false,false,false,0,0, "NULL",false);
+			swFeature = (Feature)swFeatureManager.FeatureCircularPattern5(6, 0.26179938779915,
+				true, "NULL",false,false,false,false,false,false,0,0, "NULL",false);
 			Part.ForceRebuild3(false);
 		}
 
@@ -1475,6 +1537,10 @@ namespace airDucts
 			if (string.IsNullOrEmpty(cb61_dlin1.Text) || string.IsNullOrEmpty(cb61_dlin2.Text) || string.IsNullOrEmpty(cb61_shir1.Text) || string.IsNullOrEmpty(cb61_shir2.Text))
 			{
 				System.Windows.Forms.MessageBox.Show("Заполните параметры для построения детали!");
+			}
+			else if (Convert.ToInt32(cb61_vys2.Text) > 100)
+			{
+				MessageBox.Show("Высота врезки должна быть не больше 100 мм");
 			}
 			else
 			{
@@ -1487,7 +1553,7 @@ namespace airDucts
 				vys2 = Convert.ToDouble(cb61_vys2.Text);
 				zazor = Convert.ToDouble(cb61_zazor.Text);
 
-				string name = $"Отвод прямоугольного сечения с прямоугольной врезкой_{dlin1}x{shir1}_{dlin2}x{shir2}";
+				string name = $"Тройник прямоугольного сечения с прямоугольной врезкой_{dlin1}x{shir1}_{dlin2}x{shir2}";
 
 				dlin1 = dlin1 / 1000;
 				shir1 = shir1 / 1000;
@@ -1496,8 +1562,6 @@ namespace airDucts
 				vys1 = vys1 / 1000;
 				vys2 = vys2 / 1000;
 				zazor = zazor / 1000;
-
-
 				iSwApp = new SldWorks();
 				iSwApp.Visible = true;
 
@@ -1533,6 +1597,10 @@ namespace airDucts
 			{
 				System.Windows.Forms.MessageBox.Show("Заполните параметры для построения детали!");
 			}
+			else if (Convert.ToInt32(cb62_vys2.Text) > 100)
+			{
+				MessageBox.Show("Высота врезки должна быть не больше 100 мм");
+			}
 			else
 			{
 				double dlin, shir, vys1, diam, vys2, zazor;
@@ -1543,7 +1611,7 @@ namespace airDucts
 				vys2 = Convert.ToDouble(cb62_vys2.Text);
 				zazor = Convert.ToDouble(cb62_zazor.Text);
 
-				string name = $"Отвод прямоугольного сечения с круглой врезкой_{dlin}x{shir}_{diam}";
+				string name = $"Тройник прямоугольного сечения с круглой врезкой_{dlin}x{shir}_{diam}";
 
 				dlin = dlin / 1000;
 				shir = shir / 1000;
@@ -1588,6 +1656,10 @@ namespace airDucts
 			{
 				System.Windows.Forms.MessageBox.Show("Заполните параметры для построения детали!");
 			}
+			else if (Convert.ToInt32(cb63_vys2.Text) > 100)
+			{
+				MessageBox.Show("Высота врезки должна быть не больше 100 мм");
+			}
 			else
 			{
 				double diam1, diam2, vys1, vys2, zazor;
@@ -1597,7 +1669,7 @@ namespace airDucts
 				vys2 = Convert.ToDouble(cb63_vys2.Text);
 				zazor = Convert.ToDouble(cb63_zazor.Text);
 
-				string name = $"Отвод круглого сечения с круглой врезкой_{diam1}_{diam2}";
+				string name = $"Тройник круглого сечения с круглой врезкой_{diam1}_{diam2}";
 
 				diam1 = diam1 / 1000;
 				diam2 = diam2 / 1000;
@@ -1641,6 +1713,10 @@ namespace airDucts
 			{
 				System.Windows.Forms.MessageBox.Show("Заполните параметры для построения детали!");
 			}
+			else if (Convert.ToInt32(cb64_vys2.Text) > 100)
+			{
+				MessageBox.Show("Высота врезки должна быть не больше 100 мм");
+			}
 			else
 			{
 				double dlin, shir, vys1, diam, vys2, zazor;
@@ -1651,7 +1727,7 @@ namespace airDucts
 				vys2 = Convert.ToDouble(cb64_vys2.Text);
 				zazor = Convert.ToDouble(cb64_zazor.Text);
 
-				string name = $"Отвод круглого сечения с прямоугольной врезкой_{diam}_{dlin}x{shir}";
+				string name = $"Тройник круглого сечения с прямоугольной врезкой_{diam}_{dlin}x{shir}";
 
 
 				dlin = dlin / 1000;
@@ -1847,6 +1923,10 @@ namespace airDucts
 			{
 				System.Windows.Forms.MessageBox.Show("Заполните параметры для построения детали!");
 			}
+			else if (Convert.ToInt32(cb52_vys.Text) < 20 || Convert.ToInt32(cb52_vys.Text) > 100)
+			{
+				MessageBox.Show("Высота заглушки должна быть в диапазоне от 20 до 100 мм");
+			}
 			else
 			{
 				double diam, vys, thick;
@@ -1875,20 +1955,17 @@ namespace airDucts
 				savePart(name2);
 
 				string assPath = Part.GetPathName();
-				tmpPath = Part.GetPathName();
-				tmpPath = tmpPath.Substring(0, tmpPath.Length - name2.Length - 8);
-				MessageBox.Show(tmpPath);
-
+				//tmpPath = Part.GetPathName();
+				tmpPath = "C:\\Users\\YuliaS\\Desktop\\Воздуховоды";
+				//tmpPath = tmpPath.Substring(0, tmpPath.Length - name2.Length - 8);
+				//MessageBox.Show(tmpPath);
 				createAssembly(tmpPath, name);
-
-
 				string path = Part.GetPathName();
-				MessageBox.Show(path);
-
+				//MessageBox.Show(path);
 				addComponent(Part, path, 0, 0, thick / 2);
 
 				string assemblyPath = tmpPath + "\\" + name + ".sldasm";
-				MessageBox.Show(assemblyPath);
+				//MessageBox.Show(assemblyPath);
 
 				iSwApp.NewPart();
 				Part = iSwApp.IActiveDoc2;
@@ -1897,13 +1974,16 @@ namespace airDucts
 				setMaterial();
 				savePart(name3);
 				string path2 = Part.GetPathName();
-				MessageBox.Show(path2);
-				Part = (ModelDoc2)iSwApp.ActivateDoc3(assemblyPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
+				//MessageBox.Show(path2);
+				Part = (ModelDoc2)iSwApp.ActivateDoc3(assemblyPath, true, 
+					(int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
 				addComponent(Part, path2, 0, 0, -vys);
+
 
 				AddMates(assemblyPath, name, name3, name2, vys);
 
-				Part.SaveAs3(assemblyPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+				Part.SaveAs3(assemblyPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, 
+					(int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 
 				if (txt_hint1.TextLength == 0 && txt_hint2.TextLength == 0)
 				{
@@ -1933,8 +2013,27 @@ namespace airDucts
 				trg = target.SelectedPath;
 			}
 
+		
+			string name2 = trg + "\\" + name + ".sldprt";
+			if (File.Exists(name2))
+			{
+				//Такой файл уже существует в конечной папке
+				String[] dirsfile = Directory.GetFiles(Path.GetDirectoryName(name2), "*" + Path.GetExtension(name2).Remove(0, 1)); //Поиск всех файлов в папке с расширением
+				for (int i = 0; i < dirsfile.Length; i++)
+				{
+					string newname = Path.GetDirectoryName(name2) + "\\" + Path.GetFileNameWithoutExtension(name2) + i + Path.GetExtension(name2); //Новое имя файла
+					if (!File.Exists(newname))
+					{
+						Part.SaveAs3(newname , (int)swSaveAsVersion_e.swSaveAsCurrentVersion,
+				(int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen); ; //Сохранить файл с новым именем
+						break;
+					}
+				}
+			}
 
-			Part.SaveAs3(trg + "\\" + name + ".sldprt", (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+			
+			Part.SaveAs3(name2 , (int)swSaveAsVersion_e.swSaveAsCurrentVersion, 
+				(int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 
 
 		}
@@ -1948,6 +2047,27 @@ namespace airDucts
 			Part = (ModelDoc2)iSwApp.NewAssembly();
 
 			//Сохраняем сборку
+
+			if (File.Exists(path + "\\" + name + ".sldasm"))
+			{
+				//Такой файл уже существует в конечной папке
+				String[] dirsfile = Directory.GetFiles(Path.GetDirectoryName(path + "\\" + name + ".sldasm"), "*" + Path.GetExtension(path + "\\" + name + ".sldasm").Remove(0, 1)); //Поиск всех файлов в папке с расширением
+				for (int i = 0; i < dirsfile.Length; i++)
+				{
+					string newname = Path.GetDirectoryName(path + "\\" + name + ".sldasm") + "\\" + Path.GetFileNameWithoutExtension(path + "\\" + name + ".sldasm") + i + Path.GetExtension(path + "\\" + name + ".sldasm"); //Новое имя файла
+					if (!File.Exists(newname))
+					{
+						Part.SaveAs3(newname, (int)swSaveAsVersion_e.swSaveAsCurrentVersion,
+				(int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen); ; //Сохранить файл с новым именем
+						break;
+					}
+				}
+			}
+
+
+			//Part.SaveAs3(name2, (int)swSaveAsVersion_e.swSaveAsCurrentVersion,
+				//(int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+
 			Part.SaveAs3(path + "\\" + name + ".sldasm", (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 		}
 
@@ -1985,7 +2105,8 @@ namespace airDucts
 			//string xcoorsysnames = "Coordinate System1";
 			//string mainPath = txt_target + "\\" + txt_name + ".sldasm";
 
-			tmpObj = (ModelDoc2)iSwApp.OpenDoc6(assPath, (int)swDocumentTypes_e.swDocPART, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
+			tmpObj = (ModelDoc2)iSwApp.OpenDoc6(assPath, (int)swDocumentTypes_e.swDocPART, 
+				(int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
 
 			//Активация документа сборки
 			Part = (ModelDoc2)iSwApp.ActivateDoc3(assPut, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
@@ -1998,8 +2119,10 @@ namespace airDucts
 			assembly.ForceRebuild();
 			//Фокус камеры на компоненты
 			//Part.ViewZoomtofit2();
+			Part.SaveAs3(assPut, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+			MessageBox.Show("Элемент добавлен в сборку");
 
-			
+
 		}
 
 		public void addComponent2Assembly(string assPath)
@@ -2018,7 +2141,8 @@ namespace airDucts
 			//string xcoorsysnames = "Coordinate System1";
 			//string mainPath = txt_target + "\\" + txt_name + ".sldasm";
 
-			tmpObj = (ModelDoc2)iSwApp.OpenDoc6(assPath, (int)swDocumentTypes_e.swDocASSEMBLY, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
+			tmpObj = (ModelDoc2)iSwApp.OpenDoc6(assPath, (int)swDocumentTypes_e.swDocASSEMBLY, 
+				(int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
 
 			//Активация документа сборки
 			Part = (ModelDoc2)iSwApp.ActivateDoc3(assPut, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
@@ -2032,19 +2156,18 @@ namespace airDucts
 			//Фокус камеры на компоненты
 			//Part.ViewZoomtofit2();
 			//boolstatus = Part.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swDisplaySketches, false);
-
-
+			Part.SaveAs3(assPut, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+			MessageBox.Show("Элемент добавлен в сборку");
 
 		}
 		public void AddMates(string assemblyPath, string assemblyName, string topName, string bottomName, double vys)
 		{
-
 			int mateSelMark;
 			int errorCode1 = 0;
 			int mateError;
-
 			//Активация документа со сборкой
-			assembly = (AssemblyDoc)iSwApp.ActivateDoc3(assemblyPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errorCode1);
+			assembly = (AssemblyDoc)iSwApp.ActivateDoc3(assemblyPath, true, 
+				(int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errorCode1);
 			Part = (ModelDoc2)assembly;
 			//Иницииализация объекта для выбора элементов компонентов 
 			swModelDocExt = Part.Extension;
@@ -2056,10 +2179,8 @@ namespace airDucts
 				true, mateSelMark, null, 0);
 			swModelDocExt.SelectByID2("Плоскость4@" + topName + "-1@" + assemblyName, "PLANE", 0, 0, 0,
 				true, mateSelMark, null, 0);
-			swFeature = (Feature)assembly.AddMate5((int)swMateType_e.swMateCOINCIDENT, (int)swMateAlign_e.swMateAlignALIGNED, false, 0, 0, 0, 0, 0, 0, 0, 0, false, false, 0, out mateError);
-
-			//assembly.AddMate3((int)swMateType_e.swMateCOINCIDENT, (int)swMateAlign_e.swMateAlignALIGNED, false,
-			//	0, 0, 0, 0, 0, 0, 0, 0, false, out errorCode1);
+			swFeature = (Feature)assembly.AddMate5((int)swMateType_e.swMateCOINCIDENT, 
+				(int)swMateAlign_e.swMateAlignALIGNED, false, 0, 0, 0, 0, 0, 0, 0, 0, false, false, 0, out mateError);
 
 			Part.ForceRebuild3(false);
 
@@ -2068,7 +2189,8 @@ namespace airDucts
 				true, mateSelMark, null, 0);
 			swModelDocExt.SelectByID2("Point1@Исходная точка@" + topName + "-1@" + assemblyName, "EXTSKETCHPOINT", 0, 0, 0,
 				true, mateSelMark, null, 0);
-			swFeature = (Feature)assembly.AddMate5((int)swMateType_e.swMateDISTANCE, (int)swMateAlign_e.swMateAlignALIGNED, false, vys, vys, vys, 0, 0, 0, 0, 0, false, false, 0, out mateError);
+			swFeature = (Feature)assembly.AddMate5((int)swMateType_e.swMateDISTANCE, 
+				(int)swMateAlign_e.swMateAlignALIGNED, false, vys, vys, vys, 0, 0, 0, 0, 0, false, false, 0, out mateError);
 			Part.ForceRebuild3(false);
 		}
 
@@ -2152,11 +2274,6 @@ namespace airDucts
 
 		
 		//главная
-		
-
-		
-
-
 		
 
 		private void bt_1_Click(object sender, EventArgs e)

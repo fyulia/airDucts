@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="airDucts.airDuct">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <InheritanceLine Type="System.Object" ManuallyRouted="true">
+      <Path>
+        <Point X="10.75" Y="9" />
+        <Point X="10.75" Y="8.459" />
+        <Point X="9.067" Y="8.459" />
+        <Point X="9.067" Y="0.34" />
+        <Point X="2.74" Y="0.34" />
+        <Point X="2.74" Y="1.662" />
+        <Point X="2.5" Y="1.662" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAABAAEAgAAAAAAAAAAAgACAAA=</HashCode>
+      <FileName>airDuct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="airDucts.Flanc">
+    <Position X="3.25" Y="4.25" Width="2" />
+    <InheritanceLine Type="System.Object" ManuallyRouted="true">
+      <Path>
+        <Point X="10.75" Y="9" />
+        <Point X="10.75" Y="8.459" />
+        <Point X="9.105" Y="8.459" />
+        <Point X="9.105" Y="11.088" />
+        <Point X="5.75" Y="11.088" />
+        <Point X="5.75" Y="7.25" />
+        <Point X="4.25" Y="7.25" />
+        <Point X="4.25" Y="6.574" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAgAAAEABAAAAAAAAAAAAAAAAgACAAA=</HashCode>
+      <FileName>Flanc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="airDucts.Interface">
+    <Position X="6" Y="0.5" Width="2.75" />
+    <Members>
+      <Field Name="bt_1" Hidden="true" />
+      <Method Name="bt_1_Click" Hidden="true" />
+      <Field Name="bt_10" Hidden="true" />
+      <Method Name="bt_10_Click" Hidden="true" />
+      <Field Name="bt_11" Hidden="true" />
+      <Method Name="bt_11_Click" Hidden="true" />
+      <Field Name="bt_12" Hidden="true" />
+      <Method Name="bt_12_Click" Hidden="true" />
+      <Field Name="bt_13" Hidden="true" />
+      <Method Name="bt_13_Click" Hidden="true" />
+      <Field Name="bt_14" Hidden="true" />
+      <Method Name="bt_14_Click" Hidden="true" />
+      <Field Name="bt_15" Hidden="true" />
+      <Method Name="bt_15_Click" Hidden="true" />
+      <Field Name="bt_2" Hidden="true" />
+      <Method Name="bt_2_Click" Hidden="true" />
+      <Field Name="bt_3" Hidden="true" />
+      <Method Name="bt_3_Click" Hidden="true" />
+      <Field Name="bt_4" Hidden="true" />
+      <Method Name="bt_4_Click" Hidden="true" />
+      <Field Name="bt_5" Hidden="true" />
+      <Method Name="bt_5_Click" Hidden="true" />
+      <Field Name="bt_6" Hidden="true" />
+      <Method Name="bt_6_Click" Hidden="true" />
+      <Field Name="bt_7" Hidden="true" />
+      <Method Name="bt_7_Click" Hidden="true" />
+      <Field Name="bt_8" Hidden="true" />
+      <Method Name="bt_8_Click" Hidden="true" />
+      <Field Name="bt_9" Hidden="true" />
+      <Method Name="bt_9_Click" Hidden="true" />
+      <Field Name="bt_FlanKr" Hidden="true" />
+      <Field Name="bt_FlanPr" Hidden="true" />
+      <Field Name="bt_KrVozd" Hidden="true" />
+      <Field Name="bt_Next1" Hidden="true" />
+      <Method Name="bt_Next1_Click" Hidden="true" />
+      <Field Name="bt_Next2" Hidden="true" />
+      <Method Name="bt_Next2_Click" Hidden="true" />
+      <Field Name="bt_Next31" Hidden="true" />
+      <Method Name="bt_Next31_Click" Hidden="true" />
+      <Field Name="bt_Next32" Hidden="true" />
+      <Method Name="bt_Next32_Click" Hidden="true" />
+      <Field Name="bt_Next33" Hidden="true" />
+      <Method Name="bt_Next33_Click" Hidden="true" />
+      <Field Name="bt_Next41" Hidden="true" />
+      <Method Name="bt_Next41_Click" Hidden="true" />
+      <Field Name="bt_Next42" Hidden="true" />
+      <Method Name="bt_Next42_Click" Hidden="true" />
+      <Field Name="bt_Next51" Hidden="true" />
+      <Method Name="bt_Next51_Click" Hidden="true" />
+      <Field Name="bt_Next52" Hidden="true" />
+      <Method Name="bt_Next52_Click" Hidden="true" />
+      <Field Name="bt_Next61" Hidden="true" />
+      <Method Name="bt_Next61_Click" Hidden="true" />
+      <Field Name="bt_Next63" Hidden="true" />
+      <Method Name="bt_Next63_Click" Hidden="true" />
+      <Field Name="bt_Next64" Hidden="true" />
+      <Method Name="bt_Next64_Click" Hidden="true" />
+      <Field Name="bt_Next71" Hidden="true" />
+      <Method Name="bt_Next71_Click" Hidden="true" />
+      <Field Name="bt_Next72" Hidden="true" />
+      <Method Name="bt_Next72_Click" Hidden="true" />
+      <Field Name="bt_Nezt62" Hidden="true" />
+      <Method Name="bt_Nezt62_Click" Hidden="true" />
+      <Field Name="bt_OtvodKr" Hidden="true" />
+      <Field Name="bt_OtvodPr" Hidden="true" />
+      <Field Name="bt_PerehKr" Hidden="true" />
+      <Field Name="bt_PerehPr" Hidden="true" />
+      <Field Name="bt_PerehPrPr" Hidden="true" />
+      <Field Name="bt_PrymVoz" Hidden="true" />
+      <Field Name="bt_TroinicKr" Hidden="true" />
+      <Field Name="bt_TroinicKrPr" Hidden="true" />
+      <Field Name="bt_TroinicPr" Hidden="true" />
+      <Field Name="bt_TroinicPrKr" Hidden="true" />
+      <Field Name="bt_ZaglKr" Hidden="true" />
+      <Field Name="bt_ZaglPr" Hidden="true" />
+      <Field Name="cb1_dlin" Hidden="true" />
+      <Method Name="cb1_dlin_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb1_shir" Hidden="true" />
+      <Method Name="cb1_shir_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb1_vys" Hidden="true" />
+      <Field Name="cb1_zazor" Hidden="true" />
+      <Field Name="cb2_diam" Hidden="true" />
+      <Method Name="cb2_diam_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb2_vys" Hidden="true" />
+      <Field Name="cb2_zazor" Hidden="true" />
+      <Field Name="cb31_dlin" Hidden="true" />
+      <Method Name="cb31_dlin_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb31_dlin1" Hidden="true" />
+      <Method Name="cb31_dlin1_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb31_shir" Hidden="true" />
+      <Method Name="cb31_shir_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb31_shir1" Hidden="true" />
+      <Method Name="cb31_shir1_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb31_vys" Hidden="true" />
+      <Field Name="cb31_zazor" Hidden="true" />
+      <Field Name="cb32_diam" Hidden="true" />
+      <Method Name="cb32_diam_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb32_dlin" Hidden="true" />
+      <Method Name="cb32_dlin_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb32_shir" Hidden="true" />
+      <Method Name="cb32_shir_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb32_vys" Hidden="true" />
+      <Field Name="cb32_zazor" Hidden="true" />
+      <Field Name="cb33_diam1" Hidden="true" />
+      <Method Name="cb33_diam1_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb33_diam2" Hidden="true" />
+      <Method Name="cb33_diam2_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb33_vys" Hidden="true" />
+      <Field Name="cb33_zazor" Hidden="true" />
+      <Field Name="cb41_dlin" Hidden="true" />
+      <Method Name="cb41_dlin_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb41_dlinOtvod" Hidden="true" />
+      <Field Name="cb41_shir" Hidden="true" />
+      <Method Name="cb41_shir_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb41_zazor" Hidden="true" />
+      <Field Name="cb42_diam" Hidden="true" />
+      <Method Name="cb42_diam_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb42_zazor" Hidden="true" />
+      <Field Name="cb51_dlin" Hidden="true" />
+      <Method Name="cb51_dlin_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb51_shir" Hidden="true" />
+      <Field Name="cb51_vys" Hidden="true" />
+      <Field Name="cb52_diam" Hidden="true" />
+      <Method Name="cb52_diam_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb52_thick" Hidden="true" />
+      <Field Name="cb52_vys" Hidden="true" />
+      <Field Name="cb61_dlin1" Hidden="true" />
+      <Method Name="cb61_dlin1_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb61_dlin2" Hidden="true" />
+      <Method Name="cb61_dlin2_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb61_shir1" Hidden="true" />
+      <Method Name="cb61_shir1_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb61_shir2" Hidden="true" />
+      <Method Name="cb61_shir2_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb61_vys1" Hidden="true" />
+      <Field Name="cb61_vys2" Hidden="true" />
+      <Field Name="cb61_zazor" Hidden="true" />
+      <Field Name="cb62_diam" Hidden="true" />
+      <Method Name="cb62_diam_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb62_dlin" Hidden="true" />
+      <Method Name="cb62_dlin_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb62_shir" Hidden="true" />
+      <Method Name="cb62_shir_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb62_vys1" Hidden="true" />
+      <Field Name="cb62_vys2" Hidden="true" />
+      <Field Name="cb62_zazor" Hidden="true" />
+      <Field Name="cb63_diam1" Hidden="true" />
+      <Method Name="cb63_diam1_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb63_diam2" Hidden="true" />
+      <Method Name="cb63_diam2_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb63_vys1" Hidden="true" />
+      <Field Name="cb63_vys2" Hidden="true" />
+      <Field Name="cb63_zazor" Hidden="true" />
+      <Field Name="cb64_diam" Hidden="true" />
+      <Method Name="cb64_diam_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb64_dlin" Hidden="true" />
+      <Method Name="cb64_dlin_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb64_shir" Hidden="true" />
+      <Method Name="cb64_shir_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb64_vys1" Hidden="true" />
+      <Field Name="cb64_vys2" Hidden="true" />
+      <Field Name="cb64_zazor" Hidden="true" />
+      <Field Name="cb71_dlin" Hidden="true" />
+      <Method Name="cb71_dlin_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb71_dOtv" Hidden="true" />
+      <Field Name="cb71_shir" Hidden="true" />
+      <Method Name="cb71_shir_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb71_thick" Hidden="true" />
+      <Field Name="cb72_diam" Hidden="true" />
+      <Method Name="cb72_diam_SelectedIndexChanged" Hidden="true" />
+      <Field Name="cb72_dOtv" Hidden="true" />
+      <Field Name="cb72_thick" Hidden="true" />
+      <Field Name="dataSet" Hidden="true" />
+      <Field Name="dataSet2" Hidden="true" />
+      <Field Name="dataSet3" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Field Name="groupBox10" Hidden="true" />
+      <Field Name="groupBox11" Hidden="true" />
+      <Field Name="groupBox12" Hidden="true" />
+      <Field Name="groupBox13" Hidden="true" />
+      <Field Name="groupBox14" Hidden="true" />
+      <Field Name="groupBox15" Hidden="true" />
+      <Field Name="groupBox2" Hidden="true" />
+      <Field Name="groupBox3" Hidden="true" />
+      <Field Name="groupBox4" Hidden="true" />
+      <Field Name="groupBox5" Hidden="true" />
+      <Field Name="groupBox6" Hidden="true" />
+      <Field Name="groupBox7" Hidden="true" />
+      <Field Name="groupBox8" Hidden="true" />
+      <Field Name="groupBox9" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label100" Hidden="true" />
+      <Field Name="label101" Hidden="true" />
+      <Field Name="label102" Hidden="true" />
+      <Field Name="label103" Hidden="true" />
+      <Field Name="label104" Hidden="true" />
+      <Field Name="label105" Hidden="true" />
+      <Field Name="label106" Hidden="true" />
+      <Field Name="label107" Hidden="true" />
+      <Field Name="label108" Hidden="true" />
+      <Field Name="label109" Hidden="true" />
+      <Field Name="label11" Hidden="true" />
+      <Field Name="label110" Hidden="true" />
+      <Field Name="label111" Hidden="true" />
+      <Field Name="label112" Hidden="true" />
+      <Field Name="label113" Hidden="true" />
+      <Field Name="label114" Hidden="true" />
+      <Field Name="label115" Hidden="true" />
+      <Field Name="label116" Hidden="true" />
+      <Field Name="label117" Hidden="true" />
+      <Field Name="label118" Hidden="true" />
+      <Field Name="label119" Hidden="true" />
+      <Field Name="label12" Hidden="true" />
+      <Field Name="label120" Hidden="true" />
+      <Field Name="label121" Hidden="true" />
+      <Field Name="label122" Hidden="true" />
+      <Field Name="label123" Hidden="true" />
+      <Field Name="label124" Hidden="true" />
+      <Field Name="label125" Hidden="true" />
+      <Field Name="label126" Hidden="true" />
+      <Field Name="label127" Hidden="true" />
+      <Field Name="label128" Hidden="true" />
+      <Field Name="label129" Hidden="true" />
+      <Field Name="label13" Hidden="true" />
+      <Field Name="label130" Hidden="true" />
+      <Field Name="label131" Hidden="true" />
+      <Field Name="label132" Hidden="true" />
+      <Field Name="label133" Hidden="true" />
+      <Field Name="label134" Hidden="true" />
+      <Field Name="label135" Hidden="true" />
+      <Field Name="label136" Hidden="true" />
+      <Field Name="label137" Hidden="true" />
+      <Field Name="label138" Hidden="true" />
+      <Field Name="label139" Hidden="true" />
+      <Field Name="label14" Hidden="true" />
+      <Field Name="label140" Hidden="true" />
+      <Field Name="label141" Hidden="true" />
+      <Field Name="label142" Hidden="true" />
+      <Field Name="label143" Hidden="true" />
+      <Field Name="label144" Hidden="true" />
+      <Field Name="label145" Hidden="true" />
+      <Field Name="label146" Hidden="true" />
+      <Field Name="label147" Hidden="true" />
+      <Field Name="label148" Hidden="true" />
+      <Field Name="label149" Hidden="true" />
+      <Field Name="label15" Hidden="true" />
+      <Field Name="label150" Hidden="true" />
+      <Field Name="label151" Hidden="true" />
+      <Field Name="label152" Hidden="true" />
+      <Field Name="label153" Hidden="true" />
+      <Field Name="label154" Hidden="true" />
+      <Field Name="label155" Hidden="true" />
+      <Field Name="label156" Hidden="true" />
+      <Field Name="label157" Hidden="true" />
+      <Field Name="label158" Hidden="true" />
+      <Field Name="label159" Hidden="true" />
+      <Field Name="label16" Hidden="true" />
+      <Field Name="label160" Hidden="true" />
+      <Field Name="label161" Hidden="true" />
+      <Field Name="label162" Hidden="true" />
+      <Field Name="label163" Hidden="true" />
+      <Field Name="label164" Hidden="true" />
+      <Field Name="label165" Hidden="true" />
+      <Field Name="label166" Hidden="true" />
+      <Field Name="label167" Hidden="true" />
+      <Field Name="label168" Hidden="true" />
+      <Field Name="label169" Hidden="true" />
+      <Field Name="label17" Hidden="true" />
+      <Field Name="label170" Hidden="true" />
+      <Field Name="label171" Hidden="true" />
+      <Field Name="label172" Hidden="true" />
+      <Field Name="label173" Hidden="true" />
+      <Field Name="label174" Hidden="true" />
+      <Field Name="label175" Hidden="true" />
+      <Field Name="label176" Hidden="true" />
+      <Field Name="label177" Hidden="true" />
+      <Field Name="label178" Hidden="true" />
+      <Field Name="label179" Hidden="true" />
+      <Field Name="label18" Hidden="true" />
+      <Field Name="label180" Hidden="true" />
+      <Field Name="label181" Hidden="true" />
+      <Field Name="label182" Hidden="true" />
+      <Field Name="label183" Hidden="true" />
+      <Field Name="label184" Hidden="true" />
+      <Field Name="label185" Hidden="true" />
+      <Field Name="label186" Hidden="true" />
+      <Field Name="label187" Hidden="true" />
+      <Field Name="label188" Hidden="true" />
+      <Field Name="label189" Hidden="true" />
+      <Field Name="label19" Hidden="true" />
+      <Field Name="label190" Hidden="true" />
+      <Field Name="label191" Hidden="true" />
+      <Field Name="label192" Hidden="true" />
+      <Field Name="label193" Hidden="true" />
+      <Field Name="label194" Hidden="true" />
+      <Field Name="label195" Hidden="true" />
+      <Field Name="label196" Hidden="true" />
+      <Field Name="label197" Hidden="true" />
+      <Field Name="label198" Hidden="true" />
+      <Field Name="label199" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label20" Hidden="true" />
+      <Field Name="label200" Hidden="true" />
+      <Field Name="label201" Hidden="true" />
+      <Field Name="label202" Hidden="true" />
+      <Field Name="label203" Hidden="true" />
+      <Field Name="label204" Hidden="true" />
+      <Field Name="label205" Hidden="true" />
+      <Field Name="label208" Hidden="true" />
+      <Field Name="label209" Hidden="true" />
+      <Field Name="label21" Hidden="true" />
+      <Field Name="label210" Hidden="true" />
+      <Field Name="label211" Hidden="true" />
+      <Field Name="label212" Hidden="true" />
+      <Field Name="label213" Hidden="true" />
+      <Field Name="label214" Hidden="true" />
+      <Field Name="label215" Hidden="true" />
+      <Field Name="label216" Hidden="true" />
+      <Field Name="label217" Hidden="true" />
+      <Field Name="label218" Hidden="true" />
+      <Field Name="label219" Hidden="true" />
+      <Field Name="label22" Hidden="true" />
+      <Field Name="label220" Hidden="true" />
+      <Field Name="label221" Hidden="true" />
+      <Field Name="label222" Hidden="true" />
+      <Field Name="label223" Hidden="true" />
+      <Field Name="label224" Hidden="true" />
+      <Field Name="label225" Hidden="true" />
+      <Field Name="label226" Hidden="true" />
+      <Field Name="label227" Hidden="true" />
+      <Field Name="label228" Hidden="true" />
+      <Field Name="label229" Hidden="true" />
+      <Field Name="label23" Hidden="true" />
+      <Field Name="label230" Hidden="true" />
+      <Field Name="label231" Hidden="true" />
+      <Field Name="label232" Hidden="true" />
+      <Field Name="label233" Hidden="true" />
+      <Field Name="label234" Hidden="true" />
+      <Field Name="label235" Hidden="true" />
+      <Field Name="label236" Hidden="true" />
+      <Field Name="label24" Hidden="true" />
+      <Field Name="label25" Hidden="true" />
+      <Field Name="label26" Hidden="true" />
+      <Field Name="label27" Hidden="true" />
+      <Field Name="label28" Hidden="true" />
+      <Field Name="label29" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label30" Hidden="true" />
+      <Field Name="label31" Hidden="true" />
+      <Field Name="label32" Hidden="true" />
+      <Field Name="label33" Hidden="true" />
+      <Field Name="label34" Hidden="true" />
+      <Field Name="label35" Hidden="true" />
+      <Field Name="label36" Hidden="true" />
+      <Field Name="label37" Hidden="true" />
+      <Field Name="label38" Hidden="true" />
+      <Field Name="label39" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label40" Hidden="true" />
+      <Field Name="label41" Hidden="true" />
+      <Field Name="label42" Hidden="true" />
+      <Field Name="label43" Hidden="true" />
+      <Field Name="label44" Hidden="true" />
+      <Field Name="label45" Hidden="true" />
+      <Field Name="label46" Hidden="true" />
+      <Field Name="label47" Hidden="true" />
+      <Field Name="label48" Hidden="true" />
+      <Field Name="label49" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label50" Hidden="true" />
+      <Field Name="label51" Hidden="true" />
+      <Field Name="label52" Hidden="true" />
+      <Field Name="label53" Hidden="true" />
+      <Field Name="label54" Hidden="true" />
+      <Field Name="label55" Hidden="true" />
+      <Field Name="label56" Hidden="true" />
+      <Field Name="label57" Hidden="true" />
+      <Field Name="label58" Hidden="true" />
+      <Field Name="label59" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label60" Hidden="true" />
+      <Field Name="label61" Hidden="true" />
+      <Field Name="label62" Hidden="true" />
+      <Field Name="label63" Hidden="true" />
+      <Field Name="label64" Hidden="true" />
+      <Field Name="label65" Hidden="true" />
+      <Field Name="label66" Hidden="true" />
+      <Field Name="label67" Hidden="true" />
+      <Field Name="label68" Hidden="true" />
+      <Field Name="label69" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label70" Hidden="true" />
+      <Field Name="label71" Hidden="true" />
+      <Field Name="label72" Hidden="true" />
+      <Field Name="label73" Hidden="true" />
+      <Field Name="label74" Hidden="true" />
+      <Field Name="label75" Hidden="true" />
+      <Field Name="label76" Hidden="true" />
+      <Field Name="label77" Hidden="true" />
+      <Field Name="label78" Hidden="true" />
+      <Field Name="label79" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label80" Hidden="true" />
+      <Field Name="label81" Hidden="true" />
+      <Field Name="label82" Hidden="true" />
+      <Field Name="label83" Hidden="true" />
+      <Field Name="label84" Hidden="true" />
+      <Field Name="label85" Hidden="true" />
+      <Field Name="label86" Hidden="true" />
+      <Field Name="label87" Hidden="true" />
+      <Field Name="label88" Hidden="true" />
+      <Field Name="label89" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="label90" Hidden="true" />
+      <Field Name="label91" Hidden="true" />
+      <Field Name="label92" Hidden="true" />
+      <Field Name="label93" Hidden="true" />
+      <Field Name="label94" Hidden="true" />
+      <Field Name="label95" Hidden="true" />
+      <Field Name="label96" Hidden="true" />
+      <Field Name="label97" Hidden="true" />
+      <Field Name="label98" Hidden="true" />
+      <Field Name="label99" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="pictureBox10" Hidden="true" />
+      <Field Name="pictureBox11" Hidden="true" />
+      <Field Name="pictureBox12" Hidden="true" />
+      <Field Name="pictureBox13" Hidden="true" />
+      <Field Name="pictureBox14" Hidden="true" />
+      <Field Name="pictureBox15" Hidden="true" />
+      <Field Name="pictureBox2" Hidden="true" />
+      <Field Name="pictureBox3" Hidden="true" />
+      <Field Name="pictureBox4" Hidden="true" />
+      <Field Name="pictureBox5" Hidden="true" />
+      <Field Name="pictureBox6" Hidden="true" />
+      <Field Name="pictureBox7" Hidden="true" />
+      <Field Name="pictureBox8" Hidden="true" />
+      <Field Name="pictureBox9" Hidden="true" />
+      <Field Name="sqlDataAdapter2" Hidden="true" />
+      <Field Name="sqlDataAdapter3" Hidden="true" />
+      <Field Name="tabControl1" Hidden="true" />
+      <Field Name="tabControl2" Hidden="true" />
+      <Field Name="tabControl3" Hidden="true" />
+      <Field Name="tabControl4" Hidden="true" />
+      <Field Name="tabControl5" Hidden="true" />
+      <Field Name="tabControl6" Hidden="true" />
+      <Field Name="tabPage1" Hidden="true" />
+      <Field Name="tabPage10" Hidden="true" />
+      <Field Name="tabPage11" Hidden="true" />
+      <Field Name="tabPage12" Hidden="true" />
+      <Field Name="tabPage13" Hidden="true" />
+      <Field Name="tabPage14" Hidden="true" />
+      <Field Name="tabPage15" Hidden="true" />
+      <Field Name="tabPage16" Hidden="true" />
+      <Field Name="tabPage17" Hidden="true" />
+      <Field Name="tabPage18" Hidden="true" />
+      <Field Name="tabPage19" Hidden="true" />
+      <Field Name="tabPage2" Hidden="true" />
+      <Field Name="tabPage20" Hidden="true" />
+      <Field Name="tabPage21" Hidden="true" />
+      <Field Name="tabPage3" Hidden="true" />
+      <Field Name="tabPage4" Hidden="true" />
+      <Field Name="tabPage5" Hidden="true" />
+      <Field Name="tabPage6" Hidden="true" />
+      <Field Name="tabPage7" Hidden="true" />
+      <Field Name="tabPage8" Hidden="true" />
+      <Field Name="tabPage9" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+      <Field Name="textBox10" Hidden="true" />
+      <Field Name="textBox11" Hidden="true" />
+      <Field Name="textBox12" Hidden="true" />
+      <Field Name="textBox13" Hidden="true" />
+      <Field Name="textBox14" Hidden="true" />
+      <Field Name="textBox17" Hidden="true" />
+      <Field Name="textBox2" Hidden="true" />
+      <Field Name="textBox3" Hidden="true" />
+      <Field Name="textBox4" Hidden="true" />
+      <Field Name="textBox5" Hidden="true" />
+      <Field Name="textBox6" Hidden="true" />
+      <Field Name="textBox7" Hidden="true" />
+      <Field Name="textBox8" Hidden="true" />
+      <Field Name="textBox9" Hidden="true" />
+      <Field Name="txt_hint1" Hidden="true" />
+      <Field Name="txt_hint2" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>//3/YvcfNSwQy/CxH7Hs/PP/4yZ9//+fce1u+v//5r8=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="airDucts.Otvod">
+    <Position X="3" Y="0.5" Width="2.5" />
+    <InheritanceLine Type="System.Object" ManuallyRouted="true">
+      <Path>
+        <Point X="10.75" Y="9" />
+        <Point X="10.75" Y="8.459" />
+        <Point X="9.08" Y="8.459" />
+        <Point X="9.08" Y="0.34" />
+        <Point X="5.74" Y="0.34" />
+        <Point X="5.74" Y="1.854" />
+        <Point X="5.5" Y="1.854" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAQAAAAAAAAQAABAAEAAAAAAAAAAAAAkACAAA=</HashCode>
+      <FileName>Otvod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="airDucts.Perehod">
+    <Position X="0.75" Y="7.5" Width="2.25" />
+    <InheritanceLine Type="System.Object" ManuallyRouted="true">
+      <Path>
+        <Point X="10.75" Y="9" />
+        <Point X="10.75" Y="8.459" />
+        <Point X="9.13" Y="8.459" />
+        <Point X="9.13" Y="11.825" />
+        <Point X="1.875" Y="11.825" />
+        <Point X="1.875" Y="10.401" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAABAAEACEAAAAAAAAAAkACQAA=</HashCode>
+      <FileName>Perehod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="airDucts.SwAddin">
+    <Position X="9.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QAICBAQCABAAAAAEAAAASQAhQQACAIAAACggAgDC0oI=</HashCode>
+      <FileName>SwAddin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="airDucts.Troinik">
+    <Position X="0.5" Y="3.5" Width="2" />
+    <InheritanceLine Type="System.Object" ManuallyRouted="true">
+      <Path>
+        <Point X="10.75" Y="9" />
+        <Point X="10.75" Y="8.459" />
+        <Point X="9.129" Y="8.459" />
+        <Point X="9.129" Y="11.088" />
+        <Point X="5.75" Y="11.088" />
+        <Point X="5.75" Y="7.25" />
+        <Point X="1.5" Y="7.25" />
+        <Point X="1.5" Y="6.401" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAQAAAAAAgABAAEAAAAACAAAAAAAgICAAA=</HashCode>
+      <FileName>Troinik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="airDucts.Zaglushka">
+    <Position X="3.5" Y="7.5" Width="2" />
+    <InheritanceLine Type="System.Object" ManuallyRouted="true">
+      <Path>
+        <Point X="10.75" Y="9" />
+        <Point X="10.75" Y="8.459" />
+        <Point X="9.167" Y="8.459" />
+        <Point X="9.167" Y="11.825" />
+        <Point X="4.5" Y="11.825" />
+        <Point X="4.5" Y="10.401" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CABAAAAAAAAAEAAAAAAABAAEAAAAAAAAAAAgAgASAAA=</HashCode>
+      <FileName>Zaglushka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object">
+    <Position X="9.75" Y="9" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

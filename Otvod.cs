@@ -147,8 +147,6 @@ namespace airDucts
 			Part.ClearSelection2(true);
 			Part.SketchManager.InsertSketch(true);
 
-			//dlinOtv = 0.15 + shir / 2;
-
 			skSegment = Part.SketchManager.CreateLine(0, 0, 0, 0, dlinOtv, 0);
 			Part.SetPickMode();
 			Part.ClearSelection2(true);
@@ -186,7 +184,8 @@ namespace airDucts
 			Part.SketchManager.InsertSketch(true);
 
 			boolstatus = Part.Extension.SelectByID2("Спереди", "PLANE", 0, 0, 0, true, 0, null, 0);
-			boolstatus = Part.Extension.SelectByID2("Line3@Эскиз1", "EXTSKETCHSEGMENT", 2.03215877439393E-02, 5.44515302490674E-03, 0, true, 1, null, 0);
+			boolstatus = Part.Extension.SelectByID2("Line3@Эскиз1", "EXTSKETCHSEGMENT", 2.03215877439393E-02,
+				5.44515302490674E-03, 0, true, 1, null, 0);
 
 			refPlane = (RefPlane)Part.FeatureManager.InsertRefPlane(2, 0, 4, 0, 0, 0);
 			Part.ClearSelection2(true);
@@ -201,7 +200,6 @@ namespace airDucts
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r + shir, dlin / 2, 0, r + shir, -dlin / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r + shir, -dlin / 2, 0, r, -dlin / 2, 0);
 			skSegment = (SketchSegment)Part.SketchManager.CreateLine(r, -dlin / 2, 0, r, -zazor * 5, 0);
-
 			Part.ClearSelection2(true);
 
 			boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, true, 0, null, 0);
@@ -214,7 +212,6 @@ namespace airDucts
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", r, 0, 0, true, 0, null, 0);
 			Part.SketchAddConstraints("sgHORIZONTALPOINTS2D");
 			Part.ClearSelection2(true);
-
 
 			boolstatus = Part.Extension.SelectByID2("Point1", "SKETCHPOINT", r, 0, 0, false, 0, null, 0);
 			boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", r, -zazor * 5, 0, true, 0, null, 0);
@@ -265,6 +262,7 @@ namespace airDucts
 			Part.SetPickMode();
 
 			Part.SketchManager.InsertSketch(true);
+
 
 			Part.ClearSelection2(true);
 			boolstatus = Part.Extension.SelectByID2("Эскиз4", "SKETCH", r, 0, 0, false, 1, null, 0);

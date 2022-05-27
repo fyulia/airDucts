@@ -361,7 +361,7 @@ namespace airDucts
 					}
 					else
 					{
-						Form1 form = new Form1();
+						Interface form = new Interface();
 						form.ShowDialog();
 						form.Dispose();
 					}

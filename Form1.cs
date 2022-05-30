@@ -37,6 +37,7 @@ namespace airDucts
 
 		string assPut;
 			string assPut2;
+		string nameActiveAss;
 		public Interface()
 		{
 			InitializeComponent();	
@@ -51,7 +52,8 @@ namespace airDucts
 
 			IModelDoc2 Part = iSwApp.IActiveDoc2;
 			assPut = Part.GetPathName();
-			
+			 nameActiveAss = Path.GetFileNameWithoutExtension(assPut);
+
 			string name = Part.GetTitle();
 			//путь где хранится сброка
 			assPut2 = assPut.Substring(0, assPut.Length - name.Length - 1);
@@ -1152,6 +1154,7 @@ namespace airDucts
 
 
 				addComponent2(assPath);
+				bt_razv1.Visible = true;
 			}
 		}
 
@@ -1451,33 +1454,65 @@ namespace airDucts
 				 
 				//получаем имя детали
 				tmpPath = Part.GetPathName();
-				MessageBox.Show(tmpPath);
-				//tmpPath = tmpPath.Substring(0, tmpPath.Length - name.Length - 8);
+				string osnName2 = Path.GetFileNameWithoutExtension(tmpPath);
 
-				//создаем сборку в той же папке, что и активная сборка
-				createAssembly(assPut2, name2);
+				//создаем сборку 
+				//Новое окно сборки
+				Part = (ModelDoc2)iSwApp.NewAssembly();
 
-				string path = Part.GetPathName();
-				MessageBox.Show(path);
+				//Сохраняем сборку
+
+				if (File.Exists(assPut2 + "\\" + name2 + ".sldasm"))
+				{
+					//Такой файл уже существует в конечной папке
+					String[] dirsfile = Directory.GetFiles(Path.GetDirectoryName(assPut2 + "\\" + name2 + ".sldasm"), "*" + Path.GetExtension(assPut2 + "\\" + name2 + ".sldasm").Remove(0, 1)); //Поиск всех файлов в папке с расширением
+					for (int i = 0; i < dirsfile.Length; i++)
+					{
+						string newname = Path.GetDirectoryName(assPut2 + "\\" + name2 + ".sldasm") + "\\" + Path.GetFileNameWithoutExtension(assPut2 + "\\" + name2 + ".sldasm") + "_" + i + Path.GetExtension(assPut2 + "\\" + name2 + ".sldasm"); //Новое имя файла
+						if (!File.Exists(newname))
+						{
+							Part.SaveAs3(newname, (int)swSaveAsVersion_e.swSaveAsCurrentVersion,
+					(int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen); ; //Сохранить файл с новым именем
+							break;
+						}
+					}
+				}
+				else
+				{
+					Part.SaveAs3(assPut2 + "\\" + name2 + ".sldasm", (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+
+				}
+				//имя сборки
+				string assPath = Part.GetPathName();
+				string nameSbor = Path.GetFileNameWithoutExtension(assPath);
+
 
 				//добавляем компонент в сборку
-				addComponent(Part, path,tmpPath, xAss, yAss, 0);
+				object component;
+				//Считывание открытого окна сборки
+				assembly = (AssemblyDoc)iSwApp.ActiveDoc;
 
-				//получаем имя сборки
-				
+				//Активация документа сборки
+				Part = (ModelDoc2)iSwApp.ActivateDoc3(assPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
+				//Добавление компонентов в документ сборки
+				component = assembly.AddComponent5(tmpPath, 0, "", false, "", 0, 0, 0);
+				//Закрытие открытых файлов компонентов в среде SolidWorks
+				iSwApp.CloseDoc(tmpPath);
+				//Перестроение документа
+				assembly.ForceRebuild();
+				//Фокус камеры на компоненты
+				//Part.ViewZoomtofit2();
+				Part.SaveAs3(assPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 
-				string assemblyPath = assPut2 + "\\" + name2 + ".sldasm";
-				//string assemblyPath = path;
 
 
-				createCircPattern(assemblyPath, name2, name);
+				createCircPattern(assPath, nameSbor, osnName2);
 
 				//boolstatus = Part.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swDisplaySketches, false);
 				//boolstatus = Part.Extension.InsertScene("\\scenes\\01 basic scenes\\00 3 point faded.p2s");
 
-				string assPath2 = Part.GetPathName();
-				MessageBox.Show(assPath2);
-				Part.SaveAs3(assPath2, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+				
+				Part.SaveAs3(assPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 
 
 				if (txt_hint1.TextLength == 0 && txt_hint2.TextLength == 0)
@@ -1491,7 +1526,7 @@ namespace airDucts
 				}
 
 
-				addComponent2Assembly(assPath2);
+				addComponent2Assembly(assPath);
 			}
 		}
 
@@ -1510,9 +1545,8 @@ namespace airDucts
 				zazor = Convert.ToDouble(cb41_zazor.Text);
 
 				string name = $"Отвод прямоугольного сечения_{dlin}x{shir}_90";
-				string name2 = $"Отвод прямоугольного сечения_{dlin}x{shir}_90";
+				string name2 = $"Отвод прямоугольного сечения_{dlin}x{shir}_90_сборка";
 
-				//MessageBox.Show(name.Length.ToString());
 
 				dlin = dlin / 1000;
 				shir = shir / 1000;
@@ -1532,24 +1566,63 @@ namespace airDucts
 				otvod2.createPrOtvod(dlin, shir, dlinOtv, zazor, Part);
 				setMaterial();
 				savePart(name);
-
-				string assPath = Part.GetPathName();
+				//получаем имя детали
 				tmpPath = Part.GetPathName();
-				tmpPath = tmpPath.Substring(0, tmpPath.Length - name.Length - 8);
+				string osnName2 = Path.GetFileNameWithoutExtension(tmpPath);
 
-				createAssembly(tmpPath, name2);
-				string path = Part.GetPathName();
-				addComponent(Part, path, tmpPath, xAss, yAss, 0);
-				string assemblyPath = tmpPath + "\\" + name + ".sldasm";
+				//создаем сборку 
+				//Новое окно сборки
+				Part = (ModelDoc2)iSwApp.NewAssembly();
 
-				createCircPattern(assemblyPath, name, name2);
+				//Сохраняем сборку
 
-				boolstatus = Part.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swDisplaySketches, false);
-				boolstatus = Part.Extension.InsertScene("\\scenes\\01 basic scenes\\00 3 point faded.p2s");
+				if (File.Exists(assPut2 + "\\" + name2 + ".sldasm"))
+				{
+					//Такой файл уже существует в конечной папке
+					String[] dirsfile = Directory.GetFiles(Path.GetDirectoryName(assPut2 + "\\" + name2 + ".sldasm"), "*" + Path.GetExtension(assPut2 + "\\" + name2 + ".sldasm").Remove(0, 1)); //Поиск всех файлов в папке с расширением
+					for (int i = 0; i < dirsfile.Length; i++)
+					{
+						string newname = Path.GetDirectoryName(assPut2 + "\\" + name2 + ".sldasm") + "\\" + Path.GetFileNameWithoutExtension(assPut2 + "\\" + name2 + ".sldasm") + "_" + i + Path.GetExtension(assPut2 + "\\" + name2 + ".sldasm"); //Новое имя файла
+						if (!File.Exists(newname))
+						{
+							Part.SaveAs3(newname, (int)swSaveAsVersion_e.swSaveAsCurrentVersion,
+					(int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen); ; //Сохранить файл с новым именем
+							break;
+						}
+					}
+				}
+				else
+				{
+					Part.SaveAs3(assPut2 + "\\" + name2 + ".sldasm", (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 
-				string assPath2 = Part.GetPathName();
+				}
+				//имя сборки
+				string assPath = Part.GetPathName();
+				string nameSbor = Path.GetFileNameWithoutExtension(assPath);
+
+
+				//добавляем компонент в сборку
+				object component;
+				//Считывание открытого окна сборки
+				assembly = (AssemblyDoc)iSwApp.ActiveDoc;
+
+				//Активация документа сборки
+				Part = (ModelDoc2)iSwApp.ActivateDoc3(assPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
+				//Добавление компонентов в документ сборки
+				component = assembly.AddComponent5(tmpPath, 0, "", false, "", 0, 0, 0);
+				//Закрытие открытых файлов компонентов в среде SolidWorks
+				iSwApp.CloseDoc(tmpPath);
+				//Перестроение документа
+				assembly.ForceRebuild();
+				//Фокус камеры на компоненты
+				//Part.ViewZoomtofit2();
+				Part.SaveAs3(assPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+
+
+				createCircPattern(assPath, nameSbor, osnName2);
+
 				
-				Part.SaveAs3(assPath2, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+				Part.SaveAs3(assPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 				
 				
 				if (txt_hint1.TextLength == 0 && txt_hint2.TextLength == 0)
@@ -1563,7 +1636,7 @@ namespace airDucts
 				}
 				
 
-				addComponent2Assembly(assPath2);
+				addComponent2Assembly(assPath);
 			}
 		}
 		public void createCircPattern(string assemblyPath, string assemblyName, string partName)
@@ -1590,7 +1663,7 @@ namespace airDucts
 			swFeature = (Feature)swFeatureManager.FeatureCircularPattern5(6, 0.26179938779915,
 				true, "NULL",false,false,false,false,false,false,0,0, "NULL",false);
 			Part.ForceRebuild3(false);
-			Part.SaveAs3(assemblyPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+			//Part.SaveAs3(assemblyPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 
 		}
 
@@ -2474,8 +2547,8 @@ namespace airDucts
 				thick = Convert.ToDouble(cb52_thick.Text);
 
 				string name = $"Заглушка круглого сечения_{diam}";
-				string name2 = $"Заглушка круглого сечения_{diam}(bottom)";
-				string name3 = $"Заглушка круглого сечения_{diam}(top)";
+				string bottom = $"Заглушка круглого сечения_{diam}(bottom)";
+				string top = $"Заглушка круглого сечения_{diam}(top)";
 
 				diam = diam / 1000;
 				vys = vys / 1000;
@@ -2491,37 +2564,70 @@ namespace airDucts
 				Zaglushka zagl = new Zaglushka();
 				zagl.createZaglKrBottom(diam, vys, thick, Part);
 				setMaterial();
-				savePart(name2);
-
-				string assPath = Part.GetPathName();
-				//tmpPath = Part.GetPathName();
-				tmpPath = "C:\\Users\\YuliaS\\Desktop\\Воздуховоды";
-				//tmpPath = tmpPath.Substring(0, tmpPath.Length - name2.Length - 8);
-				//MessageBox.Show(tmpPath);
-				createAssembly(tmpPath, name);
-				string path = Part.GetPathName();
-				//MessageBox.Show(path);
-				addComponent(Part, path, assPath, 0, 0, thick / 2);
-
-				string assemblyPath = tmpPath + "\\" + name + ".sldasm";
-				//MessageBox.Show(assemblyPath);
+				savePart(bottom);
+				string botName = Part.GetPathName();
+				string botName2 = Path.GetFileNameWithoutExtension(botName);
 
 				iSwApp.NewPart();
 				Part = iSwApp.IActiveDoc2;
 				Zaglushka zagl2 = new Zaglushka();
 				zagl2.createZaglKrTop(diam, vys, thick, Part);
 				setMaterial();
-				savePart(name3);
-				string path2 = Part.GetPathName();
-				//MessageBox.Show(path2);
-				Part = (ModelDoc2)iSwApp.ActivateDoc3(assemblyPath, true, 
-					(int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
-				addComponent(Part, assemblyPath,path2, 0, 0, -vys);
+				savePart(top);
+				string topName = Part.GetPathName();
+				string topName2 = Path.GetFileNameWithoutExtension(topName);
+
+				//создаем сборку 
+				//Новое окно сборки
+				Part = (ModelDoc2)iSwApp.NewAssembly();
+
+				//Сохраняем сборку
+
+				if (File.Exists(assPut2 + "\\" + name + ".sldasm"))
+				{
+					//Такой файл уже существует в конечной папке
+					String[] dirsfile = Directory.GetFiles(Path.GetDirectoryName(assPut2 + "\\" + name + ".sldasm"), "*" + Path.GetExtension(assPut2 + "\\" + name + ".sldasm").Remove(0, 1)); //Поиск всех файлов в папке с расширением
+					for (int i = 0; i < dirsfile.Length; i++)
+					{
+						string newname = Path.GetDirectoryName(assPut2 + "\\" + name + ".sldasm") + "\\" + Path.GetFileNameWithoutExtension(assPut2 + "\\" + name + ".sldasm") + "_" + i + Path.GetExtension(assPut2 + "\\" + name + ".sldasm"); //Новое имя файла
+						if (!File.Exists(newname))
+						{
+							Part.SaveAs3(newname, (int)swSaveAsVersion_e.swSaveAsCurrentVersion,
+					(int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen); ; //Сохранить файл с новым именем
+							break;
+						}
+					}
+				}
+				else
+				{
+					Part.SaveAs3(assPut2 + "\\" + name + ".sldasm", (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
+
+				}
+				string assPath = Part.GetPathName();
+				string name2 = Path.GetFileNameWithoutExtension(assPath);
+
+				object component;
+				//Считывание открытого окна сборки
+				assembly = (AssemblyDoc)iSwApp.ActiveDoc;
+
+				//Активация документа сборки
+				Part = (ModelDoc2)iSwApp.ActivateDoc3(assPath, true, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, ref errors);
+				//Добавление компонентов в документ сборки
+				component = assembly.AddComponent5(topName, 0, "", false, "", 0, 0, 0);
+				component = assembly.AddComponent5(botName, 0, "", false, "", 0, 0, 0);
+				//Закрытие открытых файлов компонентов в среде SolidWorks
+				iSwApp.CloseDoc(topName);
+				iSwApp.CloseDoc(botName);
+				//Перестроение документа
+				assembly.ForceRebuild();
+				//Фокус камеры на компоненты
+				//Part.ViewZoomtofit2();
+				Part.SaveAs3(assPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, (int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 
 
-				AddMates(assemblyPath, name, name3, name2, vys);
+				AddMates(assPath, name2, topName2, botName2, vys);
 
-				Part.SaveAs3(assemblyPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, 
+				Part.SaveAs3(assPath, (int)swSaveAsVersion_e.swSaveAsCurrentVersion, 
 					(int)swSaveAsOptions_e.swSaveAsOptions_CopyAndOpen);
 
 				if (txt_hint1.TextLength == 0 && txt_hint2.TextLength == 0)
@@ -2533,9 +2639,9 @@ namespace airDucts
 					txt_hint2.Text = txt_hint1.Text;
 					txt_hint1.Text = "Недавние размеры:" + '\r' + '\n' + $"Диаметр : {diam * 1000}";
 				}
-				string assPath2 = Part.GetPathName();
 
-				addComponent2Assembly(assPath2);
+
+				addComponent2Assembly(assPath);
 			}
 		}
 
@@ -2948,6 +3054,22 @@ namespace airDucts
 
 		private void label249_Click(object sender, EventArgs e)
 		{
+
+		}
+
+		private void bt_razv1_Click(object sender, EventArgs e)
+		{
+			
+			double shir_pr, vys_pr, dlin_pr, zazor_pr;
+			dlin_pr = Convert.ToDouble(cb1_dlin.Text);
+			shir_pr = Convert.ToDouble(cb1_shir.Text);
+			string name = $"Воздуховод прямоугольного сечения_{shir_pr}x{dlin_pr}";
+
+			iSwApp = new SldWorks();
+			iSwApp.Visible = true;
+
+			iSwApp.INewDocument2(name, (int)swDwgPaperSizes_e.swDwgPaperA3size,0,0);
+			Part = iSwApp.IActiveDoc2;
 
 		}
 	}

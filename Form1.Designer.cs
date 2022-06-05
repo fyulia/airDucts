@@ -484,7 +484,6 @@ namespace airDucts
 			this.pictureBox15 = new System.Windows.Forms.PictureBox();
 			this.txt_hint1 = new System.Windows.Forms.TextBox();
 			this.txt_hint2 = new System.Windows.Forms.TextBox();
-			this.bt_razv1 = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage21.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -1024,7 +1023,6 @@ namespace airDucts
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.Controls.Add(this.bt_razv1);
 			this.tabPage1.Controls.Add(this.bt_Next1);
 			this.tabPage1.Controls.Add(this.textBox1);
 			this.tabPage1.Controls.Add(this.groupBox1);
@@ -5630,17 +5628,6 @@ namespace airDucts
 			this.txt_hint2.Size = new System.Drawing.Size(360, 90);
 			this.txt_hint2.TabIndex = 13;
 			// 
-			// bt_razv1
-			// 
-			this.bt_razv1.Location = new System.Drawing.Point(702, 480);
-			this.bt_razv1.Name = "bt_razv1";
-			this.bt_razv1.Size = new System.Drawing.Size(233, 96);
-			this.bt_razv1.TabIndex = 12;
-			this.bt_razv1.Text = "Показать развертку последнего элемента";
-			this.bt_razv1.UseVisualStyleBackColor = true;
-			this.bt_razv1.Visible = false;
-			this.bt_razv1.Click += new System.EventHandler(this.bt_razv1_Click);
-			// 
 			// Interface
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -6204,6 +6191,5 @@ namespace airDucts
 		private System.Windows.Forms.TextBox cb64_thick;
 		private System.Windows.Forms.Label label257;
 		private System.Windows.Forms.Label label258;
-		private System.Windows.Forms.Button bt_razv1;
 	}
 }
